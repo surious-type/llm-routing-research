@@ -1,0 +1,6 @@
+[
+  {"id": "E1", "semantic_A": "CONTINUE", "semantic_B": "NEW", "position_A": "first"},
+  {"id": "E2", "semantic_A": "NEW", "semantic_B": "CONTINUE", "position_A": "first"},
+  {"id": "E3", "semantic_A": "CONTINUE", "semantic_B": "NEW", "position_A": "second"},
+  {"id": "E4", "semantic_A": "NEW", "semantic_B": "CONTINUE", "position_A": "second"}
+]
