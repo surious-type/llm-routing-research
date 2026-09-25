@@ -1,0 +1,1723 @@
+{
+  "metadata": {
+    "model": "qwen3-14b",
+    "served_models_json": "[\"qwen3-14b\"]",
+    "base_url": "http://localhost:8000",
+    "prompt_version": "structured-factorial-v1",
+    "mode": "reason-route",
+    "temperature": 0,
+    "seed": 0,
+    "thinking_enabled": false,
+    "max_completion_tokens": 128,
+    "structured_output": "json_schema",
+    "route_names_json": "[\"CONTINUE\", \"NEW\"]",
+    "conditions_json": "{\"P1\": {\"prompt_order\": [\"CONTINUE\", \"NEW\"], \"enum_order\": [\"CONTINUE\", \"NEW\"]}, \"P2\": {\"prompt_order\": [\"NEW\", \"CONTINUE\"], \"enum_order\": [\"CONTINUE\", \"NEW\"]}}",
+    "dataset": "dataset_v2.jsonl",
+    "dataset_sha256": "fe6357ef072442689848d72f942828f5d12da4f71611fd86b4f9ceeddad6088c",
+    "routes": "routes_continue_first.json",
+    "routes_sha256": "cfdff764daf9e962e49fb05003148c1469462fc1e0558573cf08a02430da4561",
+    "case_count_per_condition": 7,
+    "request_count": 14,
+    "server_metadata_file": "results/model_size_20260907/m14/server_metadata.json",
+    "server_configuration_json": "{\"label\": \"M14\", \"model_id\": \"Qwen/Qwen3-14B-AWQ\", \"served_model_name\": \"qwen3-14b\", \"gpu_memory_utilization\": 0.85, \"cpu_offload_gb\": 4, \"max_model_len\": 2048, \"max_num_seqs\": 1, \"enforce_eager\": true, \"quantization\": \"awq\", \"docker_image\": \"vllm/vllm-openai@sha256:61fc8a896b0a4fbbbdc063bc4b0dbc25ce98e02b5050c24aeb7830ac02039b14\", \"container_name\": \"routing-model-size-20260907-m14-a1\", \"vllm_version\": \"0.28.0\", \"docker_inspect\": {\"Id\": \"9cc02e899ec9048a9a2f4125965f2f6226e69d783164059f761d10606dff6fb4\", \"Created\": \"2026-09-07T17:26:50.50502925Z\", \"Path\": \"vllm\", \"Args\": [\"serve\", \"--model\", \"Qwen/Qwen3-14B-AWQ\", \"--served-model-name\", \"qwen3-14b\", \"--host\", \"0.0.0.0\", \"--port\", \"8000\", \"--quantization\", \"awq\", \"--gpu-memory-utilization\", \"0.85\", \"--cpu-offload-gb\", \"4\", \"--max-model-len\", \"2048\", \"--max-num-seqs\", \"1\", \"--generation-config\", \"vllm\", \"--default-chat-template-kwargs\", \"{\\\"enable_thinking\\\": false}\", \"--enforce-eager\"], \"State\": {\"Status\": \"running\", \"Running\": true, \"Paused\": false, \"Restarting\": false, \"OOMKilled\": false, \"Dead\": false, \"Pid\": 135120, \"ExitCode\": 0, \"Error\": \"\", \"StartedAt\": \"2026-09-07T17:26:50.550309556Z\", \"FinishedAt\": \"0001-01-01T00:00:00Z\"}, \"Image\": \"sha256:61fc8a896b0a4fbbbdc063bc4b0dbc25ce98e02b5050c24aeb7830ac02039b14\", \"ResolvConfPath\": \"/var/lib/docker/containers/9cc02e899ec9048a9a2f4125965f2f6226e69d783164059f761d10606dff6fb4/resolv.conf\", \"HostnamePath\": \"/var/lib/docker/containers/9cc02e899ec9048a9a2f4125965f2f6226e69d783164059f761d10606dff6fb4/hostname\", \"HostsPath\": \"/var/lib/docker/containers/9cc02e899ec9048a9a2f4125965f2f6226e69d783164059f761d10606dff6fb4/hosts\", \"LogPath\": \"/var/lib/docker/containers/9cc02e899ec9048a9a2f4125965f2f6226e69d783164059f761d10606dff6fb4/9cc02e899ec9048a9a2f4125965f2f6226e69d783164059f761d10606dff6fb4-json.log\", \"Name\": \"/routing-model-size-20260907-m14-a1\", \"RestartCount\": 0, \"Driver\": \"overlayfs\", \"Platform\": \"linux\", \"MountLabel\": \"\", \"ProcessLabel\": \"\", \"AppArmorProfile\": \"docker-default\", \"ExecIDs\": null, \"HostConfig\": {\"Binds\": [\"/home/surious-type/.cache/huggingface:/root/.cache/huggingface:rw\"], \"ContainerIDFile\": \"\", \"LogConfig\": {\"Type\": \"json-file\", \"Config\": {}}, \"NetworkMode\": \"bridge\", \"PortBindings\": {\"8000/tcp\": [{\"HostIp\": \"\", \"HostPort\": \"8000\"}]}, \"RestartPolicy\": {\"Name\": \"no\", \"MaximumRetryCount\": 0}, \"AutoRemove\": false, \"VolumeDriver\": \"\", \"VolumesFrom\": null, \"ConsoleSize\": [0, 0], \"CapAdd\": null, \"CapDrop\": null, \"CgroupnsMode\": \"private\", \"Dns\": null, \"DnsOptions\": [], \"DnsSearch\": [], \"ExtraHosts\": null, \"GroupAdd\": null, \"IpcMode\": \"host\", \"Cgroup\": \"\", \"Links\": null, \"OomScoreAdj\": 0, \"PidMode\": \"\", \"Privileged\": false, \"PublishAllPorts\": false, \"ReadonlyRootfs\": false, \"SecurityOpt\": [\"label=disable\"], \"UTSMode\": \"\", \"UsernsMode\": \"\", \"ShmSize\": 67108864, \"Runtime\": \"runc\", \"Isolation\": \"\", \"CpuShares\": 0, \"Memory\": 0, \"NanoCpus\": 0, \"CgroupParent\": \"\", \"BlkioWeight\": 0, \"BlkioWeightDevice\": [], \"BlkioDeviceReadBps\": [], \"BlkioDeviceWriteBps\": [], \"BlkioDeviceReadIOps\": [], \"BlkioDeviceWriteIOps\": [], \"CpuPeriod\": 0, \"CpuQuota\": 0, \"CpuRealtimePeriod\": 0, \"CpuRealtimeRuntime\": 0, \"CpusetCpus\": \"\", \"CpusetMems\": \"\", \"Devices\": [], \"DeviceCgroupRules\": null, \"DeviceRequests\": [{\"Driver\": \"\", \"Count\": -1, \"DeviceIDs\": null, \"Capabilities\": [[\"gpu\"]], \"Options\": {}}], \"MemoryReservation\": 0, \"MemorySwap\": 0, \"MemorySwappiness\": null, \"OomKillDisable\": null, \"PidsLimit\": null, \"Ulimits\": [], \"CpuCount\": 0, \"CpuPercent\": 0, \"IOMaximumIOps\": 0, \"IOMaximumBandwidth\": 0, \"MaskedPaths\": [\"/proc/acpi\", \"/proc/asound\", \"/proc/interrupts\", \"/proc/kcore\", \"/proc/keys\", \"/proc/latency_stats\", \"/proc/sched_debug\", \"/proc/scsi\", \"/proc/timer_list\", \"/proc/timer_stats\", \"/sys/devices/virtual/powercap\", \"/sys/firmware\"], \"ReadonlyPaths\": [\"/proc/bus\", \"/proc/fs\", \"/proc/irq\", \"/proc/sys\", \"/proc/sysrq-trigger\"]}, \"Storage\": {\"RootFS\": {\"Snapshot\": {\"Name\": \"overlayfs\"}}}, \"Mounts\": [{\"Type\": \"bind\", \"Source\": \"/home/surious-type/.cache/huggingface\", \"Destination\": \"/root/.cache/huggingface\", \"Mode\": \"rw\", \"RW\": true, \"Propagation\": \"rprivate\"}], \"Config\": {\"Hostname\": \"9cc02e899ec9\", \"Domainname\": \"\", \"User\": \"\", \"AttachStdin\": false, \"AttachStdout\": false, \"AttachStderr\": false, \"ExposedPorts\": {\"8000/tcp\": {}}, \"Tty\": false, \"OpenStdin\": false, \"StdinOnce\": false, \"Env\": [\"PATH=/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\", \"NVARCH=x86_64\", \"NVIDIA_REQUIRE_CUDA=cuda>=13.0 brand=unknown,driver>=535,driver<536 brand=grid,driver>=535,driver<536 brand=tesla,driver>=535,driver<536 brand=nvidia,driver>=535,driver<536 brand=quadro,driver>=535,driver<536 brand=quadrortx,driver>=535,driver<536 brand=nvidiartx,driver>=535,driver<536 brand=vapps,driver>=535,driver<536 brand=vpc,driver>=535,driver<536 brand=vcs,driver>=535,driver<536 brand=vws,driver>=535,driver<536 brand=cloudgaming,driver>=535,driver<536 brand=unknown,driver>=550,driver<551 brand=grid,driver>=550,driver<551 brand=tesla,driver>=550,driver<551 brand=nvidia,driver>=550,driver<551 brand=quadro,driver>=550,driver<551 brand=quadrortx,driver>=550,driver<551 brand=nvidiartx,driver>=550,driver<551 brand=vapps,driver>=550,driver<551 brand=vpc,driver>=550,driver<551 brand=vcs,driver>=550,driver<551 brand=vws,driver>=550,driver<551 brand=cloudgaming,driver>=550,driver<551 brand=unknown,driver>=565,driver<566 brand=grid,driver>=565,driver<566 brand=tesla,driver>=565,driver<566 brand=nvidia,driver>=565,driver<566 brand=quadro,driver>=565,driver<566 brand=quadrortx,driver>=565,driver<566 brand=nvidiartx,driver>=565,driver<566 brand=vapps,driver>=565,driver<566 brand=vpc,driver>=565,driver<566 brand=vcs,driver>=565,driver<566 brand=vws,driver>=565,driver<566 brand=cloudgaming,driver>=565,driver<566 brand=unknown,driver>=570,driver<571 brand=grid,driver>=570,driver<571 brand=tesla,driver>=570,driver<571 brand=nvidia,driver>=570,driver<571 brand=quadro,driver>=570,driver<571 brand=quadrortx,driver>=570,driver<571 brand=nvidiartx,driver>=570,driver<571 brand=vapps,driver>=570,driver<571 brand=vpc,driver>=570,driver<571 brand=vcs,driver>=570,driver<571 brand=vws,driver>=570,driver<571 brand=cloudgaming,driver>=570,driver<571 brand=unknown,driver>=575,driver<576 brand=grid,driver>=575,driver<576 brand=tesla,driver>=575,driver<576 brand=nvidia,driver>=575,driver<576 brand=quadro,driver>=575,driver<576 brand=quadrortx,driver>=575,driver<576 brand=nvidiartx,driver>=575,driver<576 brand=vapps,driver>=575,driver<576 brand=vpc,driver>=575,driver<576 brand=vcs,driver>=575,driver<576 brand=vws,driver>=575,driver<576 brand=cloudgaming,driver>=575,driver<576\", \"NV_CUDA_CUDART_VERSION=13.0.96-1\", \"CUDA_VERSION=13.0.2\", \"LD_LIBRARY_PATH=/usr/local/nvidia/lib64:/usr/local/cuda/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/local/cuda/lib64\", \"NVIDIA_VISIBLE_DEVICES=all\", \"NVIDIA_DRIVER_CAPABILITIES=compute,utility\", \"DEBIAN_FRONTEND=noninteractive\", \"UV_HTTP_TIMEOUT=500\", \"UV_INDEX_STRATEGY=unsafe-best-match\", \"UV_LINK_MODE=copy\", \"UV_PYTHON_INSTALL_DIR=/opt/uv/python\", \"UV_CACHE_DIR=/opt/uv/cache\", \"UV_OVERRIDE=/etc/uv-overrides.txt\", \"VLLM_ENABLE_CUDA_COMPATIBILITY=0\", \"TORCH_CUDA_ARCH_LIST=7.5 8.0 8.6 8.9 9.0 10.0 12.0\", \"VLLM_USAGE_SOURCE=production-docker-image\", \"VLLM_BUILD_COMMIT=2cf0a6915ce544dc493a0990f2ea38d81601128a\", \"VLLM_BUILD_PIPELINE=019d130e-464e-4ff7-b84b-492992c0c06b\", \"VLLM_BUILD_URL=https://buildkite.com/vllm/release-v2/builds/5584\", \"VLLM_IMAGE_TAG=vllm/vllm-openai:v0.28.0\"], \"Cmd\": [\"--model\", \"Qwen/Qwen3-14B-AWQ\", \"--served-model-name\", \"qwen3-14b\", \"--host\", \"0.0.0.0\", \"--port\", \"8000\", \"--quantization\", \"awq\", \"--gpu-memory-utilization\", \"0.85\", \"--cpu-offload-gb\", \"4\", \"--max-model-len\", \"2048\", \"--max-num-seqs\", \"1\", \"--generation-config\", \"vllm\", \"--default-chat-template-kwargs\", \"{\\\"enable_thinking\\\": false}\", \"--enforce-eager\"], \"Image\": \"vllm/vllm-openai@sha256:61fc8a896b0a4fbbbdc063bc4b0dbc25ce98e02b5050c24aeb7830ac02039b14\", \"Volumes\": null, \"WorkingDir\": \"/vllm-workspace\", \"Entrypoint\": [\"vllm\", \"serve\"], \"Labels\": {\"ai.vllm.build.commit\": \"2cf0a6915ce544dc493a0990f2ea38d81601128a\", \"ai.vllm.build.pipeline\": \"019d130e-464e-4ff7-b84b-492992c0c06b\", \"ai.vllm.build.url\": \"https://buildkite.com/vllm/release-v2/builds/5584\", \"ai.vllm.image.tag\": \"vllm/vllm-openai:v0.28.0\", \"maintainer\": \"NVIDIA CORPORATION <cudatools@nvidia.com>\", \"org.opencontainers.image.ref.name\": \"ubuntu\", \"org.opencontainers.image.revision\": \"2cf0a6915ce544dc493a0990f2ea38d81601128a\", \"org.opencontainers.image.source\": \"https://github.com/vllm-project/vllm\", \"org.opencontainers.image.url\": \"https://buildkite.com/vllm/release-v2/builds/5584\", \"org.opencontainers.image.version\": \"vllm/vllm-openai:v0.28.0\"}}, \"NetworkSettings\": {\"SandboxID\": \"3172ed91bf45367ab6954914af953b7b5a2a642ac64e9ec5a457ea57f457f979\", \"SandboxKey\": \"/var/run/docker/netns/3172ed91bf45\", \"Ports\": {\"8000/tcp\": [{\"HostIp\": \"0.0.0.0\", \"HostPort\": \"8000\"}, {\"HostIp\": \"::\", \"HostPort\": \"8000\"}]}, \"Networks\": {\"bridge\": {\"IPAMConfig\": null, \"Links\": null, \"Aliases\": null, \"DriverOpts\": null, \"GwPriority\": 0, \"NetworkID\": \"9a026d53e4824a8fdd1500058b664b19bda860b9938cb75fe12f9b3addd2bfc2\", \"EndpointID\": \"5028ac930ac5fcf7f1aa315ca822c5b91f4fd0c49a653479bb7f150d385b655a\", \"Gateway\": \"172.17.0.1\", \"IPAddress\": \"172.17.0.2\", \"MacAddress\": \"fe:06:a1:cc:52:74\", \"IPPrefixLen\": 16, \"IPv6Gateway\": \"\", \"GlobalIPv6Address\": \"\", \"GlobalIPv6PrefixLen\": 0, \"DNSNames\": null}}}, \"ImageManifestDescriptor\": {\"mediaType\": \"application/vnd.docker.distribution.manifest.v2+json\", \"digest\": \"sha256:2286e8533ca8b6bc777594bae30524f1426ba46ca21797524e06df6a94b06635\", \"size\": 7025, \"platform\": {\"architecture\": \"amd64\", \"os\": \"linux\"}}}, \"nvidia_smi_before\": \"Mon Sep  7 20:26:50 2026       \\n+-----------------------------------------------------------------------------------------+\\n| NVIDIA-SMI 595.84                 Driver Version: 595.84         CUDA Version: 13.2     |\\n+-----------------------------------------+------------------------+----------------------+\\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\\n|                                         |                        |               MIG M. |\\n|=========================================+========================+======================|\\n|   0  NVIDIA GeForce RTX 3060 Ti     Off |   00000000:08:00.0  On |                  N/A |\\n| 90%   74C    P0            105W /  200W |     512MiB /   8192MiB |      7%      Default |\\n|                                         |                        |                  N/A |\\n+-----------------------------------------+------------------------+----------------------+\\n\\n+-----------------------------------------------------------------------------------------+\\n| Processes:                                                                              |\\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\\n|        ID   ID                                                               Usage      |\\n|=========================================================================================|\\n|    0   N/A  N/A          121302      G   /usr/bin/gnome-shell                    188MiB |\\n|    0   N/A  N/A          123550    C+G   ...rack-uuid=3190708988185955192         62MiB |\\n|    0   N/A  N/A          123553      G   /usr/bin/Xwayland                         3MiB |\\n|    0   N/A  N/A          123818    C+G   ptyxis                                   24MiB |\\n|    0   N/A  N/A          124771      G   ...rack-uuid=3190708988185955192         92MiB |\\n+-----------------------------------------------------------------------------------------+\\n\", \"nvidia_smi_after_load\": \"Mon Sep  7 20:36:02 2026       \\n+-----------------------------------------------------------------------------------------+\\n| NVIDIA-SMI 595.84                 Driver Version: 595.84         CUDA Version: 13.2     |\\n+-----------------------------------------+------------------------+----------------------+\\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\\n|                                         |                        |               MIG M. |\\n|=========================================+========================+======================|\\n|   0  NVIDIA GeForce RTX 3060 Ti     Off |   00000000:08:00.0  On |                  N/A |\\n| 33%   58C    P2             61W /  200W |    7084MiB /   8192MiB |      0%      Default |\\n|                                         |                        |                  N/A |\\n+-----------------------------------------+------------------------+----------------------+\\n\\n+-----------------------------------------------------------------------------------------+\\n| Processes:                                                                              |\\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\\n|        ID   ID                                                               Usage      |\\n|=========================================================================================|\\n|    0   N/A  N/A          121302      G   /usr/bin/gnome-shell                    188MiB |\\n|    0   N/A  N/A          123550    C+G   ...rack-uuid=3190708988185955192         62MiB |\\n|    0   N/A  N/A          123553      G   /usr/bin/Xwayland                         3MiB |\\n|    0   N/A  N/A          123818    C+G   ptyxis                                   24MiB |\\n|    0   N/A  N/A          124771      G   ...rack-uuid=3190708988185955192         87MiB |\\n|    0   N/A  N/A          135647      C   VLLM::EngineCore                       6564MiB |\\n+-----------------------------------------------------------------------------------------+\\n\"}",
+    "created_at_utc": "2026-09-07T17:36:07.907185+00:00"
+  },
+  "rows": [
+    {
+      "condition": "P1",
+      "mode": "reason-route",
+      "id": "case_001",
+      "difficulty": "easy",
+      "message": "Пишет ошибку 403.",
+      "expected_route": "CONTINUE",
+      "predicted_route": "CONTINUE",
+      "correct": true,
+      "reason": "Новое сообщение предоставляет информацию об ошибке, которая связана с текущей задачей ассистента — уточнением проблемы входа в систему. Это продолжение текущей задачи.",
+      "prompt_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "enum_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "structured_response": "{\"reason\": \"Новое сообщение предоставляет информацию об ошибке, которая связана с текущей задачей ассистента — уточнением проблемы входа в систему. Это продолжение текущей задачи.\", \"route\": \"CONTINUE\"}",
+      "prompt_tokens": 350,
+      "completion_tokens": 60,
+      "error": null,
+      "request_latency_sec": 11.962167433994182
+    },
+    {
+      "condition": "P1",
+      "mode": "reason-route",
+      "id": "case_014",
+      "difficulty": "medium",
+      "message": "А где изменить email в профиле?",
+      "expected_route": "NEW",
+      "predicted_route": "NEW",
+      "correct": true,
+      "reason": "Новое сообщение задаёт независимый вопрос о изменении email в профиле, не связан с текущей задачей проверки статуса посылки.",
+      "prompt_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "enum_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "structured_response": "{\"reason\": \"Новое сообщение задаёт независимый вопрос о изменении email в профиле, не связан с текущей задачей проверки статуса посылки.\", \"route\": \"NEW\"}",
+      "prompt_tokens": 348,
+      "completion_tokens": 56,
+      "error": null,
+      "request_latency_sec": 10.648334796998824
+    },
+    {
+      "condition": "P1",
+      "mode": "reason-route",
+      "id": "case_020",
+      "difficulty": "medium",
+      "message": "А как назначить роль аналитика Иванову?",
+      "expected_route": "NEW",
+      "predicted_route": "CONTINUE",
+      "correct": false,
+      "reason": "Новое сообщение задаёт вопрос о процессе назначения роли аналитика, что является логическим продолжением предыдущего вопроса о правах роли аналитика.",
+      "prompt_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "enum_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "structured_response": "{\"reason\": \"Новое сообщение задаёт вопрос о процессе назначения роли аналитика, что является логическим продолжением предыдущего вопроса о правах роли аналитика.\", \"route\": \"CONTINUE\"}",
+      "prompt_tokens": 365,
+      "completion_tokens": 57,
+      "error": null,
+      "request_latency_sec": 10.830813264998142
+    },
+    {
+      "condition": "P1",
+      "mode": "reason-route",
+      "id": "case_021",
+      "difficulty": "medium",
+      "message": "Сформируй новый отчёт по сотрудникам.",
+      "expected_route": "NEW",
+      "predicted_route": "NEW",
+      "correct": true,
+      "reason": "Новое сообщение представляет собой новую самостоятельную задачу — создание отчёта по сотрудникам, не связанную с предыдущим вопросом о правах роли аналитика.",
+      "prompt_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "enum_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "structured_response": "{\"reason\": \"Новое сообщение представляет собой новую самостоятельную задачу — создание отчёта по сотрудникам, не связанную с предыдущим вопросом о правах роли аналитика.\", \"route\": \"NEW\"}",
+      "prompt_tokens": 362,
+      "completion_tokens": 58,
+      "error": null,
+      "request_latency_sec": 11.009672388005129
+    },
+    {
+      "condition": "P1",
+      "mode": "reason-route",
+      "id": "case_023",
+      "difficulty": "hard",
+      "message": "Да. А если попробовать через VPN, это может помочь?",
+      "expected_route": "CONTINUE",
+      "predicted_route": "CONTINUE",
+      "correct": true,
+      "reason": "Новое сообщение отвечает на предыдущий вопрос ассистента и предлагает альтернативный способ решения проблемы, что продолжает текущую задачу диалога.",
+      "prompt_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "enum_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "structured_response": "{\"reason\": \"Новое сообщение отвечает на предыдущий вопрос ассистента и предлагает альтернативный способ решения проблемы, что продолжает текущую задачу диалога.\", \"route\": \"CONTINUE\"}",
+      "prompt_tokens": 359,
+      "completion_tokens": 58,
+      "error": null,
+      "request_latency_sec": 11.010022272996139
+    },
+    {
+      "condition": "P1",
+      "mode": "reason-route",
+      "id": "case_024",
+      "difficulty": "hard",
+      "message": "Спасибо, вошёл. А уведомления как отключить?",
+      "expected_route": "NEW",
+      "predicted_route": "NEW",
+      "correct": true,
+      "reason": "Пользователь завершил задачу по входу в аккаунт и задал новый, независимый вопрос о настройке уведомлений.",
+      "prompt_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "enum_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "structured_response": "{\"reason\": \"Пользователь завершил задачу по входу в аккаунт и задал новый, независимый вопрос о настройке уведомлений.\", \"route\": \"NEW\"}",
+      "prompt_tokens": 361,
+      "completion_tokens": 54,
+      "error": null,
+      "request_latency_sec": 10.311874193001131
+    },
+    {
+      "condition": "P1",
+      "mode": "reason-route",
+      "id": "case_029",
+      "difficulty": "hard",
+      "message": "Убери Санкт-Петербург и сравни Москву с Казанью за тот же период.",
+      "expected_route": "CONTINUE",
+      "predicted_route": "CONTINUE",
+      "correct": true,
+      "reason": "Новое сообщение изменяет параметры текущей задачи, убирая Санкт-Петербург и добавляя Казань для сравнения с Москвой за тот же период. Это уточнение текущей задачи.",
+      "prompt_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "enum_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "structured_response": "{\"reason\": \"Новое сообщение изменяет параметры текущей задачи, убирая Санкт-Петербург и добавляя Казань для сравнения с Москвой за тот же период. Это уточнение текущей задачи.\", \"route\": \"CONTINUE\"}",
+      "prompt_tokens": 371,
+      "completion_tokens": 66,
+      "error": null,
+      "request_latency_sec": 12.601808014995186
+    },
+    {
+      "condition": "P2",
+      "mode": "reason-route",
+      "id": "case_001",
+      "difficulty": "easy",
+      "message": "Пишет ошибку 403.",
+      "expected_route": "CONTINUE",
+      "predicted_route": "CONTINUE",
+      "correct": true,
+      "reason": "Пользователь предоставил информацию об ошибке 403, что является продолжением текущей задачи по устранению проблемы входа в систему.",
+      "prompt_route_order": "[\"NEW\", \"CONTINUE\"]",
+      "enum_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "structured_response": "{\"reason\": \"Пользователь предоставил информацию об ошибке 403, что является продолжением текущей задачи по устранению проблемы входа в систему.\", \"route\": \"CONTINUE\"}",
+      "prompt_tokens": 350,
+      "completion_tokens": 49,
+      "error": null,
+      "request_latency_sec": 9.23878643399803
+    },
+    {
+      "condition": "P2",
+      "mode": "reason-route",
+      "id": "case_014",
+      "difficulty": "medium",
+      "message": "А где изменить email в профиле?",
+      "expected_route": "NEW",
+      "predicted_route": "NEW",
+      "correct": true,
+      "reason": "Новое сообщение задаёт независимый вопрос о изменении email в профиле, не связан с текущей задачей по проверке статуса посылки.",
+      "prompt_route_order": "[\"NEW\", \"CONTINUE\"]",
+      "enum_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "structured_response": "{\"reason\": \"Новое сообщение задаёт независимый вопрос о изменении email в профиле, не связан с текущей задачей по проверке статуса посылки.\", \"route\": \"NEW\"}",
+      "prompt_tokens": 348,
+      "completion_tokens": 57,
+      "error": null,
+      "request_latency_sec": 10.649325929000042
+    },
+    {
+      "condition": "P2",
+      "mode": "reason-route",
+      "id": "case_020",
+      "difficulty": "medium",
+      "message": "А как назначить роль аналитика Иванову?",
+      "expected_route": "NEW",
+      "predicted_route": "CONTINUE",
+      "correct": false,
+      "reason": "Новое сообщение задаёт вопрос о процессе назначения роли аналитика, что является логическим продолжением предыдущего вопроса о правах роли аналитика. Это связано с текущей задачей и требует дополнительной информации или действий.",
+      "prompt_route_order": "[\"NEW\", \"CONTINUE\"]",
+      "enum_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "structured_response": "{\"reason\": \"Новое сообщение задаёт вопрос о процессе назначения роли аналитика, что является логическим продолжением предыдущего вопроса о правах роли аналитика. Это связано с текущей задачей и требует дополнительной информации или действий.\", \"route\": \"CONTINUE\"}",
+      "prompt_tokens": 365,
+      "completion_tokens": 76,
+      "error": null,
+      "request_latency_sec": 14.015735448003397
+    },
+    {
+      "condition": "P2",
+      "mode": "reason-route",
+      "id": "case_021",
+      "difficulty": "medium",
+      "message": "Сформируй новый отчёт по сотрудникам.",
+      "expected_route": "NEW",
+      "predicted_route": "NEW",
+      "correct": true,
+      "reason": "Новое сообщение представляет собой самостоятельную задачу — создание нового отчёта, что не связано с предыдущим вопросом о правах роли аналитика.",
+      "prompt_route_order": "[\"NEW\", \"CONTINUE\"]",
+      "enum_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "structured_response": "{\"reason\": \"Новое сообщение представляет собой самостоятельную задачу — создание нового отчёта, что не связано с предыдущим вопросом о правах роли аналитика.\", \"route\": \"NEW\"}",
+      "prompt_tokens": 362,
+      "completion_tokens": 55,
+      "error": null,
+      "request_latency_sec": 10.296331391997228
+    },
+    {
+      "condition": "P2",
+      "mode": "reason-route",
+      "id": "case_023",
+      "difficulty": "hard",
+      "message": "Да. А если попробовать через VPN, это может помочь?",
+      "expected_route": "CONTINUE",
+      "predicted_route": "CONTINUE",
+      "correct": true,
+      "reason": "Новое сообщение задаёт вопрос, связанный с текущей задачей авторизации и предлагает альтернативный способ решения проблемы (VPN), что продолжает текущую задачу.",
+      "prompt_route_order": "[\"NEW\", \"CONTINUE\"]",
+      "enum_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "structured_response": "{\"reason\": \"Новое сообщение задаёт вопрос, связанный с текущей задачей авторизации и предлагает альтернативный способ решения проблемы (VPN), что продолжает текущую задачу.\", \"route\": \"CONTINUE\"}",
+      "prompt_tokens": 359,
+      "completion_tokens": 57,
+      "error": null,
+      "request_latency_sec": 10.66343799700553
+    },
+    {
+      "condition": "P2",
+      "mode": "reason-route",
+      "id": "case_024",
+      "difficulty": "hard",
+      "message": "Спасибо, вошёл. А уведомления как отключить?",
+      "expected_route": "NEW",
+      "predicted_route": "NEW",
+      "correct": true,
+      "reason": "Пользователь завершил предыдущую задачу (вход в аккаунт) и задал новый независимый запрос (отключение уведомлений), который не связан с предыдущей задачей.",
+      "prompt_route_order": "[\"NEW\", \"CONTINUE\"]",
+      "enum_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "structured_response": "{\"reason\": \"Пользователь завершил предыдущую задачу (вход в аккаунт) и задал новый независимый запрос (отключение уведомлений), который не связан с предыдущей задачей.\", \"route\": \"NEW\"}",
+      "prompt_tokens": 361,
+      "completion_tokens": 70,
+      "error": null,
+      "request_latency_sec": 12.953103617001034
+    },
+    {
+      "condition": "P2",
+      "mode": "reason-route",
+      "id": "case_029",
+      "difficulty": "hard",
+      "message": "Убери Санкт-Петербург и сравни Москву с Казанью за тот же период.",
+      "expected_route": "CONTINUE",
+      "predicted_route": "CONTINUE",
+      "correct": true,
+      "reason": "Пользователь меняет параметры текущей задачи, убирая Санкт-Петербург и добавляя Казань для сравнения с Москвой за тот же период. Это изменение параметров текущей задачи.",
+      "prompt_route_order": "[\"NEW\", \"CONTINUE\"]",
+      "enum_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "structured_response": "{\"reason\": \"Пользователь меняет параметры текущей задачи, убирая Санкт-Петербург и добавляя Казань для сравнения с Москвой за тот же период. Это изменение параметров текущей задачи.\", \"route\": \"CONTINUE\"}",
+      "prompt_tokens": 371,
+      "completion_tokens": 64,
+      "error": null,
+      "request_latency_sec": 11.895185061999655
+    }
+  ],
+  "raw_responses": [
+    {
+      "condition": "P1",
+      "mode": "reason-route",
+      "id": "case_001",
+      "prompt_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "enum_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "payload": {
+        "model": "qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате. Сначала кратко сформулируй основание выбора в поле reason, затем укажи выбранный маршрут в поле route."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Я не могу войти в систему.\nАссистент: Какая ошибка появляется при входе?\n\nНОВОЕ СООБЩЕНИЕ:\nПишет ошибку 403.\n\nДОСТУПНЫЕ МАРШРУТЫ:\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос.\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут."
+          }
+        ],
+        "temperature": 0,
+        "seed": 0,
+        "max_completion_tokens": 128,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "CONTINUE",
+                    "NEW"
+                  ]
+                }
+              },
+              "required": [
+                "reason",
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-ae50f1ecfb5b7615",
+        "object": "chat.completion",
+        "created": 1788802567,
+        "model": "qwen3-14b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"reason\": \"Новое сообщение предоставляет информацию об ошибке, которая связана с текущей задачей ассистента — уточнением проблемы входа в систему. Это продолжение текущей задачи.\",\n  \"route\": \"CONTINUE\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-9d35de0d",
+        "usage": {
+          "prompt_tokens": 350,
+          "total_tokens": 410,
+          "completion_tokens": 60,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "reason": "Новое сообщение предоставляет информацию об ошибке, которая связана с текущей задачей ассистента — уточнением проблемы входа в систему. Это продолжение текущей задачи.",
+        "route": "CONTINUE"
+      }
+    },
+    {
+      "condition": "P1",
+      "mode": "reason-route",
+      "id": "case_014",
+      "prompt_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "enum_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "payload": {
+        "model": "qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате. Сначала кратко сформулируй основание выбора в поле reason, затем укажи выбранный маршрут в поле route."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Моя посылка задерживается.\nАссистент: Сейчас проверю статус заказа.\n\nНОВОЕ СООБЩЕНИЕ:\nА где изменить email в профиле?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос.\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут."
+          }
+        ],
+        "temperature": 0,
+        "seed": 0,
+        "max_completion_tokens": 128,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "CONTINUE",
+                    "NEW"
+                  ]
+                }
+              },
+              "required": [
+                "reason",
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-bee198df3871d002",
+        "object": "chat.completion",
+        "created": 1788802579,
+        "model": "qwen3-14b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"reason\": \"Новое сообщение задаёт независимый вопрос о изменении email в профиле, не связан с текущей задачей проверки статуса посылки.\",\n  \"route\": \"NEW\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-9d35de0d",
+        "usage": {
+          "prompt_tokens": 348,
+          "total_tokens": 404,
+          "completion_tokens": 56,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "reason": "Новое сообщение задаёт независимый вопрос о изменении email в профиле, не связан с текущей задачей проверки статуса посылки.",
+        "route": "NEW"
+      }
+    },
+    {
+      "condition": "P1",
+      "mode": "reason-route",
+      "id": "case_020",
+      "prompt_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "enum_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "payload": {
+        "model": "qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате. Сначала кратко сформулируй основание выбора в поле reason, затем укажи выбранный маршрут в поле route."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Какие права есть у роли аналитика?\nАссистент: Аналитик может просматривать отчёты и доступные ему наборы данных.\n\nНОВОЕ СООБЩЕНИЕ:\nА как назначить роль аналитика Иванову?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос.\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут."
+          }
+        ],
+        "temperature": 0,
+        "seed": 0,
+        "max_completion_tokens": 128,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "CONTINUE",
+                    "NEW"
+                  ]
+                }
+              },
+              "required": [
+                "reason",
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-b8c0caed8a5dae44",
+        "object": "chat.completion",
+        "created": 1788802590,
+        "model": "qwen3-14b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"reason\": \"Новое сообщение задаёт вопрос о процессе назначения роли аналитика, что является логическим продолжением предыдущего вопроса о правах роли аналитика.\",\n  \"route\": \"CONTINUE\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-9d35de0d",
+        "usage": {
+          "prompt_tokens": 365,
+          "total_tokens": 422,
+          "completion_tokens": 57,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "reason": "Новое сообщение задаёт вопрос о процессе назначения роли аналитика, что является логическим продолжением предыдущего вопроса о правах роли аналитика.",
+        "route": "CONTINUE"
+      }
+    },
+    {
+      "condition": "P1",
+      "mode": "reason-route",
+      "id": "case_021",
+      "prompt_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "enum_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "payload": {
+        "model": "qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате. Сначала кратко сформулируй основание выбора в поле reason, затем укажи выбранный маршрут в поле route."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Какие права есть у роли аналитика?\nАссистент: Аналитик может просматривать отчёты и доступные ему наборы данных.\n\nНОВОЕ СООБЩЕНИЕ:\nСформируй новый отчёт по сотрудникам.\n\nДОСТУПНЫЕ МАРШРУТЫ:\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос.\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут."
+          }
+        ],
+        "temperature": 0,
+        "seed": 0,
+        "max_completion_tokens": 128,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "CONTINUE",
+                    "NEW"
+                  ]
+                }
+              },
+              "required": [
+                "reason",
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-b0d4e7995f3271fe",
+        "object": "chat.completion",
+        "created": 1788802601,
+        "model": "qwen3-14b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"reason\": \"Новое сообщение представляет собой новую самостоятельную задачу — создание отчёта по сотрудникам, не связанную с предыдущим вопросом о правах роли аналитика.\",\n  \"route\": \"NEW\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-9d35de0d",
+        "usage": {
+          "prompt_tokens": 362,
+          "total_tokens": 420,
+          "completion_tokens": 58,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "reason": "Новое сообщение представляет собой новую самостоятельную задачу — создание отчёта по сотрудникам, не связанную с предыдущим вопросом о правах роли аналитика.",
+        "route": "NEW"
+      }
+    },
+    {
+      "condition": "P1",
+      "mode": "reason-route",
+      "id": "case_023",
+      "prompt_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "enum_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "payload": {
+        "model": "qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате. Сначала кратко сформулируй основание выбора в поле reason, затем укажи выбранный маршрут в поле route."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Авторизация не работает из домашней сети.\nАссистент: Ошибка возникает сразу после ввода пароля?\n\nНОВОЕ СООБЩЕНИЕ:\nДа. А если попробовать через VPN, это может помочь?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос.\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут."
+          }
+        ],
+        "temperature": 0,
+        "seed": 0,
+        "max_completion_tokens": 128,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "CONTINUE",
+                    "NEW"
+                  ]
+                }
+              },
+              "required": [
+                "reason",
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-ab9a5afac9d31a4b",
+        "object": "chat.completion",
+        "created": 1788802612,
+        "model": "qwen3-14b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"reason\": \"Новое сообщение отвечает на предыдущий вопрос ассистента и предлагает альтернативный способ решения проблемы, что продолжает текущую задачу диалога.\",\n  \"route\": \"CONTINUE\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-9d35de0d",
+        "usage": {
+          "prompt_tokens": 359,
+          "total_tokens": 417,
+          "completion_tokens": 58,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "reason": "Новое сообщение отвечает на предыдущий вопрос ассистента и предлагает альтернативный способ решения проблемы, что продолжает текущую задачу диалога.",
+        "route": "CONTINUE"
+      }
+    },
+    {
+      "condition": "P1",
+      "mode": "reason-route",
+      "id": "case_024",
+      "prompt_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "enum_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "payload": {
+        "model": "qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате. Сначала кратко сформулируй основание выбора в поле reason, затем укажи выбранный маршрут в поле route."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Не получается войти в аккаунт.\nАссистент: Попробуйте восстановить пароль.\n\nНОВОЕ СООБЩЕНИЕ:\nСпасибо, вошёл. А уведомления как отключить?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос.\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут."
+          }
+        ],
+        "temperature": 0,
+        "seed": 0,
+        "max_completion_tokens": 128,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "CONTINUE",
+                    "NEW"
+                  ]
+                }
+              },
+              "required": [
+                "reason",
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-af64a32016aea855",
+        "object": "chat.completion",
+        "created": 1788802623,
+        "model": "qwen3-14b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"reason\": \"Пользователь завершил задачу по входу в аккаунт и задал новый, независимый вопрос о настройке уведомлений.\",\n  \"route\": \"NEW\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-9d35de0d",
+        "usage": {
+          "prompt_tokens": 361,
+          "total_tokens": 415,
+          "completion_tokens": 54,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "reason": "Пользователь завершил задачу по входу в аккаунт и задал новый, независимый вопрос о настройке уведомлений.",
+        "route": "NEW"
+      }
+    },
+    {
+      "condition": "P1",
+      "mode": "reason-route",
+      "id": "case_029",
+      "prompt_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "enum_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "payload": {
+        "model": "qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате. Сначала кратко сформулируй основание выбора в поле reason, затем укажи выбранный маршрут в поле route."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Нужно сравнить продажи Москвы и Санкт-Петербурга за август.\nАссистент: Сравнение готово: Москва выше на 12%.\n\nНОВОЕ СООБЩЕНИЕ:\nУбери Санкт-Петербург и сравни Москву с Казанью за тот же период.\n\nДОСТУПНЫЕ МАРШРУТЫ:\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос.\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут."
+          }
+        ],
+        "temperature": 0,
+        "seed": 0,
+        "max_completion_tokens": 128,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "CONTINUE",
+                    "NEW"
+                  ]
+                }
+              },
+              "required": [
+                "reason",
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-8a9871f3e288103f",
+        "object": "chat.completion",
+        "created": 1788802633,
+        "model": "qwen3-14b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"reason\": \"Новое сообщение изменяет параметры текущей задачи, убирая Санкт-Петербург и добавляя Казань для сравнения с Москвой за тот же период. Это уточнение текущей задачи.\",\n  \"route\": \"CONTINUE\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-9d35de0d",
+        "usage": {
+          "prompt_tokens": 371,
+          "total_tokens": 437,
+          "completion_tokens": 66,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "reason": "Новое сообщение изменяет параметры текущей задачи, убирая Санкт-Петербург и добавляя Казань для сравнения с Москвой за тот же период. Это уточнение текущей задачи.",
+        "route": "CONTINUE"
+      }
+    },
+    {
+      "condition": "P2",
+      "mode": "reason-route",
+      "id": "case_001",
+      "prompt_route_order": [
+        "NEW",
+        "CONTINUE"
+      ],
+      "enum_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "payload": {
+        "model": "qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате. Сначала кратко сформулируй основание выбора в поле reason, затем укажи выбранный маршрут в поле route."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Я не могу войти в систему.\nАссистент: Какая ошибка появляется при входе?\n\nНОВОЕ СООБЩЕНИЕ:\nПишет ошибку 403.\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0,
+        "seed": 0,
+        "max_completion_tokens": 128,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "CONTINUE",
+                    "NEW"
+                  ]
+                }
+              },
+              "required": [
+                "reason",
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-a1ebe4845863e31b",
+        "object": "chat.completion",
+        "created": 1788802646,
+        "model": "qwen3-14b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"reason\": \"Пользователь предоставил информацию об ошибке 403, что является продолжением текущей задачи по устранению проблемы входа в систему.\",\n  \"route\": \"CONTINUE\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-9d35de0d",
+        "usage": {
+          "prompt_tokens": 350,
+          "total_tokens": 399,
+          "completion_tokens": 49,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "reason": "Пользователь предоставил информацию об ошибке 403, что является продолжением текущей задачи по устранению проблемы входа в систему.",
+        "route": "CONTINUE"
+      }
+    },
+    {
+      "condition": "P2",
+      "mode": "reason-route",
+      "id": "case_014",
+      "prompt_route_order": [
+        "NEW",
+        "CONTINUE"
+      ],
+      "enum_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "payload": {
+        "model": "qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате. Сначала кратко сформулируй основание выбора в поле reason, затем укажи выбранный маршрут в поле route."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Моя посылка задерживается.\nАссистент: Сейчас проверю статус заказа.\n\nНОВОЕ СООБЩЕНИЕ:\nА где изменить email в профиле?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0,
+        "seed": 0,
+        "max_completion_tokens": 128,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "CONTINUE",
+                    "NEW"
+                  ]
+                }
+              },
+              "required": [
+                "reason",
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-84912db6dbd0e03a",
+        "object": "chat.completion",
+        "created": 1788802655,
+        "model": "qwen3-14b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"reason\": \"Новое сообщение задаёт независимый вопрос о изменении email в профиле, не связан с текущей задачей по проверке статуса посылки.\",\n  \"route\": \"NEW\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-9d35de0d",
+        "usage": {
+          "prompt_tokens": 348,
+          "total_tokens": 405,
+          "completion_tokens": 57,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "reason": "Новое сообщение задаёт независимый вопрос о изменении email в профиле, не связан с текущей задачей по проверке статуса посылки.",
+        "route": "NEW"
+      }
+    },
+    {
+      "condition": "P2",
+      "mode": "reason-route",
+      "id": "case_020",
+      "prompt_route_order": [
+        "NEW",
+        "CONTINUE"
+      ],
+      "enum_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "payload": {
+        "model": "qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате. Сначала кратко сформулируй основание выбора в поле reason, затем укажи выбранный маршрут в поле route."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Какие права есть у роли аналитика?\nАссистент: Аналитик может просматривать отчёты и доступные ему наборы данных.\n\nНОВОЕ СООБЩЕНИЕ:\nА как назначить роль аналитика Иванову?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0,
+        "seed": 0,
+        "max_completion_tokens": 128,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "CONTINUE",
+                    "NEW"
+                  ]
+                }
+              },
+              "required": [
+                "reason",
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-8d1786dffee5fc68",
+        "object": "chat.completion",
+        "created": 1788802666,
+        "model": "qwen3-14b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"reason\": \"Новое сообщение задаёт вопрос о процессе назначения роли аналитика, что является логическим продолжением предыдущего вопроса о правах роли аналитика. Это связано с текущей задачей и требует дополнительной информации или действий.\",\n  \"route\": \"CONTINUE\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-9d35de0d",
+        "usage": {
+          "prompt_tokens": 365,
+          "total_tokens": 441,
+          "completion_tokens": 76,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "reason": "Новое сообщение задаёт вопрос о процессе назначения роли аналитика, что является логическим продолжением предыдущего вопроса о правах роли аналитика. Это связано с текущей задачей и требует дополнительной информации или действий.",
+        "route": "CONTINUE"
+      }
+    },
+    {
+      "condition": "P2",
+      "mode": "reason-route",
+      "id": "case_021",
+      "prompt_route_order": [
+        "NEW",
+        "CONTINUE"
+      ],
+      "enum_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "payload": {
+        "model": "qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате. Сначала кратко сформулируй основание выбора в поле reason, затем укажи выбранный маршрут в поле route."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Какие права есть у роли аналитика?\nАссистент: Аналитик может просматривать отчёты и доступные ему наборы данных.\n\nНОВОЕ СООБЩЕНИЕ:\nСформируй новый отчёт по сотрудникам.\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0,
+        "seed": 0,
+        "max_completion_tokens": 128,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "CONTINUE",
+                    "NEW"
+                  ]
+                }
+              },
+              "required": [
+                "reason",
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-a86e80223401325e",
+        "object": "chat.completion",
+        "created": 1788802680,
+        "model": "qwen3-14b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"reason\": \"Новое сообщение представляет собой самостоятельную задачу — создание нового отчёта, что не связано с предыдущим вопросом о правах роли аналитика.\",\n  \"route\": \"NEW\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-9d35de0d",
+        "usage": {
+          "prompt_tokens": 362,
+          "total_tokens": 417,
+          "completion_tokens": 55,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "reason": "Новое сообщение представляет собой самостоятельную задачу — создание нового отчёта, что не связано с предыдущим вопросом о правах роли аналитика.",
+        "route": "NEW"
+      }
+    },
+    {
+      "condition": "P2",
+      "mode": "reason-route",
+      "id": "case_023",
+      "prompt_route_order": [
+        "NEW",
+        "CONTINUE"
+      ],
+      "enum_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "payload": {
+        "model": "qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате. Сначала кратко сформулируй основание выбора в поле reason, затем укажи выбранный маршрут в поле route."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Авторизация не работает из домашней сети.\nАссистент: Ошибка возникает сразу после ввода пароля?\n\nНОВОЕ СООБЩЕНИЕ:\nДа. А если попробовать через VPN, это может помочь?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0,
+        "seed": 0,
+        "max_completion_tokens": 128,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "CONTINUE",
+                    "NEW"
+                  ]
+                }
+              },
+              "required": [
+                "reason",
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-951a16e4728fcefe",
+        "object": "chat.completion",
+        "created": 1788802690,
+        "model": "qwen3-14b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"reason\": \"Новое сообщение задаёт вопрос, связанный с текущей задачей авторизации и предлагает альтернативный способ решения проблемы (VPN), что продолжает текущую задачу.\",\n  \"route\": \"CONTINUE\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-9d35de0d",
+        "usage": {
+          "prompt_tokens": 359,
+          "total_tokens": 416,
+          "completion_tokens": 57,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "reason": "Новое сообщение задаёт вопрос, связанный с текущей задачей авторизации и предлагает альтернативный способ решения проблемы (VPN), что продолжает текущую задачу.",
+        "route": "CONTINUE"
+      }
+    },
+    {
+      "condition": "P2",
+      "mode": "reason-route",
+      "id": "case_024",
+      "prompt_route_order": [
+        "NEW",
+        "CONTINUE"
+      ],
+      "enum_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "payload": {
+        "model": "qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате. Сначала кратко сформулируй основание выбора в поле reason, затем укажи выбранный маршрут в поле route."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Не получается войти в аккаунт.\nАссистент: Попробуйте восстановить пароль.\n\nНОВОЕ СООБЩЕНИЕ:\nСпасибо, вошёл. А уведомления как отключить?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0,
+        "seed": 0,
+        "max_completion_tokens": 128,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "CONTINUE",
+                    "NEW"
+                  ]
+                }
+              },
+              "required": [
+                "reason",
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-ace5fdc0e0511d9a",
+        "object": "chat.completion",
+        "created": 1788802701,
+        "model": "qwen3-14b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"reason\": \"Пользователь завершил предыдущую задачу (вход в аккаунт) и задал новый независимый запрос (отключение уведомлений), который не связан с предыдущей задачей.\",\n  \"route\": \"NEW\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-9d35de0d",
+        "usage": {
+          "prompt_tokens": 361,
+          "total_tokens": 431,
+          "completion_tokens": 70,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "reason": "Пользователь завершил предыдущую задачу (вход в аккаунт) и задал новый независимый запрос (отключение уведомлений), который не связан с предыдущей задачей.",
+        "route": "NEW"
+      }
+    },
+    {
+      "condition": "P2",
+      "mode": "reason-route",
+      "id": "case_029",
+      "prompt_route_order": [
+        "NEW",
+        "CONTINUE"
+      ],
+      "enum_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "payload": {
+        "model": "qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате. Сначала кратко сформулируй основание выбора в поле reason, затем укажи выбранный маршрут в поле route."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Нужно сравнить продажи Москвы и Санкт-Петербурга за август.\nАссистент: Сравнение готово: Москва выше на 12%.\n\nНОВОЕ СООБЩЕНИЕ:\nУбери Санкт-Петербург и сравни Москву с Казанью за тот же период.\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0,
+        "seed": 0,
+        "max_completion_tokens": 128,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "CONTINUE",
+                    "NEW"
+                  ]
+                }
+              },
+              "required": [
+                "reason",
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-aa537f0282bcd09c",
+        "object": "chat.completion",
+        "created": 1788802714,
+        "model": "qwen3-14b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"reason\": \"Пользователь меняет параметры текущей задачи, убирая Санкт-Петербург и добавляя Казань для сравнения с Москвой за тот же период. Это изменение параметров текущей задачи.\",\n  \"route\": \"CONTINUE\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-9d35de0d",
+        "usage": {
+          "prompt_tokens": 371,
+          "total_tokens": 435,
+          "completion_tokens": 64,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "reason": "Пользователь меняет параметры текущей задачи, убирая Санкт-Петербург и добавляя Казань для сравнения с Москвой за тот же период. Это изменение параметров текущей задачи.",
+        "route": "CONTINUE"
+      }
+    }
+  ]
+}

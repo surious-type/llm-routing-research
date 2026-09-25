@@ -1,0 +1,2 @@
+id,difficulty,message,expected,predicted,correct,sampled_token,logprob_a,logprob_b,p_a,p_b,confidence,margin,latency_sec,prompt_tokens,completion_tokens,error
+case_026,hard,"Тогда Pro. И ещё скажите, как удалить аккаунт.",B,B,True,B,-2.9891414642333984,-0.05164150893688202,0.05033063473418989,0.94966936526581,0.94966936526581,0.8993387305316202,0.04598112500025309,265,1,

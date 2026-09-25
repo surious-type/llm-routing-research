@@ -1,0 +1,414 @@
+WARNING 09-07 17:27:06 [argparse_utils.py:257] With `vllm serve`, you should provide the model as a positional argument or in a config file instead of via the `--model` option. The `--model` option will be removed in a future version.
+(APIServer pid=1) INFO 09-07 17:27:06 [api_utils.py:333] 
+(APIServer pid=1) INFO 09-07 17:27:06 [api_utils.py:333]        █     █     █▄   ▄█
+(APIServer pid=1) INFO 09-07 17:27:06 [api_utils.py:333]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.28.0
+(APIServer pid=1) INFO 09-07 17:27:06 [api_utils.py:333]   █▄█▀ █     █     █     █  model   Qwen/Qwen3-14B-AWQ
+(APIServer pid=1) INFO 09-07 17:27:06 [api_utils.py:333]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+(APIServer pid=1) INFO 09-07 17:27:06 [api_utils.py:333] 
+(APIServer pid=1) INFO 09-07 17:27:06 [api_utils.py:272] non-default args: {'model_tag': 'Qwen/Qwen3-14B-AWQ', 'default_chat_template_kwargs': {'enable_thinking': False}, 'host': '0.0.0.0', 'model': 'Qwen/Qwen3-14B-AWQ', 'max_model_len': 2048, 'quantization': 'awq', 'enforce_eager': True, 'served_model_name': ['qwen3-14b'], 'generation_config': 'vllm', 'gpu_memory_utilization': 0.85, 'cpu_offload_gb': 4.0, 'max_num_seqs': 1}
+(APIServer pid=1) INFO 09-07 17:27:15 [model.py:672] Resolved architecture: Qwen3ForCausalLM
+(APIServer pid=1) INFO 09-07 17:27:15 [model.py:1965] Using max model len 2048
+(APIServer pid=1) WARNING 09-07 17:27:23 [vllm.py:1285] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+(APIServer pid=1) WARNING 09-07 17:27:23 [vllm.py:1354] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+(APIServer pid=1) INFO 09-07 17:27:23 [kernel.py:308] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])
+(APIServer pid=1) INFO 09-07 17:27:23 [vllm.py:1533] Cudagraph is disabled under eager mode
+(APIServer pid=1) INFO 09-07 17:27:23 [compilation.py:329] Enabled custom fusions: norm_quant, act_quant
+(EngineCore pid=198) INFO 09-07 17:27:39 [core.py:122] Initializing a V1 LLM engine (v0.28.0) with config: model='Qwen/Qwen3-14B-AWQ', speculative_config=None, tokenizer='Qwen/Qwen3-14B-AWQ', skip_tokenizer_init=False, tokenizer_mode=auto, revision=main, tokenizer_revision=main, trust_remote_code=False, dtype=torch.float16, max_seq_len=2048, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=auto_awq, quantization_config=None, enforce_eager=True, enable_return_routed_experts=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False, jit_monitor_mode='warn', jit_monitor_verbose=False), seed=0, served_model_name=qwen3-14b, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.NONE: 0>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['all'], 'ir_enable_torch_wrap': False, 'splitting_ops': [], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': [], 'compile_ranges_endpoints': [2048], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.NONE: 0>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': [], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': True, 'fuse_act_quant': True, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False, 'enable_qk_norm_rope_fusion': False, 'fuse_rope_kvcache_cat_mla': False, 'fuse_act_padding': False, 'fuse_qk_norm_rope_kvcache': False}, 'max_cudagraph_capture_size': 0, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': False, 'static_all_moe_layers': []}, kernel_config=KernelConfig(ir_op_priority=IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native']), enable_flashinfer_autotune=True, enable_cutedsl_warmup=True, enable_jit_warmup=True, enable_bf16x3_router_gemm=False, moe_backend='auto', linear_backend='auto')
+(EngineCore pid=198) INFO 09-07 17:27:39 [parallel_state.py:1638] world_size=1 rank=0 local_rank=0 distributed_init_method=file:///tmp/vllm_dist_db8c2c1652d74591919d282012158602 backend=nccl
+(EngineCore pid=198) INFO 09-07 17:27:39 [parallel_state.py:1982] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+(EngineCore pid=198) INFO 09-07 17:27:39 [gpu_worker.py:396] Using V2 Model Runner
+(EngineCore pid=198) INFO 09-07 17:27:40 [base.py:123] Offloader set to UVAOffloader
+(EngineCore pid=198) INFO 09-07 17:27:40 [model_runner.py:358] Loading model from scratch...
+(EngineCore pid=198) INFO 09-07 17:27:40 [auto_awq.py:448] Using MarlinLinearKernel for AutoAWQMarlinLinearMethod
+(EngineCore pid=198) INFO 09-07 17:27:40 [cuda.py:486] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+(EngineCore pid=198) INFO 09-07 17:27:40 [flash_attn.py:866] Using FlashAttention version 2
+(EngineCore pid=198) INFO 09-07 17:27:46 [uva.py:58] Total CPU offloaded parameters: 4.01
+(EngineCore pid=198) INFO 09-07 17:35:14 [weight_utils.py:521] Time spent downloading weights for Qwen/Qwen3-14B-AWQ: 446.645572 seconds
+(EngineCore pid=198) INFO 09-07 17:35:14 [weight_utils.py:858] Filesystem type for checkpoints: EXT4. Checkpoint size: 9.29 GiB. Available RAM: 16.48 GiB.
+(EngineCore pid=198) INFO 09-07 17:35:14 [weight_utils.py:881] Auto-prefetch is disabled because the filesystem (EXT4) is not a recognized network FS (NFS/Lustre). If you want to force prefetching, start vLLM with --safetensors-load-strategy=prefetch.
+(EngineCore pid=198) INFO 09-07 17:35:23 [default_loader.py:430] Loading weights took 9.88 seconds
+(EngineCore pid=198) INFO 09-07 17:35:35 [model_runner.py:380] Model loading took 5.34 GiB memory and 474.937964 seconds
+(EngineCore pid=198) INFO 09-07 17:35:35 [topk_topp_sampler.py:62] Using FlashInfer for top-p & top-k sampling.
+(EngineCore pid=198) INFO 09-07 17:35:43 [gpu_worker.py:578] Available KV cache memory: 0.82 GiB
+(EngineCore pid=198) INFO 09-07 17:35:43 [kv_cache_utils.py:1869] GPU KV cache size: 5,344 tokens, Maximum concurrency for 2,048 tokens per request: 2.61x
+(EngineCore pid=198) INFO 09-07 17:35:44 [gpu_worker.py:804] Free memory on device (7.02/7.66 GiB) on startup. Desired GPU memory utilization is (0.85, 6.51 GiB). Actual usage is 5.42 GiB for consumed memory (weights + non-torch), 0.27 GiB for peak activation, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=720834970` (0.67 GiB) to fit into requested memory, or `--kv-cache-memory=1268676608` (1.18 GiB) to fully utilize gpu memory. Current kv cache memory in use is 0.82 GiB.
+(EngineCore pid=198) INFO 09-07 17:35:47 [jit_monitor.py:85] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.
+(EngineCore pid=198) INFO 09-07 17:35:47 [torch_utils.py:262] Reducing Torch threads from 8 to 1 for serving. Set OMP_NUM_THREADS in the external environment to override.
+(EngineCore pid=198) INFO 09-07 17:35:47 [core.py:354] init engine (profile, create kv cache, warmup model) took 12.64 s
+(EngineCore pid=198) WARNING 09-07 17:35:49 [vllm.py:1285] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+(EngineCore pid=198) WARNING 09-07 17:35:49 [vllm.py:1354] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+(EngineCore pid=198) INFO 09-07 17:35:49 [kernel.py:308] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])
+(EngineCore pid=198) INFO 09-07 17:35:49 [vllm.py:1533] Cudagraph is disabled under eager mode
+(EngineCore pid=198) INFO 09-07 17:35:49 [compilation.py:329] Enabled custom fusions: norm_quant, act_quant
+(APIServer pid=1) INFO 09-07 17:35:49 [api_server.py:653] Supported tasks: ['generate']
+(APIServer pid=1) INFO 09-07 17:35:54 [hf.py:551] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.
+(APIServer pid=1) INFO 09-07 17:35:54 [api_server.py:657] Starting vLLM server on http://0.0.0.0:8000
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:51] Available routes are:
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /openapi.json, Methods: HEAD, GET
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /docs, Methods: HEAD, GET
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /docs/oauth2-redirect, Methods: HEAD, GET
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /redoc, Methods: HEAD, GET
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /load, Methods: GET
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /version, Methods: GET
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /health, Methods: GET
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /metrics, Methods: GET
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /tokenize, Methods: POST
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /detokenize, Methods: POST
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /v1/models, Methods: GET
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /ping, Methods: GET
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /ping, Methods: POST
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /invocations, Methods: POST
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /v1/chat/completions, Methods: POST
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /v1/chat/completions/batch, Methods: POST
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /v1/responses, Methods: POST
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /v1/responses/{response_id}, Methods: GET
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /v1/responses/{response_id}/cancel, Methods: POST
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /v1/completions, Methods: POST
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /v1/messages, Methods: POST
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /v1/messages/count_tokens, Methods: POST
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /generative_scoring, Methods: POST
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /scale_elastic_ep, Methods: POST
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /is_scaling_elastic_ep, Methods: POST
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /v1/chat/completions/render, Methods: POST
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /v1/completions/render, Methods: POST
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /v1/chat/completions/derender, Methods: POST
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /v1/completions/derender, Methods: POST
+(APIServer pid=1) INFO 09-07 17:35:54 [launcher.py:60] Route: /inference/v1/generate, Methods: POST
+(APIServer pid=1) INFO:     172.17.0.1:50416 - "GET /v1/models HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     172.17.0.1:52856 - "GET /v1/models HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:36:19 [loggers.py:310] Engine 000: Avg prompt throughput: 35.0 tokens/s, Avg generation throughput: 5.6 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.8%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     172.17.0.1:52856 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:36:29 [loggers.py:310] Engine 000: Avg prompt throughput: 23.6 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.5%, Prefix cache hit rate: 16.0%
+(APIServer pid=1) INFO:     172.17.0.1:52856 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:36:39 [loggers.py:310] Engine 000: Avg prompt throughput: 25.3 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.8%, Prefix cache hit rate: 21.1%
+(APIServer pid=1) INFO:     172.17.0.1:52856 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:36:49 [loggers.py:310] Engine 000: Avg prompt throughput: 20.2 tokens/s, Avg generation throughput: 5.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.8%, Prefix cache hit rate: 26.9%
+(APIServer pid=1) INFO:     172.17.0.1:52856 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:36:59 [loggers.py:310] Engine 000: Avg prompt throughput: 24.7 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.5%, Prefix cache hit rate: 27.8%
+(APIServer pid=1) INFO:     172.17.0.1:52856 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:37:09 [loggers.py:310] Engine 000: Avg prompt throughput: 24.9 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.5%, Prefix cache hit rate: 28.3%
+(APIServer pid=1) INFO:     172.17.0.1:52856 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:37:19 [loggers.py:310] Engine 000: Avg prompt throughput: 25.9 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.5%, Prefix cache hit rate: 28.6%
+(APIServer pid=1) INFO:     172.17.0.1:52856 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:37:29 [loggers.py:310] Engine 000: Avg prompt throughput: 17.4 tokens/s, Avg generation throughput: 5.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.9%, Prefix cache hit rate: 31.3%
+(APIServer pid=1) INFO:     172.17.0.1:52856 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:37:39 [loggers.py:310] Engine 000: Avg prompt throughput: 18.8 tokens/s, Avg generation throughput: 5.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.9%, Prefix cache hit rate: 32.9%
+(APIServer pid=1) INFO:     172.17.0.1:52856 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:37:49 [loggers.py:310] Engine 000: Avg prompt throughput: 17.3 tokens/s, Avg generation throughput: 5.4 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.2%, Prefix cache hit rate: 34.9%
+(APIServer pid=1) INFO 09-07 17:37:59 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 5.6 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 8.4%, Prefix cache hit rate: 34.9%
+(APIServer pid=1) INFO:     172.17.0.1:52856 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:38:09 [loggers.py:310] Engine 000: Avg prompt throughput: 18.6 tokens/s, Avg generation throughput: 5.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.8%, Prefix cache hit rate: 36.1%
+(APIServer pid=1) INFO:     172.17.0.1:52856 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:38:19 [loggers.py:310] Engine 000: Avg prompt throughput: 18.3 tokens/s, Avg generation throughput: 5.4 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.8%, Prefix cache hit rate: 37.2%
+(APIServer pid=1) INFO:     172.17.0.1:52856 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:38:29 [loggers.py:310] Engine 000: Avg prompt throughput: 18.5 tokens/s, Avg generation throughput: 5.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.8%, Prefix cache hit rate: 38.1%
+(APIServer pid=1) INFO:     172.17.0.1:52856 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:38:39 [loggers.py:310] Engine 000: Avg prompt throughput: 17.9 tokens/s, Avg generation throughput: 5.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.5%, Prefix cache hit rate: 39.1%
+(APIServer pid=1) INFO:     172.17.0.1:52856 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "GET /v1/models HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:38:49 [loggers.py:310] Engine 000: Avg prompt throughput: 1.4 tokens/s, Avg generation throughput: 5.6 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.9%, Prefix cache hit rate: 42.8%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:38:59 [loggers.py:310] Engine 000: Avg prompt throughput: 23.6 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.9%, Prefix cache hit rate: 42.2%
+(APIServer pid=1) INFO 09-07 17:39:09 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 5.7 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.8%, Prefix cache hit rate: 42.2%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:39:19 [loggers.py:310] Engine 000: Avg prompt throughput: 20.5 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.5%, Prefix cache hit rate: 42.1%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:39:29 [loggers.py:310] Engine 000: Avg prompt throughput: 23.1 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.5%, Prefix cache hit rate: 41.6%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:39:39 [loggers.py:310] Engine 000: Avg prompt throughput: 19.7 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.2%, Prefix cache hit rate: 41.6%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:39:49 [loggers.py:310] Engine 000: Avg prompt throughput: 24.2 tokens/s, Avg generation throughput: 5.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.2%, Prefix cache hit rate: 41.1%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:39:59 [loggers.py:310] Engine 000: Avg prompt throughput: 20.6 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.2%, Prefix cache hit rate: 41.1%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:40:09 [loggers.py:310] Engine 000: Avg prompt throughput: 23.0 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.2%, Prefix cache hit rate: 40.8%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:40:19 [loggers.py:310] Engine 000: Avg prompt throughput: 20.0 tokens/s, Avg generation throughput: 5.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.9%, Prefix cache hit rate: 40.8%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:40:29 [loggers.py:310] Engine 000: Avg prompt throughput: 24.4 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.2%, Prefix cache hit rate: 40.4%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:40:39 [loggers.py:310] Engine 000: Avg prompt throughput: 21.1 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.9%, Prefix cache hit rate: 40.4%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:40:49 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 5.6 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.9%, Prefix cache hit rate: 40.1%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:40:59 [loggers.py:310] Engine 000: Avg prompt throughput: 24.9 tokens/s, Avg generation throughput: 5.1 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.6%, Prefix cache hit rate: 40.1%
+(APIServer pid=1) INFO 09-07 17:41:09 [loggers.py:310] Engine 000: Avg prompt throughput: 20.3 tokens/s, Avg generation throughput: 5.4 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.8%, Prefix cache hit rate: 40.1%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:41:19 [loggers.py:310] Engine 000: Avg prompt throughput: 18.8 tokens/s, Avg generation throughput: 5.4 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.5%, Prefix cache hit rate: 40.3%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:41:29 [loggers.py:310] Engine 000: Avg prompt throughput: 23.9 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.5%, Prefix cache hit rate: 40.0%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:41:39 [loggers.py:310] Engine 000: Avg prompt throughput: 20.0 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.2%, Prefix cache hit rate: 40.1%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:41:49 [loggers.py:310] Engine 000: Avg prompt throughput: 23.4 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.9%, Prefix cache hit rate: 39.9%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:41:59 [loggers.py:310] Engine 000: Avg prompt throughput: 20.4 tokens/s, Avg generation throughput: 5.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.2%, Prefix cache hit rate: 39.9%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:42:09 [loggers.py:310] Engine 000: Avg prompt throughput: 24.2 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.2%, Prefix cache hit rate: 39.6%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:42:19 [loggers.py:310] Engine 000: Avg prompt throughput: 25.3 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.2%, Prefix cache hit rate: 39.4%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:42:29 [loggers.py:310] Engine 000: Avg prompt throughput: 20.2 tokens/s, Avg generation throughput: 5.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.2%, Prefix cache hit rate: 39.5%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:42:39 [loggers.py:310] Engine 000: Avg prompt throughput: 24.4 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.9%, Prefix cache hit rate: 39.3%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:42:49 [loggers.py:310] Engine 000: Avg prompt throughput: 24.7 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.9%, Prefix cache hit rate: 39.1%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:42:59 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 5.5 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.9%, Prefix cache hit rate: 38.9%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:43:09 [loggers.py:310] Engine 000: Avg prompt throughput: 24.9 tokens/s, Avg generation throughput: 5.4 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 38.9%
+(APIServer pid=1) INFO 09-07 17:43:19 [loggers.py:310] Engine 000: Avg prompt throughput: 24.7 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.8%, Prefix cache hit rate: 38.7%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:43:29 [loggers.py:310] Engine 000: Avg prompt throughput: 24.4 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.5%, Prefix cache hit rate: 38.5%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:43:39 [loggers.py:310] Engine 000: Avg prompt throughput: 24.2 tokens/s, Avg generation throughput: 5.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.5%, Prefix cache hit rate: 38.3%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:43:49 [loggers.py:310] Engine 000: Avg prompt throughput: 22.7 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.2%, Prefix cache hit rate: 38.3%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:43:59 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 5.5 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.2%, Prefix cache hit rate: 38.1%
+(APIServer pid=1) INFO 09-07 17:44:09 [loggers.py:310] Engine 000: Avg prompt throughput: 25.9 tokens/s, Avg generation throughput: 5.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 8.1%, Prefix cache hit rate: 38.1%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:44:19 [loggers.py:310] Engine 000: Avg prompt throughput: 21.1 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.8%, Prefix cache hit rate: 38.2%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:44:29 [loggers.py:310] Engine 000: Avg prompt throughput: 23.8 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.9%, Prefix cache hit rate: 38.0%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:44:39 [loggers.py:310] Engine 000: Avg prompt throughput: 23.6 tokens/s, Avg generation throughput: 5.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.9%, Prefix cache hit rate: 37.9%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:44:49 [loggers.py:310] Engine 000: Avg prompt throughput: 20.5 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.9%, Prefix cache hit rate: 38.0%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:44:59 [loggers.py:310] Engine 000: Avg prompt throughput: 23.1 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.6%, Prefix cache hit rate: 37.9%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:45:09 [loggers.py:310] Engine 000: Avg prompt throughput: 19.7 tokens/s, Avg generation throughput: 5.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.6%, Prefix cache hit rate: 38.0%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:45:19 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 5.5 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.9%, Prefix cache hit rate: 37.8%
+(APIServer pid=1) INFO 09-07 17:45:29 [loggers.py:310] Engine 000: Avg prompt throughput: 24.2 tokens/s, Avg generation throughput: 5.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.8%, Prefix cache hit rate: 37.8%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:45:39 [loggers.py:310] Engine 000: Avg prompt throughput: 20.6 tokens/s, Avg generation throughput: 5.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.2%, Prefix cache hit rate: 37.9%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:45:49 [loggers.py:310] Engine 000: Avg prompt throughput: 23.0 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.9%, Prefix cache hit rate: 37.8%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:45:59 [loggers.py:310] Engine 000: Avg prompt throughput: 20.0 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.9%, Prefix cache hit rate: 37.9%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:46:09 [loggers.py:310] Engine 000: Avg prompt throughput: 24.4 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.2%, Prefix cache hit rate: 37.8%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:46:19 [loggers.py:310] Engine 000: Avg prompt throughput: 21.1 tokens/s, Avg generation throughput: 5.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.9%, Prefix cache hit rate: 37.8%
+(APIServer pid=1) INFO 09-07 17:46:29 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 5.6 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.8%, Prefix cache hit rate: 37.8%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:46:39 [loggers.py:310] Engine 000: Avg prompt throughput: 48.4 tokens/s, Avg generation throughput: 4.8 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.6%, Prefix cache hit rate: 37.6%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:46:49 [loggers.py:310] Engine 000: Avg prompt throughput: 20.4 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.6%, Prefix cache hit rate: 37.7%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:46:59 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 5.6 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.6%, Prefix cache hit rate: 37.6%
+(APIServer pid=1) INFO 09-07 17:47:09 [loggers.py:310] Engine 000: Avg prompt throughput: 23.9 tokens/s, Avg generation throughput: 5.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.8%, Prefix cache hit rate: 37.6%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:47:19 [loggers.py:310] Engine 000: Avg prompt throughput: 20.0 tokens/s, Avg generation throughput: 5.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.5%, Prefix cache hit rate: 37.6%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:47:29 [loggers.py:310] Engine 000: Avg prompt throughput: 23.4 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.5%, Prefix cache hit rate: 37.5%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:47:39 [loggers.py:310] Engine 000: Avg prompt throughput: 20.4 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.5%, Prefix cache hit rate: 37.6%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:47:49 [loggers.py:310] Engine 000: Avg prompt throughput: 24.2 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.5%, Prefix cache hit rate: 37.5%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:47:59 [loggers.py:310] Engine 000: Avg prompt throughput: 25.3 tokens/s, Avg generation throughput: 5.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.8%, Prefix cache hit rate: 37.4%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:48:09 [loggers.py:310] Engine 000: Avg prompt throughput: 20.2 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.2%, Prefix cache hit rate: 37.5%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:48:19 [loggers.py:310] Engine 000: Avg prompt throughput: 24.4 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.9%, Prefix cache hit rate: 37.4%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:48:29 [loggers.py:310] Engine 000: Avg prompt throughput: 24.7 tokens/s, Avg generation throughput: 5.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.9%, Prefix cache hit rate: 37.3%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:48:39 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 5.5 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.9%, Prefix cache hit rate: 37.2%
+(APIServer pid=1) INFO 09-07 17:48:49 [loggers.py:310] Engine 000: Avg prompt throughput: 24.9 tokens/s, Avg generation throughput: 5.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.8%, Prefix cache hit rate: 37.2%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:48:59 [loggers.py:310] Engine 000: Avg prompt throughput: 24.7 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.5%, Prefix cache hit rate: 37.1%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:49:09 [loggers.py:310] Engine 000: Avg prompt throughput: 24.4 tokens/s, Avg generation throughput: 5.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.2%, Prefix cache hit rate: 37.1%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:49:19 [loggers.py:310] Engine 000: Avg prompt throughput: 24.2 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.2%, Prefix cache hit rate: 37.0%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:49:29 [loggers.py:310] Engine 000: Avg prompt throughput: 22.7 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.9%, Prefix cache hit rate: 37.0%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:49:39 [loggers.py:310] Engine 000: Avg prompt throughput: 25.9 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.2%, Prefix cache hit rate: 36.9%
+(APIServer pid=1) INFO 09-07 17:49:49 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 5.6 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 8.1%, Prefix cache hit rate: 36.9%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 09-07 17:49:59 [loggers.py:310] Engine 000: Avg prompt throughput: 21.1 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 8.1%, Prefix cache hit rate: 37.0%
+(APIServer pid=1) INFO:     172.17.0.1:55072 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) 
+Parse safetensors files:   0%|          | 0/2 [00:00<?, ?it/s]
+Parse safetensors files:  50%|█████     | 1/2 [00:00<00:00,  1.03it/s]
+Parse safetensors files: 100%|██████████| 2/2 [00:01<00:00,  1.85it/s]
+Parse safetensors files: 100%|██████████| 2/2 [00:01<00:00,  1.65it/s]
+(EngineCore pid=198) 
+Loading safetensors checkpoint shards:   0% Completed | 0/2 [00:00<?, ?it/s]
+(EngineCore pid=198) 
+Loading safetensors checkpoint shards:  50% Completed | 1/2 [00:03<00:03,  3.24s/it]
+(EngineCore pid=198) 
+Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:09<00:00,  5.19s/it]
+(EngineCore pid=198) 
+Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:09<00:00,  4.91s/it]
+(EngineCore pid=198) 
+[rank0]:[W907 17:35:24.542572967 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 392167424, total: 8220573696).
+[rank0]:[W907 17:35:24.648681419 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 106954752, total: 8220573696).
+[rank0]:[W907 17:35:24.667550278 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 46137344 bytes (free: 106954752, total: 8220573696).
+[rank0]:[W907 17:35:24.715490094 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 146800640 bytes (free: 104857600, total: 8220573696).
+[rank0]:[W907 17:35:24.737077795 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 104857600 bytes (free: 130023424, total: 8220573696).
+[rank0]:[W907 17:35:24.741288404 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 104857600 bytes (free: 171966464, total: 8220573696).
+[rank0]:[W907 17:35:24.754757639 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 213909504, total: 8220573696).
+[rank0]:[W907 17:35:24.799558821 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 90177536 bytes (free: 159383552, total: 8220573696).
+[rank0]:[W907 17:35:24.878484639 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 46137344 bytes (free: 77594624, total: 8220573696).
+[rank0]:[W907 17:35:24.924450981 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 146800640 bytes (free: 75497472, total: 8220573696).
+[rank0]:[W907 17:35:24.944422411 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 104857600 bytes (free: 138412032, total: 8220573696).
+[rank0]:[W907 17:35:24.955541029 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 75497472, total: 8220573696).
+[rank0]:[W907 17:35:24.999603066 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 90177536 bytes (free: 75497472, total: 8220573696).
+[rank0]:[W907 17:35:24.070697601 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 341835776, total: 8220573696).
+[rank0]:[W907 17:35:24.144625966 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 195035136, total: 8220573696).
+[rank0]:[W907 17:35:24.160809756 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 195035136, total: 8220573696).
+[rank0]:[W907 17:35:24.204277961 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 90177536 bytes (free: 121634816, total: 8220573696).
+[rank0]:[W907 17:35:25.275469089 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 387973120, total: 8220573696).
+[rank0]:[W907 17:35:25.351717163 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 195035136, total: 8220573696).
+[rank0]:[W907 17:35:25.369781583 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 195035136, total: 8220573696).
+[rank0]:[W907 17:35:25.413548362 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 90177536 bytes (free: 121634816, total: 8220573696).
+[rank0]:[W907 17:35:25.486529759 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 401735680, total: 8220573696).
+[rank0]:[W907 17:35:25.567751412 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:25.585810352 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:25.629689813 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 90177536 bytes (free: 135397376, total: 8220573696).
+[rank0]:[W907 17:35:25.707881797 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 401735680, total: 8220573696).
+[rank0]:[W907 17:35:25.781292334 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:25.798521869 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:25.842395259 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 90177536 bytes (free: 135397376, total: 8220573696).
+[rank0]:[W907 17:35:25.918562831 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 401735680, total: 8220573696).
+[rank0]:[W907 17:35:25.994470803 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:25.011983992 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:25.055093591 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 90177536 bytes (free: 135397376, total: 8220573696).
+[rank0]:[W907 17:35:25.132648722 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 401735680, total: 8220573696).
+[rank0]:[W907 17:35:26.209729548 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:26.227802294 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:26.271419851 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 90177536 bytes (free: 135397376, total: 8220573696).
+[rank0]:[W907 17:35:26.349821170 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 401735680, total: 8220573696).
+[rank0]:[W907 17:35:26.428915547 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:26.446552911 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:26.489993844 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 90177536 bytes (free: 135397376, total: 8220573696).
+[rank0]:[W907 17:35:26.567869200 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 401735680, total: 8220573696).
+[rank0]:[W907 17:35:26.647753558 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:26.665798903 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:26.709227403 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 90177536 bytes (free: 135397376, total: 8220573696).
+[rank0]:[W907 17:35:26.786987211 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 401735680, total: 8220573696).
+[rank0]:[W907 17:35:26.863313502 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:26.880764063 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:26.924523899 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 90177536 bytes (free: 135397376, total: 8220573696).
+[rank0]:[W907 17:35:26.002457345 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 401735680, total: 8220573696).
+[rank0]:[W907 17:35:26.072126960 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:26.089514042 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:26.133117042 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 90177536 bytes (free: 135397376, total: 8220573696).
+[rank0]:[W907 17:35:27.212870363 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 401735680, total: 8220573696).
+[rank0]:[W907 17:35:27.298859124 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:27.316869032 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:27.362283260 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 90177536 bytes (free: 135397376, total: 8220573696).
+[rank0]:[W907 17:35:27.452597307 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 401735680, total: 8220573696).
+[rank0]:[W907 17:35:27.539214535 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:27.557036748 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:27.602923458 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 90177536 bytes (free: 135397376, total: 8220573696).
+[rank0]:[W907 17:35:27.693797482 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 401735680, total: 8220573696).
+[rank0]:[W907 17:35:27.773944997 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:27.791604643 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:27.835694562 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 90177536 bytes (free: 135397376, total: 8220573696).
+[rank0]:[W907 17:35:27.924755763 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 401735680, total: 8220573696).
+[rank0]:[W907 17:35:27.009747112 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:27.027845737 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:27.072310633 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 90177536 bytes (free: 135397376, total: 8220573696).
+[rank0]:[W907 17:35:27.159268224 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 401735680, total: 8220573696).
+[rank0]:[W907 17:35:28.242186258 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:28.259013133 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:28.303166511 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 90177536 bytes (free: 135397376, total: 8220573696).
+[rank0]:[W907 17:35:28.390813513 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 401735680, total: 8220573696).
+[rank0]:[W907 17:35:28.473021658 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:28.490650796 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:28.535181197 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 90177536 bytes (free: 135397376, total: 8220573696).
+[rank0]:[W907 17:35:28.624709750 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 401735680, total: 8220573696).
+[rank0]:[W907 17:35:28.709642879 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:28.726883093 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208797696, total: 8220573696).
+[rank0]:[W907 17:35:28.770983352 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 90177536 bytes (free: 135397376, total: 8220573696).
+[rank0]:[W907 17:35:28.861795579 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 403046400, total: 8220573696).
+[rank0]:[W907 17:35:28.946811914 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 210108416, total: 8220573696).
+[rank0]:[W907 17:35:28.964919526 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 210108416, total: 8220573696).
+[rank0]:[W907 17:35:28.010305682 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 90177536 bytes (free: 136708096, total: 8220573696).
+[rank0]:[W907 17:35:28.095383654 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 403046400, total: 8220573696).
+[rank0]:[W907 17:35:28.176489819 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 210108416, total: 8220573696).
+[rank0]:[W907 17:35:28.192656687 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 210108416, total: 8220573696).
+[rank0]:[W907 17:35:29.237735452 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 90177536 bytes (free: 136708096, total: 8220573696).
+[rank0]:[W907 17:35:29.322994406 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 403046400, total: 8220573696).
+[rank0]:[W907 17:35:29.409792185 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 210108416, total: 8220573696).
+[rank0]:[W907 17:35:29.427105818 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 210108416, total: 8220573696).
+[rank0]:[W907 17:35:29.471530659 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 90177536 bytes (free: 136708096, total: 8220573696).
+[rank0]:[W907 17:35:29.561162568 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 403046400, total: 8220573696).
+[rank0]:[W907 17:35:29.645112961 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 210108416, total: 8220573696).
+[rank0]:[W907 17:35:29.662734295 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 210108416, total: 8220573696).
+[rank0]:[W907 17:35:29.707757877 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 90177536 bytes (free: 136708096, total: 8220573696).
+[rank0]:[W907 17:35:29.798353244 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 403046400, total: 8220573696).
+[rank0]:[W907 17:35:29.875411838 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 210108416, total: 8220573696).
+[rank0]:[W907 17:35:29.891585760 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 210108416, total: 8220573696).
+[rank0]:[W907 17:35:29.936141498 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 90177536 bytes (free: 136708096, total: 8220573696).
+[rank0]:[W907 17:35:29.023121090 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 403046400, total: 8220573696).
+[rank0]:[W907 17:35:29.103773458 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208011264, total: 8220573696).
+[rank0]:[W907 17:35:29.121923459 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 208011264, total: 8220573696).
+[rank0]:[W907 17:35:29.161396232 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:29.192511038 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 146800640 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.208223639 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 104857600 bytes (free: 92667904, total: 8220573696).
+[rank0]:[W907 17:35:30.216119875 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.255871594 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.283546346 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 146800640 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.296806938 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 104857600 bytes (free: 92667904, total: 8220573696).
+[rank0]:[W907 17:35:30.307439840 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.347098985 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.374317876 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 146800640 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.389694643 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 104857600 bytes (free: 92667904, total: 8220573696).
+[rank0]:[W907 17:35:30.398074051 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.436631395 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.464486969 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 146800640 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.477943781 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 104857600 bytes (free: 92667904, total: 8220573696).
+[rank0]:[W907 17:35:30.485932021 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.523800315 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.552557129 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 146800640 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.567758164 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 104857600 bytes (free: 92667904, total: 8220573696).
+[rank0]:[W907 17:35:30.577988907 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.616777789 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.645649059 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 146800640 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.660637924 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 104857600 bytes (free: 92667904, total: 8220573696).
+[rank0]:[W907 17:35:30.670062024 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.709834923 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.737874935 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 146800640 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.751922933 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 104857600 bytes (free: 92667904, total: 8220573696).
+[rank0]:[W907 17:35:30.760053241 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.802099652 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.829943112 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 146800640 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.844057436 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 104857600 bytes (free: 92667904, total: 8220573696).
+[rank0]:[W907 17:35:30.852058610 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.891795592 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.919627440 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 146800640 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.934970042 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 104857600 bytes (free: 92667904, total: 8220573696).
+[rank0]:[W907 17:35:30.943048422 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.985363440 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.012595306 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 146800640 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.026564616 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 104857600 bytes (free: 92667904, total: 8220573696).
+[rank0]:[W907 17:35:30.035245292 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.074227129 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.101793095 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 146800640 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.115767184 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 104857600 bytes (free: 92667904, total: 8220573696).
+[rank0]:[W907 17:35:30.123967664 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.163442020 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.190603243 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 146800640 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:30.206257022 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 104857600 bytes (free: 92667904, total: 8220573696).
+[rank0]:[W907 17:35:31.213829417 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:31.253686616 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:31.283020529 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 146800640 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:31.296814578 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 104857600 bytes (free: 92667904, total: 8220573696).
+[rank0]:[W907 17:35:31.308645652 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:31.349262414 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:31.376180628 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 146800640 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:31.389317767 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 104857600 bytes (free: 92667904, total: 8220573696).
+[rank0]:[W907 17:35:31.396777509 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 713031680 bytes (free: 134610944, total: 8220573696).
+[rank0]:[W907 17:35:31.434961920 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 356515840 bytes (free: 134610944, total: 8220573696).
+(APIServer pid=1) INFO:     Started server process [1]
+(APIServer pid=1) INFO:     Waiting for application startup.
+(APIServer pid=1) INFO:     Application startup complete.

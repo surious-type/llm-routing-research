@@ -1,0 +1,31 @@
+{
+  "experiment": "dataset-v3-pretest-v1",
+  "date": "2026-09-09",
+  "condition": "M14 validation P2 recovery",
+  "purpose": "Repeat only the seven infrastructure-failed P2 requests after closing the external GPU-heavy application.",
+  "protocol_sha256": "75e3542f0c8fbc8d2e3c1aef3a5558802b62e86566aa15811d286289a71687da",
+  "configuration_changed": false,
+  "model": "Qwen/Qwen3-14B-AWQ",
+  "served_model_name": "qwen3-14b",
+  "docker_image": "vllm/vllm-openai@sha256:61fc8a896b0a4fbbbdc063bc4b0dbc25ce98e02b5050c24aeb7830ac02039b14",
+  "vllm_version": "0.28.0",
+  "gpu_memory_utilization": 0.85,
+  "cpu_offload_gb": 4,
+  "max_model_len": 2048,
+  "max_num_seqs": 1,
+  "enforce_eager": true,
+  "external_gpu_heavy_process_present_before_start": false,
+  "startup_status": "failed",
+  "smoke_status": "not_run_because_server_failed_to_start",
+  "recovery_requests_run": 0,
+  "error": "torch.OutOfMemoryError while converting AWQ weights; requested allocation 86 MiB with 114.06 MiB reported free",
+  "decision": "Stop M14 condition without changing memory flags and without another automatic retry, as required by the preregistered protocol.",
+  "effect_on_analysis": "The original M14 validation artifact remains incomplete with seven infrastructure errors. Those unresolved rows count as incorrect in aggregate accuracy; M14 is explicitly marked incomplete and cannot be treated as a clean model-quality comparator.",
+  "artifacts": {
+    "nvidia_before": "results/dataset_v3_pretest_20260909/servers/m14_recovery1/nvidia_before.txt",
+    "server_log": "results/dataset_v3_pretest_20260909/servers/m14_recovery1/server.log",
+    "docker_inspect": "results/dataset_v3_pretest_20260909/servers/m14_recovery1/docker_inspect.json",
+    "nvidia_after_failure": "results/dataset_v3_pretest_20260909/servers/m14_recovery1/nvidia_after_failure.txt"
+  },
+  "test_status": "NOT RUN"
+}

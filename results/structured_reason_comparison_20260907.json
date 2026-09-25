@@ -1,0 +1,1181 @@
+{
+  "s1_conditions": {
+    "E1": {
+      "correct": 22,
+      "evaluated": 30,
+      "accuracy": 0.7333333333333333,
+      "prediction_counts": {
+        "CONTINUE": 23,
+        "NEW": 7
+      },
+      "confusion_matrix": {
+        "labels": [
+          "CONTINUE",
+          "NEW"
+        ],
+        "matrix": [
+          [
+            15,
+            0
+          ],
+          [
+            8,
+            7
+          ]
+        ]
+      },
+      "errors": [],
+      "incorrect_cases": [
+        "case_018",
+        "case_020",
+        "case_021",
+        "case_022",
+        "case_024",
+        "case_026",
+        "case_028",
+        "case_030"
+      ],
+      "latency_sec": {
+        "mean": 0.11544515086619261,
+        "median": 0.11637935250109877
+      },
+      "prompt_tokens": {
+        "mean": 319.3333333333333,
+        "median": 320.0
+      },
+      "completion_tokens": {
+        "mean": 10.833333333333334,
+        "median": 11.0
+      }
+    },
+    "E2": {
+      "correct": 20,
+      "evaluated": 30,
+      "accuracy": 0.6666666666666666,
+      "prediction_counts": {
+        "CONTINUE": 15,
+        "NEW": 15
+      },
+      "confusion_matrix": {
+        "labels": [
+          "CONTINUE",
+          "NEW"
+        ],
+        "matrix": [
+          [
+            10,
+            5
+          ],
+          [
+            5,
+            10
+          ]
+        ]
+      },
+      "errors": [],
+      "incorrect_cases": [
+        "case_001",
+        "case_002",
+        "case_012",
+        "case_014",
+        "case_017",
+        "case_021",
+        "case_022",
+        "case_024",
+        "case_028",
+        "case_029"
+      ],
+      "latency_sec": {
+        "mean": 0.11312895046770184,
+        "median": 0.11106496050342685
+      },
+      "prompt_tokens": {
+        "mean": 319.3333333333333,
+        "median": 320.0
+      },
+      "completion_tokens": {
+        "mean": 10.6,
+        "median": 10.5
+      }
+    },
+    "E3": {
+      "correct": 22,
+      "evaluated": 30,
+      "accuracy": 0.7333333333333333,
+      "prediction_counts": {
+        "CONTINUE": 23,
+        "NEW": 7
+      },
+      "confusion_matrix": {
+        "labels": [
+          "CONTINUE",
+          "NEW"
+        ],
+        "matrix": [
+          [
+            15,
+            0
+          ],
+          [
+            8,
+            7
+          ]
+        ]
+      },
+      "errors": [],
+      "incorrect_cases": [
+        "case_018",
+        "case_020",
+        "case_021",
+        "case_022",
+        "case_024",
+        "case_026",
+        "case_028",
+        "case_030"
+      ],
+      "latency_sec": {
+        "mean": 0.11640834420080258,
+        "median": 0.1180191880048369
+      },
+      "prompt_tokens": {
+        "mean": 319.3333333333333,
+        "median": 320.0
+      },
+      "completion_tokens": {
+        "mean": 10.833333333333334,
+        "median": 11.0
+      }
+    },
+    "E4": {
+      "correct": 20,
+      "evaluated": 30,
+      "accuracy": 0.6666666666666666,
+      "prediction_counts": {
+        "CONTINUE": 15,
+        "NEW": 15
+      },
+      "confusion_matrix": {
+        "labels": [
+          "CONTINUE",
+          "NEW"
+        ],
+        "matrix": [
+          [
+            10,
+            5
+          ],
+          [
+            5,
+            10
+          ]
+        ]
+      },
+      "errors": [],
+      "incorrect_cases": [
+        "case_001",
+        "case_002",
+        "case_012",
+        "case_014",
+        "case_017",
+        "case_021",
+        "case_022",
+        "case_024",
+        "case_028",
+        "case_029"
+      ],
+      "latency_sec": {
+        "mean": 0.113965316900673,
+        "median": 0.11212274249919574
+      },
+      "prompt_tokens": {
+        "mean": 319.3333333333333,
+        "median": 320.0
+      },
+      "completion_tokens": {
+        "mean": 10.6,
+        "median": 10.5
+      }
+    }
+  },
+  "s2_conditions": {
+    "E1": {
+      "correct": 0,
+      "evaluated": 0,
+      "accuracy": null,
+      "prediction_counts": {
+        "CONTINUE": 0,
+        "NEW": 0
+      },
+      "confusion_matrix": {
+        "labels": [
+          "CONTINUE",
+          "NEW"
+        ],
+        "matrix": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "errors": [
+        "case_001",
+        "case_002",
+        "case_003",
+        "case_004",
+        "case_005",
+        "case_006",
+        "case_007",
+        "case_008",
+        "case_009",
+        "case_010",
+        "case_011",
+        "case_012",
+        "case_013",
+        "case_014",
+        "case_015",
+        "case_016",
+        "case_017",
+        "case_018",
+        "case_019",
+        "case_020",
+        "case_021",
+        "case_022",
+        "case_023",
+        "case_024",
+        "case_025",
+        "case_026",
+        "case_027",
+        "case_028",
+        "case_029",
+        "case_030"
+      ],
+      "incorrect_cases": [],
+      "latency_sec": {
+        "mean": 0.3603280689996609,
+        "median": 0.36656504049824434
+      },
+      "prompt_tokens": {
+        "mean": 353.3333333333333,
+        "median": 354.0
+      },
+      "completion_tokens": {
+        "mean": 32.0,
+        "median": 32.0
+      }
+    },
+    "E2": {
+      "correct": 0,
+      "evaluated": 0,
+      "accuracy": null,
+      "prediction_counts": {
+        "CONTINUE": 0,
+        "NEW": 0
+      },
+      "confusion_matrix": {
+        "labels": [
+          "CONTINUE",
+          "NEW"
+        ],
+        "matrix": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "errors": [
+        "case_001",
+        "case_002",
+        "case_003",
+        "case_004",
+        "case_005",
+        "case_006",
+        "case_007",
+        "case_008",
+        "case_009",
+        "case_010",
+        "case_011",
+        "case_012",
+        "case_013",
+        "case_014",
+        "case_015",
+        "case_016",
+        "case_017",
+        "case_018",
+        "case_019",
+        "case_020",
+        "case_021",
+        "case_022",
+        "case_023",
+        "case_024",
+        "case_025",
+        "case_026",
+        "case_027",
+        "case_028",
+        "case_029",
+        "case_030"
+      ],
+      "incorrect_cases": [],
+      "latency_sec": {
+        "mean": 0.35476814826688496,
+        "median": 0.35716908300310024
+      },
+      "prompt_tokens": {
+        "mean": 353.3333333333333,
+        "median": 354.0
+      },
+      "completion_tokens": {
+        "mean": 32.0,
+        "median": 32.0
+      }
+    },
+    "E3": {
+      "correct": 0,
+      "evaluated": 0,
+      "accuracy": null,
+      "prediction_counts": {
+        "CONTINUE": 0,
+        "NEW": 0
+      },
+      "confusion_matrix": {
+        "labels": [
+          "CONTINUE",
+          "NEW"
+        ],
+        "matrix": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "errors": [
+        "case_001",
+        "case_002",
+        "case_003",
+        "case_004",
+        "case_005",
+        "case_006",
+        "case_007",
+        "case_008",
+        "case_009",
+        "case_010",
+        "case_011",
+        "case_012",
+        "case_013",
+        "case_014",
+        "case_015",
+        "case_016",
+        "case_017",
+        "case_018",
+        "case_019",
+        "case_020",
+        "case_021",
+        "case_022",
+        "case_023",
+        "case_024",
+        "case_025",
+        "case_026",
+        "case_027",
+        "case_028",
+        "case_029",
+        "case_030"
+      ],
+      "incorrect_cases": [],
+      "latency_sec": {
+        "mean": 0.31232811386629084,
+        "median": 0.31241538250105805
+      },
+      "prompt_tokens": {
+        "mean": 353.3333333333333,
+        "median": 354.0
+      },
+      "completion_tokens": {
+        "mean": 32.0,
+        "median": 32.0
+      }
+    },
+    "E4": {
+      "correct": 0,
+      "evaluated": 0,
+      "accuracy": null,
+      "prediction_counts": {
+        "CONTINUE": 0,
+        "NEW": 0
+      },
+      "confusion_matrix": {
+        "labels": [
+          "CONTINUE",
+          "NEW"
+        ],
+        "matrix": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "errors": [
+        "case_001",
+        "case_002",
+        "case_003",
+        "case_004",
+        "case_005",
+        "case_006",
+        "case_007",
+        "case_008",
+        "case_009",
+        "case_010",
+        "case_011",
+        "case_012",
+        "case_013",
+        "case_014",
+        "case_015",
+        "case_016",
+        "case_017",
+        "case_018",
+        "case_019",
+        "case_020",
+        "case_021",
+        "case_022",
+        "case_023",
+        "case_024",
+        "case_025",
+        "case_026",
+        "case_027",
+        "case_028",
+        "case_029",
+        "case_030"
+      ],
+      "incorrect_cases": [],
+      "latency_sec": {
+        "mean": 0.31280402569949123,
+        "median": 0.3125965945000644
+      },
+      "prompt_tokens": {
+        "mean": 353.3333333333333,
+        "median": 354.0
+      },
+      "completion_tokens": {
+        "mean": 32.0,
+        "median": 32.0
+      }
+    }
+  },
+  "s1_order_robustness": {
+    "pairwise_agreement": {
+      "E1↔E2": {
+        "agreement_count": 20,
+        "total": 30,
+        "agreement_rate": 0.6666666666666666,
+        "changed_count": 10,
+        "changed_cases": [
+          "case_001",
+          "case_002",
+          "case_012",
+          "case_014",
+          "case_017",
+          "case_018",
+          "case_020",
+          "case_026",
+          "case_029",
+          "case_030"
+        ],
+        "uncompared_error_cases": []
+      },
+      "E1↔E3": {
+        "agreement_count": 30,
+        "total": 30,
+        "agreement_rate": 1.0,
+        "changed_count": 0,
+        "changed_cases": [],
+        "uncompared_error_cases": []
+      },
+      "E1↔E4": {
+        "agreement_count": 20,
+        "total": 30,
+        "agreement_rate": 0.6666666666666666,
+        "changed_count": 10,
+        "changed_cases": [
+          "case_001",
+          "case_002",
+          "case_012",
+          "case_014",
+          "case_017",
+          "case_018",
+          "case_020",
+          "case_026",
+          "case_029",
+          "case_030"
+        ],
+        "uncompared_error_cases": []
+      },
+      "E2↔E3": {
+        "agreement_count": 20,
+        "total": 30,
+        "agreement_rate": 0.6666666666666666,
+        "changed_count": 10,
+        "changed_cases": [
+          "case_001",
+          "case_002",
+          "case_012",
+          "case_014",
+          "case_017",
+          "case_018",
+          "case_020",
+          "case_026",
+          "case_029",
+          "case_030"
+        ],
+        "uncompared_error_cases": []
+      },
+      "E2↔E4": {
+        "agreement_count": 30,
+        "total": 30,
+        "agreement_rate": 1.0,
+        "changed_count": 0,
+        "changed_cases": [],
+        "uncompared_error_cases": []
+      },
+      "E3↔E4": {
+        "agreement_count": 20,
+        "total": 30,
+        "agreement_rate": 0.6666666666666666,
+        "changed_count": 10,
+        "changed_cases": [
+          "case_001",
+          "case_002",
+          "case_012",
+          "case_014",
+          "case_017",
+          "case_018",
+          "case_020",
+          "case_026",
+          "case_029",
+          "case_030"
+        ],
+        "uncompared_error_cases": []
+      }
+    },
+    "evaluated_cases": 30,
+    "order_sensitive_case_count": 10,
+    "order_sensitive_cases": [
+      "case_001",
+      "case_002",
+      "case_012",
+      "case_014",
+      "case_017",
+      "case_018",
+      "case_020",
+      "case_026",
+      "case_029",
+      "case_030"
+    ]
+  },
+  "s2_order_robustness": {
+    "pairwise_agreement": {
+      "E1↔E2": {
+        "agreement_count": 0,
+        "total": 0,
+        "agreement_rate": null,
+        "changed_count": 0,
+        "changed_cases": [],
+        "uncompared_error_cases": [
+          "case_001",
+          "case_002",
+          "case_003",
+          "case_004",
+          "case_005",
+          "case_006",
+          "case_007",
+          "case_008",
+          "case_009",
+          "case_010",
+          "case_011",
+          "case_012",
+          "case_013",
+          "case_014",
+          "case_015",
+          "case_016",
+          "case_017",
+          "case_018",
+          "case_019",
+          "case_020",
+          "case_021",
+          "case_022",
+          "case_023",
+          "case_024",
+          "case_025",
+          "case_026",
+          "case_027",
+          "case_028",
+          "case_029",
+          "case_030"
+        ]
+      },
+      "E1↔E3": {
+        "agreement_count": 0,
+        "total": 0,
+        "agreement_rate": null,
+        "changed_count": 0,
+        "changed_cases": [],
+        "uncompared_error_cases": [
+          "case_001",
+          "case_002",
+          "case_003",
+          "case_004",
+          "case_005",
+          "case_006",
+          "case_007",
+          "case_008",
+          "case_009",
+          "case_010",
+          "case_011",
+          "case_012",
+          "case_013",
+          "case_014",
+          "case_015",
+          "case_016",
+          "case_017",
+          "case_018",
+          "case_019",
+          "case_020",
+          "case_021",
+          "case_022",
+          "case_023",
+          "case_024",
+          "case_025",
+          "case_026",
+          "case_027",
+          "case_028",
+          "case_029",
+          "case_030"
+        ]
+      },
+      "E1↔E4": {
+        "agreement_count": 0,
+        "total": 0,
+        "agreement_rate": null,
+        "changed_count": 0,
+        "changed_cases": [],
+        "uncompared_error_cases": [
+          "case_001",
+          "case_002",
+          "case_003",
+          "case_004",
+          "case_005",
+          "case_006",
+          "case_007",
+          "case_008",
+          "case_009",
+          "case_010",
+          "case_011",
+          "case_012",
+          "case_013",
+          "case_014",
+          "case_015",
+          "case_016",
+          "case_017",
+          "case_018",
+          "case_019",
+          "case_020",
+          "case_021",
+          "case_022",
+          "case_023",
+          "case_024",
+          "case_025",
+          "case_026",
+          "case_027",
+          "case_028",
+          "case_029",
+          "case_030"
+        ]
+      },
+      "E2↔E3": {
+        "agreement_count": 0,
+        "total": 0,
+        "agreement_rate": null,
+        "changed_count": 0,
+        "changed_cases": [],
+        "uncompared_error_cases": [
+          "case_001",
+          "case_002",
+          "case_003",
+          "case_004",
+          "case_005",
+          "case_006",
+          "case_007",
+          "case_008",
+          "case_009",
+          "case_010",
+          "case_011",
+          "case_012",
+          "case_013",
+          "case_014",
+          "case_015",
+          "case_016",
+          "case_017",
+          "case_018",
+          "case_019",
+          "case_020",
+          "case_021",
+          "case_022",
+          "case_023",
+          "case_024",
+          "case_025",
+          "case_026",
+          "case_027",
+          "case_028",
+          "case_029",
+          "case_030"
+        ]
+      },
+      "E2↔E4": {
+        "agreement_count": 0,
+        "total": 0,
+        "agreement_rate": null,
+        "changed_count": 0,
+        "changed_cases": [],
+        "uncompared_error_cases": [
+          "case_001",
+          "case_002",
+          "case_003",
+          "case_004",
+          "case_005",
+          "case_006",
+          "case_007",
+          "case_008",
+          "case_009",
+          "case_010",
+          "case_011",
+          "case_012",
+          "case_013",
+          "case_014",
+          "case_015",
+          "case_016",
+          "case_017",
+          "case_018",
+          "case_019",
+          "case_020",
+          "case_021",
+          "case_022",
+          "case_023",
+          "case_024",
+          "case_025",
+          "case_026",
+          "case_027",
+          "case_028",
+          "case_029",
+          "case_030"
+        ]
+      },
+      "E3↔E4": {
+        "agreement_count": 0,
+        "total": 0,
+        "agreement_rate": null,
+        "changed_count": 0,
+        "changed_cases": [],
+        "uncompared_error_cases": [
+          "case_001",
+          "case_002",
+          "case_003",
+          "case_004",
+          "case_005",
+          "case_006",
+          "case_007",
+          "case_008",
+          "case_009",
+          "case_010",
+          "case_011",
+          "case_012",
+          "case_013",
+          "case_014",
+          "case_015",
+          "case_016",
+          "case_017",
+          "case_018",
+          "case_019",
+          "case_020",
+          "case_021",
+          "case_022",
+          "case_023",
+          "case_024",
+          "case_025",
+          "case_026",
+          "case_027",
+          "case_028",
+          "case_029",
+          "case_030"
+        ]
+      }
+    },
+    "evaluated_cases": 0,
+    "order_sensitive_case_count": null,
+    "order_sensitive_cases": []
+  },
+  "by_condition": {
+    "E1": {
+      "changed_count": null,
+      "changed_cases": [],
+      "corrected_count": null,
+      "corrected_cases": [],
+      "broken_count": null,
+      "broken_cases": [],
+      "agreement_count": null,
+      "total": 0
+    },
+    "E2": {
+      "changed_count": null,
+      "changed_cases": [],
+      "corrected_count": null,
+      "corrected_cases": [],
+      "broken_count": null,
+      "broken_cases": [],
+      "agreement_count": null,
+      "total": 0
+    },
+    "E3": {
+      "changed_count": null,
+      "changed_cases": [],
+      "corrected_count": null,
+      "corrected_cases": [],
+      "broken_count": null,
+      "broken_cases": [],
+      "agreement_count": null,
+      "total": 0
+    },
+    "E4": {
+      "changed_count": null,
+      "changed_cases": [],
+      "corrected_count": null,
+      "corrected_cases": [],
+      "broken_count": null,
+      "broken_cases": [],
+      "agreement_count": null,
+      "total": 0
+    }
+  },
+  "aggregate_condition_case_changes": {
+    "comparable_count": 0,
+    "changed_count": null,
+    "changed": [],
+    "corrected_count": null,
+    "corrected": [],
+    "broken_count": null,
+    "broken": [],
+    "unique_changed_cases": []
+  },
+  "important_cases": [
+    {
+      "id": "case_017",
+      "conditions": [
+        {
+          "condition": "E1",
+          "expected_route": "CONTINUE",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "",
+          "s2_reason": null,
+          "s1_correct": true,
+          "s2_correct": null,
+          "s1_error": null,
+          "s2_error": "ValueError: Структурированный ответ не является JSON"
+        },
+        {
+          "condition": "E2",
+          "expected_route": "CONTINUE",
+          "s1_prediction": "NEW",
+          "s2_prediction": "",
+          "s2_reason": null,
+          "s1_correct": false,
+          "s2_correct": null,
+          "s1_error": null,
+          "s2_error": "ValueError: Структурированный ответ не является JSON"
+        },
+        {
+          "condition": "E3",
+          "expected_route": "CONTINUE",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "",
+          "s2_reason": null,
+          "s1_correct": true,
+          "s2_correct": null,
+          "s1_error": null,
+          "s2_error": "ValueError: Структурированный ответ не является JSON"
+        },
+        {
+          "condition": "E4",
+          "expected_route": "CONTINUE",
+          "s1_prediction": "NEW",
+          "s2_prediction": "",
+          "s2_reason": null,
+          "s1_correct": false,
+          "s2_correct": null,
+          "s1_error": null,
+          "s2_error": "ValueError: Структурированный ответ не является JSON"
+        }
+      ]
+    },
+    {
+      "id": "case_020",
+      "conditions": [
+        {
+          "condition": "E1",
+          "expected_route": "NEW",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "",
+          "s2_reason": null,
+          "s1_correct": false,
+          "s2_correct": null,
+          "s1_error": null,
+          "s2_error": "ValueError: Структурированный ответ не является JSON"
+        },
+        {
+          "condition": "E2",
+          "expected_route": "NEW",
+          "s1_prediction": "NEW",
+          "s2_prediction": "",
+          "s2_reason": null,
+          "s1_correct": true,
+          "s2_correct": null,
+          "s1_error": null,
+          "s2_error": "ValueError: Структурированный ответ не является JSON"
+        },
+        {
+          "condition": "E3",
+          "expected_route": "NEW",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "",
+          "s2_reason": null,
+          "s1_correct": false,
+          "s2_correct": null,
+          "s1_error": null,
+          "s2_error": "ValueError: Структурированный ответ не является JSON"
+        },
+        {
+          "condition": "E4",
+          "expected_route": "NEW",
+          "s1_prediction": "NEW",
+          "s2_prediction": "",
+          "s2_reason": null,
+          "s1_correct": true,
+          "s2_correct": null,
+          "s1_error": null,
+          "s2_error": "ValueError: Структурированный ответ не является JSON"
+        }
+      ]
+    },
+    {
+      "id": "case_021",
+      "conditions": [
+        {
+          "condition": "E1",
+          "expected_route": "NEW",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "",
+          "s2_reason": null,
+          "s1_correct": false,
+          "s2_correct": null,
+          "s1_error": null,
+          "s2_error": "ValueError: Структурированный ответ не является JSON"
+        },
+        {
+          "condition": "E2",
+          "expected_route": "NEW",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "",
+          "s2_reason": null,
+          "s1_correct": false,
+          "s2_correct": null,
+          "s1_error": null,
+          "s2_error": "ValueError: Структурированный ответ не является JSON"
+        },
+        {
+          "condition": "E3",
+          "expected_route": "NEW",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "",
+          "s2_reason": null,
+          "s1_correct": false,
+          "s2_correct": null,
+          "s1_error": null,
+          "s2_error": "ValueError: Структурированный ответ не является JSON"
+        },
+        {
+          "condition": "E4",
+          "expected_route": "NEW",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "",
+          "s2_reason": null,
+          "s1_correct": false,
+          "s2_correct": null,
+          "s1_error": null,
+          "s2_error": "ValueError: Структурированный ответ не является JSON"
+        }
+      ]
+    },
+    {
+      "id": "case_023",
+      "conditions": [
+        {
+          "condition": "E1",
+          "expected_route": "CONTINUE",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "",
+          "s2_reason": null,
+          "s1_correct": true,
+          "s2_correct": null,
+          "s1_error": null,
+          "s2_error": "ValueError: Структурированный ответ не является JSON"
+        },
+        {
+          "condition": "E2",
+          "expected_route": "CONTINUE",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "",
+          "s2_reason": null,
+          "s1_correct": true,
+          "s2_correct": null,
+          "s1_error": null,
+          "s2_error": "ValueError: Структурированный ответ не является JSON"
+        },
+        {
+          "condition": "E3",
+          "expected_route": "CONTINUE",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "",
+          "s2_reason": null,
+          "s1_correct": true,
+          "s2_correct": null,
+          "s1_error": null,
+          "s2_error": "ValueError: Структурированный ответ не является JSON"
+        },
+        {
+          "condition": "E4",
+          "expected_route": "CONTINUE",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "",
+          "s2_reason": null,
+          "s1_correct": true,
+          "s2_correct": null,
+          "s1_error": null,
+          "s2_error": "ValueError: Структурированный ответ не является JSON"
+        }
+      ]
+    },
+    {
+      "id": "case_024",
+      "conditions": [
+        {
+          "condition": "E1",
+          "expected_route": "NEW",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "",
+          "s2_reason": null,
+          "s1_correct": false,
+          "s2_correct": null,
+          "s1_error": null,
+          "s2_error": "ValueError: Структурированный ответ не является JSON"
+        },
+        {
+          "condition": "E2",
+          "expected_route": "NEW",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "",
+          "s2_reason": null,
+          "s1_correct": false,
+          "s2_correct": null,
+          "s1_error": null,
+          "s2_error": "ValueError: Структурированный ответ не является JSON"
+        },
+        {
+          "condition": "E3",
+          "expected_route": "NEW",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "",
+          "s2_reason": null,
+          "s1_correct": false,
+          "s2_correct": null,
+          "s1_error": null,
+          "s2_error": "ValueError: Структурированный ответ не является JSON"
+        },
+        {
+          "condition": "E4",
+          "expected_route": "NEW",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "",
+          "s2_reason": null,
+          "s1_correct": false,
+          "s2_correct": null,
+          "s1_error": null,
+          "s2_error": "ValueError: Структурированный ответ не является JSON"
+        }
+      ]
+    },
+    {
+      "id": "case_029",
+      "conditions": [
+        {
+          "condition": "E1",
+          "expected_route": "CONTINUE",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "",
+          "s2_reason": null,
+          "s1_correct": true,
+          "s2_correct": null,
+          "s1_error": null,
+          "s2_error": "ValueError: Структурированный ответ не является JSON"
+        },
+        {
+          "condition": "E2",
+          "expected_route": "CONTINUE",
+          "s1_prediction": "NEW",
+          "s2_prediction": "",
+          "s2_reason": null,
+          "s1_correct": false,
+          "s2_correct": null,
+          "s1_error": null,
+          "s2_error": "ValueError: Структурированный ответ не является JSON"
+        },
+        {
+          "condition": "E3",
+          "expected_route": "CONTINUE",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "",
+          "s2_reason": null,
+          "s1_correct": true,
+          "s2_correct": null,
+          "s1_error": null,
+          "s2_error": "ValueError: Структурированный ответ не является JSON"
+        },
+        {
+          "condition": "E4",
+          "expected_route": "CONTINUE",
+          "s1_prediction": "NEW",
+          "s2_prediction": "",
+          "s2_reason": null,
+          "s1_correct": false,
+          "s2_correct": null,
+          "s1_error": null,
+          "s2_error": "ValueError: Структурированный ответ не является JSON"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "generator_seed": 2026090901,
+  "policy_version": "dataset-v3-policy-draft-1",
+  "target_count": 300,
+  "class_counts": {
+    "NEW": 150,
+    "CONTINUE": 150
+  },
+  "split_counts": {
+    "development": 120,
+    "validation": 60,
+    "test": 120
+  },
+  "difficulty_counts": {
+    "medium": 132,
+    "easy": 84,
+    "hard": 84
+  },
+  "ambiguity_counts": {
+    "medium": 90,
+    "low": 180,
+    "high": 30
+  },
+  "category_counts": {
+    "completed_then_new_task": 18,
+    "explicit_continuation": 20,
+    "correction_or_data_completion": 22,
+    "clarification_answer": 24,
+    "same_entity_new_operation": 28,
+    "intent_switch_same_domain": 22,
+    "parameter_change": 24,
+    "same_topic_new_operation": 28,
+    "mixed_continuation_and_independent": 30,
+    "necessary_related_subquestion": 20,
+    "new_goal_same_workflow": 24,
+    "entity_substitution_same_operation": 20,
+    "result_representation_change": 20
+  },
+  "domain_counts": {
+    "programming": {
+      "NEW": 10,
+      "CONTINUE": 10
+    },
+    "files_storage": {
+      "CONTINUE": 10,
+      "NEW": 10
+    },
+    "data_analytics_sql": {
+      "CONTINUE": 10,
+      "NEW": 10
+    },
+    "hr_workplace": {
+      "CONTINUE": 10,
+      "NEW": 10
+    },
+    "calendar_planning": {
+      "CONTINUE": 10,
+      "NEW": 10
+    },
+    "email_messaging": {
+      "CONTINUE": 10,
+      "NEW": 10
+    },
+    "sysadmin_devops": {
+      "CONTINUE": 10,
+      "NEW": 10
+    },
+    "shopping_orders": {
+      "CONTINUE": 10,
+      "NEW": 10
+    },
+    "travel_logistics": {
+      "CONTINUE": 10,
+      "NEW": 10
+    },
+    "cooking_household": {
+      "CONTINUE": 10,
+      "NEW": 10
+    },
+    "education_learning": {
+      "NEW": 10,
+      "CONTINUE": 10
+    },
+    "support_accounts": {
+      "CONTINUE": 10,
+      "NEW": 10
+    },
+    "documents_content": {
+      "NEW": 10,
+      "CONTINUE": 10
+    },
+    "search_research": {
+      "CONTINUE": 10,
+      "NEW": 10
+    },
+    "project_management": {
+      "CONTINUE": 10,
+      "NEW": 10
+    }
+  },
+  "family_count": 75,
+  "family_cases": 225,
+  "standalone_cases": 75,
+  "family_split_counts": {
+    "development": 30,
+    "validation": 15,
+    "test": 30
+  },
+  "checks": {
+    "all_quota_checks_passed": true,
+    "exact_duplicate_cases": 0
+  },
+  "sha256": {
+    "dataset_v3_full_working.jsonl": "536c0be8b1cf05927731bd53ea65c1557ff86a3b6591155b5a054fba2eadc10e",
+    "dataset_v3_development.jsonl": "be113c460c0534fcd434206000281fbaed9eb356a2b8b2ff6c710d38eef569af",
+    "dataset_v3_validation.jsonl": "22cfce2bebe1a99754605c1776a480edd575640d1639ee6638aecfb71ccc78dc",
+    "dataset_v3_test_inputs.jsonl": "5fb313191f3204cd343bbe6c7f78192f0d38690fc506da60075fc4613955c485",
+    "dataset_v3_test_labels.jsonl": "f96ec1f6671e701a17e42348237c6ccb0abcd0377cff4943d73e6260d7aac31a",
+    "dataset_v3_test_full_trusted.jsonl": "8019c86c81406e4ad9023cc818958b1798c1720f6797353deeb8d33834082ca5"
+  }
+}

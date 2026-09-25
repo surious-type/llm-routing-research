@@ -1,0 +1,1023 @@
+{
+  "manifest": {
+    "experiment_family": "reason-route-model-size-v1",
+    "image": "vllm/vllm-openai@sha256:61fc8a896b0a4fbbbdc063bc4b0dbc25ce98e02b5050c24aeb7830ac02039b14",
+    "expected_vllm_version": "0.28.0",
+    "started_at_utc": "2026-09-07T17:16:23.619371+00:00",
+    "models": {
+      "M4": {
+        "success": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "configuration": {
+              "label": "M4",
+              "model_id": "Qwen/Qwen3-4B-AWQ",
+              "served_model_name": "qwen3-4b",
+              "gpu_memory_utilization": 0.9,
+              "cpu_offload_gb": 0,
+              "max_model_len": 2048,
+              "max_num_seqs": 1,
+              "enforce_eager": false,
+              "quantization": "awq"
+            },
+            "container_name": "routing-model-size-20260907-m4-a1",
+            "image": "vllm/vllm-openai@sha256:61fc8a896b0a4fbbbdc063bc4b0dbc25ce98e02b5050c24aeb7830ac02039b14",
+            "vllm_version": "0.28.0",
+            "started_at_utc": "2026-09-07T17:16:25.195513+00:00",
+            "nvidia_smi_before": "results/model_size_20260907/m4/attempt1_nvidia_before.txt",
+            "docker_command": [
+              "docker",
+              "run",
+              "--detach",
+              "--name",
+              "routing-model-size-20260907-m4-a1",
+              "--gpus",
+              "all",
+              "--ipc",
+              "host",
+              "--publish",
+              "8000:8000",
+              "--volume",
+              "/home/surious-type/.cache/huggingface:/root/.cache/huggingface:rw",
+              "vllm/vllm-openai@sha256:61fc8a896b0a4fbbbdc063bc4b0dbc25ce98e02b5050c24aeb7830ac02039b14",
+              "--model",
+              "Qwen/Qwen3-4B-AWQ",
+              "--served-model-name",
+              "qwen3-4b",
+              "--host",
+              "0.0.0.0",
+              "--port",
+              "8000",
+              "--quantization",
+              "awq",
+              "--gpu-memory-utilization",
+              "0.9",
+              "--cpu-offload-gb",
+              "0",
+              "--max-model-len",
+              "2048",
+              "--max-num-seqs",
+              "1",
+              "--generation-config",
+              "vllm",
+              "--default-chat-template-kwargs",
+              "{\"enable_thinking\": false}"
+            ],
+            "docker_run_stdout": "620002a4f17a0b9c89ee03a0f5b3bcd3ae7800bcbe2219bc26901e36ed0c3a31",
+            "docker_run_stderr": "",
+            "server_log": "results/model_size_20260907/m4/attempt1_server.log",
+            "startup_error": null,
+            "gpu_oom": false,
+            "nvidia_smi_after_load": "results/model_size_20260907/m4/attempt1_nvidia_after_load.txt",
+            "server_metadata": "results/model_size_20260907/m4/server_metadata.json",
+            "smoke_exit_code": 0,
+            "experiment_exit_code": 0,
+            "nvidia_smi_after_experiment": "results/model_size_20260907/m4/attempt1_nvidia_after_experiment.txt",
+            "status": "complete"
+          }
+        ]
+      },
+      "M8": {
+        "success": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "configuration": {
+              "label": "M8",
+              "model_id": "Qwen/Qwen3-8B-AWQ",
+              "served_model_name": "qwen3-8b",
+              "gpu_memory_utilization": 0.85,
+              "cpu_offload_gb": 0,
+              "max_model_len": 2048,
+              "max_num_seqs": 1,
+              "enforce_eager": true,
+              "quantization": "awq"
+            },
+            "container_name": "routing-model-size-20260907-m8-a1",
+            "image": "vllm/vllm-openai@sha256:61fc8a896b0a4fbbbdc063bc4b0dbc25ce98e02b5050c24aeb7830ac02039b14",
+            "vllm_version": "0.28.0",
+            "started_at_utc": "2026-09-07T17:18:48.106517+00:00",
+            "nvidia_smi_before": "results/model_size_20260907/m8/attempt1_nvidia_before.txt",
+            "docker_command": [
+              "docker",
+              "run",
+              "--detach",
+              "--name",
+              "routing-model-size-20260907-m8-a1",
+              "--gpus",
+              "all",
+              "--ipc",
+              "host",
+              "--publish",
+              "8000:8000",
+              "--volume",
+              "/home/surious-type/.cache/huggingface:/root/.cache/huggingface:rw",
+              "vllm/vllm-openai@sha256:61fc8a896b0a4fbbbdc063bc4b0dbc25ce98e02b5050c24aeb7830ac02039b14",
+              "--model",
+              "Qwen/Qwen3-8B-AWQ",
+              "--served-model-name",
+              "qwen3-8b",
+              "--host",
+              "0.0.0.0",
+              "--port",
+              "8000",
+              "--quantization",
+              "awq",
+              "--gpu-memory-utilization",
+              "0.85",
+              "--cpu-offload-gb",
+              "0",
+              "--max-model-len",
+              "2048",
+              "--max-num-seqs",
+              "1",
+              "--generation-config",
+              "vllm",
+              "--default-chat-template-kwargs",
+              "{\"enable_thinking\": false}",
+              "--enforce-eager"
+            ],
+            "docker_run_stdout": "3be8c7a174723f6efb34d842eef059af64628b701fd9d8bd93439b172a78d1e9",
+            "docker_run_stderr": "",
+            "server_log": "results/model_size_20260907/m8/attempt1_server.log",
+            "startup_error": null,
+            "gpu_oom": false,
+            "nvidia_smi_after_load": "results/model_size_20260907/m8/attempt1_nvidia_after_load.txt",
+            "server_metadata": "results/model_size_20260907/m8/server_metadata.json",
+            "smoke_exit_code": 0,
+            "experiment_exit_code": 0,
+            "nvidia_smi_after_experiment": "results/model_size_20260907/m8/attempt1_nvidia_after_experiment.txt",
+            "status": "complete"
+          }
+        ]
+      },
+      "M14": {
+        "success": true,
+        "attempts": [
+          {
+            "attempt": 1,
+            "configuration": {
+              "label": "M14",
+              "model_id": "Qwen/Qwen3-14B-AWQ",
+              "served_model_name": "qwen3-14b",
+              "gpu_memory_utilization": 0.85,
+              "cpu_offload_gb": 4,
+              "max_model_len": 2048,
+              "max_num_seqs": 1,
+              "enforce_eager": true,
+              "quantization": "awq"
+            },
+            "container_name": "routing-model-size-20260907-m14-a1",
+            "image": "vllm/vllm-openai@sha256:61fc8a896b0a4fbbbdc063bc4b0dbc25ce98e02b5050c24aeb7830ac02039b14",
+            "vllm_version": "0.28.0",
+            "started_at_utc": "2026-09-07T17:26:50.445004+00:00",
+            "nvidia_smi_before": "results/model_size_20260907/m14/attempt1_nvidia_before.txt",
+            "docker_command": [
+              "docker",
+              "run",
+              "--detach",
+              "--name",
+              "routing-model-size-20260907-m14-a1",
+              "--gpus",
+              "all",
+              "--ipc",
+              "host",
+              "--publish",
+              "8000:8000",
+              "--volume",
+              "/home/surious-type/.cache/huggingface:/root/.cache/huggingface:rw",
+              "vllm/vllm-openai@sha256:61fc8a896b0a4fbbbdc063bc4b0dbc25ce98e02b5050c24aeb7830ac02039b14",
+              "--model",
+              "Qwen/Qwen3-14B-AWQ",
+              "--served-model-name",
+              "qwen3-14b",
+              "--host",
+              "0.0.0.0",
+              "--port",
+              "8000",
+              "--quantization",
+              "awq",
+              "--gpu-memory-utilization",
+              "0.85",
+              "--cpu-offload-gb",
+              "4",
+              "--max-model-len",
+              "2048",
+              "--max-num-seqs",
+              "1",
+              "--generation-config",
+              "vllm",
+              "--default-chat-template-kwargs",
+              "{\"enable_thinking\": false}",
+              "--enforce-eager"
+            ],
+            "docker_run_stdout": "9cc02e899ec9048a9a2f4125965f2f6226e69d783164059f761d10606dff6fb4",
+            "docker_run_stderr": "",
+            "server_log": "results/model_size_20260907/m14/attempt1_server.log",
+            "startup_error": null,
+            "gpu_oom": false,
+            "nvidia_smi_after_load": "results/model_size_20260907/m14/attempt1_nvidia_after_load.txt",
+            "server_metadata": "results/model_size_20260907/m14/server_metadata.json",
+            "smoke_exit_code": 0,
+            "experiment_exit_code": 0,
+            "nvidia_smi_after_experiment": "results/model_size_20260907/m14/attempt1_nvidia_after_experiment.txt",
+            "status": "complete"
+          }
+        ]
+      }
+    },
+    "stopped_preexisting_containers": [
+      "b03a9ed11a60"
+    ],
+    "finished_at_utc": "2026-09-07T17:50:06.818196+00:00"
+  },
+  "models": {
+    "M4": {
+      "P1": {
+        "correct": 27,
+        "evaluated": 30,
+        "accuracy": 0.9,
+        "prediction_counts": {
+          "CONTINUE": 16,
+          "NEW": 14
+        },
+        "confusion_matrix": {
+          "labels": [
+            "CONTINUE",
+            "NEW"
+          ],
+          "matrix": [
+            [
+              14,
+              1
+            ],
+            [
+              2,
+              13
+            ]
+          ]
+        },
+        "errors": [],
+        "incorrect_cases": [
+          "case_020",
+          "case_021",
+          "case_023"
+        ],
+        "latency_sec": {
+          "mean": 0.620131872966158,
+          "median": 0.6083181009998953
+        },
+        "prompt_tokens": {
+          "mean": 353.3333333333333,
+          "median": 354.0
+        },
+        "completion_tokens": {
+          "mean": 59.56666666666667,
+          "median": 60.0
+        }
+      },
+      "P2": {
+        "correct": 27,
+        "evaluated": 30,
+        "accuracy": 0.9,
+        "prediction_counts": {
+          "CONTINUE": 16,
+          "NEW": 14
+        },
+        "confusion_matrix": {
+          "labels": [
+            "CONTINUE",
+            "NEW"
+          ],
+          "matrix": [
+            [
+              14,
+              1
+            ],
+            [
+              2,
+              13
+            ]
+          ]
+        },
+        "errors": [],
+        "incorrect_cases": [
+          "case_001",
+          "case_014",
+          "case_024"
+        ],
+        "latency_sec": {
+          "mean": 0.6219594133001617,
+          "median": 0.5959791530003713
+        },
+        "prompt_tokens": {
+          "mean": 353.3333333333333,
+          "median": 354.0
+        },
+        "completion_tokens": {
+          "mean": 60.56666666666667,
+          "median": 57.0
+        }
+      },
+      "mean_accuracy": 0.9,
+      "semantic_agreement": {
+        "agreement_count": 24,
+        "total": 30,
+        "agreement_rate": 0.8,
+        "changed_count": 6,
+        "changed_cases": [
+          "case_001",
+          "case_014",
+          "case_020",
+          "case_021",
+          "case_023",
+          "case_024"
+        ],
+        "uncompared_error_cases": []
+      },
+      "order_sensitive_case_count": 6,
+      "order_sensitive_cases": [
+        "case_001",
+        "case_014",
+        "case_020",
+        "case_021",
+        "case_023",
+        "case_024"
+      ]
+    },
+    "M8": {
+      "P1": {
+        "correct": 29,
+        "evaluated": 30,
+        "accuracy": 0.9666666666666667,
+        "prediction_counts": {
+          "CONTINUE": 14,
+          "NEW": 16
+        },
+        "confusion_matrix": {
+          "labels": [
+            "CONTINUE",
+            "NEW"
+          ],
+          "matrix": [
+            [
+              14,
+              1
+            ],
+            [
+              0,
+              15
+            ]
+          ]
+        },
+        "errors": [],
+        "incorrect_cases": [
+          "case_002"
+        ],
+        "latency_sec": {
+          "mean": 1.426976833632701,
+          "median": 1.3858305654975993
+        },
+        "prompt_tokens": {
+          "mean": 353.3333333333333,
+          "median": 354.0
+        },
+        "completion_tokens": {
+          "mean": 66.16666666666667,
+          "median": 65.0
+        }
+      },
+      "P2": {
+        "correct": 27,
+        "evaluated": 30,
+        "accuracy": 0.9,
+        "prediction_counts": {
+          "CONTINUE": 16,
+          "NEW": 14
+        },
+        "confusion_matrix": {
+          "labels": [
+            "CONTINUE",
+            "NEW"
+          ],
+          "matrix": [
+            [
+              14,
+              1
+            ],
+            [
+              2,
+              13
+            ]
+          ]
+        },
+        "errors": [],
+        "incorrect_cases": [
+          "case_026",
+          "case_028",
+          "case_029"
+        ],
+        "latency_sec": {
+          "mean": 1.393752154699905,
+          "median": 1.4035184895001294
+        },
+        "prompt_tokens": {
+          "mean": 353.3333333333333,
+          "median": 354.0
+        },
+        "completion_tokens": {
+          "mean": 64.36666666666666,
+          "median": 63.0
+        }
+      },
+      "mean_accuracy": 0.9333333333333333,
+      "semantic_agreement": {
+        "agreement_count": 26,
+        "total": 30,
+        "agreement_rate": 0.8666666666666667,
+        "changed_count": 4,
+        "changed_cases": [
+          "case_002",
+          "case_026",
+          "case_028",
+          "case_029"
+        ],
+        "uncompared_error_cases": []
+      },
+      "order_sensitive_case_count": 4,
+      "order_sensitive_cases": [
+        "case_002",
+        "case_026",
+        "case_028",
+        "case_029"
+      ]
+    },
+    "M14": {
+      "P1": {
+        "correct": 27,
+        "evaluated": 30,
+        "accuracy": 0.9,
+        "prediction_counts": {
+          "CONTINUE": 14,
+          "NEW": 16
+        },
+        "confusion_matrix": {
+          "labels": [
+            "CONTINUE",
+            "NEW"
+          ],
+          "matrix": [
+            [
+              13,
+              2
+            ],
+            [
+              1,
+              14
+            ]
+          ]
+        },
+        "errors": [],
+        "incorrect_cases": [
+          "case_013",
+          "case_020",
+          "case_027"
+        ],
+        "latency_sec": {
+          "mean": 11.313909629600433,
+          "median": 11.017243075999431
+        },
+        "prompt_tokens": {
+          "mean": 353.3333333333333,
+          "median": 354.0
+        },
+        "completion_tokens": {
+          "mean": 59.833333333333336,
+          "median": 58.0
+        }
+      },
+      "P2": {
+        "correct": 27,
+        "evaluated": 30,
+        "accuracy": 0.9,
+        "prediction_counts": {
+          "CONTINUE": 14,
+          "NEW": 16
+        },
+        "confusion_matrix": {
+          "labels": [
+            "CONTINUE",
+            "NEW"
+          ],
+          "matrix": [
+            [
+              13,
+              2
+            ],
+            [
+              1,
+              14
+            ]
+          ]
+        },
+        "errors": [],
+        "incorrect_cases": [
+          "case_010",
+          "case_013",
+          "case_020"
+        ],
+        "latency_sec": {
+          "mean": 11.20769607250016,
+          "median": 11.020443993500521
+        },
+        "prompt_tokens": {
+          "mean": 353.3333333333333,
+          "median": 354.0
+        },
+        "completion_tokens": {
+          "mean": 59.06666666666667,
+          "median": 58.0
+        }
+      },
+      "mean_accuracy": 0.9,
+      "semantic_agreement": {
+        "agreement_count": 28,
+        "total": 30,
+        "agreement_rate": 0.9333333333333333,
+        "changed_count": 2,
+        "changed_cases": [
+          "case_010",
+          "case_027"
+        ],
+        "uncompared_error_cases": []
+      },
+      "order_sensitive_case_count": 2,
+      "order_sensitive_cases": [
+        "case_010",
+        "case_027"
+      ]
+    }
+  },
+  "comparisons": {
+    "M4→M8": {
+      "fixed_cases": [
+        "case_001",
+        "case_014",
+        "case_020",
+        "case_021",
+        "case_023",
+        "case_024"
+      ],
+      "new_error_cases": [
+        "case_002",
+        "case_026",
+        "case_028",
+        "case_029"
+      ],
+      "persistent_error_cases": [],
+      "smaller_errors_by_case": {
+        "case_020": [
+          "P1"
+        ],
+        "case_021": [
+          "P1"
+        ],
+        "case_023": [
+          "P1"
+        ],
+        "case_001": [
+          "P2"
+        ],
+        "case_014": [
+          "P2"
+        ],
+        "case_024": [
+          "P2"
+        ]
+      },
+      "larger_errors_by_case": {
+        "case_002": [
+          "P1"
+        ],
+        "case_026": [
+          "P2"
+        ],
+        "case_028": [
+          "P2"
+        ],
+        "case_029": [
+          "P2"
+        ]
+      }
+    },
+    "M4→M14": {
+      "fixed_cases": [
+        "case_001",
+        "case_014",
+        "case_021",
+        "case_023",
+        "case_024"
+      ],
+      "new_error_cases": [
+        "case_010",
+        "case_013",
+        "case_027"
+      ],
+      "persistent_error_cases": [
+        "case_020"
+      ],
+      "smaller_errors_by_case": {
+        "case_020": [
+          "P1"
+        ],
+        "case_021": [
+          "P1"
+        ],
+        "case_023": [
+          "P1"
+        ],
+        "case_001": [
+          "P2"
+        ],
+        "case_014": [
+          "P2"
+        ],
+        "case_024": [
+          "P2"
+        ]
+      },
+      "larger_errors_by_case": {
+        "case_013": [
+          "P1",
+          "P2"
+        ],
+        "case_020": [
+          "P1",
+          "P2"
+        ],
+        "case_027": [
+          "P1"
+        ],
+        "case_010": [
+          "P2"
+        ]
+      }
+    },
+    "M8→M14": {
+      "fixed_cases": [
+        "case_002",
+        "case_026",
+        "case_028",
+        "case_029"
+      ],
+      "new_error_cases": [
+        "case_010",
+        "case_013",
+        "case_020",
+        "case_027"
+      ],
+      "persistent_error_cases": [],
+      "smaller_errors_by_case": {
+        "case_002": [
+          "P1"
+        ],
+        "case_026": [
+          "P2"
+        ],
+        "case_028": [
+          "P2"
+        ],
+        "case_029": [
+          "P2"
+        ]
+      },
+      "larger_errors_by_case": {
+        "case_013": [
+          "P1",
+          "P2"
+        ],
+        "case_020": [
+          "P1",
+          "P2"
+        ],
+        "case_027": [
+          "P1"
+        ],
+        "case_010": [
+          "P2"
+        ]
+      }
+    }
+  },
+  "important_cases": {
+    "case_001": {
+      "M4": {
+        "P1": {
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true,
+          "error": null
+        },
+        "P2": {
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false,
+          "error": null
+        }
+      },
+      "M8": {
+        "P1": {
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true,
+          "error": null
+        },
+        "P2": {
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true,
+          "error": null
+        }
+      },
+      "M14": {
+        "P1": {
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true,
+          "error": null
+        },
+        "P2": {
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true,
+          "error": null
+        }
+      }
+    },
+    "case_014": {
+      "M4": {
+        "P1": {
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true,
+          "error": null
+        },
+        "P2": {
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false,
+          "error": null
+        }
+      },
+      "M8": {
+        "P1": {
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true,
+          "error": null
+        },
+        "P2": {
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true,
+          "error": null
+        }
+      },
+      "M14": {
+        "P1": {
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true,
+          "error": null
+        },
+        "P2": {
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true,
+          "error": null
+        }
+      }
+    },
+    "case_020": {
+      "M4": {
+        "P1": {
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false,
+          "error": null
+        },
+        "P2": {
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true,
+          "error": null
+        }
+      },
+      "M8": {
+        "P1": {
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true,
+          "error": null
+        },
+        "P2": {
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true,
+          "error": null
+        }
+      },
+      "M14": {
+        "P1": {
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false,
+          "error": null
+        },
+        "P2": {
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false,
+          "error": null
+        }
+      }
+    },
+    "case_021": {
+      "M4": {
+        "P1": {
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false,
+          "error": null
+        },
+        "P2": {
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true,
+          "error": null
+        }
+      },
+      "M8": {
+        "P1": {
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true,
+          "error": null
+        },
+        "P2": {
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true,
+          "error": null
+        }
+      },
+      "M14": {
+        "P1": {
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true,
+          "error": null
+        },
+        "P2": {
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true,
+          "error": null
+        }
+      }
+    },
+    "case_023": {
+      "M4": {
+        "P1": {
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false,
+          "error": null
+        },
+        "P2": {
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true,
+          "error": null
+        }
+      },
+      "M8": {
+        "P1": {
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true,
+          "error": null
+        },
+        "P2": {
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true,
+          "error": null
+        }
+      },
+      "M14": {
+        "P1": {
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true,
+          "error": null
+        },
+        "P2": {
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true,
+          "error": null
+        }
+      }
+    },
+    "case_024": {
+      "M4": {
+        "P1": {
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true,
+          "error": null
+        },
+        "P2": {
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false,
+          "error": null
+        }
+      },
+      "M8": {
+        "P1": {
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true,
+          "error": null
+        },
+        "P2": {
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true,
+          "error": null
+        }
+      },
+      "M14": {
+        "P1": {
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true,
+          "error": null
+        },
+        "P2": {
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true,
+          "error": null
+        }
+      }
+    },
+    "case_029": {
+      "M4": {
+        "P1": {
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true,
+          "error": null
+        },
+        "P2": {
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true,
+          "error": null
+        }
+      },
+      "M8": {
+        "P1": {
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true,
+          "error": null
+        },
+        "P2": {
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false,
+          "error": null
+        }
+      },
+      "M14": {
+        "P1": {
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true,
+          "error": null
+        },
+        "P2": {
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true,
+          "error": null
+        }
+      }
+    }
+  }
+}

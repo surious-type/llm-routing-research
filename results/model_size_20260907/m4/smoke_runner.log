@@ -1,0 +1,16 @@
+P1 case_001: predicted=CONTINUE expected=CONTINUE error=None
+P1 case_014: predicted=NEW expected=NEW error=None
+P1 case_020: predicted=CONTINUE expected=NEW error=None
+P1 case_021: predicted=CONTINUE expected=NEW error=None
+P1 case_023: predicted=NEW expected=CONTINUE error=None
+P1 case_024: predicted=NEW expected=NEW error=None
+P1 case_029: predicted=CONTINUE expected=CONTINUE error=None
+P2 case_001: predicted=NEW expected=CONTINUE error=None
+P2 case_014: predicted=CONTINUE expected=NEW error=None
+P2 case_020: predicted=NEW expected=NEW error=None
+P2 case_021: predicted=NEW expected=NEW error=None
+P2 case_023: predicted=CONTINUE expected=CONTINUE error=None
+P2 case_024: predicted=CONTINUE expected=NEW error=None
+P2 case_029: predicted=CONTINUE expected=CONTINUE error=None
+P1: accuracy=4/7, mean_latency=0.703901s
+P2: accuracy=4/7, mean_latency=0.740997s

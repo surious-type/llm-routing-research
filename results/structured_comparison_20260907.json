@@ -1,0 +1,152 @@
+{
+  "run_a": {
+    "correct": 22,
+    "evaluated": 30,
+    "accuracy": 0.7333333333333333,
+    "errors": [],
+    "incorrect_cases": [
+      "case_018",
+      "case_020",
+      "case_021",
+      "case_022",
+      "case_024",
+      "case_026",
+      "case_028",
+      "case_030"
+    ],
+    "confusion_matrix": {
+      "labels": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "matrix": [
+        [
+          15,
+          0
+        ],
+        [
+          8,
+          7
+        ]
+      ]
+    },
+    "mean_latency_sec": 0.17419923099902615,
+    "median_latency_sec": 0.1832564949982043
+  },
+  "run_b": {
+    "correct": 20,
+    "evaluated": 30,
+    "accuracy": 0.6666666666666666,
+    "errors": [],
+    "incorrect_cases": [
+      "case_001",
+      "case_002",
+      "case_012",
+      "case_014",
+      "case_017",
+      "case_021",
+      "case_022",
+      "case_024",
+      "case_028",
+      "case_029"
+    ],
+    "confusion_matrix": {
+      "labels": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "matrix": [
+        [
+          10,
+          5
+        ],
+        [
+          5,
+          10
+        ]
+      ]
+    },
+    "mean_latency_sec": 0.15719107050050904,
+    "median_latency_sec": 0.16077116600354202
+  },
+  "semantic_agreement": {
+    "count": 20,
+    "total": 30,
+    "rate": 0.6666666666666666
+  },
+  "order_sensitive_cases": [
+    "case_001",
+    "case_002",
+    "case_012",
+    "case_014",
+    "case_017",
+    "case_018",
+    "case_020",
+    "case_026",
+    "case_029",
+    "case_030"
+  ],
+  "uncompared_error_cases": [],
+  "important_cases": [
+    {
+      "id": "case_017",
+      "expected_route": "CONTINUE",
+      "predicted_route_a": "CONTINUE",
+      "predicted_route_b": "NEW",
+      "correct_a": true,
+      "correct_b": false,
+      "error_a": null,
+      "error_b": null
+    },
+    {
+      "id": "case_020",
+      "expected_route": "NEW",
+      "predicted_route_a": "CONTINUE",
+      "predicted_route_b": "NEW",
+      "correct_a": false,
+      "correct_b": true,
+      "error_a": null,
+      "error_b": null
+    },
+    {
+      "id": "case_021",
+      "expected_route": "NEW",
+      "predicted_route_a": "CONTINUE",
+      "predicted_route_b": "CONTINUE",
+      "correct_a": false,
+      "correct_b": false,
+      "error_a": null,
+      "error_b": null
+    },
+    {
+      "id": "case_023",
+      "expected_route": "CONTINUE",
+      "predicted_route_a": "CONTINUE",
+      "predicted_route_b": "CONTINUE",
+      "correct_a": true,
+      "correct_b": true,
+      "error_a": null,
+      "error_b": null
+    },
+    {
+      "id": "case_024",
+      "expected_route": "NEW",
+      "predicted_route_a": "CONTINUE",
+      "predicted_route_b": "CONTINUE",
+      "correct_a": false,
+      "correct_b": false,
+      "error_a": null,
+      "error_b": null
+    },
+    {
+      "id": "case_029",
+      "expected_route": "CONTINUE",
+      "predicted_route_a": "CONTINUE",
+      "predicted_route_b": "NEW",
+      "correct_a": true,
+      "correct_b": false,
+      "error_a": null,
+      "error_b": null
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "experiment": "dataset-v3-pretest-v1",
+  "date": "2026-09-09",
+  "protocol_sha256": "75e3542f0c8fbc8d2e3c1aef3a5558802b62e86566aa15811d286289a71687da",
+  "protocol_modified": false,
+  "condition": "M8 development P2",
+  "case_id": "v3_development_0090",
+  "observed_error": "Structured JSON was truncated at max_completion_tokens=128",
+  "finish_reason": "length",
+  "completion_tokens": 128,
+  "response_retry_performed": false,
+  "token_limit_changed": false,
+  "dataset_changed": false,
+  "prompt_changed": false,
+  "route_descriptions_changed": false,
+  "original_output_preserved": "m8_development.csv/json",
+  "root_cause": "The model generated a reason longer than the fixed completion budget. The runner correctly saved the response-level parse error. The orchestrator incorrectly treated any nonzero runner exit as infrastructure failure even when all 240 rows and the raw model response were present.",
+  "technical_correction": [
+    "Accept a completed split with response-level parse errors only when the expected row count is present and every error has a matching raw model response.",
+    "Continue to reject HTTP errors, missing raw responses and incomplete row counts.",
+    "Resume without rerunning the completed M4 or M8 development outputs.",
+    "Exclude invalid P1/P2 pairs from agreement denominators and report them separately."
+  ],
+  "methodology_impact": "No routing semantics or decoding parameter changed. The truncated case remains an error and is not retried.",
+  "updated_evaluator_sha256": {
+    "dataset_v3_pretest_routing.py": "b0a21ba9641607265cafcf1f9f5383fb5131bcb98a8444744077ad892a4829af",
+    "dataset_v3_pretest_analyze.py": "b38d144df88c6cbc2ecdc0c71c99e63e823013034f3cb7ce241a2ddd38bada5b",
+    "dataset_v3_pretest_orchestrator.py": "7aab4e611f2dc376658b34d42b6dfdc491955f5d02f15ecdcd3ae9f55dfd19a2"
+  }
+}

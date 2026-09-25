@@ -1,0 +1,134 @@
+{
+  "plan_version": "dataset-v3-plan-draft-1",
+  "policy_version": "dataset-v3-policy-draft-1",
+  "status": "design_only",
+  "target_count": 300,
+  "existing_diagnostic_set": {
+    "file": "dataset_v2.jsonl",
+    "count": 30,
+    "role": "separate_development_diagnostic",
+    "included_in_v3": false
+  },
+  "class_counts": {
+    "CONTINUE": 150,
+    "NEW": 150
+  },
+  "splits": {
+    "development": {
+      "total": 120,
+      "class_counts": {"CONTINUE": 60, "NEW": 60},
+      "difficulty_counts": {
+        "easy": {"CONTINUE": 17, "NEW": 17, "total": 34},
+        "medium": {"CONTINUE": 26, "NEW": 26, "total": 52},
+        "hard": {"CONTINUE": 17, "NEW": 17, "total": 34}
+      },
+      "contrastive_families": 30,
+      "family_cases": 90,
+      "standalone_cases": 30
+    },
+    "validation": {
+      "total": 60,
+      "class_counts": {"CONTINUE": 30, "NEW": 30},
+      "difficulty_counts": {
+        "easy": {"CONTINUE": 8, "NEW": 8, "total": 16},
+        "medium": {"CONTINUE": 14, "NEW": 14, "total": 28},
+        "hard": {"CONTINUE": 8, "NEW": 8, "total": 16}
+      },
+      "contrastive_families": 15,
+      "family_cases": 45,
+      "standalone_cases": 15
+    },
+    "test": {
+      "total": 120,
+      "class_counts": {"CONTINUE": 60, "NEW": 60},
+      "difficulty_counts": {
+        "easy": {"CONTINUE": 17, "NEW": 17, "total": 34},
+        "medium": {"CONTINUE": 26, "NEW": 26, "total": 52},
+        "hard": {"CONTINUE": 17, "NEW": 17, "total": 34}
+      },
+      "contrastive_families": 30,
+      "family_cases": 90,
+      "standalone_cases": 30
+    }
+  },
+  "difficulty_counts": {
+    "easy": {"CONTINUE": 42, "NEW": 42, "total": 84},
+    "medium": {"CONTINUE": 66, "NEW": 66, "total": 132},
+    "hard": {"CONTINUE": 42, "NEW": 42, "total": 84}
+  },
+  "ambiguity_counts": {
+    "low": 180,
+    "medium": 90,
+    "high": 30
+  },
+  "category_quotas": {
+    "explicit_continuation": {"expected_route": "CONTINUE", "count": 20},
+    "clarification_answer": {"expected_route": "CONTINUE", "count": 24},
+    "parameter_change": {"expected_route": "CONTINUE", "count": 24},
+    "entity_substitution_same_operation": {"expected_route": "CONTINUE", "count": 20},
+    "result_representation_change": {"expected_route": "CONTINUE", "count": 20},
+    "correction_or_data_completion": {"expected_route": "CONTINUE", "count": 22},
+    "necessary_related_subquestion": {"expected_route": "CONTINUE", "count": 20},
+    "same_topic_new_operation": {"expected_route": "NEW", "count": 28},
+    "same_entity_new_operation": {"expected_route": "NEW", "count": 28},
+    "completed_then_new_task": {"expected_route": "NEW", "count": 18},
+    "new_goal_same_workflow": {"expected_route": "NEW", "count": 24},
+    "intent_switch_same_domain": {"expected_route": "NEW", "count": 22},
+    "mixed_continuation_and_independent": {"expected_route": "NEW", "count": 30}
+  },
+  "domain_quotas": {
+    "programming": {"CONTINUE": 10, "NEW": 10, "total": 20},
+    "files_storage": {"CONTINUE": 10, "NEW": 10, "total": 20},
+    "data_analytics_sql": {"CONTINUE": 10, "NEW": 10, "total": 20},
+    "hr_workplace": {"CONTINUE": 10, "NEW": 10, "total": 20},
+    "calendar_planning": {"CONTINUE": 10, "NEW": 10, "total": 20},
+    "email_messaging": {"CONTINUE": 10, "NEW": 10, "total": 20},
+    "sysadmin_devops": {"CONTINUE": 10, "NEW": 10, "total": 20},
+    "shopping_orders": {"CONTINUE": 10, "NEW": 10, "total": 20},
+    "travel_logistics": {"CONTINUE": 10, "NEW": 10, "total": 20},
+    "cooking_household": {"CONTINUE": 10, "NEW": 10, "total": 20},
+    "education_learning": {"CONTINUE": 10, "NEW": 10, "total": 20},
+    "support_accounts": {"CONTINUE": 10, "NEW": 10, "total": 20},
+    "documents_content": {"CONTINUE": 10, "NEW": 10, "total": 20},
+    "search_research": {"CONTINUE": 10, "NEW": 10, "total": 20},
+    "project_management": {"CONTINUE": 10, "NEW": 10, "total": 20}
+  },
+  "contrastive_design": {
+    "family_size": 3,
+    "family_count": 75,
+    "family_case_count": 225,
+    "standalone_case_count": 75,
+    "both_labels_required_per_family": true,
+    "cross_split_family_leakage_allowed": false,
+    "shared_base_scenario_across_splits_allowed": false
+  },
+  "router_input_allowlist": [
+    "history[].role",
+    "history[].content",
+    "message"
+  ],
+  "evaluation_metadata_denylist_for_prompt": [
+    "id",
+    "expected_route",
+    "split",
+    "category",
+    "difficulty",
+    "ambiguity",
+    "domain",
+    "family_id",
+    "policy_version",
+    "annotation_notes"
+  ],
+  "test_access_policy": {
+    "inputs_may_be_opened_before_method_freeze": false,
+    "labels_may_be_opened_before_method_freeze": false,
+    "allowed_for_prompt_selection": false,
+    "allowed_for_few_shot_selection": false,
+    "allowed_for_threshold_selection": false,
+    "allowed_for_model_selection": false,
+    "allowed_for_description_tuning": false,
+    "family_level_split_required": true
+  },
+  "generation_started": false,
+  "examples_created": 0
+}

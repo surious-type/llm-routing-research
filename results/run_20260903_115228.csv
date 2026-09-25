@@ -1,0 +1,2 @@
+id,difficulty,message,expected,predicted,correct,sampled_token,logprob_a,logprob_b,p_a,p_b,confidence,margin,latency_sec,prompt_tokens,completion_tokens,error
+case_024,hard,"Спасибо, вошёл. А уведомления как отключить?",B,A,False,A,-3.576278118089249e-07,-15.84375,0.9999998684330216,1.3156697834933018e-07,0.9999998684330216,0.9999997368660433,0.046269143000245094,270,1,

@@ -1,0 +1,29 @@
+{
+  "experiment_family": "reason-route-model-size-v1",
+  "status": "blocked_before_model_launch",
+  "checked_at_local_date": "2026-09-07",
+  "environment": {
+    "nvidia_smi_binary": "/usr/bin/nvidia-smi",
+    "nvidia_smi_exit_code": 9,
+    "nvidia_smi_output": "NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.",
+    "docker_binary": "/usr/bin/docker",
+    "docker_client_version": "29.6.1",
+    "docker_api_version": "1.55",
+    "docker_server_access": false,
+    "docker_exit_code": 1,
+    "docker_error": "permission denied while trying to connect to the docker API at unix:///var/run/docker.sock"
+  },
+  "experimental_actions": {
+    "existing_server_stopped": false,
+    "model_servers_started": 0,
+    "smoke_tests_run": 0,
+    "dataset_requests_run": 0,
+    "historical_results_reused_as_model_size_results": false
+  },
+  "models_not_run": [
+    "Qwen/Qwen3-4B-AWQ",
+    "Qwen/Qwen3-8B-AWQ",
+    "Qwen/Qwen3-14B-AWQ"
+  ],
+  "reason": "The protocol requires both Docker daemon access and a working NVIDIA GPU before automation. Neither capability was available from the Codex environment."
+}

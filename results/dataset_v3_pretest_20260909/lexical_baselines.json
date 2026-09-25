@@ -1,0 +1,1148 @@
+{
+  "method": "TfidfVectorizer(word,1-2gram)+LogisticRegression",
+  "scikit_learn_version": "1.7.2",
+  "train_split": "development",
+  "eval_split": "validation",
+  "conditions": {
+    "message": {
+      "accuracy": 0.8166666666666667,
+      "balanced_accuracy": 0.8166666666666667,
+      "confusion_matrix": [
+        [
+          26,
+          4
+        ],
+        [
+          7,
+          23
+        ]
+      ],
+      "label_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "predictions": [
+        {
+          "id": "v3_validation_0001",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0002",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0003",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0004",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0005",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0006",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0007",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0008",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0009",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0010",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0011",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0012",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0013",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0014",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0015",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0016",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0017",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0018",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0019",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0020",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0021",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0022",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0023",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0024",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0025",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0026",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0027",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0028",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0029",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0030",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0031",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0032",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0033",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0034",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0035",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0036",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0037",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0038",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0039",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0040",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0041",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0042",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0043",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0044",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0045",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0046",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0047",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0048",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0049",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0050",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0051",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0052",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0053",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0054",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0055",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0056",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0057",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0058",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0059",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0060",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        }
+      ]
+    },
+    "history": {
+      "accuracy": 0.5166666666666667,
+      "balanced_accuracy": 0.5166666666666666,
+      "confusion_matrix": [
+        [
+          17,
+          13
+        ],
+        [
+          16,
+          14
+        ]
+      ],
+      "label_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "predictions": [
+        {
+          "id": "v3_validation_0001",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0002",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0003",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0004",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0005",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0006",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0007",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0008",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0009",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0010",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0011",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0012",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0013",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0014",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0015",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0016",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0017",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0018",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0019",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0020",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0021",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0022",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0023",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0024",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0025",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0026",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0027",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0028",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0029",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0030",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0031",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0032",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0033",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0034",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0035",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0036",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0037",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0038",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0039",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0040",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0041",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0042",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0043",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0044",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0045",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0046",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0047",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0048",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0049",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0050",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0051",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0052",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0053",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0054",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0055",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0056",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0057",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0058",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0059",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0060",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        }
+      ]
+    },
+    "history_message": {
+      "accuracy": 0.65,
+      "balanced_accuracy": 0.6499999999999999,
+      "confusion_matrix": [
+        [
+          19,
+          11
+        ],
+        [
+          10,
+          20
+        ]
+      ],
+      "label_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "predictions": [
+        {
+          "id": "v3_validation_0001",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0002",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0003",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0004",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0005",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0006",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0007",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0008",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0009",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0010",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0011",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0012",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0013",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0014",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0015",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0016",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0017",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0018",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0019",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0020",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0021",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0022",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0023",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0024",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0025",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0026",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0027",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0028",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0029",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0030",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0031",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0032",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0033",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0034",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0035",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0036",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0037",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0038",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0039",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0040",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0041",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0042",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0043",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0044",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0045",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0046",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0047",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0048",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0049",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0050",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0051",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0052",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0053",
+          "expected_route": "CONTINUE",
+          "predicted_route": "NEW",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0054",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0055",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0056",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0057",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0058",
+          "expected_route": "NEW",
+          "predicted_route": "NEW",
+          "correct": true
+        },
+        {
+          "id": "v3_validation_0059",
+          "expected_route": "NEW",
+          "predicted_route": "CONTINUE",
+          "correct": false
+        },
+        {
+          "id": "v3_validation_0060",
+          "expected_route": "CONTINUE",
+          "predicted_route": "CONTINUE",
+          "correct": true
+        }
+      ]
+    }
+  }
+}

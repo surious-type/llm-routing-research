@@ -1,0 +1,1060 @@
+{
+  "s1_conditions": {
+    "E1": {
+      "correct": 22,
+      "evaluated": 30,
+      "accuracy": 0.7333333333333333,
+      "prediction_counts": {
+        "CONTINUE": 23,
+        "NEW": 7
+      },
+      "confusion_matrix": {
+        "labels": [
+          "CONTINUE",
+          "NEW"
+        ],
+        "matrix": [
+          [
+            15,
+            0
+          ],
+          [
+            8,
+            7
+          ]
+        ]
+      },
+      "errors": [],
+      "incorrect_cases": [
+        "case_018",
+        "case_020",
+        "case_021",
+        "case_022",
+        "case_024",
+        "case_026",
+        "case_028",
+        "case_030"
+      ],
+      "latency_sec": {
+        "mean": 0.16292756983311846,
+        "median": 0.16391084250062704
+      },
+      "prompt_tokens": {
+        "mean": 319.3333333333333,
+        "median": 320.0
+      },
+      "completion_tokens": {
+        "mean": 10.833333333333334,
+        "median": 11.0
+      }
+    },
+    "E2": {
+      "correct": 20,
+      "evaluated": 30,
+      "accuracy": 0.6666666666666666,
+      "prediction_counts": {
+        "CONTINUE": 15,
+        "NEW": 15
+      },
+      "confusion_matrix": {
+        "labels": [
+          "CONTINUE",
+          "NEW"
+        ],
+        "matrix": [
+          [
+            10,
+            5
+          ],
+          [
+            5,
+            10
+          ]
+        ]
+      },
+      "errors": [],
+      "incorrect_cases": [
+        "case_001",
+        "case_002",
+        "case_012",
+        "case_014",
+        "case_017",
+        "case_021",
+        "case_022",
+        "case_024",
+        "case_028",
+        "case_029"
+      ],
+      "latency_sec": {
+        "mean": 0.1595208037996296,
+        "median": 0.15740747549716616
+      },
+      "prompt_tokens": {
+        "mean": 319.3333333333333,
+        "median": 320.0
+      },
+      "completion_tokens": {
+        "mean": 10.6,
+        "median": 10.5
+      }
+    },
+    "E3": {
+      "correct": 22,
+      "evaluated": 30,
+      "accuracy": 0.7333333333333333,
+      "prediction_counts": {
+        "CONTINUE": 23,
+        "NEW": 7
+      },
+      "confusion_matrix": {
+        "labels": [
+          "CONTINUE",
+          "NEW"
+        ],
+        "matrix": [
+          [
+            15,
+            0
+          ],
+          [
+            8,
+            7
+          ]
+        ]
+      },
+      "errors": [],
+      "incorrect_cases": [
+        "case_018",
+        "case_020",
+        "case_021",
+        "case_022",
+        "case_024",
+        "case_026",
+        "case_028",
+        "case_030"
+      ],
+      "latency_sec": {
+        "mean": 0.11561002093391531,
+        "median": 0.11749449600392836
+      },
+      "prompt_tokens": {
+        "mean": 319.3333333333333,
+        "median": 320.0
+      },
+      "completion_tokens": {
+        "mean": 10.833333333333334,
+        "median": 11.0
+      }
+    },
+    "E4": {
+      "correct": 20,
+      "evaluated": 30,
+      "accuracy": 0.6666666666666666,
+      "prediction_counts": {
+        "CONTINUE": 15,
+        "NEW": 15
+      },
+      "confusion_matrix": {
+        "labels": [
+          "CONTINUE",
+          "NEW"
+        ],
+        "matrix": [
+          [
+            10,
+            5
+          ],
+          [
+            5,
+            10
+          ]
+        ]
+      },
+      "errors": [],
+      "incorrect_cases": [
+        "case_001",
+        "case_002",
+        "case_012",
+        "case_014",
+        "case_017",
+        "case_021",
+        "case_022",
+        "case_024",
+        "case_028",
+        "case_029"
+      ],
+      "latency_sec": {
+        "mean": 0.11477607889998277,
+        "median": 0.11353022349794628
+      },
+      "prompt_tokens": {
+        "mean": 319.3333333333333,
+        "median": 320.0
+      },
+      "completion_tokens": {
+        "mean": 10.6,
+        "median": 10.5
+      }
+    }
+  },
+  "s2_conditions": {
+    "E1": {
+      "correct": 27,
+      "evaluated": 30,
+      "accuracy": 0.9,
+      "prediction_counts": {
+        "CONTINUE": 16,
+        "NEW": 14
+      },
+      "confusion_matrix": {
+        "labels": [
+          "CONTINUE",
+          "NEW"
+        ],
+        "matrix": [
+          [
+            14,
+            1
+          ],
+          [
+            2,
+            13
+          ]
+        ]
+      },
+      "errors": [],
+      "incorrect_cases": [
+        "case_020",
+        "case_021",
+        "case_023"
+      ],
+      "latency_sec": {
+        "mean": 0.6130349202991056,
+        "median": 0.603022992498154
+      },
+      "prompt_tokens": {
+        "mean": 353.3333333333333,
+        "median": 354.0
+      },
+      "completion_tokens": {
+        "mean": 59.5,
+        "median": 60.0
+      }
+    },
+    "E2": {
+      "correct": 27,
+      "evaluated": 30,
+      "accuracy": 0.9,
+      "prediction_counts": {
+        "CONTINUE": 16,
+        "NEW": 14
+      },
+      "confusion_matrix": {
+        "labels": [
+          "CONTINUE",
+          "NEW"
+        ],
+        "matrix": [
+          [
+            14,
+            1
+          ],
+          [
+            2,
+            13
+          ]
+        ]
+      },
+      "errors": [],
+      "incorrect_cases": [
+        "case_001",
+        "case_014",
+        "case_024"
+      ],
+      "latency_sec": {
+        "mean": 0.636367067466684,
+        "median": 0.6122666164992552
+      },
+      "prompt_tokens": {
+        "mean": 353.3333333333333,
+        "median": 354.0
+      },
+      "completion_tokens": {
+        "mean": 60.93333333333333,
+        "median": 57.5
+      }
+    },
+    "E3": {
+      "correct": 27,
+      "evaluated": 30,
+      "accuracy": 0.9,
+      "prediction_counts": {
+        "CONTINUE": 16,
+        "NEW": 14
+      },
+      "confusion_matrix": {
+        "labels": [
+          "CONTINUE",
+          "NEW"
+        ],
+        "matrix": [
+          [
+            14,
+            1
+          ],
+          [
+            2,
+            13
+          ]
+        ]
+      },
+      "errors": [],
+      "incorrect_cases": [
+        "case_020",
+        "case_021",
+        "case_023"
+      ],
+      "latency_sec": {
+        "mean": 0.5810878934675808,
+        "median": 0.5841825019997486
+      },
+      "prompt_tokens": {
+        "mean": 353.3333333333333,
+        "median": 354.0
+      },
+      "completion_tokens": {
+        "mean": 59.5,
+        "median": 60.0
+      }
+    },
+    "E4": {
+      "correct": 27,
+      "evaluated": 30,
+      "accuracy": 0.9,
+      "prediction_counts": {
+        "CONTINUE": 16,
+        "NEW": 14
+      },
+      "confusion_matrix": {
+        "labels": [
+          "CONTINUE",
+          "NEW"
+        ],
+        "matrix": [
+          [
+            14,
+            1
+          ],
+          [
+            2,
+            13
+          ]
+        ]
+      },
+      "errors": [],
+      "incorrect_cases": [
+        "case_001",
+        "case_014",
+        "case_024"
+      ],
+      "latency_sec": {
+        "mean": 0.5940847164657801,
+        "median": 0.5640683780002291
+      },
+      "prompt_tokens": {
+        "mean": 353.3333333333333,
+        "median": 354.0
+      },
+      "completion_tokens": {
+        "mean": 60.93333333333333,
+        "median": 57.5
+      }
+    }
+  },
+  "s1_order_robustness": {
+    "pairwise_agreement": {
+      "E1↔E2": {
+        "agreement_count": 20,
+        "total": 30,
+        "agreement_rate": 0.6666666666666666,
+        "changed_count": 10,
+        "changed_cases": [
+          "case_001",
+          "case_002",
+          "case_012",
+          "case_014",
+          "case_017",
+          "case_018",
+          "case_020",
+          "case_026",
+          "case_029",
+          "case_030"
+        ],
+        "uncompared_error_cases": []
+      },
+      "E1↔E3": {
+        "agreement_count": 30,
+        "total": 30,
+        "agreement_rate": 1.0,
+        "changed_count": 0,
+        "changed_cases": [],
+        "uncompared_error_cases": []
+      },
+      "E1↔E4": {
+        "agreement_count": 20,
+        "total": 30,
+        "agreement_rate": 0.6666666666666666,
+        "changed_count": 10,
+        "changed_cases": [
+          "case_001",
+          "case_002",
+          "case_012",
+          "case_014",
+          "case_017",
+          "case_018",
+          "case_020",
+          "case_026",
+          "case_029",
+          "case_030"
+        ],
+        "uncompared_error_cases": []
+      },
+      "E2↔E3": {
+        "agreement_count": 20,
+        "total": 30,
+        "agreement_rate": 0.6666666666666666,
+        "changed_count": 10,
+        "changed_cases": [
+          "case_001",
+          "case_002",
+          "case_012",
+          "case_014",
+          "case_017",
+          "case_018",
+          "case_020",
+          "case_026",
+          "case_029",
+          "case_030"
+        ],
+        "uncompared_error_cases": []
+      },
+      "E2↔E4": {
+        "agreement_count": 30,
+        "total": 30,
+        "agreement_rate": 1.0,
+        "changed_count": 0,
+        "changed_cases": [],
+        "uncompared_error_cases": []
+      },
+      "E3↔E4": {
+        "agreement_count": 20,
+        "total": 30,
+        "agreement_rate": 0.6666666666666666,
+        "changed_count": 10,
+        "changed_cases": [
+          "case_001",
+          "case_002",
+          "case_012",
+          "case_014",
+          "case_017",
+          "case_018",
+          "case_020",
+          "case_026",
+          "case_029",
+          "case_030"
+        ],
+        "uncompared_error_cases": []
+      }
+    },
+    "evaluated_cases": 30,
+    "order_sensitive_case_count": 10,
+    "order_sensitive_cases": [
+      "case_001",
+      "case_002",
+      "case_012",
+      "case_014",
+      "case_017",
+      "case_018",
+      "case_020",
+      "case_026",
+      "case_029",
+      "case_030"
+    ]
+  },
+  "s2_order_robustness": {
+    "pairwise_agreement": {
+      "E1↔E2": {
+        "agreement_count": 24,
+        "total": 30,
+        "agreement_rate": 0.8,
+        "changed_count": 6,
+        "changed_cases": [
+          "case_001",
+          "case_014",
+          "case_020",
+          "case_021",
+          "case_023",
+          "case_024"
+        ],
+        "uncompared_error_cases": []
+      },
+      "E1↔E3": {
+        "agreement_count": 30,
+        "total": 30,
+        "agreement_rate": 1.0,
+        "changed_count": 0,
+        "changed_cases": [],
+        "uncompared_error_cases": []
+      },
+      "E1↔E4": {
+        "agreement_count": 24,
+        "total": 30,
+        "agreement_rate": 0.8,
+        "changed_count": 6,
+        "changed_cases": [
+          "case_001",
+          "case_014",
+          "case_020",
+          "case_021",
+          "case_023",
+          "case_024"
+        ],
+        "uncompared_error_cases": []
+      },
+      "E2↔E3": {
+        "agreement_count": 24,
+        "total": 30,
+        "agreement_rate": 0.8,
+        "changed_count": 6,
+        "changed_cases": [
+          "case_001",
+          "case_014",
+          "case_020",
+          "case_021",
+          "case_023",
+          "case_024"
+        ],
+        "uncompared_error_cases": []
+      },
+      "E2↔E4": {
+        "agreement_count": 30,
+        "total": 30,
+        "agreement_rate": 1.0,
+        "changed_count": 0,
+        "changed_cases": [],
+        "uncompared_error_cases": []
+      },
+      "E3↔E4": {
+        "agreement_count": 24,
+        "total": 30,
+        "agreement_rate": 0.8,
+        "changed_count": 6,
+        "changed_cases": [
+          "case_001",
+          "case_014",
+          "case_020",
+          "case_021",
+          "case_023",
+          "case_024"
+        ],
+        "uncompared_error_cases": []
+      }
+    },
+    "evaluated_cases": 30,
+    "order_sensitive_case_count": 6,
+    "order_sensitive_cases": [
+      "case_001",
+      "case_014",
+      "case_020",
+      "case_021",
+      "case_023",
+      "case_024"
+    ]
+  },
+  "by_condition": {
+    "E1": {
+      "changed_count": 7,
+      "changed_cases": [
+        "case_018",
+        "case_022",
+        "case_023",
+        "case_024",
+        "case_026",
+        "case_028",
+        "case_030"
+      ],
+      "corrected_count": 6,
+      "corrected_cases": [
+        "case_018",
+        "case_022",
+        "case_024",
+        "case_026",
+        "case_028",
+        "case_030"
+      ],
+      "broken_count": 1,
+      "broken_cases": [
+        "case_023"
+      ],
+      "agreement_count": 23,
+      "total": 30
+    },
+    "E2": {
+      "changed_count": 7,
+      "changed_cases": [
+        "case_002",
+        "case_012",
+        "case_017",
+        "case_021",
+        "case_022",
+        "case_028",
+        "case_029"
+      ],
+      "corrected_count": 7,
+      "corrected_cases": [
+        "case_002",
+        "case_012",
+        "case_017",
+        "case_021",
+        "case_022",
+        "case_028",
+        "case_029"
+      ],
+      "broken_count": 0,
+      "broken_cases": [],
+      "agreement_count": 23,
+      "total": 30
+    },
+    "E3": {
+      "changed_count": 7,
+      "changed_cases": [
+        "case_018",
+        "case_022",
+        "case_023",
+        "case_024",
+        "case_026",
+        "case_028",
+        "case_030"
+      ],
+      "corrected_count": 6,
+      "corrected_cases": [
+        "case_018",
+        "case_022",
+        "case_024",
+        "case_026",
+        "case_028",
+        "case_030"
+      ],
+      "broken_count": 1,
+      "broken_cases": [
+        "case_023"
+      ],
+      "agreement_count": 23,
+      "total": 30
+    },
+    "E4": {
+      "changed_count": 7,
+      "changed_cases": [
+        "case_002",
+        "case_012",
+        "case_017",
+        "case_021",
+        "case_022",
+        "case_028",
+        "case_029"
+      ],
+      "corrected_count": 7,
+      "corrected_cases": [
+        "case_002",
+        "case_012",
+        "case_017",
+        "case_021",
+        "case_022",
+        "case_028",
+        "case_029"
+      ],
+      "broken_count": 0,
+      "broken_cases": [],
+      "agreement_count": 23,
+      "total": 30
+    }
+  },
+  "aggregate_condition_case_changes": {
+    "comparable_count": 120,
+    "changed_count": 28,
+    "changed": [
+      "E1:case_018",
+      "E1:case_022",
+      "E1:case_023",
+      "E1:case_024",
+      "E1:case_026",
+      "E1:case_028",
+      "E1:case_030",
+      "E2:case_002",
+      "E2:case_012",
+      "E2:case_017",
+      "E2:case_021",
+      "E2:case_022",
+      "E2:case_028",
+      "E2:case_029",
+      "E3:case_018",
+      "E3:case_022",
+      "E3:case_023",
+      "E3:case_024",
+      "E3:case_026",
+      "E3:case_028",
+      "E3:case_030",
+      "E4:case_002",
+      "E4:case_012",
+      "E4:case_017",
+      "E4:case_021",
+      "E4:case_022",
+      "E4:case_028",
+      "E4:case_029"
+    ],
+    "corrected_count": 26,
+    "corrected": [
+      "E1:case_018",
+      "E1:case_022",
+      "E1:case_024",
+      "E1:case_026",
+      "E1:case_028",
+      "E1:case_030",
+      "E2:case_002",
+      "E2:case_012",
+      "E2:case_017",
+      "E2:case_021",
+      "E2:case_022",
+      "E2:case_028",
+      "E2:case_029",
+      "E3:case_018",
+      "E3:case_022",
+      "E3:case_024",
+      "E3:case_026",
+      "E3:case_028",
+      "E3:case_030",
+      "E4:case_002",
+      "E4:case_012",
+      "E4:case_017",
+      "E4:case_021",
+      "E4:case_022",
+      "E4:case_028",
+      "E4:case_029"
+    ],
+    "broken_count": 2,
+    "broken": [
+      "E1:case_023",
+      "E3:case_023"
+    ],
+    "unique_changed_cases": [
+      "case_002",
+      "case_012",
+      "case_017",
+      "case_018",
+      "case_021",
+      "case_022",
+      "case_023",
+      "case_024",
+      "case_026",
+      "case_028",
+      "case_029",
+      "case_030"
+    ]
+  },
+  "important_cases": [
+    {
+      "id": "case_017",
+      "conditions": [
+        {
+          "condition": "E1",
+          "expected_route": "CONTINUE",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "CONTINUE",
+          "s2_reason": "Сообщение пользователя связано с предыдущей задачей, так как оно касается выбора способа представления данных (график vs таблица), что продолжает текущую задачу.",
+          "s1_correct": true,
+          "s2_correct": true,
+          "s1_error": null,
+          "s2_error": null
+        },
+        {
+          "condition": "E2",
+          "expected_route": "CONTINUE",
+          "s1_prediction": "NEW",
+          "s2_prediction": "CONTINUE",
+          "s2_reason": "Новое сообщение предлагает альтернативный способ представления данных (таблица вместо графика), что является продолжением текущей задачи, так как пользователь оставляет тему обсуждения в рамках одной задачи.",
+          "s1_correct": false,
+          "s2_correct": true,
+          "s1_error": null,
+          "s2_error": null
+        },
+        {
+          "condition": "E3",
+          "expected_route": "CONTINUE",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "CONTINUE",
+          "s2_reason": "Сообщение пользователя связано с предыдущей задачей, так как оно касается выбора способа представления данных (график vs таблица), что продолжает текущую задачу.",
+          "s1_correct": true,
+          "s2_correct": true,
+          "s1_error": null,
+          "s2_error": null
+        },
+        {
+          "condition": "E4",
+          "expected_route": "CONTINUE",
+          "s1_prediction": "NEW",
+          "s2_prediction": "CONTINUE",
+          "s2_reason": "Новое сообщение предлагает альтернативный способ представления данных (таблица вместо графика), что является продолжением текущей задачи, так как пользователь оставляет тему обсуждения в рамках одной задачи.",
+          "s1_correct": false,
+          "s2_correct": true,
+          "s1_error": null,
+          "s2_error": null
+        }
+      ]
+    },
+    {
+      "id": "case_020",
+      "conditions": [
+        {
+          "condition": "E1",
+          "expected_route": "NEW",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "CONTINUE",
+          "s2_reason": "Новое сообщение задаёт вопрос о назначении роли аналитика Иванову, что продолжает текущую задачу диалога, связанную с правами роли аналитика.",
+          "s1_correct": false,
+          "s2_correct": false,
+          "s1_error": null,
+          "s2_error": null
+        },
+        {
+          "condition": "E2",
+          "expected_route": "NEW",
+          "s1_prediction": "NEW",
+          "s2_prediction": "NEW",
+          "s2_reason": "Новое сообщение задаёт новую независимую задачу — назначение роли аналитика Иванову, что отличается от предыдущего вопроса о правах роли аналитика.",
+          "s1_correct": true,
+          "s2_correct": true,
+          "s1_error": null,
+          "s2_error": null
+        },
+        {
+          "condition": "E3",
+          "expected_route": "NEW",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "CONTINUE",
+          "s2_reason": "Новое сообщение задаёт вопрос о назначении роли аналитика Иванову, что продолжает текущую задачу диалога, связанную с правами роли аналитика.",
+          "s1_correct": false,
+          "s2_correct": false,
+          "s1_error": null,
+          "s2_error": null
+        },
+        {
+          "condition": "E4",
+          "expected_route": "NEW",
+          "s1_prediction": "NEW",
+          "s2_prediction": "NEW",
+          "s2_reason": "Новое сообщение задаёт новую независимую задачу — назначение роли аналитика Иванову, что отличается от предыдущего вопроса о правах роли аналитика.",
+          "s1_correct": true,
+          "s2_correct": true,
+          "s1_error": null,
+          "s2_error": null
+        }
+      ]
+    },
+    {
+      "id": "case_021",
+      "conditions": [
+        {
+          "condition": "E1",
+          "expected_route": "NEW",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "CONTINUE",
+          "s2_reason": "Сообщение «Сформируй новый отчёт по сотрудникам» продолжает текущую задачу диалога, связанную с формированием отчётов. Оно отвечает на предыдущий вопрос ассистента и уточняет параметры задачи.",
+          "s1_correct": false,
+          "s2_correct": false,
+          "s1_error": null,
+          "s2_error": null
+        },
+        {
+          "condition": "E2",
+          "expected_route": "NEW",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "NEW",
+          "s2_reason": "Новое сообщение «Сформируй новый отчёт по сотрудникам» является новой самостоятельной задачей, не связанной напрямую с предыдущим вопросом о правах роли аналитика. Оно требует выполнения новой операции — формирования отчёта, что отличает его от продолжения текущей задачи.",
+          "s1_correct": false,
+          "s2_correct": true,
+          "s1_error": null,
+          "s2_error": null
+        },
+        {
+          "condition": "E3",
+          "expected_route": "NEW",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "CONTINUE",
+          "s2_reason": "Сообщение «Сформируй новый отчёт по сотрудникам» продолжает текущую задачу диалога, связанную с формированием отчётов. Оно отвечает на предыдущий вопрос ассистента и уточняет параметры задачи.",
+          "s1_correct": false,
+          "s2_correct": false,
+          "s1_error": null,
+          "s2_error": null
+        },
+        {
+          "condition": "E4",
+          "expected_route": "NEW",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "NEW",
+          "s2_reason": "Новое сообщение «Сформируй новый отчёт по сотрудникам» является новой самостоятельной задачей, не связанной напрямую с предыдущим вопросом о правах роли аналитика. Оно требует выполнения новой операции — формирования отчёта, что отличает его от продолжения текущей задачи.",
+          "s1_correct": false,
+          "s2_correct": true,
+          "s1_error": null,
+          "s2_error": null
+        }
+      ]
+    },
+    {
+      "id": "case_023",
+      "conditions": [
+        {
+          "condition": "E1",
+          "expected_route": "CONTINUE",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "NEW",
+          "s2_reason": "Пользователь задаёт новый вопрос о возможном решении проблемы с авторизацией через VPN, что вводит новую самостоятельную задачу, связанную с проверкой альтернативных способов входа.",
+          "s1_correct": true,
+          "s2_correct": false,
+          "s1_error": null,
+          "s2_error": null
+        },
+        {
+          "condition": "E2",
+          "expected_route": "CONTINUE",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "CONTINUE",
+          "s2_reason": "Новое сообщение задаёт вопрос о возможном решении проблемы через VPN, что продолжает текущую задачу, связанную с авторизацией.",
+          "s1_correct": true,
+          "s2_correct": true,
+          "s1_error": null,
+          "s2_error": null
+        },
+        {
+          "condition": "E3",
+          "expected_route": "CONTINUE",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "NEW",
+          "s2_reason": "Пользователь задаёт новый вопрос о возможном решении проблемы с авторизацией через VPN, что вводит новую самостоятельную задачу, связанную с проверкой альтернативных способов входа.",
+          "s1_correct": true,
+          "s2_correct": false,
+          "s1_error": null,
+          "s2_error": null
+        },
+        {
+          "condition": "E4",
+          "expected_route": "CONTINUE",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "CONTINUE",
+          "s2_reason": "Новое сообщение задаёт вопрос о возможном решении проблемы через VPN, что продолжает текущую задачу, связанную с авторизацией.",
+          "s1_correct": true,
+          "s2_correct": true,
+          "s1_error": null,
+          "s2_error": null
+        }
+      ]
+    },
+    {
+      "id": "case_024",
+      "conditions": [
+        {
+          "condition": "E1",
+          "expected_route": "NEW",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "NEW",
+          "s2_reason": "Сообщение пользователя связано с предыдущей задачей (вход в аккаунт), но содержит новый запрос о настройке уведомлений, что требует отдельного обращения.",
+          "s1_correct": false,
+          "s2_correct": true,
+          "s1_error": null,
+          "s2_error": null
+        },
+        {
+          "condition": "E2",
+          "expected_route": "NEW",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "CONTINUE",
+          "s2_reason": "Новое сообщение содержит запрос о настройке уведомлений, который является частью одной задачи — настройки аккаунта. Оно продолжает текущую задачу, так как связано с предыдущим действием (войти в аккаунт).",
+          "s1_correct": false,
+          "s2_correct": false,
+          "s1_error": null,
+          "s2_error": null
+        },
+        {
+          "condition": "E3",
+          "expected_route": "NEW",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "NEW",
+          "s2_reason": "Сообщение пользователя связано с предыдущей задачей (вход в аккаунт), но содержит новый запрос о настройке уведомлений, что требует отдельного обращения.",
+          "s1_correct": false,
+          "s2_correct": true,
+          "s1_error": null,
+          "s2_error": null
+        },
+        {
+          "condition": "E4",
+          "expected_route": "NEW",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "CONTINUE",
+          "s2_reason": "Новое сообщение содержит запрос о настройке уведомлений, который является частью одной задачи — настройки аккаунта. Оно продолжает текущую задачу, так как связано с предыдущим действием (войти в аккаунт).",
+          "s1_correct": false,
+          "s2_correct": false,
+          "s1_error": null,
+          "s2_error": null
+        }
+      ]
+    },
+    {
+      "id": "case_029",
+      "conditions": [
+        {
+          "condition": "E1",
+          "expected_route": "CONTINUE",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "CONTINUE",
+          "s2_reason": "Новое сообщение изменяет параметры текущей задачи, убирая Санкт-Петербург и вводя Казань для сравнения с Москвой, что является продолжением текущей задачи.",
+          "s1_correct": true,
+          "s2_correct": true,
+          "s1_error": null,
+          "s2_error": null
+        },
+        {
+          "condition": "E2",
+          "expected_route": "CONTINUE",
+          "s1_prediction": "NEW",
+          "s2_prediction": "CONTINUE",
+          "s2_reason": "Новое сообщение изменяет параметры текущей задачи, убирая Санкт-Петербург и добавляя Казань для сравнения, что является продолжением текущей задачи.",
+          "s1_correct": false,
+          "s2_correct": true,
+          "s1_error": null,
+          "s2_error": null
+        },
+        {
+          "condition": "E3",
+          "expected_route": "CONTINUE",
+          "s1_prediction": "CONTINUE",
+          "s2_prediction": "CONTINUE",
+          "s2_reason": "Новое сообщение изменяет параметры текущей задачи, убирая Санкт-Петербург и вводя Казань для сравнения с Москвой, что является продолжением текущей задачи.",
+          "s1_correct": true,
+          "s2_correct": true,
+          "s1_error": null,
+          "s2_error": null
+        },
+        {
+          "condition": "E4",
+          "expected_route": "CONTINUE",
+          "s1_prediction": "NEW",
+          "s2_prediction": "CONTINUE",
+          "s2_reason": "Новое сообщение изменяет параметры текущей задачи, убирая Санкт-Петербург и добавляя Казань для сравнения, что является продолжением текущей задачи.",
+          "s1_correct": false,
+          "s2_correct": true,
+          "s1_error": null,
+          "s2_error": null
+        }
+      ]
+    }
+  ]
+}

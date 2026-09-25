@@ -1,0 +1,371 @@
+{
+  "conditions": {
+    "E1": {
+      "correct": 22,
+      "evaluated": 30,
+      "accuracy": 0.7333333333333333,
+      "prediction_counts": {
+        "CONTINUE": 23,
+        "NEW": 7
+      },
+      "confusion_matrix": {
+        "labels": [
+          "CONTINUE",
+          "NEW"
+        ],
+        "matrix": [
+          [
+            15,
+            0
+          ],
+          [
+            8,
+            7
+          ]
+        ]
+      },
+      "errors": [],
+      "incorrect_cases": [
+        "case_018",
+        "case_020",
+        "case_021",
+        "case_022",
+        "case_024",
+        "case_026",
+        "case_028",
+        "case_030"
+      ],
+      "latency_sec": {
+        "mean": 0.16292756983311846,
+        "median": 0.16391084250062704
+      },
+      "prompt_tokens": {
+        "mean": 319.3333333333333,
+        "median": 320.0
+      },
+      "completion_tokens": {
+        "mean": 10.833333333333334,
+        "median": 11.0
+      }
+    },
+    "E2": {
+      "correct": 20,
+      "evaluated": 30,
+      "accuracy": 0.6666666666666666,
+      "prediction_counts": {
+        "CONTINUE": 15,
+        "NEW": 15
+      },
+      "confusion_matrix": {
+        "labels": [
+          "CONTINUE",
+          "NEW"
+        ],
+        "matrix": [
+          [
+            10,
+            5
+          ],
+          [
+            5,
+            10
+          ]
+        ]
+      },
+      "errors": [],
+      "incorrect_cases": [
+        "case_001",
+        "case_002",
+        "case_012",
+        "case_014",
+        "case_017",
+        "case_021",
+        "case_022",
+        "case_024",
+        "case_028",
+        "case_029"
+      ],
+      "latency_sec": {
+        "mean": 0.1595208037996296,
+        "median": 0.15740747549716616
+      },
+      "prompt_tokens": {
+        "mean": 319.3333333333333,
+        "median": 320.0
+      },
+      "completion_tokens": {
+        "mean": 10.6,
+        "median": 10.5
+      }
+    },
+    "E3": {
+      "correct": 22,
+      "evaluated": 30,
+      "accuracy": 0.7333333333333333,
+      "prediction_counts": {
+        "CONTINUE": 23,
+        "NEW": 7
+      },
+      "confusion_matrix": {
+        "labels": [
+          "CONTINUE",
+          "NEW"
+        ],
+        "matrix": [
+          [
+            15,
+            0
+          ],
+          [
+            8,
+            7
+          ]
+        ]
+      },
+      "errors": [],
+      "incorrect_cases": [
+        "case_018",
+        "case_020",
+        "case_021",
+        "case_022",
+        "case_024",
+        "case_026",
+        "case_028",
+        "case_030"
+      ],
+      "latency_sec": {
+        "mean": 0.11561002093391531,
+        "median": 0.11749449600392836
+      },
+      "prompt_tokens": {
+        "mean": 319.3333333333333,
+        "median": 320.0
+      },
+      "completion_tokens": {
+        "mean": 10.833333333333334,
+        "median": 11.0
+      }
+    },
+    "E4": {
+      "correct": 20,
+      "evaluated": 30,
+      "accuracy": 0.6666666666666666,
+      "prediction_counts": {
+        "CONTINUE": 15,
+        "NEW": 15
+      },
+      "confusion_matrix": {
+        "labels": [
+          "CONTINUE",
+          "NEW"
+        ],
+        "matrix": [
+          [
+            10,
+            5
+          ],
+          [
+            5,
+            10
+          ]
+        ]
+      },
+      "errors": [],
+      "incorrect_cases": [
+        "case_001",
+        "case_002",
+        "case_012",
+        "case_014",
+        "case_017",
+        "case_021",
+        "case_022",
+        "case_024",
+        "case_028",
+        "case_029"
+      ],
+      "latency_sec": {
+        "mean": 0.11477607889998277,
+        "median": 0.11353022349794628
+      },
+      "prompt_tokens": {
+        "mean": 319.3333333333333,
+        "median": 320.0
+      },
+      "completion_tokens": {
+        "mean": 10.6,
+        "median": 10.5
+      }
+    }
+  },
+  "pairwise_agreement": {
+    "E1↔E2": {
+      "agreement_count": 20,
+      "total": 30,
+      "agreement_rate": 0.6666666666666666,
+      "changed_count": 10,
+      "changed_cases": [
+        "case_001",
+        "case_002",
+        "case_012",
+        "case_014",
+        "case_017",
+        "case_018",
+        "case_020",
+        "case_026",
+        "case_029",
+        "case_030"
+      ],
+      "uncompared_error_cases": []
+    },
+    "E1↔E3": {
+      "agreement_count": 30,
+      "total": 30,
+      "agreement_rate": 1.0,
+      "changed_count": 0,
+      "changed_cases": [],
+      "uncompared_error_cases": []
+    },
+    "E1↔E4": {
+      "agreement_count": 20,
+      "total": 30,
+      "agreement_rate": 0.6666666666666666,
+      "changed_count": 10,
+      "changed_cases": [
+        "case_001",
+        "case_002",
+        "case_012",
+        "case_014",
+        "case_017",
+        "case_018",
+        "case_020",
+        "case_026",
+        "case_029",
+        "case_030"
+      ],
+      "uncompared_error_cases": []
+    },
+    "E2↔E3": {
+      "agreement_count": 20,
+      "total": 30,
+      "agreement_rate": 0.6666666666666666,
+      "changed_count": 10,
+      "changed_cases": [
+        "case_001",
+        "case_002",
+        "case_012",
+        "case_014",
+        "case_017",
+        "case_018",
+        "case_020",
+        "case_026",
+        "case_029",
+        "case_030"
+      ],
+      "uncompared_error_cases": []
+    },
+    "E2↔E4": {
+      "agreement_count": 30,
+      "total": 30,
+      "agreement_rate": 1.0,
+      "changed_count": 0,
+      "changed_cases": [],
+      "uncompared_error_cases": []
+    },
+    "E3↔E4": {
+      "agreement_count": 20,
+      "total": 30,
+      "agreement_rate": 0.6666666666666666,
+      "changed_count": 10,
+      "changed_cases": [
+        "case_001",
+        "case_002",
+        "case_012",
+        "case_014",
+        "case_017",
+        "case_018",
+        "case_020",
+        "case_026",
+        "case_029",
+        "case_030"
+      ],
+      "uncompared_error_cases": []
+    }
+  },
+  "prompt_order_effect": {
+    "E1↔E2": {
+      "agreement_count": 20,
+      "total": 30,
+      "agreement_rate": 0.6666666666666666,
+      "changed_count": 10,
+      "changed_cases": [
+        "case_001",
+        "case_002",
+        "case_012",
+        "case_014",
+        "case_017",
+        "case_018",
+        "case_020",
+        "case_026",
+        "case_029",
+        "case_030"
+      ],
+      "uncompared_error_cases": []
+    },
+    "E3↔E4": {
+      "agreement_count": 20,
+      "total": 30,
+      "agreement_rate": 0.6666666666666666,
+      "changed_count": 10,
+      "changed_cases": [
+        "case_001",
+        "case_002",
+        "case_012",
+        "case_014",
+        "case_017",
+        "case_018",
+        "case_020",
+        "case_026",
+        "case_029",
+        "case_030"
+      ],
+      "uncompared_error_cases": []
+    }
+  },
+  "enum_order_effect": {
+    "E1↔E3": {
+      "agreement_count": 30,
+      "total": 30,
+      "agreement_rate": 1.0,
+      "changed_count": 0,
+      "changed_cases": [],
+      "uncompared_error_cases": []
+    },
+    "E2↔E4": {
+      "agreement_count": 30,
+      "total": 30,
+      "agreement_rate": 1.0,
+      "changed_count": 0,
+      "changed_cases": [],
+      "uncompared_error_cases": []
+    }
+  },
+  "interaction": {
+    "accuracy_difference_in_differences": 0.0,
+    "case_level_prompt_effect_symmetric_difference": [],
+    "case_level_enum_effect_symmetric_difference": []
+  },
+  "order_robustness_evaluated_cases": 30,
+  "order_sensitive_case_count": 10,
+  "order_sensitive_cases": [
+    "case_001",
+    "case_002",
+    "case_012",
+    "case_014",
+    "case_017",
+    "case_018",
+    "case_020",
+    "case_026",
+    "case_029",
+    "case_030"
+  ]
+}

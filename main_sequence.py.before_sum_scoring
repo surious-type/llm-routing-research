@@ -1,0 +1,742 @@
+#!/usr/bin/env python3
+
+import argparse
+import csv
+import json
+import math
+import statistics
+import time
+from datetime import datetime
+from pathlib import Path
+
+import requests
+
+
+BASE_URL = "http://localhost:8000"
+
+DATASET_PATH = Path(__file__).with_name("dataset_v2.jsonl")
+
+RESULTS_DIR = Path(__file__).with_name("results")
+
+
+SYSTEM_PROMPT = """Ты выполняешь маршрутизацию диалога.
+
+Тебе предоставлены:
+- текущий диалог;
+- новое сообщение пользователя;
+- доступные маршруты и их описания.
+
+Определи, какому из доступных маршрутов лучше всего соответствует
+новое сообщение с учётом текущего диалога.
+
+Используй смысл маршрута и его описание.
+Не выполняй запрос пользователя.
+Не объясняй решение.
+
+Ответом должно быть точное название одного доступного маршрута.
+"""
+
+
+def parse_args():
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument(
+        "--routes",
+        default="routes_continue_first.json",
+    )
+
+    parser.add_argument(
+        "--limit",
+        type=int,
+        default=None,
+    )
+
+    parser.add_argument(
+        "--start",
+        type=int,
+        default=0,
+    )
+
+    parser.add_argument(
+        "--base-url",
+        default=BASE_URL,
+    )
+
+    parser.add_argument(
+        "--model",
+        default=None,
+    )
+
+    parser.add_argument(
+        "--timeout",
+        type=float,
+        default=120,
+    )
+
+    parser.add_argument(
+        "--debug-response",
+        action="store_true",
+    )
+
+    parser.add_argument(
+        "--show-prompt",
+        action="store_true",
+    )
+
+    return parser.parse_args()
+
+
+def load_dataset():
+    rows = []
+
+    with DATASET_PATH.open(encoding="utf-8") as f:
+        for line in f:
+            if line.strip():
+                rows.append(json.loads(line))
+
+    return rows
+
+
+def load_routes(path):
+    with open(path, encoding="utf-8") as f:
+        routes = json.load(f)
+
+    names = [route["name"] for route in routes]
+
+    if len(names) != len(set(names)):
+        raise RuntimeError("Названия маршрутов должны быть уникальны")
+
+    return routes
+
+
+def discover_model(
+    session,
+    base_url,
+    timeout,
+):
+    response = session.get(
+        f"{base_url}/v1/models",
+        timeout=timeout,
+    )
+
+    response.raise_for_status()
+
+    data = response.json()["data"]
+
+    if not data:
+        raise RuntimeError("vLLM не вернул модель")
+
+    return data[0]["id"]
+
+
+def render_history(history):
+    names = {
+        "user": "Пользователь",
+        "assistant": "Ассистент",
+    }
+
+    return "\n".join(f"{names[x['role']]}: {x['content']}" for x in history)
+
+
+def build_prompt(row, routes):
+    routes_text = "\n\n".join(
+        (f"{route['name']}:\n{route['description']}") for route in routes
+    )
+
+    return f"""ТЕКУЩИЙ ДИАЛОГ:
+{render_history(row["history"])}
+
+НОВОЕ СООБЩЕНИЕ:
+{row["message"]}
+
+ДОСТУПНЫЕ МАРШРУТЫ:
+{routes_text}
+
+Выбери один маршрут."""
+
+
+def build_messages(row, routes):
+    return [
+        {
+            "role": "system",
+            "content": SYSTEM_PROMPT,
+        },
+        {
+            "role": "user",
+            "content": build_prompt(
+                row,
+                routes,
+            ),
+        },
+    ]
+
+
+def tokenize_chat(
+    session,
+    base_url,
+    model,
+    messages,
+    timeout,
+    *,
+    add_generation_prompt,
+    continue_final_message=False,
+):
+    payload = {
+        "model": model,
+        "messages": messages,
+        "add_generation_prompt": add_generation_prompt,
+        "continue_final_message": continue_final_message,
+        "chat_template_kwargs": {
+            "enable_thinking": False,
+        },
+    }
+
+    response = session.post(
+        f"{base_url}/tokenize",
+        json=payload,
+        timeout=timeout,
+    )
+
+    if not response.ok:
+        raise RuntimeError(f"/tokenize HTTP {response.status_code}: {response.text}")
+
+    return response.json()["tokens"]
+
+
+def extract_token_logprob(
+    entry,
+    token_id,
+):
+    if entry is None:
+        raise RuntimeError(f"Нет prompt logprob для token_id={token_id}")
+
+    # JSON object keys приходят строками.
+    item = entry.get(str(token_id))
+
+    if item is None:
+        item = entry.get(token_id)
+
+    if item is None:
+        # На случай другой сериализации.
+        for key, value in entry.items():
+            try:
+                if int(key) == token_id:
+                    item = value
+                    break
+            except (TypeError, ValueError):
+                pass
+
+    if item is None:
+        raise RuntimeError(f"Token {token_id} отсутствует в prompt_logprobs: {entry}")
+
+    if isinstance(item, dict):
+        return float(item["logprob"])
+
+    return float(item)
+
+
+def score_token_sequence(
+    session,
+    base_url,
+    model,
+    full_token_ids,
+    candidate_start,
+    timeout,
+    debug_response=False,
+):
+    """
+    Teacher-forcing score:
+
+    log P(t1, ..., tn | prompt)
+      = sum_i log P(t_i | prompt, t_<i)
+    """
+
+    payload = {
+        "model": model,
+        # Передаём уже готовые token IDs,
+        # чтобы ничего не ретокенизировалось.
+        "prompt": full_token_ids,
+        # Нам генерация не нужна.
+        "max_tokens": 0,
+        "echo": True,
+        # Возвращаем logprob prompt tokens.
+        "prompt_logprobs": 1,
+        "temperature": 0,
+        "add_special_tokens": False,
+    }
+
+    started = time.perf_counter()
+
+    response = session.post(
+        f"{base_url}/v1/completions",
+        json=payload,
+        timeout=timeout,
+    )
+
+    latency = time.perf_counter() - started
+
+    if not response.ok:
+        raise RuntimeError(
+            f"/v1/completions HTTP {response.status_code}: {response.text}"
+        )
+
+    data = response.json()
+
+    if debug_response:
+        print("\nRAW SEQUENCE RESPONSE:")
+        print(
+            json.dumps(
+                data,
+                ensure_ascii=False,
+                indent=2,
+            )
+        )
+
+    choice = data["choices"][0]
+
+    prompt_logprobs = choice.get("prompt_logprobs")
+
+    if prompt_logprobs is None:
+        raise RuntimeError("vLLM не вернул prompt_logprobs")
+
+    if len(prompt_logprobs) != len(full_token_ids):
+        raise RuntimeError(
+            "Размер prompt_logprobs "
+            "не совпадает с prompt token IDs: "
+            f"{len(prompt_logprobs)} != "
+            f"{len(full_token_ids)}"
+        )
+
+    token_logprobs = []
+
+    for position in range(
+        candidate_start,
+        len(full_token_ids),
+    ):
+        token_id = full_token_ids[position]
+
+        logprob = extract_token_logprob(
+            prompt_logprobs[position],
+            token_id,
+        )
+
+        token_logprobs.append(logprob)
+
+    if not token_logprobs:
+        raise RuntimeError("У маршрута не осталось ни одного scored token")
+
+    sum_logprob = sum(token_logprobs)
+
+    mean_logprob = sum_logprob / len(token_logprobs)
+
+    return {
+        "token_logprobs": token_logprobs,
+        "sum_logprob": sum_logprob,
+        "mean_logprob": mean_logprob,
+        "latency_sec": latency,
+    }
+
+
+def score_route(
+    session,
+    base_url,
+    model,
+    base_messages,
+    base_token_ids,
+    route,
+    timeout,
+    debug_response,
+):
+    """
+    Добавляем имя маршрута как уже известный
+    ответ assistant и вычисляем likelihood
+    этой последовательности.
+    """
+
+    candidate_messages = base_messages + [
+        {
+            "role": "assistant",
+            "content": route["name"],
+        }
+    ]
+
+    full_token_ids = tokenize_chat(
+        session=session,
+        base_url=base_url,
+        model=model,
+        messages=candidate_messages,
+        timeout=timeout,
+        add_generation_prompt=False,
+        # Важно: не закрываем assistant message,
+        # а рассматриваем route name
+        # как генерируемое продолжение.
+        continue_final_message=True,
+    )
+
+    prefix_len = len(base_token_ids)
+
+    if (
+        len(full_token_ids) < prefix_len
+        or full_token_ids[:prefix_len] != base_token_ids
+    ):
+        raise RuntimeError(
+            "Chat template дал разные prefix tokens. "
+            "Sequence scoring нельзя корректно "
+            "выполнить этим способом."
+        )
+
+    candidate_token_ids = full_token_ids[prefix_len:]
+
+    score = score_token_sequence(
+        session=session,
+        base_url=base_url,
+        model=model,
+        full_token_ids=full_token_ids,
+        candidate_start=prefix_len,
+        timeout=timeout,
+        debug_response=debug_response,
+    )
+
+    return {
+        "name": route["name"],
+        "token_ids": candidate_token_ids,
+        "token_count": len(candidate_token_ids),
+        "token_logprobs": score["token_logprobs"],
+        "sum_logprob": score["sum_logprob"],
+        "mean_logprob": score["mean_logprob"],
+        "latency_sec": score["latency_sec"],
+    }
+
+
+def softmax_scores(values):
+    maximum = max(values.values())
+
+    exps = {key: math.exp(value - maximum) for key, value in values.items()}
+
+    total = sum(exps.values())
+
+    return {key: value / total for key, value in exps.items()}
+
+
+def route_case(
+    session,
+    base_url,
+    model,
+    row,
+    routes,
+    timeout,
+    debug_response,
+):
+    messages = build_messages(
+        row,
+        routes,
+    )
+
+    base_token_ids = tokenize_chat(
+        session=session,
+        base_url=base_url,
+        model=model,
+        messages=messages,
+        timeout=timeout,
+        add_generation_prompt=True,
+        continue_final_message=False,
+    )
+
+    candidates = []
+
+    for route in routes:
+        candidate = score_route(
+            session=session,
+            base_url=base_url,
+            model=model,
+            base_messages=messages,
+            base_token_ids=base_token_ids,
+            route=route,
+            timeout=timeout,
+            debug_response=debug_response,
+        )
+
+        candidates.append(candidate)
+
+    # --------------------------------
+    # 1. TRUE sequence likelihood
+    # --------------------------------
+
+    sum_scores = {c["name"]: c["sum_logprob"] for c in candidates}
+
+    predicted_sum = max(
+        sum_scores,
+        key=sum_scores.get,
+    )
+
+    # --------------------------------
+    # 2. Length-normalized likelihood
+    # --------------------------------
+
+    mean_scores = {c["name"]: c["mean_logprob"] for c in candidates}
+
+    predicted_mean = max(
+        mean_scores,
+        key=mean_scores.get,
+    )
+
+    # В routing используем mean:
+    predicted = predicted_mean
+
+    probabilities = softmax_scores(mean_scores)
+
+    ordered = sorted(
+        probabilities.items(),
+        key=lambda x: x[1],
+        reverse=True,
+    )
+
+    confidence = ordered[0][1]
+
+    margin = ordered[0][1] - ordered[1][1] if len(ordered) > 1 else 1.0
+
+    expected = row["expected_route"]
+
+    details = {}
+
+    for c in candidates:
+        details[c["name"]] = {
+            "token_ids": c["token_ids"],
+            "token_count": c["token_count"],
+            "token_logprobs": c["token_logprobs"],
+            "sum_logprob": c["sum_logprob"],
+            "mean_logprob": c["mean_logprob"],
+            "normalized_score_probability": probabilities[c["name"]],
+        }
+
+    return {
+        "id": row["id"],
+        "difficulty": row["difficulty"],
+        "message": row["message"],
+        "expected_route": expected,
+        "predicted_route": predicted,
+        "predicted_sum": predicted_sum,
+        "correct": predicted == expected,
+        "correct_sum": predicted_sum == expected,
+        "confidence": confidence,
+        "margin": margin,
+        "routes_json": json.dumps(
+            details,
+            ensure_ascii=False,
+        ),
+        "latency_sec": sum(c["latency_sec"] for c in candidates),
+        "error": None,
+    }
+
+
+def print_result(result):
+    if result["error"]:
+        print(
+            "ERROR:",
+            result["error"],
+        )
+        return
+
+    details = json.loads(result["routes_json"])
+
+    print()
+    print("SEQUENCE SCORES:")
+
+    for name, item in details.items():
+        print()
+        print(f"  {name}")
+
+        print(f"    tokens       : {item['token_ids']}")
+
+        print(f"    token count  : {item['token_count']}")
+
+        print(f"    token logP   : {item['token_logprobs']}")
+
+        print(f"    sum logP     : {item['sum_logprob']:.6f}")
+
+        print(f"    mean logP    : {item['mean_logprob']:.6f}")
+
+        print(f"    normalized   : {item['normalized_score_probability']:.8f}")
+
+    print()
+
+    print(f"Predicted mean : {result['predicted_route']}")
+
+    print(f"Predicted sum  : {result['predicted_sum']}")
+
+    print(f"Expected       : {result['expected_route']}")
+
+    print(f"Confidence     : {result['confidence']:.8f}")
+
+    print(f"Margin         : {result['margin']:.8f}")
+
+    print(f"Result(mean)   : {'✓ CORRECT' if result['correct'] else '✗ WRONG'}")
+
+    print(f"Result(sum)    : {'✓ CORRECT' if result['correct_sum'] else '✗ WRONG'}")
+
+    print(f"Latency        : {result['latency_sec']:.3f} s")
+
+
+def save_results(results):
+    RESULTS_DIR.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+    path = RESULTS_DIR / f"sequence_{timestamp}.csv"
+
+    with path.open(
+        "w",
+        encoding="utf-8",
+        newline="",
+    ) as f:
+        writer = csv.DictWriter(
+            f,
+            fieldnames=results[0].keys(),
+        )
+
+        writer.writeheader()
+        writer.writerows(results)
+
+    return path
+
+
+def print_summary(results):
+    valid = [r for r in results if r["error"] is None]
+
+    print()
+    print("#" * 70)
+    print("SUMMARY")
+    print("#" * 70)
+
+    print(f"Cases       : {len(results)}")
+
+    if not valid:
+        return
+
+    correct_mean = sum(r["correct"] for r in valid)
+
+    correct_sum = sum(r["correct_sum"] for r in valid)
+
+    print(
+        f"Mean acc.   : {correct_mean / len(valid):.4f} ({correct_mean}/{len(valid)})"
+    )
+
+    print(f"Sum acc.    : {correct_sum / len(valid):.4f} ({correct_sum}/{len(valid)})")
+
+    print(f"Confidence  : {statistics.mean(r['confidence'] for r in valid):.4f}")
+
+    print(f"Margin      : {statistics.mean(r['margin'] for r in valid):.4f}")
+
+    print(f"Latency     : {statistics.mean(r['latency_sec'] for r in valid):.3f} s")
+
+
+def main():
+    args = parse_args()
+
+    dataset = load_dataset()
+    routes = load_routes(args.routes)
+
+    if args.limit is None:
+        cases = dataset[args.start :]
+    else:
+        cases = dataset[args.start : args.start + args.limit]
+
+    session = requests.Session()
+
+    model = args.model or discover_model(
+        session,
+        args.base_url,
+        args.timeout,
+    )
+
+    print()
+    print("Sequence Routing Research")
+    print(f"Model  : {model}")
+    print(f"Routes : {args.routes}")
+    print(f"Cases  : {len(cases)}")
+
+    print()
+
+    for i, route in enumerate(
+        routes,
+        start=1,
+    ):
+        print(f"{i}. {route['name']}")
+
+    results = []
+
+    for i, row in enumerate(
+        cases,
+        start=1,
+    ):
+        print()
+        print("=" * 70)
+
+        print(f"[{i}/{len(cases)}] {row['id']} | {row['difficulty']}")
+
+        print("=" * 70)
+
+        print(render_history(row["history"]))
+
+        print(f"НОВОЕ: {row['message']}")
+
+        print(f"EXPECTED: {row['expected_route']}")
+
+        if args.show_prompt:
+            print()
+            print("--- PROMPT ---")
+            print(
+                build_prompt(
+                    row,
+                    routes,
+                )
+            )
+            print("--- END ---")
+
+        try:
+            result = route_case(
+                session=session,
+                base_url=args.base_url,
+                model=model,
+                row=row,
+                routes=routes,
+                timeout=args.timeout,
+                debug_response=args.debug_response,
+            )
+
+        except Exception as exc:
+            result = {
+                "id": row["id"],
+                "difficulty": row["difficulty"],
+                "message": row["message"],
+                "expected_route": row["expected_route"],
+                "predicted_route": None,
+                "predicted_sum": None,
+                "correct": None,
+                "correct_sum": None,
+                "confidence": None,
+                "margin": None,
+                "routes_json": None,
+                "latency_sec": None,
+                "error": f"{type(exc).__name__}: {exc}",
+            }
+
+        results.append(result)
+        print_result(result)
+
+    if not results:
+        return
+
+    print_summary(results)
+
+    output = save_results(results)
+
+    print()
+    print(f"CSV saved: {output}")
+
+
+if __name__ == "__main__":
+    main()

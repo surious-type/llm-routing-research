@@ -1,0 +1,50 @@
+{
+  "experiment": "dataset-v3-pretest-v1",
+  "date": "2026-09-09",
+  "protocol_sha256": "75e3542f0c8fbc8d2e3c1aef3a5558802b62e86566aa15811d286289a71687da",
+  "protocol_modified": false,
+  "condition": "M14 validation P2",
+  "model_started_successfully": true,
+  "smoke_completed": true,
+  "smoke_valid_responses": 12,
+  "full_rows_written": 120,
+  "raw_responses_written": 113,
+  "infrastructure_error_count": 7,
+  "failed_ids": [
+    "v3_validation_0054",
+    "v3_validation_0055",
+    "v3_validation_0056",
+    "v3_validation_0057",
+    "v3_validation_0058",
+    "v3_validation_0059",
+    "v3_validation_0060"
+  ],
+  "failed_order": "P2",
+  "errors": [
+    "RemoteDisconnected: remote end closed connection without response",
+    "ConnectionResetError: connection reset by peer"
+  ],
+  "gpu_evidence": {
+    "m14_engine_memory_after_load_mib": 6564,
+    "external_process_at_failure": "X:\\Games\\GodOfWarRagnarok\\GoWR.exe",
+    "external_process_memory_mib_at_diagnostic": 4173,
+    "gpu_total_mib": 8192
+  },
+  "observation": "An external GPU-heavy process appeared during the M14 run. Its memory plus the loaded M14 engine exceeded physical VRAM. The final seven requests had no model response.",
+  "hypothesis": "Concurrent GPU workload caused the vLLM engine/connection failure. This is strongly supported by nvidia-smi snapshots but the server log does not contain a single explicit causal traceback.",
+  "recovery_policy": {
+    "requires_gpu_workload_to_be_closed": true,
+    "restart_same_exact_m14_configuration": true,
+    "repeat_smoke_before_recovery": true,
+    "rerun_successful_predictions": false,
+    "rerun_only_failed_ids_and_order": true,
+    "change_memory_flags": false,
+    "change_prompt_or_dataset": false
+  },
+  "updated_evaluator_sha256": {
+    "dataset_v3_pretest_routing.py": "a023a1e6f8c4aab19b839fdb21b07ca277a2004a3f68b83f4cee5111653e3dde",
+    "dataset_v3_pretest_analyze.py": "beb7ab21c76dcadcafa5ed98143b9b91dbde428b1f1feb346b46c9fca78e5897",
+    "dataset_v3_pretest_orchestrator.py": "7aab4e611f2dc376658b34d42b6dfdc491955f5d02f15ecdcd3ae9f55dfd19a2"
+  },
+  "test_status": "NOT RUN"
+}

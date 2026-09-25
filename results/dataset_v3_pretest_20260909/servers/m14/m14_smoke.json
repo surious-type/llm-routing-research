@@ -1,0 +1,1554 @@
+{
+  "metadata": {
+    "experiment": "dataset-v3-pretest-v1",
+    "model": "qwen3-14b",
+    "served_models_json": "[\"qwen3-14b\"]",
+    "base_url": "http://localhost:8000",
+    "prompt_version": "structured-factorial-v1",
+    "mode": "reason-route",
+    "temperature": 0,
+    "seed": 0,
+    "thinking_enabled": false,
+    "max_completion_tokens": 128,
+    "structured_output": "json_schema",
+    "route_names_json": "[\"CONTINUE\", \"NEW\"]",
+    "conditions_json": "{\"P1\": {\"prompt_order\": [\"CONTINUE\", \"NEW\"], \"enum_order\": [\"CONTINUE\", \"NEW\"]}, \"P2\": {\"prompt_order\": [\"NEW\", \"CONTINUE\"], \"enum_order\": [\"CONTINUE\", \"NEW\"]}}",
+    "dataset": "/home/surious-type/llm-routing-research/dataset_v3_development.jsonl",
+    "dataset_sha256": "be113c460c0534fcd434206000281fbaed9eb356a2b8b2ff6c710d38eef569af",
+    "routes": "/home/surious-type/llm-routing-research/routes_continue_first.json",
+    "routes_sha256": "cfdff764daf9e962e49fb05003148c1469462fc1e0558573cf08a02430da4561",
+    "case_count_per_condition": 6,
+    "request_count": 12,
+    "server_metadata_file": "results/dataset_v3_pretest_20260909/servers/m14/server_metadata.json",
+    "server_configuration_json": "{\"label\": \"M14\", \"model_id\": \"Qwen/Qwen3-14B-AWQ\", \"served_model_name\": \"qwen3-14b\", \"gpu_memory_utilization\": 0.85, \"cpu_offload_gb\": 4, \"enforce_eager\": true, \"max_model_len\": 2048, \"max_num_seqs\": 1, \"quantization\": \"awq\", \"splits\": [\"validation\"], \"docker_image\": \"vllm/vllm-openai@sha256:61fc8a896b0a4fbbbdc063bc4b0dbc25ce98e02b5050c24aeb7830ac02039b14\", \"container_name\": \"dataset-v3-pretest-20260909-m14\", \"vllm_version\": \"0.28.0\", \"docker_inspect\": {\"Id\": \"196d99a295f65ca991ae339df2fb5f0da3fbc3de00926aab1e04d55dc806c98b\", \"Created\": \"2026-09-09T08:47:06.593688178Z\", \"Path\": \"vllm\", \"Args\": [\"serve\", \"--model\", \"Qwen/Qwen3-14B-AWQ\", \"--served-model-name\", \"qwen3-14b\", \"--host\", \"0.0.0.0\", \"--port\", \"8000\", \"--quantization\", \"awq\", \"--gpu-memory-utilization\", \"0.85\", \"--cpu-offload-gb\", \"4\", \"--max-model-len\", \"2048\", \"--max-num-seqs\", \"1\", \"--generation-config\", \"vllm\", \"--default-chat-template-kwargs\", \"{\\\"enable_thinking\\\": false}\", \"--enforce-eager\"], \"State\": {\"Status\": \"running\", \"Running\": true, \"Paused\": false, \"Restarting\": false, \"OOMKilled\": false, \"Dead\": false, \"Pid\": 41986, \"ExitCode\": 0, \"Error\": \"\", \"StartedAt\": \"2026-09-09T08:47:06.631001993Z\", \"FinishedAt\": \"0001-01-01T00:00:00Z\"}, \"Image\": \"sha256:61fc8a896b0a4fbbbdc063bc4b0dbc25ce98e02b5050c24aeb7830ac02039b14\", \"ResolvConfPath\": \"/var/lib/docker/containers/196d99a295f65ca991ae339df2fb5f0da3fbc3de00926aab1e04d55dc806c98b/resolv.conf\", \"HostnamePath\": \"/var/lib/docker/containers/196d99a295f65ca991ae339df2fb5f0da3fbc3de00926aab1e04d55dc806c98b/hostname\", \"HostsPath\": \"/var/lib/docker/containers/196d99a295f65ca991ae339df2fb5f0da3fbc3de00926aab1e04d55dc806c98b/hosts\", \"LogPath\": \"/var/lib/docker/containers/196d99a295f65ca991ae339df2fb5f0da3fbc3de00926aab1e04d55dc806c98b/196d99a295f65ca991ae339df2fb5f0da3fbc3de00926aab1e04d55dc806c98b-json.log\", \"Name\": \"/dataset-v3-pretest-20260909-m14\", \"RestartCount\": 0, \"Driver\": \"overlayfs\", \"Platform\": \"linux\", \"MountLabel\": \"\", \"ProcessLabel\": \"\", \"AppArmorProfile\": \"docker-default\", \"ExecIDs\": null, \"HostConfig\": {\"Binds\": [\"/home/surious-type/.cache/huggingface:/root/.cache/huggingface:rw\"], \"ContainerIDFile\": \"\", \"LogConfig\": {\"Type\": \"json-file\", \"Config\": {}}, \"NetworkMode\": \"bridge\", \"PortBindings\": {\"8000/tcp\": [{\"HostIp\": \"\", \"HostPort\": \"8000\"}]}, \"RestartPolicy\": {\"Name\": \"no\", \"MaximumRetryCount\": 0}, \"AutoRemove\": false, \"VolumeDriver\": \"\", \"VolumesFrom\": null, \"ConsoleSize\": [0, 0], \"CapAdd\": null, \"CapDrop\": null, \"CgroupnsMode\": \"private\", \"Dns\": null, \"DnsOptions\": [], \"DnsSearch\": [], \"ExtraHosts\": null, \"GroupAdd\": null, \"IpcMode\": \"host\", \"Cgroup\": \"\", \"Links\": null, \"OomScoreAdj\": 0, \"PidMode\": \"\", \"Privileged\": false, \"PublishAllPorts\": false, \"ReadonlyRootfs\": false, \"SecurityOpt\": [\"label=disable\"], \"UTSMode\": \"\", \"UsernsMode\": \"\", \"ShmSize\": 67108864, \"Runtime\": \"runc\", \"Isolation\": \"\", \"CpuShares\": 0, \"Memory\": 0, \"NanoCpus\": 0, \"CgroupParent\": \"\", \"BlkioWeight\": 0, \"BlkioWeightDevice\": [], \"BlkioDeviceReadBps\": [], \"BlkioDeviceWriteBps\": [], \"BlkioDeviceReadIOps\": [], \"BlkioDeviceWriteIOps\": [], \"CpuPeriod\": 0, \"CpuQuota\": 0, \"CpuRealtimePeriod\": 0, \"CpuRealtimeRuntime\": 0, \"CpusetCpus\": \"\", \"CpusetMems\": \"\", \"Devices\": [], \"DeviceCgroupRules\": null, \"DeviceRequests\": [{\"Driver\": \"\", \"Count\": -1, \"DeviceIDs\": null, \"Capabilities\": [[\"gpu\"]], \"Options\": {}}], \"MemoryReservation\": 0, \"MemorySwap\": 0, \"MemorySwappiness\": null, \"OomKillDisable\": null, \"PidsLimit\": null, \"Ulimits\": [], \"CpuCount\": 0, \"CpuPercent\": 0, \"IOMaximumIOps\": 0, \"IOMaximumBandwidth\": 0, \"MaskedPaths\": [\"/proc/acpi\", \"/proc/asound\", \"/proc/interrupts\", \"/proc/kcore\", \"/proc/keys\", \"/proc/latency_stats\", \"/proc/sched_debug\", \"/proc/scsi\", \"/proc/timer_list\", \"/proc/timer_stats\", \"/sys/devices/virtual/powercap\", \"/sys/firmware\"], \"ReadonlyPaths\": [\"/proc/bus\", \"/proc/fs\", \"/proc/irq\", \"/proc/sys\", \"/proc/sysrq-trigger\"]}, \"Storage\": {\"RootFS\": {\"Snapshot\": {\"Name\": \"overlayfs\"}}}, \"Mounts\": [{\"Type\": \"bind\", \"Source\": \"/home/surious-type/.cache/huggingface\", \"Destination\": \"/root/.cache/huggingface\", \"Mode\": \"rw\", \"RW\": true, \"Propagation\": \"rprivate\"}], \"Config\": {\"Hostname\": \"196d99a295f6\", \"Domainname\": \"\", \"User\": \"\", \"AttachStdin\": false, \"AttachStdout\": false, \"AttachStderr\": false, \"ExposedPorts\": {\"8000/tcp\": {}}, \"Tty\": false, \"OpenStdin\": false, \"StdinOnce\": false, \"Env\": [\"PATH=/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\", \"NVARCH=x86_64\", \"NVIDIA_REQUIRE_CUDA=cuda>=13.0 brand=unknown,driver>=535,driver<536 brand=grid,driver>=535,driver<536 brand=tesla,driver>=535,driver<536 brand=nvidia,driver>=535,driver<536 brand=quadro,driver>=535,driver<536 brand=quadrortx,driver>=535,driver<536 brand=nvidiartx,driver>=535,driver<536 brand=vapps,driver>=535,driver<536 brand=vpc,driver>=535,driver<536 brand=vcs,driver>=535,driver<536 brand=vws,driver>=535,driver<536 brand=cloudgaming,driver>=535,driver<536 brand=unknown,driver>=550,driver<551 brand=grid,driver>=550,driver<551 brand=tesla,driver>=550,driver<551 brand=nvidia,driver>=550,driver<551 brand=quadro,driver>=550,driver<551 brand=quadrortx,driver>=550,driver<551 brand=nvidiartx,driver>=550,driver<551 brand=vapps,driver>=550,driver<551 brand=vpc,driver>=550,driver<551 brand=vcs,driver>=550,driver<551 brand=vws,driver>=550,driver<551 brand=cloudgaming,driver>=550,driver<551 brand=unknown,driver>=565,driver<566 brand=grid,driver>=565,driver<566 brand=tesla,driver>=565,driver<566 brand=nvidia,driver>=565,driver<566 brand=quadro,driver>=565,driver<566 brand=quadrortx,driver>=565,driver<566 brand=nvidiartx,driver>=565,driver<566 brand=vapps,driver>=565,driver<566 brand=vpc,driver>=565,driver<566 brand=vcs,driver>=565,driver<566 brand=vws,driver>=565,driver<566 brand=cloudgaming,driver>=565,driver<566 brand=unknown,driver>=570,driver<571 brand=grid,driver>=570,driver<571 brand=tesla,driver>=570,driver<571 brand=nvidia,driver>=570,driver<571 brand=quadro,driver>=570,driver<571 brand=quadrortx,driver>=570,driver<571 brand=nvidiartx,driver>=570,driver<571 brand=vapps,driver>=570,driver<571 brand=vpc,driver>=570,driver<571 brand=vcs,driver>=570,driver<571 brand=vws,driver>=570,driver<571 brand=cloudgaming,driver>=570,driver<571 brand=unknown,driver>=575,driver<576 brand=grid,driver>=575,driver<576 brand=tesla,driver>=575,driver<576 brand=nvidia,driver>=575,driver<576 brand=quadro,driver>=575,driver<576 brand=quadrortx,driver>=575,driver<576 brand=nvidiartx,driver>=575,driver<576 brand=vapps,driver>=575,driver<576 brand=vpc,driver>=575,driver<576 brand=vcs,driver>=575,driver<576 brand=vws,driver>=575,driver<576 brand=cloudgaming,driver>=575,driver<576\", \"NV_CUDA_CUDART_VERSION=13.0.96-1\", \"CUDA_VERSION=13.0.2\", \"LD_LIBRARY_PATH=/usr/local/nvidia/lib64:/usr/local/cuda/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/local/cuda/lib64\", \"NVIDIA_VISIBLE_DEVICES=all\", \"NVIDIA_DRIVER_CAPABILITIES=compute,utility\", \"DEBIAN_FRONTEND=noninteractive\", \"UV_HTTP_TIMEOUT=500\", \"UV_INDEX_STRATEGY=unsafe-best-match\", \"UV_LINK_MODE=copy\", \"UV_PYTHON_INSTALL_DIR=/opt/uv/python\", \"UV_CACHE_DIR=/opt/uv/cache\", \"UV_OVERRIDE=/etc/uv-overrides.txt\", \"VLLM_ENABLE_CUDA_COMPATIBILITY=0\", \"TORCH_CUDA_ARCH_LIST=7.5 8.0 8.6 8.9 9.0 10.0 12.0\", \"VLLM_USAGE_SOURCE=production-docker-image\", \"VLLM_BUILD_COMMIT=2cf0a6915ce544dc493a0990f2ea38d81601128a\", \"VLLM_BUILD_PIPELINE=019d130e-464e-4ff7-b84b-492992c0c06b\", \"VLLM_BUILD_URL=https://buildkite.com/vllm/release-v2/builds/5584\", \"VLLM_IMAGE_TAG=vllm/vllm-openai:v0.28.0\"], \"Cmd\": [\"--model\", \"Qwen/Qwen3-14B-AWQ\", \"--served-model-name\", \"qwen3-14b\", \"--host\", \"0.0.0.0\", \"--port\", \"8000\", \"--quantization\", \"awq\", \"--gpu-memory-utilization\", \"0.85\", \"--cpu-offload-gb\", \"4\", \"--max-model-len\", \"2048\", \"--max-num-seqs\", \"1\", \"--generation-config\", \"vllm\", \"--default-chat-template-kwargs\", \"{\\\"enable_thinking\\\": false}\", \"--enforce-eager\"], \"Image\": \"vllm/vllm-openai@sha256:61fc8a896b0a4fbbbdc063bc4b0dbc25ce98e02b5050c24aeb7830ac02039b14\", \"Volumes\": null, \"WorkingDir\": \"/vllm-workspace\", \"Entrypoint\": [\"vllm\", \"serve\"], \"Labels\": {\"ai.vllm.build.commit\": \"2cf0a6915ce544dc493a0990f2ea38d81601128a\", \"ai.vllm.build.pipeline\": \"019d130e-464e-4ff7-b84b-492992c0c06b\", \"ai.vllm.build.url\": \"https://buildkite.com/vllm/release-v2/builds/5584\", \"ai.vllm.image.tag\": \"vllm/vllm-openai:v0.28.0\", \"maintainer\": \"NVIDIA CORPORATION <cudatools@nvidia.com>\", \"org.opencontainers.image.ref.name\": \"ubuntu\", \"org.opencontainers.image.revision\": \"2cf0a6915ce544dc493a0990f2ea38d81601128a\", \"org.opencontainers.image.source\": \"https://github.com/vllm-project/vllm\", \"org.opencontainers.image.url\": \"https://buildkite.com/vllm/release-v2/builds/5584\", \"org.opencontainers.image.version\": \"vllm/vllm-openai:v0.28.0\"}}, \"NetworkSettings\": {\"SandboxID\": \"ec884814cfadfd8dcdd7ad9d6b7e701830718e272c8e861b30274e203fb37610\", \"SandboxKey\": \"/var/run/docker/netns/ec884814cfad\", \"Ports\": {\"8000/tcp\": [{\"HostIp\": \"0.0.0.0\", \"HostPort\": \"8000\"}, {\"HostIp\": \"::\", \"HostPort\": \"8000\"}]}, \"Networks\": {\"bridge\": {\"IPAMConfig\": null, \"Links\": null, \"Aliases\": null, \"DriverOpts\": null, \"GwPriority\": 0, \"NetworkID\": \"766a55c32a51237e93032924021bc3c2ad693ca9433a2667a1130dc09d386435\", \"EndpointID\": \"1bf6735d0755bc2f7f0804fea17a35bfd266428b8a6ba271c4244d3324b26baf\", \"Gateway\": \"172.17.0.1\", \"IPAddress\": \"172.17.0.2\", \"MacAddress\": \"26:a1:ba:2e:1e:91\", \"IPPrefixLen\": 16, \"IPv6Gateway\": \"\", \"GlobalIPv6Address\": \"\", \"GlobalIPv6PrefixLen\": 0, \"DNSNames\": null}}}, \"ImageManifestDescriptor\": {\"mediaType\": \"application/vnd.docker.distribution.manifest.v2+json\", \"digest\": \"sha256:2286e8533ca8b6bc777594bae30524f1426ba46ca21797524e06df6a94b06635\", \"size\": 7025, \"platform\": {\"architecture\": \"amd64\", \"os\": \"linux\"}}}, \"nvidia_smi_before\": \"Wed Sep  9 11:47:06 2026       \\n+-----------------------------------------------------------------------------------------+\\n| NVIDIA-SMI 595.84                 Driver Version: 595.84         CUDA Version: 13.2     |\\n+-----------------------------------------+------------------------+----------------------+\\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\\n|                                         |                        |               MIG M. |\\n|=========================================+========================+======================|\\n|   0  NVIDIA GeForce RTX 3060 Ti     Off |   00000000:08:00.0 Off |                  N/A |\\n| 97%   77C    P2            117W /  200W |     461MiB /   8192MiB |      0%      Default |\\n|                                         |                        |                  N/A |\\n+-----------------------------------------+------------------------+----------------------+\\n\\n+-----------------------------------------------------------------------------------------+\\n| Processes:                                                                              |\\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\\n|        ID   ID                                                               Usage      |\\n|=========================================================================================|\\n|    0   N/A  N/A            2682      G   /usr/bin/gnome-shell                    121MiB |\\n|    0   N/A  N/A            5445    C+G   /usr/bin/sunshine                       136MiB |\\n|    0   N/A  N/A            5448      G   /usr/bin/Xwayland                         3MiB |\\n|    0   N/A  N/A            5636    C+G   ...rack-uuid=3190708988185955192         63MiB |\\n|    0   N/A  N/A           11287      G   /opt/telegram/Telegram                   19MiB |\\n+-----------------------------------------------------------------------------------------+\\n\", \"nvidia_smi_after_load\": \"Wed Sep  9 11:48:22 2026       \\n+-----------------------------------------------------------------------------------------+\\n| NVIDIA-SMI 595.84                 Driver Version: 595.84         CUDA Version: 13.2     |\\n+-----------------------------------------+------------------------+----------------------+\\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\\n|                                         |                        |               MIG M. |\\n|=========================================+========================+======================|\\n|   0  NVIDIA GeForce RTX 3060 Ti     Off |   00000000:08:00.0 Off |                  N/A |\\n| 43%   60C    P2             60W /  200W |    7041MiB /   8192MiB |      0%      Default |\\n|                                         |                        |                  N/A |\\n+-----------------------------------------+------------------------+----------------------+\\n\\n+-----------------------------------------------------------------------------------------+\\n| Processes:                                                                              |\\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\\n|        ID   ID                                                               Usage      |\\n|=========================================================================================|\\n|    0   N/A  N/A            2682      G   /usr/bin/gnome-shell                    121MiB |\\n|    0   N/A  N/A            5445    C+G   /usr/bin/sunshine                       136MiB |\\n|    0   N/A  N/A            5448      G   /usr/bin/Xwayland                         3MiB |\\n|    0   N/A  N/A            5636    C+G   ...rack-uuid=3190708988185955192         63MiB |\\n|    0   N/A  N/A           11287      G   /opt/telegram/Telegram                   19MiB |\\n|    0   N/A  N/A           42433      C   VLLM::EngineCore                       6564MiB |\\n+-----------------------------------------------------------------------------------------+\\n\"}",
+    "created_at_utc": "2026-09-09T08:48:25.778002+00:00"
+  },
+  "rows": [
+    {
+      "condition": "P1",
+      "mode": "reason-route",
+      "id": "v3_development_0001",
+      "difficulty": "medium",
+      "message": "Готово. Следом создай endpoint для экспорта.",
+      "expected_route": "NEW",
+      "predicted_route": "NEW",
+      "correct": true,
+      "reason": "Новое сообщение указывает на завершение текущей задачи (проверка транзакции в ORM) и вводит новую задачу (создание endpoint для экспорта), что соответствует маршруту NEW.",
+      "prompt_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "enum_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "structured_response": "{\"reason\": \"Новое сообщение указывает на завершение текущей задачи (проверка транзакции в ORM) и вводит новую задачу (создание endpoint для экспорта), что соответствует маршруту NEW.\", \"route\": \"NEW\"}",
+      "prompt_tokens": 430,
+      "completion_tokens": 67,
+      "error": null,
+      "request_latency_sec": 13.263616879999972,
+      "split": "development",
+      "category": "completed_then_new_task",
+      "ambiguity": "medium",
+      "domain": "programming",
+      "family_id": "family_0001",
+      "policy_version": "dataset-v3-policy-draft-1"
+    },
+    {
+      "condition": "P1",
+      "mode": "reason-route",
+      "id": "v3_development_0002",
+      "difficulty": "medium",
+      "message": "Доведи текущий результат до конца.",
+      "expected_route": "CONTINUE",
+      "predicted_route": "CONTINUE",
+      "correct": true,
+      "reason": "Новое сообщение указывает на необходимость завершения текущей задачи, без введения новых независимых запросов. Оно продолжает диалог, требуя довести результат до конца, что соответствует продолжению текущей задачи.",
+      "prompt_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "enum_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "structured_response": "{\"reason\": \"Новое сообщение указывает на необходимость завершения текущей задачи, без введения новых независимых запросов. Оно продолжает диалог, требуя довести результат до конца, что соответствует продолжению текущей задачи.\", \"route\": \"CONTINUE\"}",
+      "prompt_tokens": 425,
+      "completion_tokens": 75,
+      "error": null,
+      "request_latency_sec": 13.993827673000851,
+      "split": "development",
+      "category": "explicit_continuation",
+      "ambiguity": "low",
+      "domain": "programming",
+      "family_id": "family_0001",
+      "policy_version": "dataset-v3-policy-draft-1"
+    },
+    {
+      "condition": "P1",
+      "mode": "reason-route",
+      "id": "v3_development_0003",
+      "difficulty": "easy",
+      "message": "Исправь параметр на «изоляцию REPEATABLE READ».",
+      "expected_route": "CONTINUE",
+      "predicted_route": "CONTINUE",
+      "correct": true,
+      "reason": "Новое сообщение уточняет параметр текущей задачи, изменяя изоляцию с «READ COMMITTED» на «REPEATABLE READ», что продолжает процесс проверки транзакции в ORM в контексте сервиса платежей.",
+      "prompt_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "enum_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "structured_response": "{\"reason\": \"Новое сообщение уточняет параметр текущей задачи, изменяя изоляцию с «READ COMMITTED» на «REPEATABLE READ», что продолжает процесс проверки транзакции в ORM в контексте сервиса платежей.\", \"route\": \"CONTINUE\"}",
+      "prompt_tokens": 431,
+      "completion_tokens": 73,
+      "error": null,
+      "request_latency_sec": 13.643114244001481,
+      "split": "development",
+      "category": "correction_or_data_completion",
+      "ambiguity": "low",
+      "domain": "programming",
+      "family_id": "family_0001",
+      "policy_version": "dataset-v3-policy-draft-1"
+    },
+    {
+      "condition": "P1",
+      "mode": "reason-route",
+      "id": "v3_development_0005",
+      "difficulty": "hard",
+      "message": "Подготовь Dockerfile здесь.",
+      "expected_route": "NEW",
+      "predicted_route": "NEW",
+      "correct": true,
+      "reason": "Новое сообщение вводит новую самостоятельную задачу — подготовку Dockerfile, которая не связана с настройкой повторных запросов в HTTP-клиенте.",
+      "prompt_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "enum_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "structured_response": "{\"reason\": \"Новое сообщение вводит новую самостоятельную задачу — подготовку Dockerfile, которая не связана с настройкой повторных запросов в HTTP-клиенте.\", \"route\": \"NEW\"}",
+      "prompt_tokens": 413,
+      "completion_tokens": 54,
+      "error": null,
+      "request_latency_sec": 10.475999837000927,
+      "split": "development",
+      "category": "same_entity_new_operation",
+      "ambiguity": "medium",
+      "domain": "programming",
+      "family_id": "family_0002",
+      "policy_version": "dataset-v3-policy-draft-1"
+    },
+    {
+      "condition": "P1",
+      "mode": "reason-route",
+      "id": "v3_development_0006",
+      "difficulty": "easy",
+      "message": "Теперь подготовь Dockerfile.",
+      "expected_route": "NEW",
+      "predicted_route": "NEW",
+      "correct": true,
+      "reason": "Новое сообщение вводит новую самостоятельную задачу — подготовку Dockerfile, которая не связана с предыдущей задачей настройки повторных запросов в HTTP-клиенте.",
+      "prompt_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "enum_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "structured_response": "{\"reason\": \"Новое сообщение вводит новую самостоятельную задачу — подготовку Dockerfile, которая не связана с предыдущей задачей настройки повторных запросов в HTTP-клиенте.\", \"route\": \"NEW\"}",
+      "prompt_tokens": 414,
+      "completion_tokens": 61,
+      "error": null,
+      "request_latency_sec": 11.51980786799868,
+      "split": "development",
+      "category": "intent_switch_same_domain",
+      "ambiguity": "low",
+      "domain": "programming",
+      "family_id": "family_0002",
+      "policy_version": "dataset-v3-policy-draft-1"
+    },
+    {
+      "condition": "P1",
+      "mode": "reason-route",
+      "id": "v3_development_0011",
+      "difficulty": "hard",
+      "message": "Исправь параметр на «включая подпапки».",
+      "expected_route": "CONTINUE",
+      "predicted_route": "CONTINUE",
+      "correct": true,
+      "reason": "Новое сообщение уточняет параметр текущей задачи, изменяя его с «только верхний уровень» на «включая подпапки», что продолжает процесс синхронизации каталога, начатый ранее.",
+      "prompt_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "enum_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "structured_response": "{\"reason\": \"Новое сообщение уточняет параметр текущей задачи, изменяя его с «только верхний уровень» на «включая подпапки», что продолжает процесс синхронизации каталога, начатый ранее.\", \"route\": \"CONTINUE\"}",
+      "prompt_tokens": 450,
+      "completion_tokens": 72,
+      "error": null,
+      "request_latency_sec": 13.839999216999786,
+      "split": "development",
+      "category": "correction_or_data_completion",
+      "ambiguity": "high",
+      "domain": "files_storage",
+      "family_id": "family_0006",
+      "policy_version": "dataset-v3-policy-draft-1"
+    },
+    {
+      "condition": "P2",
+      "mode": "reason-route",
+      "id": "v3_development_0001",
+      "difficulty": "medium",
+      "message": "Готово. Следом создай endpoint для экспорта.",
+      "expected_route": "NEW",
+      "predicted_route": "NEW",
+      "correct": true,
+      "reason": "Пользователь завершил обсуждение изоляции транзакций и перешёл к следующей задаче — созданию endpoint для экспорта, что указывает на начало новой самостоятельной задачи.",
+      "prompt_route_order": "[\"NEW\", \"CONTINUE\"]",
+      "enum_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "structured_response": "{\"reason\": \"Пользователь завершил обсуждение изоляции транзакций и перешёл к следующей задаче — созданию endpoint для экспорта, что указывает на начало новой самостоятельной задачи.\", \"route\": \"NEW\"}",
+      "prompt_tokens": 430,
+      "completion_tokens": 68,
+      "error": null,
+      "request_latency_sec": 12.581495787000677,
+      "split": "development",
+      "category": "completed_then_new_task",
+      "ambiguity": "medium",
+      "domain": "programming",
+      "family_id": "family_0001",
+      "policy_version": "dataset-v3-policy-draft-1"
+    },
+    {
+      "condition": "P2",
+      "mode": "reason-route",
+      "id": "v3_development_0002",
+      "difficulty": "medium",
+      "message": "Доведи текущий результат до конца.",
+      "expected_route": "CONTINUE",
+      "predicted_route": "CONTINUE",
+      "correct": true,
+      "reason": "Пользователь просит довести текущий результат до конца, что указывает на продолжение текущей задачи, а не на начало новой.",
+      "prompt_route_order": "[\"NEW\", \"CONTINUE\"]",
+      "enum_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "structured_response": "{\"reason\": \"Пользователь просит довести текущий результат до конца, что указывает на продолжение текущей задачи, а не на начало новой.\", \"route\": \"CONTINUE\"}",
+      "prompt_tokens": 425,
+      "completion_tokens": 49,
+      "error": null,
+      "request_latency_sec": 9.228121588001159,
+      "split": "development",
+      "category": "explicit_continuation",
+      "ambiguity": "low",
+      "domain": "programming",
+      "family_id": "family_0001",
+      "policy_version": "dataset-v3-policy-draft-1"
+    },
+    {
+      "condition": "P2",
+      "mode": "reason-route",
+      "id": "v3_development_0003",
+      "difficulty": "easy",
+      "message": "Исправь параметр на «изоляцию REPEATABLE READ».",
+      "expected_route": "CONTINUE",
+      "predicted_route": "CONTINUE",
+      "correct": true,
+      "reason": "Новое сообщение уточняет параметр текущей задачи, изменяя изоляцию с «READ COMMITTED» на «REPEATABLE READ», что продолжает процесс проверки транзакции в ORM в контексте сервиса платежей.",
+      "prompt_route_order": "[\"NEW\", \"CONTINUE\"]",
+      "enum_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "structured_response": "{\"reason\": \"Новое сообщение уточняет параметр текущей задачи, изменяя изоляцию с «READ COMMITTED» на «REPEATABLE READ», что продолжает процесс проверки транзакции в ORM в контексте сервиса платежей.\", \"route\": \"CONTINUE\"}",
+      "prompt_tokens": 431,
+      "completion_tokens": 73,
+      "error": null,
+      "request_latency_sec": 13.473419500998716,
+      "split": "development",
+      "category": "correction_or_data_completion",
+      "ambiguity": "low",
+      "domain": "programming",
+      "family_id": "family_0001",
+      "policy_version": "dataset-v3-policy-draft-1"
+    },
+    {
+      "condition": "P2",
+      "mode": "reason-route",
+      "id": "v3_development_0005",
+      "difficulty": "hard",
+      "message": "Подготовь Dockerfile здесь.",
+      "expected_route": "NEW",
+      "predicted_route": "NEW",
+      "correct": true,
+      "reason": "Новое сообщение 'Подготовь Dockerfile здесь' представляет собой новую самостоятельную задачу, не связанную с настройкой повторных запросов в HTTP-клиенте. Это отдельный запрос, требующий подготовки Dockerfile.",
+      "prompt_route_order": "[\"NEW\", \"CONTINUE\"]",
+      "enum_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "structured_response": "{\"reason\": \"Новое сообщение 'Подготовь Dockerfile здесь' представляет собой новую самостоятельную задачу, не связанную с настройкой повторных запросов в HTTP-клиенте. Это отдельный запрос, требующий подготовки Dockerfile.\", \"route\": \"NEW\"}",
+      "prompt_tokens": 413,
+      "completion_tokens": 69,
+      "error": null,
+      "request_latency_sec": 12.760429141999339,
+      "split": "development",
+      "category": "same_entity_new_operation",
+      "ambiguity": "medium",
+      "domain": "programming",
+      "family_id": "family_0002",
+      "policy_version": "dataset-v3-policy-draft-1"
+    },
+    {
+      "condition": "P2",
+      "mode": "reason-route",
+      "id": "v3_development_0006",
+      "difficulty": "easy",
+      "message": "Теперь подготовь Dockerfile.",
+      "expected_route": "NEW",
+      "predicted_route": "NEW",
+      "correct": true,
+      "reason": "Новое сообщение 'Теперь подготовь Dockerfile' представляет собой новую самостоятельную задачу, не связанную с предыдущей настройкой повторных запросов в контексте HTTP-клиента.",
+      "prompt_route_order": "[\"NEW\", \"CONTINUE\"]",
+      "enum_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "structured_response": "{\"reason\": \"Новое сообщение 'Теперь подготовь Dockerfile' представляет собой новую самостоятельную задачу, не связанную с предыдущей настройкой повторных запросов в контексте HTTP-клиента.\", \"route\": \"NEW\"}",
+      "prompt_tokens": 414,
+      "completion_tokens": 63,
+      "error": null,
+      "request_latency_sec": 11.700286703999154,
+      "split": "development",
+      "category": "intent_switch_same_domain",
+      "ambiguity": "low",
+      "domain": "programming",
+      "family_id": "family_0002",
+      "policy_version": "dataset-v3-policy-draft-1"
+    },
+    {
+      "condition": "P2",
+      "mode": "reason-route",
+      "id": "v3_development_0011",
+      "difficulty": "hard",
+      "message": "Исправь параметр на «включая подпапки».",
+      "expected_route": "CONTINUE",
+      "predicted_route": "CONTINUE",
+      "correct": true,
+      "reason": "Новое сообщение уточняет параметр текущей задачи, изменяя его с «только верхний уровень» на «включая подпапки», что продолжает процесс синхронизации каталога, начатый ранее.",
+      "prompt_route_order": "[\"NEW\", \"CONTINUE\"]",
+      "enum_route_order": "[\"CONTINUE\", \"NEW\"]",
+      "structured_response": "{\"reason\": \"Новое сообщение уточняет параметр текущей задачи, изменяя его с «только верхний уровень» на «включая подпапки», что продолжает процесс синхронизации каталога, начатый ранее.\", \"route\": \"CONTINUE\"}",
+      "prompt_tokens": 450,
+      "completion_tokens": 72,
+      "error": null,
+      "request_latency_sec": 13.297913768999933,
+      "split": "development",
+      "category": "correction_or_data_completion",
+      "ambiguity": "high",
+      "domain": "files_storage",
+      "family_id": "family_0006",
+      "policy_version": "dataset-v3-policy-draft-1"
+    }
+  ],
+  "raw_responses": [
+    {
+      "condition": "P1",
+      "mode": "reason-route",
+      "id": "v3_development_0001",
+      "prompt_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "enum_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "payload": {
+        "model": "qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате. Сначала кратко сформулируй основание выбора в поле reason, затем укажи выбранный маршрут в поле route."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Нужно проверить транзакцию в ORM. Контекст задачи: «сервис платежей». Сейчас используется «изоляцию READ COMMITTED». Итог нужен в виде пошагового плана.\nАссистент: Я проверил исходные данные; перед финальным результатом нужно уточнение. Оставить вариант «изоляцию READ COMMITTED» или использовать «изоляцию REPEATABLE READ»?\n\nНОВОЕ СООБЩЕНИЕ:\nГотово. Следом создай endpoint для экспорта.\n\nДОСТУПНЫЕ МАРШРУТЫ:\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос.\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут."
+          }
+        ],
+        "temperature": 0,
+        "seed": 0,
+        "max_completion_tokens": 128,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "CONTINUE",
+                    "NEW"
+                  ]
+                }
+              },
+              "required": [
+                "reason",
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-bd1eb62344c823d5",
+        "object": "chat.completion",
+        "created": 1788943705,
+        "model": "qwen3-14b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"reason\": \"Новое сообщение указывает на завершение текущей задачи (проверка транзакции в ORM) и вводит новую задачу (создание endpoint для экспорта), что соответствует маршруту NEW.\",\n  \"route\": \"NEW\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-9d35de0d",
+        "usage": {
+          "prompt_tokens": 430,
+          "total_tokens": 497,
+          "completion_tokens": 67,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "reason": "Новое сообщение указывает на завершение текущей задачи (проверка транзакции в ORM) и вводит новую задачу (создание endpoint для экспорта), что соответствует маршруту NEW.",
+        "route": "NEW"
+      }
+    },
+    {
+      "condition": "P1",
+      "mode": "reason-route",
+      "id": "v3_development_0002",
+      "prompt_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "enum_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "payload": {
+        "model": "qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате. Сначала кратко сформулируй основание выбора в поле reason, затем укажи выбранный маршрут в поле route."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Нужно проверить транзакцию в ORM. Контекст задачи: «сервис платежей». Сейчас используется «изоляцию READ COMMITTED». Итог нужен в виде пошагового плана.\nАссистент: Я проверил исходные данные; перед финальным результатом нужно уточнение. Оставить вариант «изоляцию READ COMMITTED» или использовать «изоляцию REPEATABLE READ»?\n\nНОВОЕ СООБЩЕНИЕ:\nДоведи текущий результат до конца.\n\nДОСТУПНЫЕ МАРШРУТЫ:\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос.\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут."
+          }
+        ],
+        "temperature": 0,
+        "seed": 0,
+        "max_completion_tokens": 128,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "CONTINUE",
+                    "NEW"
+                  ]
+                }
+              },
+              "required": [
+                "reason",
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-9f3f06f7f30eb663",
+        "object": "chat.completion",
+        "created": 1788943719,
+        "model": "qwen3-14b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"reason\": \"Новое сообщение указывает на необходимость завершения текущей задачи, без введения новых независимых запросов. Оно продолжает диалог, требуя довести результат до конца, что соответствует продолжению текущей задачи.\",\n  \"route\": \"CONTINUE\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-9d35de0d",
+        "usage": {
+          "prompt_tokens": 425,
+          "total_tokens": 500,
+          "completion_tokens": 75,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "reason": "Новое сообщение указывает на необходимость завершения текущей задачи, без введения новых независимых запросов. Оно продолжает диалог, требуя довести результат до конца, что соответствует продолжению текущей задачи.",
+        "route": "CONTINUE"
+      }
+    },
+    {
+      "condition": "P1",
+      "mode": "reason-route",
+      "id": "v3_development_0003",
+      "prompt_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "enum_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "payload": {
+        "model": "qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате. Сначала кратко сформулируй основание выбора в поле reason, затем укажи выбранный маршрут в поле route."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Нужно проверить транзакцию в ORM. Контекст задачи: «сервис платежей». Сейчас используется «изоляцию READ COMMITTED». Итог нужен в виде пошагового плана.\nАссистент: Я проверил исходные данные; перед финальным результатом нужно уточнение. Оставить вариант «изоляцию READ COMMITTED» или использовать «изоляцию REPEATABLE READ»?\n\nНОВОЕ СООБЩЕНИЕ:\nИсправь параметр на «изоляцию REPEATABLE READ».\n\nДОСТУПНЫЕ МАРШРУТЫ:\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос.\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут."
+          }
+        ],
+        "temperature": 0,
+        "seed": 0,
+        "max_completion_tokens": 128,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "CONTINUE",
+                    "NEW"
+                  ]
+                }
+              },
+              "required": [
+                "reason",
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-80f1580909fe3c65",
+        "object": "chat.completion",
+        "created": 1788943733,
+        "model": "qwen3-14b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"reason\": \"Новое сообщение уточняет параметр текущей задачи, изменяя изоляцию с «READ COMMITTED» на «REPEATABLE READ», что продолжает процесс проверки транзакции в ORM в контексте сервиса платежей.\",\n  \"route\": \"CONTINUE\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-9d35de0d",
+        "usage": {
+          "prompt_tokens": 431,
+          "total_tokens": 504,
+          "completion_tokens": 73,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "reason": "Новое сообщение уточняет параметр текущей задачи, изменяя изоляцию с «READ COMMITTED» на «REPEATABLE READ», что продолжает процесс проверки транзакции в ORM в контексте сервиса платежей.",
+        "route": "CONTINUE"
+      }
+    },
+    {
+      "condition": "P1",
+      "mode": "reason-route",
+      "id": "v3_development_0005",
+      "prompt_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "enum_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "payload": {
+        "model": "qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате. Сначала кратко сформулируй основание выбора в поле reason, затем укажи выбранный маршрут в поле route."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Нужно настроить повторные запросы. Контекст задачи: «HTTP-клиент». Сейчас используется «2 повтора». Итог нужен в YAML.\nАссистент: Я начал выполнение и подготовил промежуточный вариант. Сейчас используется «2 повтора». Перед завершением уточни: оставить его или перейти на «5 повторов»?\n\nНОВОЕ СООБЩЕНИЕ:\nПодготовь Dockerfile здесь.\n\nДОСТУПНЫЕ МАРШРУТЫ:\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос.\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут."
+          }
+        ],
+        "temperature": 0,
+        "seed": 0,
+        "max_completion_tokens": 128,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "CONTINUE",
+                    "NEW"
+                  ]
+                }
+              },
+              "required": [
+                "reason",
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-8ac64fb5c6ebad51",
+        "object": "chat.completion",
+        "created": 1788943746,
+        "model": "qwen3-14b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"reason\": \"Новое сообщение вводит новую самостоятельную задачу — подготовку Dockerfile, которая не связана с настройкой повторных запросов в HTTP-клиенте.\",\n  \"route\": \"NEW\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-9d35de0d",
+        "usage": {
+          "prompt_tokens": 413,
+          "total_tokens": 467,
+          "completion_tokens": 54,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "reason": "Новое сообщение вводит новую самостоятельную задачу — подготовку Dockerfile, которая не связана с настройкой повторных запросов в HTTP-клиенте.",
+        "route": "NEW"
+      }
+    },
+    {
+      "condition": "P1",
+      "mode": "reason-route",
+      "id": "v3_development_0006",
+      "prompt_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "enum_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "payload": {
+        "model": "qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате. Сначала кратко сформулируй основание выбора в поле reason, затем укажи выбранный маршрут в поле route."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Нужно настроить повторные запросы. Контекст задачи: «HTTP-клиент». Сейчас используется «2 повтора». Итог нужен в YAML.\nАссистент: Я начал выполнение и подготовил промежуточный вариант. Сейчас используется «2 повтора». Перед завершением уточни: оставить его или перейти на «5 повторов»?\n\nНОВОЕ СООБЩЕНИЕ:\nТеперь подготовь Dockerfile.\n\nДОСТУПНЫЕ МАРШРУТЫ:\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос.\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут."
+          }
+        ],
+        "temperature": 0,
+        "seed": 0,
+        "max_completion_tokens": 128,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "CONTINUE",
+                    "NEW"
+                  ]
+                }
+              },
+              "required": [
+                "reason",
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-80b29b7989c5a926",
+        "object": "chat.completion",
+        "created": 1788943757,
+        "model": "qwen3-14b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"reason\": \"Новое сообщение вводит новую самостоятельную задачу — подготовку Dockerfile, которая не связана с предыдущей задачей настройки повторных запросов в HTTP-клиенте.\",\n  \"route\": \"NEW\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-9d35de0d",
+        "usage": {
+          "prompt_tokens": 414,
+          "total_tokens": 475,
+          "completion_tokens": 61,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "reason": "Новое сообщение вводит новую самостоятельную задачу — подготовку Dockerfile, которая не связана с предыдущей задачей настройки повторных запросов в HTTP-клиенте.",
+        "route": "NEW"
+      }
+    },
+    {
+      "condition": "P1",
+      "mode": "reason-route",
+      "id": "v3_development_0011",
+      "prompt_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "enum_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "payload": {
+        "model": "qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате. Сначала кратко сформулируй основание выбора в поле reason, затем укажи выбранный маршрут в поле route."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Нужно синхронизировать каталог. Контекст задачи: «рабочий каталог проекта». Сейчас используется «только верхний уровень». Итог нужен в виде короткого чек-листа.\nАссистент: Я собрал основу и дошёл до места, где нужен последний параметр. Я пока не закрываю задачу: нужно решить, оставить «только верхний уровень» или перейти на «включая подпапки».\n\nНОВОЕ СООБЩЕНИЕ:\nИсправь параметр на «включая подпапки».\n\nДОСТУПНЫЕ МАРШРУТЫ:\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос.\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут."
+          }
+        ],
+        "temperature": 0,
+        "seed": 0,
+        "max_completion_tokens": 128,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "CONTINUE",
+                    "NEW"
+                  ]
+                }
+              },
+              "required": [
+                "reason",
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-b0db6137c0b47b21",
+        "object": "chat.completion",
+        "created": 1788943768,
+        "model": "qwen3-14b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"reason\": \"Новое сообщение уточняет параметр текущей задачи, изменяя его с «только верхний уровень» на «включая подпапки», что продолжает процесс синхронизации каталога, начатый ранее.\",\n  \"route\": \"CONTINUE\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-9d35de0d",
+        "usage": {
+          "prompt_tokens": 450,
+          "total_tokens": 522,
+          "completion_tokens": 72,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "reason": "Новое сообщение уточняет параметр текущей задачи, изменяя его с «только верхний уровень» на «включая подпапки», что продолжает процесс синхронизации каталога, начатый ранее.",
+        "route": "CONTINUE"
+      }
+    },
+    {
+      "condition": "P2",
+      "mode": "reason-route",
+      "id": "v3_development_0001",
+      "prompt_route_order": [
+        "NEW",
+        "CONTINUE"
+      ],
+      "enum_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "payload": {
+        "model": "qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате. Сначала кратко сформулируй основание выбора в поле reason, затем укажи выбранный маршрут в поле route."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Нужно проверить транзакцию в ORM. Контекст задачи: «сервис платежей». Сейчас используется «изоляцию READ COMMITTED». Итог нужен в виде пошагового плана.\nАссистент: Я проверил исходные данные; перед финальным результатом нужно уточнение. Оставить вариант «изоляцию READ COMMITTED» или использовать «изоляцию REPEATABLE READ»?\n\nНОВОЕ СООБЩЕНИЕ:\nГотово. Следом создай endpoint для экспорта.\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0,
+        "seed": 0,
+        "max_completion_tokens": 128,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "CONTINUE",
+                    "NEW"
+                  ]
+                }
+              },
+              "required": [
+                "reason",
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-9038988d5dd90f9e",
+        "object": "chat.completion",
+        "created": 1788943782,
+        "model": "qwen3-14b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"reason\": \"Пользователь завершил обсуждение изоляции транзакций и перешёл к следующей задаче — созданию endpoint для экспорта, что указывает на начало новой самостоятельной задачи.\",\n  \"route\": \"NEW\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-9d35de0d",
+        "usage": {
+          "prompt_tokens": 430,
+          "total_tokens": 498,
+          "completion_tokens": 68,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "reason": "Пользователь завершил обсуждение изоляции транзакций и перешёл к следующей задаче — созданию endpoint для экспорта, что указывает на начало новой самостоятельной задачи.",
+        "route": "NEW"
+      }
+    },
+    {
+      "condition": "P2",
+      "mode": "reason-route",
+      "id": "v3_development_0002",
+      "prompt_route_order": [
+        "NEW",
+        "CONTINUE"
+      ],
+      "enum_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "payload": {
+        "model": "qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате. Сначала кратко сформулируй основание выбора в поле reason, затем укажи выбранный маршрут в поле route."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Нужно проверить транзакцию в ORM. Контекст задачи: «сервис платежей». Сейчас используется «изоляцию READ COMMITTED». Итог нужен в виде пошагового плана.\nАссистент: Я проверил исходные данные; перед финальным результатом нужно уточнение. Оставить вариант «изоляцию READ COMMITTED» или использовать «изоляцию REPEATABLE READ»?\n\nНОВОЕ СООБЩЕНИЕ:\nДоведи текущий результат до конца.\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0,
+        "seed": 0,
+        "max_completion_tokens": 128,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "CONTINUE",
+                    "NEW"
+                  ]
+                }
+              },
+              "required": [
+                "reason",
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-a9dcdd9fc7742504",
+        "object": "chat.completion",
+        "created": 1788943795,
+        "model": "qwen3-14b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"reason\": \"Пользователь просит довести текущий результат до конца, что указывает на продолжение текущей задачи, а не на начало новой.\",\n  \"route\": \"CONTINUE\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-9d35de0d",
+        "usage": {
+          "prompt_tokens": 425,
+          "total_tokens": 474,
+          "completion_tokens": 49,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "reason": "Пользователь просит довести текущий результат до конца, что указывает на продолжение текущей задачи, а не на начало новой.",
+        "route": "CONTINUE"
+      }
+    },
+    {
+      "condition": "P2",
+      "mode": "reason-route",
+      "id": "v3_development_0003",
+      "prompt_route_order": [
+        "NEW",
+        "CONTINUE"
+      ],
+      "enum_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "payload": {
+        "model": "qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате. Сначала кратко сформулируй основание выбора в поле reason, затем укажи выбранный маршрут в поле route."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Нужно проверить транзакцию в ORM. Контекст задачи: «сервис платежей». Сейчас используется «изоляцию READ COMMITTED». Итог нужен в виде пошагового плана.\nАссистент: Я проверил исходные данные; перед финальным результатом нужно уточнение. Оставить вариант «изоляцию READ COMMITTED» или использовать «изоляцию REPEATABLE READ»?\n\nНОВОЕ СООБЩЕНИЕ:\nИсправь параметр на «изоляцию REPEATABLE READ».\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0,
+        "seed": 0,
+        "max_completion_tokens": 128,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "CONTINUE",
+                    "NEW"
+                  ]
+                }
+              },
+              "required": [
+                "reason",
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-bb7772b6edcb9030",
+        "object": "chat.completion",
+        "created": 1788943804,
+        "model": "qwen3-14b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"reason\": \"Новое сообщение уточняет параметр текущей задачи, изменяя изоляцию с «READ COMMITTED» на «REPEATABLE READ», что продолжает процесс проверки транзакции в ORM в контексте сервиса платежей.\",\n  \"route\": \"CONTINUE\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-9d35de0d",
+        "usage": {
+          "prompt_tokens": 431,
+          "total_tokens": 504,
+          "completion_tokens": 73,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "reason": "Новое сообщение уточняет параметр текущей задачи, изменяя изоляцию с «READ COMMITTED» на «REPEATABLE READ», что продолжает процесс проверки транзакции в ORM в контексте сервиса платежей.",
+        "route": "CONTINUE"
+      }
+    },
+    {
+      "condition": "P2",
+      "mode": "reason-route",
+      "id": "v3_development_0005",
+      "prompt_route_order": [
+        "NEW",
+        "CONTINUE"
+      ],
+      "enum_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "payload": {
+        "model": "qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате. Сначала кратко сформулируй основание выбора в поле reason, затем укажи выбранный маршрут в поле route."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Нужно настроить повторные запросы. Контекст задачи: «HTTP-клиент». Сейчас используется «2 повтора». Итог нужен в YAML.\nАссистент: Я начал выполнение и подготовил промежуточный вариант. Сейчас используется «2 повтора». Перед завершением уточни: оставить его или перейти на «5 повторов»?\n\nНОВОЕ СООБЩЕНИЕ:\nПодготовь Dockerfile здесь.\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0,
+        "seed": 0,
+        "max_completion_tokens": 128,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "CONTINUE",
+                    "NEW"
+                  ]
+                }
+              },
+              "required": [
+                "reason",
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-b6af75e5e4cedf70",
+        "object": "chat.completion",
+        "created": 1788943817,
+        "model": "qwen3-14b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"reason\": \"Новое сообщение 'Подготовь Dockerfile здесь' представляет собой новую самостоятельную задачу, не связанную с настройкой повторных запросов в HTTP-клиенте. Это отдельный запрос, требующий подготовки Dockerfile.\",\n  \"route\": \"NEW\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-9d35de0d",
+        "usage": {
+          "prompt_tokens": 413,
+          "total_tokens": 482,
+          "completion_tokens": 69,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "reason": "Новое сообщение 'Подготовь Dockerfile здесь' представляет собой новую самостоятельную задачу, не связанную с настройкой повторных запросов в HTTP-клиенте. Это отдельный запрос, требующий подготовки Dockerfile.",
+        "route": "NEW"
+      }
+    },
+    {
+      "condition": "P2",
+      "mode": "reason-route",
+      "id": "v3_development_0006",
+      "prompt_route_order": [
+        "NEW",
+        "CONTINUE"
+      ],
+      "enum_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "payload": {
+        "model": "qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате. Сначала кратко сформулируй основание выбора в поле reason, затем укажи выбранный маршрут в поле route."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Нужно настроить повторные запросы. Контекст задачи: «HTTP-клиент». Сейчас используется «2 повтора». Итог нужен в YAML.\nАссистент: Я начал выполнение и подготовил промежуточный вариант. Сейчас используется «2 повтора». Перед завершением уточни: оставить его или перейти на «5 повторов»?\n\nНОВОЕ СООБЩЕНИЕ:\nТеперь подготовь Dockerfile.\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0,
+        "seed": 0,
+        "max_completion_tokens": 128,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "CONTINUE",
+                    "NEW"
+                  ]
+                }
+              },
+              "required": [
+                "reason",
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-886a6f6d37a33b0b",
+        "object": "chat.completion",
+        "created": 1788943830,
+        "model": "qwen3-14b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"reason\": \"Новое сообщение 'Теперь подготовь Dockerfile' представляет собой новую самостоятельную задачу, не связанную с предыдущей настройкой повторных запросов в контексте HTTP-клиента.\",\n  \"route\": \"NEW\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-9d35de0d",
+        "usage": {
+          "prompt_tokens": 414,
+          "total_tokens": 477,
+          "completion_tokens": 63,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "reason": "Новое сообщение 'Теперь подготовь Dockerfile' представляет собой новую самостоятельную задачу, не связанную с предыдущей настройкой повторных запросов в контексте HTTP-клиента.",
+        "route": "NEW"
+      }
+    },
+    {
+      "condition": "P2",
+      "mode": "reason-route",
+      "id": "v3_development_0011",
+      "prompt_route_order": [
+        "NEW",
+        "CONTINUE"
+      ],
+      "enum_route_order": [
+        "CONTINUE",
+        "NEW"
+      ],
+      "payload": {
+        "model": "qwen3-14b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате. Сначала кратко сформулируй основание выбора в поле reason, затем укажи выбранный маршрут в поле route."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Нужно синхронизировать каталог. Контекст задачи: «рабочий каталог проекта». Сейчас используется «только верхний уровень». Итог нужен в виде короткого чек-листа.\nАссистент: Я собрал основу и дошёл до места, где нужен последний параметр. Я пока не закрываю задачу: нужно решить, оставить «только верхний уровень» или перейти на «включая подпапки».\n\nНОВОЕ СООБЩЕНИЕ:\nИсправь параметр на «включая подпапки».\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0,
+        "seed": 0,
+        "max_completion_tokens": 128,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "CONTINUE",
+                    "NEW"
+                  ]
+                }
+              },
+              "required": [
+                "reason",
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-bc4db6bf3403ffdf",
+        "object": "chat.completion",
+        "created": 1788943842,
+        "model": "qwen3-14b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"reason\": \"Новое сообщение уточняет параметр текущей задачи, изменяя его с «только верхний уровень» на «включая подпапки», что продолжает процесс синхронизации каталога, начатый ранее.\",\n  \"route\": \"CONTINUE\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-9d35de0d",
+        "usage": {
+          "prompt_tokens": 450,
+          "total_tokens": 522,
+          "completion_tokens": 72,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "reason": "Новое сообщение уточняет параметр текущей задачи, изменяя его с «только верхний уровень» на «включая подпапки», что продолжает процесс синхронизации каталога, начатый ранее.",
+        "route": "CONTINUE"
+      }
+    }
+  ]
+}

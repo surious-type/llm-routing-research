@@ -1,0 +1,67 @@
+WARNING 09-09 14:16:01 [argparse_utils.py:257] With `vllm serve`, you should provide the model as a positional argument or in a config file instead of via the `--model` option. The `--model` option will be removed in a future version.
+(APIServer pid=1) INFO 09-09 14:16:01 [api_utils.py:333] 
+(APIServer pid=1) INFO 09-09 14:16:01 [api_utils.py:333]        █     █     █▄   ▄█
+(APIServer pid=1) INFO 09-09 14:16:01 [api_utils.py:333]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.28.0
+(APIServer pid=1) INFO 09-09 14:16:01 [api_utils.py:333]   █▄█▀ █     █     █     █  model   Qwen/Qwen3-14B-AWQ
+(APIServer pid=1) INFO 09-09 14:16:01 [api_utils.py:333]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+(APIServer pid=1) INFO 09-09 14:16:01 [api_utils.py:333] 
+(APIServer pid=1) INFO 09-09 14:16:01 [api_utils.py:272] non-default args: {'model_tag': 'Qwen/Qwen3-14B-AWQ', 'default_chat_template_kwargs': {'enable_thinking': False}, 'host': '0.0.0.0', 'model': 'Qwen/Qwen3-14B-AWQ', 'max_model_len': 2048, 'quantization': 'awq', 'enforce_eager': True, 'served_model_name': ['qwen3-14b'], 'generation_config': 'vllm', 'gpu_memory_utilization': 0.85, 'cpu_offload_gb': 4.0, 'max_num_seqs': 1}
+(APIServer pid=1) INFO 09-09 14:16:11 [model.py:672] Resolved architecture: Qwen3ForCausalLM
+(APIServer pid=1) INFO 09-09 14:16:11 [model.py:1965] Using max model len 2048
+(APIServer pid=1) WARNING 09-09 14:16:17 [vllm.py:1285] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+(APIServer pid=1) WARNING 09-09 14:16:17 [vllm.py:1354] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+(APIServer pid=1) INFO 09-09 14:16:17 [kernel.py:308] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])
+(APIServer pid=1) INFO 09-09 14:16:17 [vllm.py:1533] Cudagraph is disabled under eager mode
+(APIServer pid=1) INFO 09-09 14:16:17 [compilation.py:329] Enabled custom fusions: norm_quant, act_quant
+(EngineCore pid=171) INFO 09-09 14:16:27 [core.py:122] Initializing a V1 LLM engine (v0.28.0) with config: model='Qwen/Qwen3-14B-AWQ', speculative_config=None, tokenizer='Qwen/Qwen3-14B-AWQ', skip_tokenizer_init=False, tokenizer_mode=auto, revision=main, tokenizer_revision=main, trust_remote_code=False, dtype=torch.float16, max_seq_len=2048, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=auto_awq, quantization_config=None, enforce_eager=True, enable_return_routed_experts=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False, jit_monitor_mode='warn', jit_monitor_verbose=False), seed=0, served_model_name=qwen3-14b, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.NONE: 0>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['all'], 'ir_enable_torch_wrap': False, 'splitting_ops': [], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': [], 'compile_ranges_endpoints': [2048], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.NONE: 0>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': [], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': True, 'fuse_act_quant': True, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False, 'enable_qk_norm_rope_fusion': False, 'fuse_rope_kvcache_cat_mla': False, 'fuse_act_padding': False, 'fuse_qk_norm_rope_kvcache': False}, 'max_cudagraph_capture_size': 0, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': False, 'static_all_moe_layers': []}, kernel_config=KernelConfig(ir_op_priority=IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native']), enable_flashinfer_autotune=True, enable_cutedsl_warmup=True, enable_jit_warmup=True, enable_bf16x3_router_gemm=False, moe_backend='auto', linear_backend='auto')
+(EngineCore pid=171) INFO 09-09 14:16:28 [parallel_state.py:1638] world_size=1 rank=0 local_rank=0 distributed_init_method=file:///tmp/vllm_dist_f9b74624eee44aa9b31fcd0e433c955a backend=nccl
+(EngineCore pid=171) INFO 09-09 14:16:28 [parallel_state.py:1982] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+(EngineCore pid=171) INFO 09-09 14:16:28 [gpu_worker.py:396] Using V2 Model Runner
+(EngineCore pid=171) INFO 09-09 14:16:28 [base.py:123] Offloader set to UVAOffloader
+(EngineCore pid=171) INFO 09-09 14:16:28 [model_runner.py:358] Loading model from scratch...
+(EngineCore pid=171) INFO 09-09 14:16:28 [auto_awq.py:448] Using MarlinLinearKernel for AutoAWQMarlinLinearMethod
+(EngineCore pid=171) INFO 09-09 14:16:29 [cuda.py:486] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+(EngineCore pid=171) INFO 09-09 14:16:29 [flash_attn.py:866] Using FlashAttention version 2
+(EngineCore pid=171) INFO 09-09 14:16:34 [uva.py:58] Total CPU offloaded parameters: 4.01
+(EngineCore pid=171) INFO 09-09 14:16:35 [weight_utils.py:858] Filesystem type for checkpoints: EXT4. Checkpoint size: 9.29 GiB. Available RAM: 16.58 GiB.
+(EngineCore pid=171) INFO 09-09 14:16:35 [weight_utils.py:881] Auto-prefetch is disabled because the filesystem (EXT4) is not a recognized network FS (NFS/Lustre). If you want to force prefetching, start vLLM with --safetensors-load-strategy=prefetch.
+(EngineCore pid=171) INFO 09-09 14:16:41 [default_loader.py:430] Loading weights took 6.60 seconds
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346] EngineCore failed to start.
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346] Traceback (most recent call last):
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py", line 1315, in run_engine_core
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]     engine_core = EngineCoreProc(*args, engine_index=dp_rank, **kwargs)
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]   File "/usr/local/lib/python3.12/dist-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]     return func(*args, **kwargs)
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py", line 1073, in __init__
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]     super().__init__(
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/engine/core.py", line 133, in __init__
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]     self.model_executor = executor_class(vllm_config)
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]   File "/usr/local/lib/python3.12/dist-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]     return func(*args, **kwargs)
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/executor/abstract.py", line 110, in __init__
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]     self._init_executor()
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/executor/uniproc_executor.py", line 74, in _init_executor
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]     self.driver_worker.load_model()
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/worker/gpu_worker.py", line 457, in load_model
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]     self.model_runner.load_model(load_dummy_weights=load_dummy_weights)
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]   File "/usr/local/lib/python3.12/dist-packages/vllm/v1/worker/gpu/model_runner.py", line 360, in load_model
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]     self.model = model_loader.load_model(
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]                  ^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]   File "/usr/local/lib/python3.12/dist-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]     return func(*args, **kwargs)
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]   File "/usr/local/lib/python3.12/dist-packages/vllm/model_executor/model_loader/base_loader.py", line 80, in load_model
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]     process_weights_after_loading(model, model_config, target_device)
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]   File "/usr/local/lib/python3.12/dist-packages/vllm/model_executor/model_loader/utils.py", line 108, in process_weights_after_loading
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]     quant_method.process_weights_after_loading(module)
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]   File "/usr/local/lib/python3.12/dist-packages/vllm/model_executor/layers/quantization/auto_awq.py", line 508, in process_weights_after_loading
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]     _convert_awq_to_standard_format(
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]   File "/usr/local/lib/python3.12/dist-packages/vllm/model_executor/layers/quantization/auto_awq.py", line 125, in _convert_awq_to_standard_format
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]     new_qw = (unpacked.to(torch.int32) << shifts[None, :, None]).sum(
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=171) ERROR 09-09 14:16:42 [core.py:1346] torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 86.00 MiB. GPU 0 has a total capacity of 7.66 GiB of which 114.06 MiB is free. Including non-PyTorch memory, this process has 6.86 GiB memory in use. Of the allocated memory 6.67 GiB is allocated by PyTorch, and 22.73 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+(APIServer pid=1) INFO 09-09 14:16:43 [utils.py:615] [shutdown] Process manager: send sigterm to process EngineCore

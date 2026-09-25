@@ -1,0 +1,84 @@
+{
+  "experiment": "dataset-v3-pretest-v1-supplemental-recovery",
+  "date": "2026-09-09",
+  "trigger": "Explicit user authorization to add more CPU RAM offload after M14 recovery OOM.",
+  "methodology_status": "new_infrastructure_condition",
+  "baseline_overwritten": false,
+  "configuration_change": {
+    "cpu_offload_gb": {
+      "baseline": 4,
+      "supplemental": 6
+    }
+  },
+  "unchanged": [
+    "model",
+    "dataset",
+    "route descriptions",
+    "system and user prompt",
+    "JSON Schema",
+    "temperature",
+    "seed",
+    "enable_thinking",
+    "max_completion_tokens",
+    "max_model_len",
+    "max_num_seqs",
+    "enforce_eager",
+    "P2 route and enum order"
+  ],
+  "model": "Qwen/Qwen3-14B-AWQ",
+  "docker_image": "vllm/vllm-openai@sha256:61fc8a896b0a4fbbbdc063bc4b0dbc25ce98e02b5050c24aeb7830ac02039b14",
+  "vllm_version": "0.28.0",
+  "gpu_memory_utilization": 0.85,
+  "cpu_offload_gb": 6,
+  "max_model_len": 2048,
+  "max_num_seqs": 1,
+  "enforce_eager": true,
+  "startup_status": "success",
+  "reported_cpu_offloaded_parameters_gb": 6.03,
+  "smoke": {
+    "rows": 12,
+    "valid_rows": 12,
+    "errors": 0
+  },
+  "repair": {
+    "condition": "P2",
+    "ids": [
+      "v3_validation_0054",
+      "v3_validation_0055",
+      "v3_validation_0056",
+      "v3_validation_0057",
+      "v3_validation_0058",
+      "v3_validation_0059",
+      "v3_validation_0060"
+    ],
+    "valid_responses": 7,
+    "correct": 6,
+    "incorrect": 1,
+    "incorrect_ids": ["v3_validation_0059"],
+    "mean_latency_sec": 23.790038
+  },
+  "merged_supplemental_metrics": {
+    "P1_accuracy": 0.85,
+    "P2_accuracy": 0.8166666666666667,
+    "mean_accuracy": 0.8333333333333333,
+    "semantic_agreement": 0.9333333333333333,
+    "coverage": 0.9333333333333333,
+    "order_sensitive_case_count": 4,
+    "agreed_but_wrong_count": 8,
+    "accuracy_when_agree": 0.8571428571428571
+  },
+  "interpretation_limit": "The merged M14 result combines 113 original responses produced with cpu_offload_gb=4 and seven recovered responses produced with cpu_offload_gb=6. It is a useful completion diagnostic but not a clean single-condition comparator.",
+  "frozen_winner_status": "M8 remains the formally frozen winner until M14 validation is rerun completely under one declared configuration.",
+  "hashes": {
+    "repair_json": "e4a5196e58b08314958de81247445eceb7194cf4690053d356a57394efdee7f7",
+    "supplemental_comparison_json": "d3b7d901ceeb61b0403b2ac2baae82e92389d52e6d02e4f0986c075e49b46870",
+    "server_metadata_json": "a8f4422710769231adf94660bc62cad1d27c5a89fea1d5e3cf245b8216e70c35"
+  },
+  "artifacts": {
+    "repair_json": "results/dataset_v3_pretest_20260909/m14_validation_offload6_repair.json",
+    "repair_csv": "results/dataset_v3_pretest_20260909/m14_validation_offload6_repair.csv",
+    "analysis": "results/dataset_v3_pretest_20260909/supplemental_offload6_analysis/",
+    "server": "results/dataset_v3_pretest_20260909/servers/m14_offload6_recovery1/"
+  },
+  "test_status": "NOT RUN"
+}

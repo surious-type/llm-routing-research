@@ -1,0 +1,14 @@
+P1 v3_development_0001: predicted=CONTINUE expected=NEW error=None
+P1 v3_development_0002: predicted=CONTINUE expected=CONTINUE error=None
+P1 v3_development_0003: predicted=CONTINUE expected=CONTINUE error=None
+P1 v3_development_0005: predicted=NEW expected=NEW error=None
+P1 v3_development_0006: predicted=NEW expected=NEW error=None
+P1 v3_development_0011: predicted=CONTINUE expected=CONTINUE error=None
+P2 v3_development_0001: predicted=NEW expected=NEW error=None
+P2 v3_development_0002: predicted=CONTINUE expected=CONTINUE error=None
+P2 v3_development_0003: predicted=CONTINUE expected=CONTINUE error=None
+P2 v3_development_0005: predicted=NEW expected=NEW error=None
+P2 v3_development_0006: predicted=NEW expected=NEW error=None
+P2 v3_development_0011: predicted=CONTINUE expected=CONTINUE error=None
+P1: accuracy=5/6, mean_latency=1.453208s
+P2: accuracy=6/6, mean_latency=1.492750s

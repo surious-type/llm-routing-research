@@ -1,0 +1,4 @@
+{
+  "message_only_tfidf_logreg_dev_to_validation_accuracy": 0.8166666666666667,
+  "note": "Diagnostic for surface leakage. Test labels were not used. A high value means the synthetic candidate set still contains lexical shortcuts and must not be treated as a final human-validated benchmark."
+}

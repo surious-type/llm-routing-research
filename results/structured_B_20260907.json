@@ -1,0 +1,3054 @@
+{
+  "metadata": {
+    "model": "qwen3-4b",
+    "served_models_json": "[\"qwen3-4b\"]",
+    "base_url": "http://localhost:8000",
+    "prompt_version": "structured-routing-v1",
+    "system_prompt": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате.",
+    "temperature": 0.0,
+    "seed": 0,
+    "thinking_enabled": false,
+    "structured_output": "json_schema",
+    "route_names_json": "[\"NEW\", \"CONTINUE\"]",
+    "dataset": "dataset_v2.jsonl",
+    "dataset_sha256": "fe6357ef072442689848d72f942828f5d12da4f71611fd86b4f9ceeddad6088c",
+    "routes": "routes_new_first.json",
+    "routes_sha256": "1f6d70be7c652d0514ee4809483afad17256e3b65f5e2126b1577ff3ec4139e8",
+    "case_count": 30,
+    "created_at_utc": "2026-09-07T14:33:28.742895+00:00"
+  },
+  "rows": [
+    {
+      "id": "case_001",
+      "difficulty": "easy",
+      "message": "Пишет ошибку 403.",
+      "expected_route": "CONTINUE",
+      "predicted_route": "NEW",
+      "correct": false,
+      "structured_response": "{\"route\": \"NEW\"}",
+      "prompt_tokens": 316,
+      "completion_tokens": 10,
+      "error": null,
+      "request_latency_sec": 0.10906399600207806
+    },
+    {
+      "id": "case_002",
+      "difficulty": "easy",
+      "message": "А платить можно помесячно?",
+      "expected_route": "CONTINUE",
+      "predicted_route": "NEW",
+      "correct": false,
+      "structured_response": "{\"route\": \"NEW\"}",
+      "prompt_tokens": 314,
+      "completion_tokens": 10,
+      "error": null,
+      "request_latency_sec": 0.16074461600510404
+    },
+    {
+      "id": "case_003",
+      "difficulty": "easy",
+      "message": "А сколько стоит тариф Pro?",
+      "expected_route": "NEW",
+      "predicted_route": "NEW",
+      "correct": true,
+      "structured_response": "{\"route\": \"NEW\"}",
+      "prompt_tokens": 315,
+      "completion_tokens": 10,
+      "error": null,
+      "request_latency_sec": 0.15986582800542237
+    },
+    {
+      "id": "case_004",
+      "difficulty": "easy",
+      "message": "С 10 по 17 сентября.",
+      "expected_route": "CONTINUE",
+      "predicted_route": "CONTINUE",
+      "correct": true,
+      "structured_response": "{\"route\": \"CONTINUE\"}",
+      "prompt_tokens": 309,
+      "completion_tokens": 11,
+      "error": null,
+      "request_latency_sec": 0.16964583600201877
+    },
+    {
+      "id": "case_005",
+      "difficulty": "easy",
+      "message": "А как оформить больничный?",
+      "expected_route": "NEW",
+      "predicted_route": "NEW",
+      "correct": true,
+      "structured_response": "{\"route\": \"NEW\"}",
+      "prompt_tokens": 307,
+      "completion_tokens": 10,
+      "error": null,
+      "request_latency_sec": 0.15973863800172694
+    },
+    {
+      "id": "case_006",
+      "difficulty": "easy",
+      "message": "Лишний платёж вернётся автоматически?",
+      "expected_route": "CONTINUE",
+      "predicted_route": "CONTINUE",
+      "correct": true,
+      "structured_response": "{\"route\": \"CONTINUE\"}",
+      "prompt_tokens": 320,
+      "completion_tokens": 11,
+      "error": null,
+      "request_latency_sec": 0.16604538999672513
+    },
+    {
+      "id": "case_007",
+      "difficulty": "easy",
+      "message": "Как удалить мой аккаунт?",
+      "expected_route": "NEW",
+      "predicted_route": "NEW",
+      "correct": true,
+      "structured_response": "{\"route\": \"NEW\"}",
+      "prompt_tokens": 316,
+      "completion_tokens": 10,
+      "error": null,
+      "request_latency_sec": 0.16079771600198
+    },
+    {
+      "id": "case_008",
+      "difficulty": "easy",
+      "message": "PDF тоже поддерживается?",
+      "expected_route": "CONTINUE",
+      "predicted_route": "CONTINUE",
+      "correct": true,
+      "structured_response": "{\"route\": \"CONTINUE\"}",
+      "prompt_tokens": 308,
+      "completion_tokens": 12,
+      "error": null,
+      "request_latency_sec": 0.17945143399992958
+    },
+    {
+      "id": "case_009",
+      "difficulty": "easy",
+      "message": "А где поменять пароль?",
+      "expected_route": "NEW",
+      "predicted_route": "NEW",
+      "correct": true,
+      "structured_response": "{\"route\": \"NEW\"}",
+      "prompt_tokens": 310,
+      "completion_tokens": 10,
+      "error": null,
+      "request_latency_sec": 0.15911048199632205
+    },
+    {
+      "id": "case_010",
+      "difficulty": "easy",
+      "message": "А можно ещё за прошлый квартал?",
+      "expected_route": "CONTINUE",
+      "predicted_route": "CONTINUE",
+      "correct": true,
+      "structured_response": "{\"route\": \"CONTINUE\"}",
+      "prompt_tokens": 322,
+      "completion_tokens": 11,
+      "error": null,
+      "request_latency_sec": 0.16712826400180347
+    },
+    {
+      "id": "case_011",
+      "difficulty": "easy",
+      "message": "Теперь создай отпуск Иванову.",
+      "expected_route": "NEW",
+      "predicted_route": "NEW",
+      "correct": true,
+      "structured_response": "{\"route\": \"NEW\"}",
+      "prompt_tokens": 321,
+      "completion_tokens": 10,
+      "error": null,
+      "request_latency_sec": 0.15734986899769865
+    },
+    {
+      "id": "case_012",
+      "difficulty": "easy",
+      "message": "Да, у всех отчётов белый экран.",
+      "expected_route": "CONTINUE",
+      "predicted_route": "NEW",
+      "correct": false,
+      "structured_response": "{\"route\": \"NEW\"}",
+      "prompt_tokens": 327,
+      "completion_tokens": 10,
+      "error": null,
+      "request_latency_sec": 0.15832009000587277
+    },
+    {
+      "id": "case_013",
+      "difficulty": "medium",
+      "message": "А адрес доставки ещё можно изменить?",
+      "expected_route": "CONTINUE",
+      "predicted_route": "CONTINUE",
+      "correct": true,
+      "structured_response": "{\"route\": \"CONTINUE\"}",
+      "prompt_tokens": 313,
+      "completion_tokens": 11,
+      "error": null,
+      "request_latency_sec": 0.16873542800021823
+    },
+    {
+      "id": "case_014",
+      "difficulty": "medium",
+      "message": "А где изменить email в профиле?",
+      "expected_route": "NEW",
+      "predicted_route": "CONTINUE",
+      "correct": false,
+      "structured_response": "{\"route\": \"CONTINUE\"}",
+      "prompt_tokens": 314,
+      "completion_tokens": 11,
+      "error": null,
+      "request_latency_sec": 0.16683959999500075
+    },
+    {
+      "id": "case_015",
+      "difficulty": "medium",
+      "message": "На /reports, в основном при больших отчётах.",
+      "expected_route": "CONTINUE",
+      "predicted_route": "CONTINUE",
+      "correct": true,
+      "structured_response": "{\"route\": \"CONTINUE\"}",
+      "prompt_tokens": 317,
+      "completion_tokens": 12,
+      "error": null,
+      "request_latency_sec": 0.1726251290019718
+    },
+    {
+      "id": "case_016",
+      "difficulty": "medium",
+      "message": "Как создать нового пользователя через API?",
+      "expected_route": "NEW",
+      "predicted_route": "NEW",
+      "correct": true,
+      "structured_response": "{\"route\": \"NEW\"}",
+      "prompt_tokens": 310,
+      "completion_tokens": 10,
+      "error": null,
+      "request_latency_sec": 0.15689012100483524
+    },
+    {
+      "id": "case_017",
+      "difficulty": "medium",
+      "message": "Можно вместо графика вывести таблицу?",
+      "expected_route": "CONTINUE",
+      "predicted_route": "NEW",
+      "correct": false,
+      "structured_response": "{\"route\": \"NEW\"}",
+      "prompt_tokens": 312,
+      "completion_tokens": 10,
+      "error": null,
+      "request_latency_sec": 0.15698095300467685
+    },
+    {
+      "id": "case_018",
+      "difficulty": "medium",
+      "message": "А как подключить новый MCP-инструмент?",
+      "expected_route": "NEW",
+      "predicted_route": "NEW",
+      "correct": true,
+      "structured_response": "{\"route\": \"NEW\"}",
+      "prompt_tokens": 314,
+      "completion_tokens": 10,
+      "error": null,
+      "request_latency_sec": 0.15719378399808193
+    },
+    {
+      "id": "case_019",
+      "difficulty": "medium",
+      "message": "А если руководитель сейчас отсутствует?",
+      "expected_route": "CONTINUE",
+      "predicted_route": "CONTINUE",
+      "correct": true,
+      "structured_response": "{\"route\": \"CONTINUE\"}",
+      "prompt_tokens": 320,
+      "completion_tokens": 11,
+      "error": null,
+      "request_latency_sec": 0.1641121309949085
+    },
+    {
+      "id": "case_020",
+      "difficulty": "medium",
+      "message": "А как назначить роль аналитика Иванову?",
+      "expected_route": "NEW",
+      "predicted_route": "NEW",
+      "correct": true,
+      "structured_response": "{\"route\": \"NEW\"}",
+      "prompt_tokens": 331,
+      "completion_tokens": 10,
+      "error": null,
+      "request_latency_sec": 0.11024763900059042
+    },
+    {
+      "id": "case_021",
+      "difficulty": "medium",
+      "message": "Сформируй новый отчёт по сотрудникам.",
+      "expected_route": "NEW",
+      "predicted_route": "CONTINUE",
+      "correct": false,
+      "structured_response": "{\"route\": \"CONTINUE\"}",
+      "prompt_tokens": 328,
+      "completion_tokens": 11,
+      "error": null,
+      "request_latency_sec": 0.16676884600019548
+    },
+    {
+      "id": "case_022",
+      "difficulty": "medium",
+      "message": "А где изменить номер телефона в профиле?",
+      "expected_route": "NEW",
+      "predicted_route": "CONTINUE",
+      "correct": false,
+      "structured_response": "{\"route\": \"CONTINUE\"}",
+      "prompt_tokens": 322,
+      "completion_tokens": 11,
+      "error": null,
+      "request_latency_sec": 0.16567712600226514
+    },
+    {
+      "id": "case_023",
+      "difficulty": "hard",
+      "message": "Да. А если попробовать через VPN, это может помочь?",
+      "expected_route": "CONTINUE",
+      "predicted_route": "CONTINUE",
+      "correct": true,
+      "structured_response": "{\"route\": \"CONTINUE\"}",
+      "prompt_tokens": 325,
+      "completion_tokens": 11,
+      "error": null,
+      "request_latency_sec": 0.1676845339970896
+    },
+    {
+      "id": "case_024",
+      "difficulty": "hard",
+      "message": "Спасибо, вошёл. А уведомления как отключить?",
+      "expected_route": "NEW",
+      "predicted_route": "CONTINUE",
+      "correct": false,
+      "structured_response": "{\"route\": \"CONTINUE\"}",
+      "prompt_tokens": 327,
+      "completion_tokens": 11,
+      "error": null,
+      "request_latency_sec": 0.1199815200016019
+    },
+    {
+      "id": "case_025",
+      "difficulty": "hard",
+      "message": "После перехода мои сохранённые отчёты останутся?",
+      "expected_route": "CONTINUE",
+      "predicted_route": "CONTINUE",
+      "correct": true,
+      "structured_response": "{\"route\": \"CONTINUE\"}",
+      "prompt_tokens": 325,
+      "completion_tokens": 12,
+      "error": null,
+      "request_latency_sec": 0.17707343499932904
+    },
+    {
+      "id": "case_026",
+      "difficulty": "hard",
+      "message": "Тогда Pro. И ещё скажите, как удалить аккаунт.",
+      "expected_route": "NEW",
+      "predicted_route": "NEW",
+      "correct": true,
+      "structured_response": "{\"route\": \"NEW\"}",
+      "prompt_tokens": 322,
+      "completion_tokens": 10,
+      "error": null,
+      "request_latency_sec": 0.15984343500167597
+    },
+    {
+      "id": "case_027",
+      "difficulty": "hard",
+      "message": "Иногда ещё появляется 500. Это может быть связано?",
+      "expected_route": "CONTINUE",
+      "predicted_route": "CONTINUE",
+      "correct": true,
+      "structured_response": "{\"route\": \"CONTINUE\"}",
+      "prompt_tokens": 320,
+      "completion_tokens": 11,
+      "error": null,
+      "request_latency_sec": 0.16416833800030872
+    },
+    {
+      "id": "case_028",
+      "difficulty": "hard",
+      "message": "Не помогает. Кстати, где посмотреть историю платежей?",
+      "expected_route": "NEW",
+      "predicted_route": "CONTINUE",
+      "correct": false,
+      "structured_response": "{\"route\": \"CONTINUE\"}",
+      "prompt_tokens": 321,
+      "completion_tokens": 11,
+      "error": null,
+      "request_latency_sec": 0.16830837199813686
+    },
+    {
+      "id": "case_029",
+      "difficulty": "hard",
+      "message": "Убери Санкт-Петербург и сравни Москву с Казанью за тот же период.",
+      "expected_route": "CONTINUE",
+      "predicted_route": "NEW",
+      "correct": false,
+      "structured_response": "{\"route\": \"NEW\"}",
+      "prompt_tokens": 337,
+      "completion_tokens": 10,
+      "error": null,
+      "request_latency_sec": 0.10770262499863748
+    },
+    {
+      "id": "case_030",
+      "difficulty": "hard",
+      "message": "Сохрани результат. И создай встречу с отделом продаж на завтра.",
+      "expected_route": "NEW",
+      "predicted_route": "NEW",
+      "correct": true,
+      "structured_response": "{\"route\": \"NEW\"}",
+      "prompt_tokens": 337,
+      "completion_tokens": 10,
+      "error": null,
+      "request_latency_sec": 0.15763693999906536
+    }
+  ],
+  "raw_responses": [
+    {
+      "id": "case_001",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Я не могу войти в систему.\nАссистент: Какая ошибка появляется при входе?\n\nНОВОЕ СООБЩЕНИЕ:\nПишет ошибку 403.\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-9cdb5d7615696a5f",
+        "object": "chat.completion",
+        "created": 1788791608,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"NEW\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 316,
+          "total_tokens": 326,
+          "completion_tokens": 10,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "NEW"
+      }
+    },
+    {
+      "id": "case_002",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Хочу перейти на тариф Pro.\nАссистент: Вас интересуют условия перехода?\n\nНОВОЕ СООБЩЕНИЕ:\nА платить можно помесячно?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-869d402d1b129c05",
+        "object": "chat.completion",
+        "created": 1788791608,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"NEW\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 314,
+          "total_tokens": 324,
+          "completion_tokens": 10,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "NEW"
+      }
+    },
+    {
+      "id": "case_003",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Я не могу войти в систему.\nАссистент: Какая ошибка появляется при входе?\n\nНОВОЕ СООБЩЕНИЕ:\nА сколько стоит тариф Pro?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-a104998bf768980e",
+        "object": "chat.completion",
+        "created": 1788791609,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"NEW\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 315,
+          "total_tokens": 325,
+          "completion_tokens": 10,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "NEW"
+      }
+    },
+    {
+      "id": "case_004",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Хочу оформить отпуск.\nАссистент: На какие даты?\n\nНОВОЕ СООБЩЕНИЕ:\nС 10 по 17 сентября.\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-91e16cf7dd090742",
+        "object": "chat.completion",
+        "created": 1788791609,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"CONTINUE\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 309,
+          "total_tokens": 320,
+          "completion_tokens": 11,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "CONTINUE"
+      }
+    },
+    {
+      "id": "case_005",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Хочу оформить отпуск.\nАссистент: На какие даты?\n\nНОВОЕ СООБЩЕНИЕ:\nА как оформить больничный?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-9c178be166ef2f07",
+        "object": "chat.completion",
+        "created": 1788791609,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"NEW\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 307,
+          "total_tokens": 317,
+          "completion_tokens": 10,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "NEW"
+      }
+    },
+    {
+      "id": "case_006",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: С карты дважды списали деньги за подписку.\nАссистент: Проверяю информацию о платеже.\n\nНОВОЕ СООБЩЕНИЕ:\nЛишний платёж вернётся автоматически?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-bdba36ad5339578a",
+        "object": "chat.completion",
+        "created": 1788791609,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"CONTINUE\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 320,
+          "total_tokens": 331,
+          "completion_tokens": 11,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "CONTINUE"
+      }
+    },
+    {
+      "id": "case_007",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: С карты дважды списали деньги за подписку.\nАссистент: Проверяю информацию о платеже.\n\nНОВОЕ СООБЩЕНИЕ:\nКак удалить мой аккаунт?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-995fe0251f8999c0",
+        "object": "chat.completion",
+        "created": 1788791609,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"NEW\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 316,
+          "total_tokens": 326,
+          "completion_tokens": 10,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "NEW"
+      }
+    },
+    {
+      "id": "case_008",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Я загружаю документ в систему.\nАссистент: Какой формат файла используется?\n\nНОВОЕ СООБЩЕНИЕ:\nPDF тоже поддерживается?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-850775b3cb1213be",
+        "object": "chat.completion",
+        "created": 1788791609,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"CONTINUE\" \n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 308,
+          "total_tokens": 320,
+          "completion_tokens": 12,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "CONTINUE"
+      }
+    },
+    {
+      "id": "case_009",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Я загружаю документ в систему.\nАссистент: Какой формат файла используется?\n\nНОВОЕ СООБЩЕНИЕ:\nА где поменять пароль?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-985cc137428b7fba",
+        "object": "chat.completion",
+        "created": 1788791610,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"NEW\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 310,
+          "total_tokens": 320,
+          "completion_tokens": 10,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "NEW"
+      }
+    },
+    {
+      "id": "case_010",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Построй отчёт по продажам за этот квартал.\nАссистент: Формирую отчёт.\n\nНОВОЕ СООБЩЕНИЕ:\nА можно ещё за прошлый квартал?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-8b474cd6aab1f461",
+        "object": "chat.completion",
+        "created": 1788791610,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"CONTINUE\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 322,
+          "total_tokens": 333,
+          "completion_tokens": 11,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "CONTINUE"
+      }
+    },
+    {
+      "id": "case_011",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Построй отчёт по продажам за этот квартал.\nАссистент: Формирую отчёт.\n\nНОВОЕ СООБЩЕНИЕ:\nТеперь создай отпуск Иванову.\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-83e23a2a3a7fec6a",
+        "object": "chat.completion",
+        "created": 1788791610,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"NEW\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 321,
+          "total_tokens": 331,
+          "completion_tokens": 10,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "NEW"
+      }
+    },
+    {
+      "id": "case_012",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: В приложении не открывается раздел аналитики.\nАссистент: Ошибка появляется при открытии любого отчёта?\n\nНОВОЕ СООБЩЕНИЕ:\nДа, у всех отчётов белый экран.\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-81e6de6578a4ee2e",
+        "object": "chat.completion",
+        "created": 1788791610,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"NEW\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 327,
+          "total_tokens": 337,
+          "completion_tokens": 10,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "NEW"
+      }
+    },
+    {
+      "id": "case_013",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Моя посылка задерживается.\nАссистент: Сейчас проверю статус заказа.\n\nНОВОЕ СООБЩЕНИЕ:\nА адрес доставки ещё можно изменить?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-a4eb63b9f7716f9d",
+        "object": "chat.completion",
+        "created": 1788791610,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"CONTINUE\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 313,
+          "total_tokens": 324,
+          "completion_tokens": 11,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "CONTINUE"
+      }
+    },
+    {
+      "id": "case_014",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Моя посылка задерживается.\nАссистент: Сейчас проверю статус заказа.\n\nНОВОЕ СООБЩЕНИЕ:\nА где изменить email в профиле?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-964f34b34a176448",
+        "object": "chat.completion",
+        "created": 1788791610,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"CONTINUE\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 314,
+          "total_tokens": 325,
+          "completion_tokens": 11,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "CONTINUE"
+      }
+    },
+    {
+      "id": "case_015",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: К API иногда приходят ответы с timeout.\nАссистент: На каком endpoint это происходит?\n\nНОВОЕ СООБЩЕНИЕ:\nНа /reports, в основном при больших отчётах.\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-aea673fb9d9db6d5",
+        "object": "chat.completion",
+        "created": 1788791610,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"CONTINUE\" \n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 317,
+          "total_tokens": 329,
+          "completion_tokens": 12,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "CONTINUE"
+      }
+    },
+    {
+      "id": "case_016",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: К API иногда приходят ответы с timeout.\nАссистент: На каком endpoint это происходит?\n\nНОВОЕ СООБЩЕНИЕ:\nКак создать нового пользователя через API?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-84df7129d6c730e3",
+        "object": "chat.completion",
+        "created": 1788791611,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"NEW\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 310,
+          "total_tokens": 320,
+          "completion_tokens": 10,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "NEW"
+      }
+    },
+    {
+      "id": "case_017",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Построй график расходов за месяц.\nАссистент: График построен.\n\nНОВОЕ СООБЩЕНИЕ:\nМожно вместо графика вывести таблицу?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-9552c3b60131f329",
+        "object": "chat.completion",
+        "created": 1788791611,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"NEW\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 312,
+          "total_tokens": 322,
+          "completion_tokens": 10,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "NEW"
+      }
+    },
+    {
+      "id": "case_018",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Построй график расходов за месяц.\nАссистент: График построен.\n\nНОВОЕ СООБЩЕНИЕ:\nА как подключить новый MCP-инструмент?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-be8c012088822472",
+        "object": "chat.completion",
+        "created": 1788791611,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"NEW\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 314,
+          "total_tokens": 324,
+          "completion_tokens": 10,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "NEW"
+      }
+    },
+    {
+      "id": "case_019",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Кто должен согласовать мой отпуск?\nАссистент: Обычно отпуск согласует непосредственный руководитель.\n\nНОВОЕ СООБЩЕНИЕ:\nА если руководитель сейчас отсутствует?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-91e9eae66e2681d4",
+        "object": "chat.completion",
+        "created": 1788791611,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"CONTINUE\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 320,
+          "total_tokens": 331,
+          "completion_tokens": 11,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "CONTINUE"
+      }
+    },
+    {
+      "id": "case_020",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Какие права есть у роли аналитика?\nАссистент: Аналитик может просматривать отчёты и доступные ему наборы данных.\n\nНОВОЕ СООБЩЕНИЕ:\nА как назначить роль аналитика Иванову?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-924b73ad2ec490e5",
+        "object": "chat.completion",
+        "created": 1788791611,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"NEW\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 331,
+          "total_tokens": 341,
+          "completion_tokens": 10,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "NEW"
+      }
+    },
+    {
+      "id": "case_021",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Какие права есть у роли аналитика?\nАссистент: Аналитик может просматривать отчёты и доступные ему наборы данных.\n\nНОВОЕ СООБЩЕНИЕ:\nСформируй новый отчёт по сотрудникам.\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-b8aec36497ed82ce",
+        "object": "chat.completion",
+        "created": 1788791611,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"CONTINUE\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 328,
+          "total_tokens": 339,
+          "completion_tokens": 11,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "CONTINUE"
+      }
+    },
+    {
+      "id": "case_022",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Не могу восстановить пароль.\nАссистент: Вам должно прийти письмо со ссылкой на восстановление.\n\nНОВОЕ СООБЩЕНИЕ:\nА где изменить номер телефона в профиле?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-b290042e94a47698",
+        "object": "chat.completion",
+        "created": 1788791612,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"CONTINUE\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 322,
+          "total_tokens": 333,
+          "completion_tokens": 11,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "CONTINUE"
+      }
+    },
+    {
+      "id": "case_023",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Авторизация не работает из домашней сети.\nАссистент: Ошибка возникает сразу после ввода пароля?\n\nНОВОЕ СООБЩЕНИЕ:\nДа. А если попробовать через VPN, это может помочь?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-8ba73f55fa6e9c8a",
+        "object": "chat.completion",
+        "created": 1788791612,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"CONTINUE\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 325,
+          "total_tokens": 336,
+          "completion_tokens": 11,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "CONTINUE"
+      }
+    },
+    {
+      "id": "case_024",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Не получается войти в аккаунт.\nАссистент: Попробуйте восстановить пароль.\n\nНОВОЕ СООБЩЕНИЕ:\nСпасибо, вошёл. А уведомления как отключить?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-bb60263bdea5f3ec",
+        "object": "chat.completion",
+        "created": 1788791612,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"CONTINUE\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 327,
+          "total_tokens": 338,
+          "completion_tokens": 11,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "CONTINUE"
+      }
+    },
+    {
+      "id": "case_025",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Хочу перейти с Pro на Business.\nАссистент: Могу рассказать об условиях перехода.\n\nНОВОЕ СООБЩЕНИЕ:\nПосле перехода мои сохранённые отчёты останутся?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-b2d0acd3b9622e1b",
+        "object": "chat.completion",
+        "created": 1788791612,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"CONTINUE\" \n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 325,
+          "total_tokens": 337,
+          "completion_tokens": 12,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "CONTINUE"
+      }
+    },
+    {
+      "id": "case_026",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Помогите выбрать тариф.\nАссистент: Для описанных задач подходит Pro.\n\nНОВОЕ СООБЩЕНИЕ:\nТогда Pro. И ещё скажите, как удалить аккаунт.\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-a5c5457cdbb94a4c",
+        "object": "chat.completion",
+        "created": 1788791612,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"NEW\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 322,
+          "total_tokens": 332,
+          "completion_tokens": 10,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "NEW"
+      }
+    },
+    {
+      "id": "case_027",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: API периодически отвечает timeout.\nАссистент: Как часто возникает ошибка?\n\nНОВОЕ СООБЩЕНИЕ:\nИногда ещё появляется 500. Это может быть связано?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-9f1a8e7d9becc7fe",
+        "object": "chat.completion",
+        "created": 1788791612,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"CONTINUE\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 320,
+          "total_tokens": 331,
+          "completion_tokens": 11,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "CONTINUE"
+      }
+    },
+    {
+      "id": "case_028",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Не могу восстановить пароль.\nАссистент: Вам должно прийти письмо со ссылкой.\n\nНОВОЕ СООБЩЕНИЕ:\nНе помогает. Кстати, где посмотреть историю платежей?\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-be286518aca3e6db",
+        "object": "chat.completion",
+        "created": 1788791613,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"CONTINUE\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 321,
+          "total_tokens": 332,
+          "completion_tokens": 11,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "CONTINUE"
+      }
+    },
+    {
+      "id": "case_029",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Нужно сравнить продажи Москвы и Санкт-Петербурга за август.\nАссистент: Сравнение готово: Москва выше на 12%.\n\nНОВОЕ СООБЩЕНИЕ:\nУбери Санкт-Петербург и сравни Москву с Казанью за тот же период.\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-a7145f7b0cc5a5b1",
+        "object": "chat.completion",
+        "created": 1788791613,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"NEW\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 337,
+          "total_tokens": 347,
+          "completion_tokens": 10,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "NEW"
+      }
+    },
+    {
+      "id": "case_030",
+      "payload": {
+        "model": "qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Ты выполняешь маршрутизацию диалога. Выбери один наиболее подходящий маршрут согласно описаниям доступных маршрутов. Верни выбор в требуемом структурированном формате."
+          },
+          {
+            "role": "user",
+            "content": "ТЕКУЩИЙ ДИАЛОГ:\nПользователь: Нужно сравнить продажи Москвы и Санкт-Петербурга за август.\nАссистент: Сравнение готово: Москва выше на 12%.\n\nНОВОЕ СООБЩЕНИЕ:\nСохрани результат. И создай встречу с отделом продаж на завтра.\n\nДОСТУПНЫЕ МАРШРУТЫ:\nNEW: Новое сообщение вводит новую самостоятельную задачу. Это другая операция или другой независимый запрос. Если предыдущая задача завершена и пользователь начинает следующую, это новая задача. Если сообщение одновременно продолжает текущую задачу и содержит новый независимый запрос, выбирается этот маршрут.\nCONTINUE: Новое сообщение продолжает текущую задачу диалога. Оно отвечает на вопрос ассистента, уточняет текущую задачу, меняет её параметры, повторяет ту же операцию с другими параметрами или задаёт непосредственно связанный с текущей задачей вопрос."
+          }
+        ],
+        "temperature": 0.0,
+        "seed": 0,
+        "max_completion_tokens": 32,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "route_selection",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "NEW",
+                    "CONTINUE"
+                  ]
+                }
+              },
+              "required": [
+                "route"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-a08def3e6fce9853",
+        "object": "chat.completion",
+        "created": 1788791613,
+        "model": "qwen3-4b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\n  \"route\": \"NEW\"\n}",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.28.0-3e4924c9",
+        "usage": {
+          "prompt_tokens": 337,
+          "total_tokens": 347,
+          "completion_tokens": 10,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "parsed_response": {
+        "route": "NEW"
+      }
+    }
+  ]
+}

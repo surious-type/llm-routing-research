@@ -1,0 +1,140 @@
+{
+  "status": "passed",
+  "required_fields": [
+    "id",
+    "history",
+    "message",
+    "expected_route",
+    "split",
+    "category",
+    "difficulty",
+    "ambiguity",
+    "domain",
+    "family_id",
+    "policy_version",
+    "annotation_notes"
+  ],
+  "router_input_allowlist": [
+    "history[].role",
+    "history[].content",
+    "message"
+  ],
+  "splits": {
+    "development": {
+      "count": 120,
+      "class_counts": {
+        "CONTINUE": 60,
+        "NEW": 60
+      },
+      "category_counts": {
+        "clarification_answer": 7,
+        "completed_then_new_task": 7,
+        "correction_or_data_completion": 8,
+        "entity_substitution_same_operation": 9,
+        "explicit_continuation": 6,
+        "intent_switch_same_domain": 10,
+        "mixed_continuation_and_independent": 11,
+        "necessary_related_subquestion": 8,
+        "new_goal_same_workflow": 12,
+        "parameter_change": 12,
+        "result_representation_change": 10,
+        "same_entity_new_operation": 12,
+        "same_topic_new_operation": 8
+      },
+      "domain_counts": {
+        "calendar_planning": 8,
+        "cooking_household": 8,
+        "data_analytics_sql": 8,
+        "documents_content": 8,
+        "education_learning": 8,
+        "email_messaging": 8,
+        "files_storage": 8,
+        "hr_workplace": 8,
+        "programming": 8,
+        "project_management": 8,
+        "search_research": 8,
+        "shopping_orders": 8,
+        "support_accounts": 8,
+        "sysadmin_devops": 8,
+        "travel_logistics": 8
+      },
+      "difficulty_counts": {
+        "easy": 34,
+        "hard": 34,
+        "medium": 52
+      },
+      "ambiguity_counts": {
+        "high": 13,
+        "low": 71,
+        "medium": 36
+      },
+      "family_count": 30,
+      "standalone_count": 30
+    },
+    "validation": {
+      "count": 60,
+      "class_counts": {
+        "CONTINUE": 30,
+        "NEW": 30
+      },
+      "category_counts": {
+        "clarification_answer": 5,
+        "completed_then_new_task": 4,
+        "correction_or_data_completion": 5,
+        "entity_substitution_same_operation": 5,
+        "explicit_continuation": 3,
+        "intent_switch_same_domain": 5,
+        "mixed_continuation_and_independent": 6,
+        "necessary_related_subquestion": 5,
+        "new_goal_same_workflow": 4,
+        "parameter_change": 5,
+        "result_representation_change": 2,
+        "same_entity_new_operation": 6,
+        "same_topic_new_operation": 5
+      },
+      "domain_counts": {
+        "calendar_planning": 4,
+        "cooking_household": 4,
+        "data_analytics_sql": 4,
+        "documents_content": 4,
+        "education_learning": 4,
+        "email_messaging": 4,
+        "files_storage": 4,
+        "hr_workplace": 4,
+        "programming": 4,
+        "project_management": 4,
+        "search_research": 4,
+        "shopping_orders": 4,
+        "support_accounts": 4,
+        "sysadmin_devops": 4,
+        "travel_logistics": 4
+      },
+      "difficulty_counts": {
+        "easy": 16,
+        "hard": 16,
+        "medium": 28
+      },
+      "ambiguity_counts": {
+        "high": 6,
+        "low": 38,
+        "medium": 16
+      },
+      "family_count": 15,
+      "standalone_count": 15
+    }
+  },
+  "unique_ids": 180,
+  "family_overlap": [],
+  "exact_duplicate_full_cases": 0,
+  "exact_duplicate_router_inputs": 0,
+  "files": {
+    "development": {
+      "path": "dataset_v3_development.jsonl",
+      "sha256": "be113c460c0534fcd434206000281fbaed9eb356a2b8b2ff6c710d38eef569af"
+    },
+    "validation": {
+      "path": "dataset_v3_validation.jsonl",
+      "sha256": "22cfce2bebe1a99754605c1776a480edd575640d1639ee6638aecfb71ccc78dc"
+    }
+  }
+}

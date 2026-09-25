@@ -1,0 +1,5865 @@
+{
+  "groups": {
+    "no_thinking_reason": {
+      "runs": {
+        "R1": {
+          "conditions": {
+            "E1": {
+              "correct": 27,
+              "evaluated": 30,
+              "accuracy": 0.9,
+              "prediction_counts": {
+                "CONTINUE": 16,
+                "NEW": 14
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    14,
+                    1
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_020",
+                "case_021",
+                "case_023"
+              ],
+              "latency_sec": {
+                "mean": 0.5776867563336661,
+                "median": 0.584652190500492
+              },
+              "prompt_tokens": {
+                "mean": 353.3333333333333,
+                "median": 354.0
+              },
+              "completion_tokens": {
+                "mean": 59.5,
+                "median": 60.0
+              }
+            },
+            "E2": {
+              "correct": 27,
+              "evaluated": 30,
+              "accuracy": 0.9,
+              "prediction_counts": {
+                "CONTINUE": 16,
+                "NEW": 14
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    14,
+                    1
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_001",
+                "case_014",
+                "case_024"
+              ],
+              "latency_sec": {
+                "mean": 0.6094614032997925,
+                "median": 0.5805723739977111
+              },
+              "prompt_tokens": {
+                "mean": 353.3333333333333,
+                "median": 354.0
+              },
+              "completion_tokens": {
+                "mean": 60.93333333333333,
+                "median": 57.5
+              }
+            },
+            "E3": {
+              "correct": 27,
+              "evaluated": 30,
+              "accuracy": 0.9,
+              "prediction_counts": {
+                "CONTINUE": 16,
+                "NEW": 14
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    14,
+                    1
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_020",
+                "case_021",
+                "case_023"
+              ],
+              "latency_sec": {
+                "mean": 0.5994001905659389,
+                "median": 0.6054712599980121
+              },
+              "prompt_tokens": {
+                "mean": 353.3333333333333,
+                "median": 354.0
+              },
+              "completion_tokens": {
+                "mean": 59.5,
+                "median": 60.0
+              }
+            },
+            "E4": {
+              "correct": 27,
+              "evaluated": 30,
+              "accuracy": 0.9,
+              "prediction_counts": {
+                "CONTINUE": 16,
+                "NEW": 14
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    14,
+                    1
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_001",
+                "case_014",
+                "case_024"
+              ],
+              "latency_sec": {
+                "mean": 0.611917613799839,
+                "median": 0.5808038399991347
+              },
+              "prompt_tokens": {
+                "mean": 353.3333333333333,
+                "median": 354.0
+              },
+              "completion_tokens": {
+                "mean": 60.93333333333333,
+                "median": 57.5
+              }
+            }
+          },
+          "pairwise_agreement": {
+            "E1↔E2": {
+              "agreement_count": 24,
+              "total": 30,
+              "agreement_rate": 0.8,
+              "changed_count": 6,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E1↔E3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "E1↔E4": {
+              "agreement_count": 24,
+              "total": 30,
+              "agreement_rate": 0.8,
+              "changed_count": 6,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E2↔E3": {
+              "agreement_count": 24,
+              "total": 30,
+              "agreement_rate": 0.8,
+              "changed_count": 6,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E2↔E4": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "E3↔E4": {
+              "agreement_count": 24,
+              "total": 30,
+              "agreement_rate": 0.8,
+              "changed_count": 6,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024"
+              ],
+              "uncompared_error_cases": []
+            }
+          },
+          "prompt_order_effect": {
+            "E1↔E2": {
+              "agreement_count": 24,
+              "total": 30,
+              "agreement_rate": 0.8,
+              "changed_count": 6,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E3↔E4": {
+              "agreement_count": 24,
+              "total": 30,
+              "agreement_rate": 0.8,
+              "changed_count": 6,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024"
+              ],
+              "uncompared_error_cases": []
+            }
+          },
+          "enum_order_effect": {
+            "E1↔E3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "E2↔E4": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            }
+          },
+          "interaction": {
+            "accuracy_difference_in_differences": 0.0,
+            "case_level_prompt_effect_symmetric_difference": [],
+            "case_level_enum_effect_symmetric_difference": []
+          },
+          "order_robustness_evaluated_cases": 30,
+          "order_sensitive_case_count": 6,
+          "order_sensitive_cases": [
+            "case_001",
+            "case_014",
+            "case_020",
+            "case_021",
+            "case_023",
+            "case_024"
+          ]
+        },
+        "R2": {
+          "conditions": {
+            "E1": {
+              "correct": 27,
+              "evaluated": 30,
+              "accuracy": 0.9,
+              "prediction_counts": {
+                "CONTINUE": 16,
+                "NEW": 14
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    14,
+                    1
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_020",
+                "case_021",
+                "case_023"
+              ],
+              "latency_sec": {
+                "mean": 0.5967273567672237,
+                "median": 0.5978385399976105
+              },
+              "prompt_tokens": {
+                "mean": 353.3333333333333,
+                "median": 354.0
+              },
+              "completion_tokens": {
+                "mean": 59.5,
+                "median": 60.0
+              }
+            },
+            "E2": {
+              "correct": 27,
+              "evaluated": 30,
+              "accuracy": 0.9,
+              "prediction_counts": {
+                "CONTINUE": 16,
+                "NEW": 14
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    14,
+                    1
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_001",
+                "case_014",
+                "case_024"
+              ],
+              "latency_sec": {
+                "mean": 0.6112837306665218,
+                "median": 0.578193117002229
+              },
+              "prompt_tokens": {
+                "mean": 353.3333333333333,
+                "median": 354.0
+              },
+              "completion_tokens": {
+                "mean": 60.93333333333333,
+                "median": 57.5
+              }
+            },
+            "E3": {
+              "correct": 27,
+              "evaluated": 30,
+              "accuracy": 0.9,
+              "prediction_counts": {
+                "CONTINUE": 16,
+                "NEW": 14
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    14,
+                    1
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_020",
+                "case_021",
+                "case_023"
+              ],
+              "latency_sec": {
+                "mean": 0.6018154385669429,
+                "median": 0.6072774800013576
+              },
+              "prompt_tokens": {
+                "mean": 353.3333333333333,
+                "median": 354.0
+              },
+              "completion_tokens": {
+                "mean": 59.5,
+                "median": 60.0
+              }
+            },
+            "E4": {
+              "correct": 27,
+              "evaluated": 30,
+              "accuracy": 0.9,
+              "prediction_counts": {
+                "CONTINUE": 16,
+                "NEW": 14
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    14,
+                    1
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_001",
+                "case_014",
+                "case_024"
+              ],
+              "latency_sec": {
+                "mean": 0.6116169701669908,
+                "median": 0.5816141299983428
+              },
+              "prompt_tokens": {
+                "mean": 353.3333333333333,
+                "median": 354.0
+              },
+              "completion_tokens": {
+                "mean": 60.93333333333333,
+                "median": 57.5
+              }
+            }
+          },
+          "pairwise_agreement": {
+            "E1↔E2": {
+              "agreement_count": 24,
+              "total": 30,
+              "agreement_rate": 0.8,
+              "changed_count": 6,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E1↔E3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "E1↔E4": {
+              "agreement_count": 24,
+              "total": 30,
+              "agreement_rate": 0.8,
+              "changed_count": 6,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E2↔E3": {
+              "agreement_count": 24,
+              "total": 30,
+              "agreement_rate": 0.8,
+              "changed_count": 6,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E2↔E4": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "E3↔E4": {
+              "agreement_count": 24,
+              "total": 30,
+              "agreement_rate": 0.8,
+              "changed_count": 6,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024"
+              ],
+              "uncompared_error_cases": []
+            }
+          },
+          "prompt_order_effect": {
+            "E1↔E2": {
+              "agreement_count": 24,
+              "total": 30,
+              "agreement_rate": 0.8,
+              "changed_count": 6,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E3↔E4": {
+              "agreement_count": 24,
+              "total": 30,
+              "agreement_rate": 0.8,
+              "changed_count": 6,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024"
+              ],
+              "uncompared_error_cases": []
+            }
+          },
+          "enum_order_effect": {
+            "E1↔E3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "E2↔E4": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            }
+          },
+          "interaction": {
+            "accuracy_difference_in_differences": 0.0,
+            "case_level_prompt_effect_symmetric_difference": [],
+            "case_level_enum_effect_symmetric_difference": []
+          },
+          "order_robustness_evaluated_cases": 30,
+          "order_sensitive_case_count": 6,
+          "order_sensitive_cases": [
+            "case_001",
+            "case_014",
+            "case_020",
+            "case_021",
+            "case_023",
+            "case_024"
+          ]
+        },
+        "R3": {
+          "conditions": {
+            "E1": {
+              "correct": 27,
+              "evaluated": 30,
+              "accuracy": 0.9,
+              "prediction_counts": {
+                "CONTINUE": 16,
+                "NEW": 14
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    14,
+                    1
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_020",
+                "case_021",
+                "case_023"
+              ],
+              "latency_sec": {
+                "mean": 0.5902101763339791,
+                "median": 0.5951005910028471
+              },
+              "prompt_tokens": {
+                "mean": 353.3333333333333,
+                "median": 354.0
+              },
+              "completion_tokens": {
+                "mean": 59.5,
+                "median": 60.0
+              }
+            },
+            "E2": {
+              "correct": 27,
+              "evaluated": 30,
+              "accuracy": 0.9,
+              "prediction_counts": {
+                "CONTINUE": 16,
+                "NEW": 14
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    14,
+                    1
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_001",
+                "case_014",
+                "case_024"
+              ],
+              "latency_sec": {
+                "mean": 0.6048870760668554,
+                "median": 0.572744650500681
+              },
+              "prompt_tokens": {
+                "mean": 353.3333333333333,
+                "median": 354.0
+              },
+              "completion_tokens": {
+                "mean": 60.93333333333333,
+                "median": 57.5
+              }
+            },
+            "E3": {
+              "correct": 27,
+              "evaluated": 30,
+              "accuracy": 0.9,
+              "prediction_counts": {
+                "CONTINUE": 16,
+                "NEW": 14
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    14,
+                    1
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_020",
+                "case_021",
+                "case_023"
+              ],
+              "latency_sec": {
+                "mean": 0.5957958302329643,
+                "median": 0.5999641929993231
+              },
+              "prompt_tokens": {
+                "mean": 353.3333333333333,
+                "median": 354.0
+              },
+              "completion_tokens": {
+                "mean": 59.5,
+                "median": 60.0
+              }
+            },
+            "E4": {
+              "correct": 27,
+              "evaluated": 30,
+              "accuracy": 0.9,
+              "prediction_counts": {
+                "CONTINUE": 16,
+                "NEW": 14
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    14,
+                    1
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_001",
+                "case_014",
+                "case_024"
+              ],
+              "latency_sec": {
+                "mean": 0.609493769632536,
+                "median": 0.5746157279972977
+              },
+              "prompt_tokens": {
+                "mean": 353.3333333333333,
+                "median": 354.0
+              },
+              "completion_tokens": {
+                "mean": 60.93333333333333,
+                "median": 57.5
+              }
+            }
+          },
+          "pairwise_agreement": {
+            "E1↔E2": {
+              "agreement_count": 24,
+              "total": 30,
+              "agreement_rate": 0.8,
+              "changed_count": 6,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E1↔E3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "E1↔E4": {
+              "agreement_count": 24,
+              "total": 30,
+              "agreement_rate": 0.8,
+              "changed_count": 6,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E2↔E3": {
+              "agreement_count": 24,
+              "total": 30,
+              "agreement_rate": 0.8,
+              "changed_count": 6,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E2↔E4": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "E3↔E4": {
+              "agreement_count": 24,
+              "total": 30,
+              "agreement_rate": 0.8,
+              "changed_count": 6,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024"
+              ],
+              "uncompared_error_cases": []
+            }
+          },
+          "prompt_order_effect": {
+            "E1↔E2": {
+              "agreement_count": 24,
+              "total": 30,
+              "agreement_rate": 0.8,
+              "changed_count": 6,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E3↔E4": {
+              "agreement_count": 24,
+              "total": 30,
+              "agreement_rate": 0.8,
+              "changed_count": 6,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024"
+              ],
+              "uncompared_error_cases": []
+            }
+          },
+          "enum_order_effect": {
+            "E1↔E3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "E2↔E4": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            }
+          },
+          "interaction": {
+            "accuracy_difference_in_differences": 0.0,
+            "case_level_prompt_effect_symmetric_difference": [],
+            "case_level_enum_effect_symmetric_difference": []
+          },
+          "order_robustness_evaluated_cases": 30,
+          "order_sensitive_case_count": 6,
+          "order_sensitive_cases": [
+            "case_001",
+            "case_014",
+            "case_020",
+            "case_021",
+            "case_023",
+            "case_024"
+          ]
+        }
+      },
+      "repeatability_by_condition": {
+        "E1": {
+          "all_repeat_comparable_count": 30,
+          "all_repeat_agreement_count": 30,
+          "all_repeat_agreement_rate": 1.0,
+          "unstable_case_count": 0,
+          "unstable_cases": [],
+          "uncompared_error_cases": [],
+          "pairwise": {
+            "R1↔R2": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "R1↔R3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "R2↔R3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            }
+          }
+        },
+        "E2": {
+          "all_repeat_comparable_count": 30,
+          "all_repeat_agreement_count": 30,
+          "all_repeat_agreement_rate": 1.0,
+          "unstable_case_count": 0,
+          "unstable_cases": [],
+          "uncompared_error_cases": [],
+          "pairwise": {
+            "R1↔R2": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "R1↔R3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "R2↔R3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            }
+          }
+        },
+        "E3": {
+          "all_repeat_comparable_count": 30,
+          "all_repeat_agreement_count": 30,
+          "all_repeat_agreement_rate": 1.0,
+          "unstable_case_count": 0,
+          "unstable_cases": [],
+          "uncompared_error_cases": [],
+          "pairwise": {
+            "R1↔R2": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "R1↔R3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "R2↔R3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            }
+          }
+        },
+        "E4": {
+          "all_repeat_comparable_count": 30,
+          "all_repeat_agreement_count": 30,
+          "all_repeat_agreement_rate": 1.0,
+          "unstable_case_count": 0,
+          "unstable_cases": [],
+          "uncompared_error_cases": [],
+          "pairwise": {
+            "R1↔R2": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "R1↔R3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "R2↔R3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            }
+          }
+        }
+      },
+      "important_cases": {
+        "case_017": {
+          "R1": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Сообщение пользователя связано с предыдущей задачей, так как оно касается выбора способа представления данных (график vs таблица), что продолжает текущую задачу."
+            },
+            "E2": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение предлагает альтернативный способ представления данных (таблица вместо графика), что является продолжением текущей задачи, так как пользователь оставляет тему обсуждения в рамках одной задачи."
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Сообщение пользователя связано с предыдущей задачей, так как оно касается выбора способа представления данных (график vs таблица), что продолжает текущую задачу."
+            },
+            "E4": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение предлагает альтернативный способ представления данных (таблица вместо графика), что является продолжением текущей задачи, так как пользователь оставляет тему обсуждения в рамках одной задачи."
+            }
+          },
+          "R2": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Сообщение пользователя связано с предыдущей задачей, так как оно касается выбора способа представления данных (график vs таблица), что продолжает текущую задачу."
+            },
+            "E2": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение предлагает альтернативный способ представления данных (таблица вместо графика), что является продолжением текущей задачи, так как пользователь оставляет тему обсуждения в рамках одной задачи."
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Сообщение пользователя связано с предыдущей задачей, так как оно касается выбора способа представления данных (график vs таблица), что продолжает текущую задачу."
+            },
+            "E4": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение предлагает альтернативный способ представления данных (таблица вместо графика), что является продолжением текущей задачи, так как пользователь оставляет тему обсуждения в рамках одной задачи."
+            }
+          },
+          "R3": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Сообщение пользователя связано с предыдущей задачей, так как оно касается выбора способа представления данных (график vs таблица), что продолжает текущую задачу."
+            },
+            "E2": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение предлагает альтернативный способ представления данных (таблица вместо графика), что является продолжением текущей задачи, так как пользователь оставляет тему обсуждения в рамках одной задачи."
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Сообщение пользователя связано с предыдущей задачей, так как оно касается выбора способа представления данных (график vs таблица), что продолжает текущую задачу."
+            },
+            "E4": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение предлагает альтернативный способ представления данных (таблица вместо графика), что является продолжением текущей задачи, так как пользователь оставляет тему обсуждения в рамках одной задачи."
+            }
+          }
+        },
+        "case_020": {
+          "R1": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение задаёт вопрос о назначении роли аналитика Иванову, что продолжает текущую задачу диалога, связанную с правами роли аналитика."
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение задаёт новую независимую задачу — назначение роли аналитика Иванову, что отличается от предыдущего вопроса о правах роли аналитика."
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение задаёт вопрос о назначении роли аналитика Иванову, что продолжает текущую задачу диалога, связанную с правами роли аналитика."
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение задаёт новую независимую задачу — назначение роли аналитика Иванову, что отличается от предыдущего вопроса о правах роли аналитика."
+            }
+          },
+          "R2": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение задаёт вопрос о назначении роли аналитика Иванову, что продолжает текущую задачу диалога, связанную с правами роли аналитика."
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение задаёт новую независимую задачу — назначение роли аналитика Иванову, что отличается от предыдущего вопроса о правах роли аналитика."
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение задаёт вопрос о назначении роли аналитика Иванову, что продолжает текущую задачу диалога, связанную с правами роли аналитика."
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение задаёт новую независимую задачу — назначение роли аналитика Иванову, что отличается от предыдущего вопроса о правах роли аналитика."
+            }
+          },
+          "R3": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение задаёт вопрос о назначении роли аналитика Иванову, что продолжает текущую задачу диалога, связанную с правами роли аналитика."
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение задаёт новую независимую задачу — назначение роли аналитика Иванову, что отличается от предыдущего вопроса о правах роли аналитика."
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение задаёт вопрос о назначении роли аналитика Иванову, что продолжает текущую задачу диалога, связанную с правами роли аналитика."
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение задаёт новую независимую задачу — назначение роли аналитика Иванову, что отличается от предыдущего вопроса о правах роли аналитика."
+            }
+          }
+        },
+        "case_021": {
+          "R1": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Сообщение «Сформируй новый отчёт по сотрудникам» продолжает текущую задачу диалога, связанную с формированием отчётов. Оно отвечает на предыдущий вопрос ассистента и уточняет параметры задачи."
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение «Сформируй новый отчёт по сотрудникам» является новой самостоятельной задачей, не связанной напрямую с предыдущим вопросом о правах роли аналитика. Оно требует выполнения новой операции — формирования отчёта, что отличает его от продолжения текущей задачи."
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Сообщение «Сформируй новый отчёт по сотрудникам» продолжает текущую задачу диалога, связанную с формированием отчётов. Оно отвечает на предыдущий вопрос ассистента и уточняет параметры задачи."
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение «Сформируй новый отчёт по сотрудникам» является новой самостоятельной задачей, не связанной напрямую с предыдущим вопросом о правах роли аналитика. Оно требует выполнения новой операции — формирования отчёта, что отличает его от продолжения текущей задачи."
+            }
+          },
+          "R2": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Сообщение «Сформируй новый отчёт по сотрудникам» продолжает текущую задачу диалога, связанную с формированием отчётов. Оно отвечает на предыдущий вопрос ассистента и уточняет параметры задачи."
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение «Сформируй новый отчёт по сотрудникам» является новой самостоятельной задачей, не связанной напрямую с предыдущим вопросом о правах роли аналитика. Оно требует выполнения новой операции — формирования отчёта, что отличает его от продолжения текущей задачи."
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Сообщение «Сформируй новый отчёт по сотрудникам» продолжает текущую задачу диалога, связанную с формированием отчётов. Оно отвечает на предыдущий вопрос ассистента и уточняет параметры задачи."
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение «Сформируй новый отчёт по сотрудникам» является новой самостоятельной задачей, не связанной напрямую с предыдущим вопросом о правах роли аналитика. Оно требует выполнения новой операции — формирования отчёта, что отличает его от продолжения текущей задачи."
+            }
+          },
+          "R3": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Сообщение «Сформируй новый отчёт по сотрудникам» продолжает текущую задачу диалога, связанную с формированием отчётов. Оно отвечает на предыдущий вопрос ассистента и уточняет параметры задачи."
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение «Сформируй новый отчёт по сотрудникам» является новой самостоятельной задачей, не связанной напрямую с предыдущим вопросом о правах роли аналитика. Оно требует выполнения новой операции — формирования отчёта, что отличает его от продолжения текущей задачи."
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Сообщение «Сформируй новый отчёт по сотрудникам» продолжает текущую задачу диалога, связанную с формированием отчётов. Оно отвечает на предыдущий вопрос ассистента и уточняет параметры задачи."
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение «Сформируй новый отчёт по сотрудникам» является новой самостоятельной задачей, не связанной напрямую с предыдущим вопросом о правах роли аналитика. Оно требует выполнения новой операции — формирования отчёта, что отличает его от продолжения текущей задачи."
+            }
+          }
+        },
+        "case_023": {
+          "R1": {
+            "E1": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": "Пользователь задаёт новый вопрос о возможном решении проблемы с авторизацией через VPN, что вводит новую самостоятельную задачу, связанную с проверкой альтернативных способов входа."
+            },
+            "E2": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение задаёт вопрос о возможном решении проблемы через VPN, что продолжает текущую задачу, связанную с авторизацией."
+            },
+            "E3": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": "Пользователь задаёт новый вопрос о возможном решении проблемы с авторизацией через VPN, что вводит новую самостоятельную задачу, связанную с проверкой альтернативных способов входа."
+            },
+            "E4": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение задаёт вопрос о возможном решении проблемы через VPN, что продолжает текущую задачу, связанную с авторизацией."
+            }
+          },
+          "R2": {
+            "E1": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": "Пользователь задаёт новый вопрос о возможном решении проблемы с авторизацией через VPN, что вводит новую самостоятельную задачу, связанную с проверкой альтернативных способов входа."
+            },
+            "E2": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение задаёт вопрос о возможном решении проблемы через VPN, что продолжает текущую задачу, связанную с авторизацией."
+            },
+            "E3": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": "Пользователь задаёт новый вопрос о возможном решении проблемы с авторизацией через VPN, что вводит новую самостоятельную задачу, связанную с проверкой альтернативных способов входа."
+            },
+            "E4": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение задаёт вопрос о возможном решении проблемы через VPN, что продолжает текущую задачу, связанную с авторизацией."
+            }
+          },
+          "R3": {
+            "E1": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": "Пользователь задаёт новый вопрос о возможном решении проблемы с авторизацией через VPN, что вводит новую самостоятельную задачу, связанную с проверкой альтернативных способов входа."
+            },
+            "E2": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение задаёт вопрос о возможном решении проблемы через VPN, что продолжает текущую задачу, связанную с авторизацией."
+            },
+            "E3": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": "Пользователь задаёт новый вопрос о возможном решении проблемы с авторизацией через VPN, что вводит новую самостоятельную задачу, связанную с проверкой альтернативных способов входа."
+            },
+            "E4": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение задаёт вопрос о возможном решении проблемы через VPN, что продолжает текущую задачу, связанную с авторизацией."
+            }
+          }
+        },
+        "case_024": {
+          "R1": {
+            "E1": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Сообщение пользователя связано с предыдущей задачей (вход в аккаунт), но содержит новый запрос о настройке уведомлений, что требует отдельного обращения."
+            },
+            "E2": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение содержит запрос о настройке уведомлений, который является частью одной задачи — настройки аккаунта. Оно продолжает текущую задачу, так как связано с предыдущим действием (войти в аккаунт)."
+            },
+            "E3": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Сообщение пользователя связано с предыдущей задачей (вход в аккаунт), но содержит новый запрос о настройке уведомлений, что требует отдельного обращения."
+            },
+            "E4": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение содержит запрос о настройке уведомлений, который является частью одной задачи — настройки аккаунта. Оно продолжает текущую задачу, так как связано с предыдущим действием (войти в аккаунт)."
+            }
+          },
+          "R2": {
+            "E1": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Сообщение пользователя связано с предыдущей задачей (вход в аккаунт), но содержит новый запрос о настройке уведомлений, что требует отдельного обращения."
+            },
+            "E2": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение содержит запрос о настройке уведомлений, который является частью одной задачи — настройки аккаунта. Оно продолжает текущую задачу, так как связано с предыдущим действием (войти в аккаунт)."
+            },
+            "E3": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Сообщение пользователя связано с предыдущей задачей (вход в аккаунт), но содержит новый запрос о настройке уведомлений, что требует отдельного обращения."
+            },
+            "E4": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение содержит запрос о настройке уведомлений, который является частью одной задачи — настройки аккаунта. Оно продолжает текущую задачу, так как связано с предыдущим действием (войти в аккаунт)."
+            }
+          },
+          "R3": {
+            "E1": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Сообщение пользователя связано с предыдущей задачей (вход в аккаунт), но содержит новый запрос о настройке уведомлений, что требует отдельного обращения."
+            },
+            "E2": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение содержит запрос о настройке уведомлений, который является частью одной задачи — настройки аккаунта. Оно продолжает текущую задачу, так как связано с предыдущим действием (войти в аккаунт)."
+            },
+            "E3": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Сообщение пользователя связано с предыдущей задачей (вход в аккаунт), но содержит новый запрос о настройке уведомлений, что требует отдельного обращения."
+            },
+            "E4": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение содержит запрос о настройке уведомлений, который является частью одной задачи — настройки аккаунта. Оно продолжает текущую задачу, так как связано с предыдущим действием (войти в аккаунт)."
+            }
+          }
+        },
+        "case_029": {
+          "R1": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение изменяет параметры текущей задачи, убирая Санкт-Петербург и вводя Казань для сравнения с Москвой, что является продолжением текущей задачи."
+            },
+            "E2": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение изменяет параметры текущей задачи, убирая Санкт-Петербург и добавляя Казань для сравнения, что является продолжением текущей задачи."
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение изменяет параметры текущей задачи, убирая Санкт-Петербург и вводя Казань для сравнения с Москвой, что является продолжением текущей задачи."
+            },
+            "E4": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение изменяет параметры текущей задачи, убирая Санкт-Петербург и добавляя Казань для сравнения, что является продолжением текущей задачи."
+            }
+          },
+          "R2": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение изменяет параметры текущей задачи, убирая Санкт-Петербург и вводя Казань для сравнения с Москвой, что является продолжением текущей задачи."
+            },
+            "E2": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение изменяет параметры текущей задачи, убирая Санкт-Петербург и добавляя Казань для сравнения, что является продолжением текущей задачи."
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение изменяет параметры текущей задачи, убирая Санкт-Петербург и вводя Казань для сравнения с Москвой, что является продолжением текущей задачи."
+            },
+            "E4": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение изменяет параметры текущей задачи, убирая Санкт-Петербург и добавляя Казань для сравнения, что является продолжением текущей задачи."
+            }
+          },
+          "R3": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение изменяет параметры текущей задачи, убирая Санкт-Петербург и вводя Казань для сравнения с Москвой, что является продолжением текущей задачи."
+            },
+            "E2": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение изменяет параметры текущей задачи, убирая Санкт-Петербург и добавляя Казань для сравнения, что является продолжением текущей задачи."
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение изменяет параметры текущей задачи, убирая Санкт-Петербург и вводя Казань для сравнения с Москвой, что является продолжением текущей задачи."
+            },
+            "E4": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение изменяет параметры текущей задачи, убирая Санкт-Петербург и добавляя Казань для сравнения, что является продолжением текущей задачи."
+            }
+          }
+        }
+      }
+    },
+    "thinking_reason": {
+      "runs": {
+        "R1": {
+          "conditions": {
+            "E1": {
+              "correct": 28,
+              "evaluated": 30,
+              "accuracy": 0.9333333333333333,
+              "prediction_counts": {
+                "CONTINUE": 17,
+                "NEW": 13
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    15,
+                    0
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_020",
+                "case_021"
+              ],
+              "latency_sec": {
+                "mean": 0.6288614087337919,
+                "median": 0.61526839599901
+              },
+              "prompt_tokens": {
+                "mean": 349.3333333333333,
+                "median": 350.0
+              },
+              "completion_tokens": {
+                "mean": 63.266666666666666,
+                "median": 61.5
+              }
+            },
+            "E2": {
+              "correct": 25,
+              "evaluated": 30,
+              "accuracy": 0.8333333333333334,
+              "prediction_counts": {
+                "CONTINUE": 14,
+                "NEW": 16
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    12,
+                    3
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_001",
+                "case_014",
+                "case_023",
+                "case_024",
+                "case_029"
+              ],
+              "latency_sec": {
+                "mean": 0.5845105580670255,
+                "median": 0.579555521500879
+              },
+              "prompt_tokens": {
+                "mean": 349.3333333333333,
+                "median": 350.0
+              },
+              "completion_tokens": {
+                "mean": 58.333333333333336,
+                "median": 57.5
+              }
+            },
+            "E3": {
+              "correct": 28,
+              "evaluated": 30,
+              "accuracy": 0.9333333333333333,
+              "prediction_counts": {
+                "CONTINUE": 17,
+                "NEW": 13
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    15,
+                    0
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_020",
+                "case_021"
+              ],
+              "latency_sec": {
+                "mean": 0.6322278397002568,
+                "median": 0.6182204475007893
+              },
+              "prompt_tokens": {
+                "mean": 349.3333333333333,
+                "median": 350.0
+              },
+              "completion_tokens": {
+                "mean": 63.266666666666666,
+                "median": 61.5
+              }
+            },
+            "E4": {
+              "correct": 25,
+              "evaluated": 30,
+              "accuracy": 0.8333333333333334,
+              "prediction_counts": {
+                "CONTINUE": 14,
+                "NEW": 16
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    12,
+                    3
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_001",
+                "case_014",
+                "case_023",
+                "case_024",
+                "case_029"
+              ],
+              "latency_sec": {
+                "mean": 0.5806701808326277,
+                "median": 0.5824743554985616
+              },
+              "prompt_tokens": {
+                "mean": 349.3333333333333,
+                "median": 350.0
+              },
+              "completion_tokens": {
+                "mean": 58.333333333333336,
+                "median": 57.5
+              }
+            }
+          },
+          "pairwise_agreement": {
+            "E1↔E2": {
+              "agreement_count": 23,
+              "total": 30,
+              "agreement_rate": 0.7666666666666667,
+              "changed_count": 7,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E1↔E3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "E1↔E4": {
+              "agreement_count": 23,
+              "total": 30,
+              "agreement_rate": 0.7666666666666667,
+              "changed_count": 7,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E2↔E3": {
+              "agreement_count": 23,
+              "total": 30,
+              "agreement_rate": 0.7666666666666667,
+              "changed_count": 7,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E2↔E4": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "E3↔E4": {
+              "agreement_count": 23,
+              "total": 30,
+              "agreement_rate": 0.7666666666666667,
+              "changed_count": 7,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            }
+          },
+          "prompt_order_effect": {
+            "E1↔E2": {
+              "agreement_count": 23,
+              "total": 30,
+              "agreement_rate": 0.7666666666666667,
+              "changed_count": 7,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E3↔E4": {
+              "agreement_count": 23,
+              "total": 30,
+              "agreement_rate": 0.7666666666666667,
+              "changed_count": 7,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            }
+          },
+          "enum_order_effect": {
+            "E1↔E3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "E2↔E4": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            }
+          },
+          "interaction": {
+            "accuracy_difference_in_differences": 0.0,
+            "case_level_prompt_effect_symmetric_difference": [],
+            "case_level_enum_effect_symmetric_difference": []
+          },
+          "order_robustness_evaluated_cases": 30,
+          "order_sensitive_case_count": 7,
+          "order_sensitive_cases": [
+            "case_001",
+            "case_014",
+            "case_020",
+            "case_021",
+            "case_023",
+            "case_024",
+            "case_029"
+          ]
+        },
+        "R2": {
+          "conditions": {
+            "E1": {
+              "correct": 28,
+              "evaluated": 30,
+              "accuracy": 0.9333333333333333,
+              "prediction_counts": {
+                "CONTINUE": 17,
+                "NEW": 13
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    15,
+                    0
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_020",
+                "case_021"
+              ],
+              "latency_sec": {
+                "mean": 0.6180729969661721,
+                "median": 0.5976962214990635
+              },
+              "prompt_tokens": {
+                "mean": 349.3333333333333,
+                "median": 350.0
+              },
+              "completion_tokens": {
+                "mean": 63.266666666666666,
+                "median": 61.5
+              }
+            },
+            "E2": {
+              "correct": 25,
+              "evaluated": 30,
+              "accuracy": 0.8333333333333334,
+              "prediction_counts": {
+                "CONTINUE": 14,
+                "NEW": 16
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    12,
+                    3
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_001",
+                "case_014",
+                "case_023",
+                "case_024",
+                "case_029"
+              ],
+              "latency_sec": {
+                "mean": 0.569088866100113,
+                "median": 0.5583152455037634
+              },
+              "prompt_tokens": {
+                "mean": 349.3333333333333,
+                "median": 350.0
+              },
+              "completion_tokens": {
+                "mean": 58.333333333333336,
+                "median": 57.5
+              }
+            },
+            "E3": {
+              "correct": 28,
+              "evaluated": 30,
+              "accuracy": 0.9333333333333333,
+              "prediction_counts": {
+                "CONTINUE": 17,
+                "NEW": 13
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    15,
+                    0
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_020",
+                "case_021"
+              ],
+              "latency_sec": {
+                "mean": 0.6210327416005991,
+                "median": 0.6032898265038966
+              },
+              "prompt_tokens": {
+                "mean": 349.3333333333333,
+                "median": 350.0
+              },
+              "completion_tokens": {
+                "mean": 63.266666666666666,
+                "median": 61.5
+              }
+            },
+            "E4": {
+              "correct": 25,
+              "evaluated": 30,
+              "accuracy": 0.8333333333333334,
+              "prediction_counts": {
+                "CONTINUE": 14,
+                "NEW": 16
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    12,
+                    3
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_001",
+                "case_014",
+                "case_023",
+                "case_024",
+                "case_029"
+              ],
+              "latency_sec": {
+                "mean": 0.5729113762657411,
+                "median": 0.5673607835014991
+              },
+              "prompt_tokens": {
+                "mean": 349.3333333333333,
+                "median": 350.0
+              },
+              "completion_tokens": {
+                "mean": 58.333333333333336,
+                "median": 57.5
+              }
+            }
+          },
+          "pairwise_agreement": {
+            "E1↔E2": {
+              "agreement_count": 23,
+              "total": 30,
+              "agreement_rate": 0.7666666666666667,
+              "changed_count": 7,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E1↔E3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "E1↔E4": {
+              "agreement_count": 23,
+              "total": 30,
+              "agreement_rate": 0.7666666666666667,
+              "changed_count": 7,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E2↔E3": {
+              "agreement_count": 23,
+              "total": 30,
+              "agreement_rate": 0.7666666666666667,
+              "changed_count": 7,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E2↔E4": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "E3↔E4": {
+              "agreement_count": 23,
+              "total": 30,
+              "agreement_rate": 0.7666666666666667,
+              "changed_count": 7,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            }
+          },
+          "prompt_order_effect": {
+            "E1↔E2": {
+              "agreement_count": 23,
+              "total": 30,
+              "agreement_rate": 0.7666666666666667,
+              "changed_count": 7,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E3↔E4": {
+              "agreement_count": 23,
+              "total": 30,
+              "agreement_rate": 0.7666666666666667,
+              "changed_count": 7,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            }
+          },
+          "enum_order_effect": {
+            "E1↔E3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "E2↔E4": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            }
+          },
+          "interaction": {
+            "accuracy_difference_in_differences": 0.0,
+            "case_level_prompt_effect_symmetric_difference": [],
+            "case_level_enum_effect_symmetric_difference": []
+          },
+          "order_robustness_evaluated_cases": 30,
+          "order_sensitive_case_count": 7,
+          "order_sensitive_cases": [
+            "case_001",
+            "case_014",
+            "case_020",
+            "case_021",
+            "case_023",
+            "case_024",
+            "case_029"
+          ]
+        },
+        "R3": {
+          "conditions": {
+            "E1": {
+              "correct": 28,
+              "evaluated": 30,
+              "accuracy": 0.9333333333333333,
+              "prediction_counts": {
+                "CONTINUE": 17,
+                "NEW": 13
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    15,
+                    0
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_020",
+                "case_021"
+              ],
+              "latency_sec": {
+                "mean": 0.6127991999341854,
+                "median": 0.594225691002066
+              },
+              "prompt_tokens": {
+                "mean": 349.3333333333333,
+                "median": 350.0
+              },
+              "completion_tokens": {
+                "mean": 63.266666666666666,
+                "median": 61.5
+              }
+            },
+            "E2": {
+              "correct": 25,
+              "evaluated": 30,
+              "accuracy": 0.8333333333333334,
+              "prediction_counts": {
+                "CONTINUE": 14,
+                "NEW": 16
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    12,
+                    3
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_001",
+                "case_014",
+                "case_023",
+                "case_024",
+                "case_029"
+              ],
+              "latency_sec": {
+                "mean": 0.5703730758332919,
+                "median": 0.5606040600032429
+              },
+              "prompt_tokens": {
+                "mean": 349.3333333333333,
+                "median": 350.0
+              },
+              "completion_tokens": {
+                "mean": 58.333333333333336,
+                "median": 57.5
+              }
+            },
+            "E3": {
+              "correct": 28,
+              "evaluated": 30,
+              "accuracy": 0.9333333333333333,
+              "prediction_counts": {
+                "CONTINUE": 17,
+                "NEW": 13
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    15,
+                    0
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_020",
+                "case_021"
+              ],
+              "latency_sec": {
+                "mean": 0.6215426153006168,
+                "median": 0.6058137644977251
+              },
+              "prompt_tokens": {
+                "mean": 349.3333333333333,
+                "median": 350.0
+              },
+              "completion_tokens": {
+                "mean": 63.266666666666666,
+                "median": 61.5
+              }
+            },
+            "E4": {
+              "correct": 25,
+              "evaluated": 30,
+              "accuracy": 0.8333333333333334,
+              "prediction_counts": {
+                "CONTINUE": 14,
+                "NEW": 16
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    12,
+                    3
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_001",
+                "case_014",
+                "case_023",
+                "case_024",
+                "case_029"
+              ],
+              "latency_sec": {
+                "mean": 0.5794733381670085,
+                "median": 0.5717975089974061
+              },
+              "prompt_tokens": {
+                "mean": 349.3333333333333,
+                "median": 350.0
+              },
+              "completion_tokens": {
+                "mean": 58.333333333333336,
+                "median": 57.5
+              }
+            }
+          },
+          "pairwise_agreement": {
+            "E1↔E2": {
+              "agreement_count": 23,
+              "total": 30,
+              "agreement_rate": 0.7666666666666667,
+              "changed_count": 7,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E1↔E3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "E1↔E4": {
+              "agreement_count": 23,
+              "total": 30,
+              "agreement_rate": 0.7666666666666667,
+              "changed_count": 7,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E2↔E3": {
+              "agreement_count": 23,
+              "total": 30,
+              "agreement_rate": 0.7666666666666667,
+              "changed_count": 7,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E2↔E4": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "E3↔E4": {
+              "agreement_count": 23,
+              "total": 30,
+              "agreement_rate": 0.7666666666666667,
+              "changed_count": 7,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            }
+          },
+          "prompt_order_effect": {
+            "E1↔E2": {
+              "agreement_count": 23,
+              "total": 30,
+              "agreement_rate": 0.7666666666666667,
+              "changed_count": 7,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E3↔E4": {
+              "agreement_count": 23,
+              "total": 30,
+              "agreement_rate": 0.7666666666666667,
+              "changed_count": 7,
+              "changed_cases": [
+                "case_001",
+                "case_014",
+                "case_020",
+                "case_021",
+                "case_023",
+                "case_024",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            }
+          },
+          "enum_order_effect": {
+            "E1↔E3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "E2↔E4": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            }
+          },
+          "interaction": {
+            "accuracy_difference_in_differences": 0.0,
+            "case_level_prompt_effect_symmetric_difference": [],
+            "case_level_enum_effect_symmetric_difference": []
+          },
+          "order_robustness_evaluated_cases": 30,
+          "order_sensitive_case_count": 7,
+          "order_sensitive_cases": [
+            "case_001",
+            "case_014",
+            "case_020",
+            "case_021",
+            "case_023",
+            "case_024",
+            "case_029"
+          ]
+        }
+      },
+      "repeatability_by_condition": {
+        "E1": {
+          "all_repeat_comparable_count": 30,
+          "all_repeat_agreement_count": 30,
+          "all_repeat_agreement_rate": 1.0,
+          "unstable_case_count": 0,
+          "unstable_cases": [],
+          "uncompared_error_cases": [],
+          "pairwise": {
+            "R1↔R2": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "R1↔R3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "R2↔R3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            }
+          }
+        },
+        "E2": {
+          "all_repeat_comparable_count": 30,
+          "all_repeat_agreement_count": 30,
+          "all_repeat_agreement_rate": 1.0,
+          "unstable_case_count": 0,
+          "unstable_cases": [],
+          "uncompared_error_cases": [],
+          "pairwise": {
+            "R1↔R2": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "R1↔R3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "R2↔R3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            }
+          }
+        },
+        "E3": {
+          "all_repeat_comparable_count": 30,
+          "all_repeat_agreement_count": 30,
+          "all_repeat_agreement_rate": 1.0,
+          "unstable_case_count": 0,
+          "unstable_cases": [],
+          "uncompared_error_cases": [],
+          "pairwise": {
+            "R1↔R2": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "R1↔R3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "R2↔R3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            }
+          }
+        },
+        "E4": {
+          "all_repeat_comparable_count": 30,
+          "all_repeat_agreement_count": 30,
+          "all_repeat_agreement_rate": 1.0,
+          "unstable_case_count": 0,
+          "unstable_cases": [],
+          "uncompared_error_cases": [],
+          "pairwise": {
+            "R1↔R2": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "R1↔R3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "R2↔R3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            }
+          }
+        }
+      },
+      "important_cases": {
+        "case_017": {
+          "R1": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Пользователь предлагает альтернативный способ представления данных, что требует изменения подхода к текущей задаче, но не завершает её."
+            },
+            "E2": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение предлагает альтернативный способ представления данных (таблица вместо графика), что является продолжением текущей задачи, так как пользователь всё ещё работает над тем же запросом по выводу информации о расходах."
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Пользователь предлагает альтернативный способ представления данных, что требует изменения подхода к текущей задаче, но не завершает её."
+            },
+            "E4": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение предлагает альтернативный способ представления данных (таблица вместо графика), что является продолжением текущей задачи, так как пользователь всё ещё работает над тем же запросом по выводу информации о расходах."
+            }
+          },
+          "R2": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Пользователь предлагает альтернативный способ представления данных, что требует изменения подхода к текущей задаче, но не завершает её."
+            },
+            "E2": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение предлагает альтернативный способ представления данных (таблица вместо графика), что является продолжением текущей задачи, так как пользователь всё ещё работает над тем же запросом по выводу информации о расходах."
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Пользователь предлагает альтернативный способ представления данных, что требует изменения подхода к текущей задаче, но не завершает её."
+            },
+            "E4": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение предлагает альтернативный способ представления данных (таблица вместо графика), что является продолжением текущей задачи, так как пользователь всё ещё работает над тем же запросом по выводу информации о расходах."
+            }
+          },
+          "R3": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Пользователь предлагает альтернативный способ представления данных, что требует изменения подхода к текущей задаче, но не завершает её."
+            },
+            "E2": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение предлагает альтернативный способ представления данных (таблица вместо графика), что является продолжением текущей задачи, так как пользователь всё ещё работает над тем же запросом по выводу информации о расходах."
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Пользователь предлагает альтернативный способ представления данных, что требует изменения подхода к текущей задаче, но не завершает её."
+            },
+            "E4": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение предлагает альтернативный способ представления данных (таблица вместо графика), что является продолжением текущей задачи, так как пользователь всё ещё работает над тем же запросом по выводу информации о расходах."
+            }
+          }
+        },
+        "case_020": {
+          "R1": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение задаёт вопрос о назначении роли аналитика Иванову, что продолжает текущую задачу, связанную с правами роли аналитика."
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение задаёт новую независимую задачу, связанную с назначением роли аналитика Иванову, что отличается от предыдущего вопроса о правах роли."
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение задаёт вопрос о назначении роли аналитика Иванову, что продолжает текущую задачу, связанную с правами роли аналитика."
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение задаёт новую независимую задачу, связанную с назначением роли аналитика Иванову, что отличается от предыдущего вопроса о правах роли."
+            }
+          },
+          "R2": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение задаёт вопрос о назначении роли аналитика Иванову, что продолжает текущую задачу, связанную с правами роли аналитика."
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение задаёт новую независимую задачу, связанную с назначением роли аналитика Иванову, что отличается от предыдущего вопроса о правах роли."
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение задаёт вопрос о назначении роли аналитика Иванову, что продолжает текущую задачу, связанную с правами роли аналитика."
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение задаёт новую независимую задачу, связанную с назначением роли аналитика Иванову, что отличается от предыдущего вопроса о правах роли."
+            }
+          },
+          "R3": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение задаёт вопрос о назначении роли аналитика Иванову, что продолжает текущую задачу, связанную с правами роли аналитика."
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение задаёт новую независимую задачу, связанную с назначением роли аналитика Иванову, что отличается от предыдущего вопроса о правах роли."
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение задаёт вопрос о назначении роли аналитика Иванову, что продолжает текущую задачу, связанную с правами роли аналитика."
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение задаёт новую независимую задачу, связанную с назначением роли аналитика Иванову, что отличается от предыдущего вопроса о правах роли."
+            }
+          }
+        },
+        "case_021": {
+          "R1": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Сообщение пользователя связано с формированием отчёта по сотрудникам, что продолжает текущую задачу диалога, связанную с правами роли аналитика и доступными данными."
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение требует выполнения новой операции — сформировать отчёт, что отличается от предыдущего вопроса о правах роли. Это новая самостоятельная задача."
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Сообщение пользователя связано с формированием отчёта по сотрудникам, что продолжает текущую задачу диалога, связанную с правами роли аналитика и доступными данными."
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение требует выполнения новой операции — сформировать отчёт, что отличается от предыдущего вопроса о правах роли. Это новая самостоятельная задача."
+            }
+          },
+          "R2": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Сообщение пользователя связано с формированием отчёта по сотрудникам, что продолжает текущую задачу диалога, связанную с правами роли аналитика и доступными данными."
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение требует выполнения новой операции — сформировать отчёт, что отличается от предыдущего вопроса о правах роли. Это новая самостоятельная задача."
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Сообщение пользователя связано с формированием отчёта по сотрудникам, что продолжает текущую задачу диалога, связанную с правами роли аналитика и доступными данными."
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение требует выполнения новой операции — сформировать отчёт, что отличается от предыдущего вопроса о правах роли. Это новая самостоятельная задача."
+            }
+          },
+          "R3": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Сообщение пользователя связано с формированием отчёта по сотрудникам, что продолжает текущую задачу диалога, связанную с правами роли аналитика и доступными данными."
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение требует выполнения новой операции — сформировать отчёт, что отличается от предыдущего вопроса о правах роли. Это новая самостоятельная задача."
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Сообщение пользователя связано с формированием отчёта по сотрудникам, что продолжает текущую задачу диалога, связанную с правами роли аналитика и доступными данными."
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение требует выполнения новой операции — сформировать отчёт, что отличается от предыдущего вопроса о правах роли. Это новая самостоятельная задача."
+            }
+          }
+        },
+        "case_023": {
+          "R1": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Пользователь уточняет, может ли использование VPN решить проблему с авторизацией в домашней сети. Это продолжает текущую задачу, так как вопрос связан с тем же сценарием."
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение задаёт новый независимый запрос, проверяя, поможет ли VPN в решении проблемы с авторизацией."
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Пользователь уточняет, может ли использование VPN решить проблему с авторизацией в домашней сети. Это продолжает текущую задачу, так как вопрос связан с тем же сценарием."
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение задаёт новый независимый запрос, проверяя, поможет ли VPN в решении проблемы с авторизацией."
+            }
+          },
+          "R2": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Пользователь уточняет, может ли использование VPN решить проблему с авторизацией в домашней сети. Это продолжает текущую задачу, так как вопрос связан с тем же сценарием."
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение задаёт новый независимый запрос, проверяя, поможет ли VPN в решении проблемы с авторизацией."
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Пользователь уточняет, может ли использование VPN решить проблему с авторизацией в домашней сети. Это продолжает текущую задачу, так как вопрос связан с тем же сценарием."
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение задаёт новый независимый запрос, проверяя, поможет ли VPN в решении проблемы с авторизацией."
+            }
+          },
+          "R3": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Пользователь уточняет, может ли использование VPN решить проблему с авторизацией в домашней сети. Это продолжает текущую задачу, так как вопрос связан с тем же сценарием."
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение задаёт новый независимый запрос, проверяя, поможет ли VPN в решении проблемы с авторизацией."
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Пользователь уточняет, может ли использование VPN решить проблему с авторизацией в домашней сети. Это продолжает текущую задачу, так как вопрос связан с тем же сценарием."
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение задаёт новый независимый запрос, проверяя, поможет ли VPN в решении проблемы с авторизацией."
+            }
+          }
+        },
+        "case_024": {
+          "R1": {
+            "E1": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Пользователь сначала жаловался на проблемы с входом в аккаунт, ассистент предложил восстановить пароль. Теперь пользователь сообщает, что вошёл, но задаёт вопрос о выключении уведомлений, что является новой задачей, не связанной напрямую с входом в аккаунт."
+            },
+            "E2": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение содержит вопрос о настройке уведомлений, который является частью той же задачи, что и вход в аккаунт."
+            },
+            "E3": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Пользователь сначала жаловался на проблемы с входом в аккаунт, ассистент предложил восстановить пароль. Теперь пользователь сообщает, что вошёл, но задаёт вопрос о выключении уведомлений, что является новой задачей, не связанной напрямую с входом в аккаунт."
+            },
+            "E4": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение содержит вопрос о настройке уведомлений, который является частью той же задачи, что и вход в аккаунт."
+            }
+          },
+          "R2": {
+            "E1": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Пользователь сначала жаловался на проблемы с входом в аккаунт, ассистент предложил восстановить пароль. Теперь пользователь сообщает, что вошёл, но задаёт вопрос о выключении уведомлений, что является новой задачей, не связанной напрямую с входом в аккаунт."
+            },
+            "E2": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение содержит вопрос о настройке уведомлений, который является частью той же задачи, что и вход в аккаунт."
+            },
+            "E3": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Пользователь сначала жаловался на проблемы с входом в аккаунт, ассистент предложил восстановить пароль. Теперь пользователь сообщает, что вошёл, но задаёт вопрос о выключении уведомлений, что является новой задачей, не связанной напрямую с входом в аккаунт."
+            },
+            "E4": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение содержит вопрос о настройке уведомлений, который является частью той же задачи, что и вход в аккаунт."
+            }
+          },
+          "R3": {
+            "E1": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Пользователь сначала жаловался на проблемы с входом в аккаунт, ассистент предложил восстановить пароль. Теперь пользователь сообщает, что вошёл, но задаёт вопрос о выключении уведомлений, что является новой задачей, не связанной напрямую с входом в аккаунт."
+            },
+            "E2": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение содержит вопрос о настройке уведомлений, который является частью той же задачи, что и вход в аккаунт."
+            },
+            "E3": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": "Пользователь сначала жаловался на проблемы с входом в аккаунт, ассистент предложил восстановить пароль. Теперь пользователь сообщает, что вошёл, но задаёт вопрос о выключении уведомлений, что является новой задачей, не связанной напрямую с входом в аккаунт."
+            },
+            "E4": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение содержит вопрос о настройке уведомлений, который является частью той же задачи, что и вход в аккаунт."
+            }
+          }
+        },
+        "case_029": {
+          "R1": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение изменяет параметры текущей задачи, убирая Санкт-Петербург и добавляя Казань для сравнения с Москвой, что является продолжением текущей задачи."
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение убирает Санкт-Петербург и сравнивает Москву с Казанью, что является новой самостоятельной задачей, так как это изменение параметров и новая операция сравнения."
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение изменяет параметры текущей задачи, убирая Санкт-Петербург и добавляя Казань для сравнения с Москвой, что является продолжением текущей задачи."
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение убирает Санкт-Петербург и сравнивает Москву с Казанью, что является новой самостоятельной задачей, так как это изменение параметров и новая операция сравнения."
+            }
+          },
+          "R2": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение изменяет параметры текущей задачи, убирая Санкт-Петербург и добавляя Казань для сравнения с Москвой, что является продолжением текущей задачи."
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение убирает Санкт-Петербург и сравнивает Москву с Казанью, что является новой самостоятельной задачей, так как это изменение параметров и новая операция сравнения."
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение изменяет параметры текущей задачи, убирая Санкт-Петербург и добавляя Казань для сравнения с Москвой, что является продолжением текущей задачи."
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение убирает Санкт-Петербург и сравнивает Москву с Казанью, что является новой самостоятельной задачей, так как это изменение параметров и новая операция сравнения."
+            }
+          },
+          "R3": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение изменяет параметры текущей задачи, убирая Санкт-Петербург и добавляя Казань для сравнения с Москвой, что является продолжением текущей задачи."
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение убирает Санкт-Петербург и сравнивает Москву с Казанью, что является новой самостоятельной задачей, так как это изменение параметров и новая операция сравнения."
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": "Новое сообщение изменяет параметры текущей задачи, убирая Санкт-Петербург и добавляя Казань для сравнения с Москвой, что является продолжением текущей задачи."
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": "Новое сообщение убирает Санкт-Петербург и сравнивает Москву с Казанью, что является новой самостоятельной задачей, так как это изменение параметров и новая операция сравнения."
+            }
+          }
+        }
+      }
+    },
+    "thinking_route_only": {
+      "runs": {
+        "R1": {
+          "conditions": {
+            "E1": {
+              "correct": 24,
+              "evaluated": 30,
+              "accuracy": 0.8,
+              "prediction_counts": {
+                "CONTINUE": 21,
+                "NEW": 9
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    15,
+                    0
+                  ],
+                  [
+                    6,
+                    9
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_020",
+                "case_021",
+                "case_022",
+                "case_024",
+                "case_026",
+                "case_028"
+              ],
+              "latency_sec": {
+                "mean": 0.17833428043328847,
+                "median": 0.18305855599828647
+              },
+              "prompt_tokens": {
+                "mean": 315.3333333333333,
+                "median": 316.0
+              },
+              "completion_tokens": {
+                "mean": 10.7,
+                "median": 11.0
+              }
+            },
+            "E2": {
+              "correct": 19,
+              "evaluated": 30,
+              "accuracy": 0.6333333333333333,
+              "prediction_counts": {
+                "CONTINUE": 8,
+                "NEW": 22
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    6,
+                    9
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_001",
+                "case_002",
+                "case_006",
+                "case_012",
+                "case_015",
+                "case_017",
+                "case_023",
+                "case_024",
+                "case_027",
+                "case_028",
+                "case_029"
+              ],
+              "latency_sec": {
+                "mean": 0.1590906410344663,
+                "median": 0.15763086599690723
+              },
+              "prompt_tokens": {
+                "mean": 315.3333333333333,
+                "median": 316.0
+              },
+              "completion_tokens": {
+                "mean": 10.266666666666667,
+                "median": 10.0
+              }
+            },
+            "E3": {
+              "correct": 24,
+              "evaluated": 30,
+              "accuracy": 0.8,
+              "prediction_counts": {
+                "CONTINUE": 21,
+                "NEW": 9
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    15,
+                    0
+                  ],
+                  [
+                    6,
+                    9
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_020",
+                "case_021",
+                "case_022",
+                "case_024",
+                "case_026",
+                "case_028"
+              ],
+              "latency_sec": {
+                "mean": 0.11587364096582557,
+                "median": 0.1188367214963364
+              },
+              "prompt_tokens": {
+                "mean": 315.3333333333333,
+                "median": 316.0
+              },
+              "completion_tokens": {
+                "mean": 10.7,
+                "median": 11.0
+              }
+            },
+            "E4": {
+              "correct": 19,
+              "evaluated": 30,
+              "accuracy": 0.6333333333333333,
+              "prediction_counts": {
+                "CONTINUE": 8,
+                "NEW": 22
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    6,
+                    9
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_001",
+                "case_002",
+                "case_006",
+                "case_012",
+                "case_015",
+                "case_017",
+                "case_023",
+                "case_024",
+                "case_027",
+                "case_028",
+                "case_029"
+              ],
+              "latency_sec": {
+                "mean": 0.11429620616715207,
+                "median": 0.11111819750294671
+              },
+              "prompt_tokens": {
+                "mean": 315.3333333333333,
+                "median": 316.0
+              },
+              "completion_tokens": {
+                "mean": 10.266666666666667,
+                "median": 10.0
+              }
+            }
+          },
+          "pairwise_agreement": {
+            "E1↔E2": {
+              "agreement_count": 17,
+              "total": 30,
+              "agreement_rate": 0.5666666666666667,
+              "changed_count": 13,
+              "changed_cases": [
+                "case_001",
+                "case_002",
+                "case_006",
+                "case_012",
+                "case_015",
+                "case_017",
+                "case_020",
+                "case_021",
+                "case_022",
+                "case_023",
+                "case_026",
+                "case_027",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E1↔E3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "E1↔E4": {
+              "agreement_count": 17,
+              "total": 30,
+              "agreement_rate": 0.5666666666666667,
+              "changed_count": 13,
+              "changed_cases": [
+                "case_001",
+                "case_002",
+                "case_006",
+                "case_012",
+                "case_015",
+                "case_017",
+                "case_020",
+                "case_021",
+                "case_022",
+                "case_023",
+                "case_026",
+                "case_027",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E2↔E3": {
+              "agreement_count": 17,
+              "total": 30,
+              "agreement_rate": 0.5666666666666667,
+              "changed_count": 13,
+              "changed_cases": [
+                "case_001",
+                "case_002",
+                "case_006",
+                "case_012",
+                "case_015",
+                "case_017",
+                "case_020",
+                "case_021",
+                "case_022",
+                "case_023",
+                "case_026",
+                "case_027",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E2↔E4": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "E3↔E4": {
+              "agreement_count": 17,
+              "total": 30,
+              "agreement_rate": 0.5666666666666667,
+              "changed_count": 13,
+              "changed_cases": [
+                "case_001",
+                "case_002",
+                "case_006",
+                "case_012",
+                "case_015",
+                "case_017",
+                "case_020",
+                "case_021",
+                "case_022",
+                "case_023",
+                "case_026",
+                "case_027",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            }
+          },
+          "prompt_order_effect": {
+            "E1↔E2": {
+              "agreement_count": 17,
+              "total": 30,
+              "agreement_rate": 0.5666666666666667,
+              "changed_count": 13,
+              "changed_cases": [
+                "case_001",
+                "case_002",
+                "case_006",
+                "case_012",
+                "case_015",
+                "case_017",
+                "case_020",
+                "case_021",
+                "case_022",
+                "case_023",
+                "case_026",
+                "case_027",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E3↔E4": {
+              "agreement_count": 17,
+              "total": 30,
+              "agreement_rate": 0.5666666666666667,
+              "changed_count": 13,
+              "changed_cases": [
+                "case_001",
+                "case_002",
+                "case_006",
+                "case_012",
+                "case_015",
+                "case_017",
+                "case_020",
+                "case_021",
+                "case_022",
+                "case_023",
+                "case_026",
+                "case_027",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            }
+          },
+          "enum_order_effect": {
+            "E1↔E3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "E2↔E4": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            }
+          },
+          "interaction": {
+            "accuracy_difference_in_differences": 0.0,
+            "case_level_prompt_effect_symmetric_difference": [],
+            "case_level_enum_effect_symmetric_difference": []
+          },
+          "order_robustness_evaluated_cases": 30,
+          "order_sensitive_case_count": 13,
+          "order_sensitive_cases": [
+            "case_001",
+            "case_002",
+            "case_006",
+            "case_012",
+            "case_015",
+            "case_017",
+            "case_020",
+            "case_021",
+            "case_022",
+            "case_023",
+            "case_026",
+            "case_027",
+            "case_029"
+          ]
+        },
+        "R2": {
+          "conditions": {
+            "E1": {
+              "correct": 24,
+              "evaluated": 30,
+              "accuracy": 0.8,
+              "prediction_counts": {
+                "CONTINUE": 21,
+                "NEW": 9
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    15,
+                    0
+                  ],
+                  [
+                    6,
+                    9
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_020",
+                "case_021",
+                "case_022",
+                "case_024",
+                "case_026",
+                "case_028"
+              ],
+              "latency_sec": {
+                "mean": 0.11789222536705589,
+                "median": 0.1188546250014042
+              },
+              "prompt_tokens": {
+                "mean": 315.3333333333333,
+                "median": 316.0
+              },
+              "completion_tokens": {
+                "mean": 10.7,
+                "median": 11.0
+              }
+            },
+            "E2": {
+              "correct": 19,
+              "evaluated": 30,
+              "accuracy": 0.6333333333333333,
+              "prediction_counts": {
+                "CONTINUE": 8,
+                "NEW": 22
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    6,
+                    9
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_001",
+                "case_002",
+                "case_006",
+                "case_012",
+                "case_015",
+                "case_017",
+                "case_023",
+                "case_024",
+                "case_027",
+                "case_028",
+                "case_029"
+              ],
+              "latency_sec": {
+                "mean": 0.11255837430095804,
+                "median": 0.11099347700292128
+              },
+              "prompt_tokens": {
+                "mean": 315.3333333333333,
+                "median": 316.0
+              },
+              "completion_tokens": {
+                "mean": 10.266666666666667,
+                "median": 10.0
+              }
+            },
+            "E3": {
+              "correct": 24,
+              "evaluated": 30,
+              "accuracy": 0.8,
+              "prediction_counts": {
+                "CONTINUE": 21,
+                "NEW": 9
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    15,
+                    0
+                  ],
+                  [
+                    6,
+                    9
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_020",
+                "case_021",
+                "case_022",
+                "case_024",
+                "case_026",
+                "case_028"
+              ],
+              "latency_sec": {
+                "mean": 0.11575565759946281,
+                "median": 0.11847960700106341
+              },
+              "prompt_tokens": {
+                "mean": 315.3333333333333,
+                "median": 316.0
+              },
+              "completion_tokens": {
+                "mean": 10.7,
+                "median": 11.0
+              }
+            },
+            "E4": {
+              "correct": 19,
+              "evaluated": 30,
+              "accuracy": 0.6333333333333333,
+              "prediction_counts": {
+                "CONTINUE": 8,
+                "NEW": 22
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    6,
+                    9
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_001",
+                "case_002",
+                "case_006",
+                "case_012",
+                "case_015",
+                "case_017",
+                "case_023",
+                "case_024",
+                "case_027",
+                "case_028",
+                "case_029"
+              ],
+              "latency_sec": {
+                "mean": 0.11638733113237928,
+                "median": 0.11543825649641803
+              },
+              "prompt_tokens": {
+                "mean": 315.3333333333333,
+                "median": 316.0
+              },
+              "completion_tokens": {
+                "mean": 10.266666666666667,
+                "median": 10.0
+              }
+            }
+          },
+          "pairwise_agreement": {
+            "E1↔E2": {
+              "agreement_count": 17,
+              "total": 30,
+              "agreement_rate": 0.5666666666666667,
+              "changed_count": 13,
+              "changed_cases": [
+                "case_001",
+                "case_002",
+                "case_006",
+                "case_012",
+                "case_015",
+                "case_017",
+                "case_020",
+                "case_021",
+                "case_022",
+                "case_023",
+                "case_026",
+                "case_027",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E1↔E3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "E1↔E4": {
+              "agreement_count": 17,
+              "total": 30,
+              "agreement_rate": 0.5666666666666667,
+              "changed_count": 13,
+              "changed_cases": [
+                "case_001",
+                "case_002",
+                "case_006",
+                "case_012",
+                "case_015",
+                "case_017",
+                "case_020",
+                "case_021",
+                "case_022",
+                "case_023",
+                "case_026",
+                "case_027",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E2↔E3": {
+              "agreement_count": 17,
+              "total": 30,
+              "agreement_rate": 0.5666666666666667,
+              "changed_count": 13,
+              "changed_cases": [
+                "case_001",
+                "case_002",
+                "case_006",
+                "case_012",
+                "case_015",
+                "case_017",
+                "case_020",
+                "case_021",
+                "case_022",
+                "case_023",
+                "case_026",
+                "case_027",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E2↔E4": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "E3↔E4": {
+              "agreement_count": 17,
+              "total": 30,
+              "agreement_rate": 0.5666666666666667,
+              "changed_count": 13,
+              "changed_cases": [
+                "case_001",
+                "case_002",
+                "case_006",
+                "case_012",
+                "case_015",
+                "case_017",
+                "case_020",
+                "case_021",
+                "case_022",
+                "case_023",
+                "case_026",
+                "case_027",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            }
+          },
+          "prompt_order_effect": {
+            "E1↔E2": {
+              "agreement_count": 17,
+              "total": 30,
+              "agreement_rate": 0.5666666666666667,
+              "changed_count": 13,
+              "changed_cases": [
+                "case_001",
+                "case_002",
+                "case_006",
+                "case_012",
+                "case_015",
+                "case_017",
+                "case_020",
+                "case_021",
+                "case_022",
+                "case_023",
+                "case_026",
+                "case_027",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E3↔E4": {
+              "agreement_count": 17,
+              "total": 30,
+              "agreement_rate": 0.5666666666666667,
+              "changed_count": 13,
+              "changed_cases": [
+                "case_001",
+                "case_002",
+                "case_006",
+                "case_012",
+                "case_015",
+                "case_017",
+                "case_020",
+                "case_021",
+                "case_022",
+                "case_023",
+                "case_026",
+                "case_027",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            }
+          },
+          "enum_order_effect": {
+            "E1↔E3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "E2↔E4": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            }
+          },
+          "interaction": {
+            "accuracy_difference_in_differences": 0.0,
+            "case_level_prompt_effect_symmetric_difference": [],
+            "case_level_enum_effect_symmetric_difference": []
+          },
+          "order_robustness_evaluated_cases": 30,
+          "order_sensitive_case_count": 13,
+          "order_sensitive_cases": [
+            "case_001",
+            "case_002",
+            "case_006",
+            "case_012",
+            "case_015",
+            "case_017",
+            "case_020",
+            "case_021",
+            "case_022",
+            "case_023",
+            "case_026",
+            "case_027",
+            "case_029"
+          ]
+        },
+        "R3": {
+          "conditions": {
+            "E1": {
+              "correct": 24,
+              "evaluated": 30,
+              "accuracy": 0.8,
+              "prediction_counts": {
+                "CONTINUE": 21,
+                "NEW": 9
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    15,
+                    0
+                  ],
+                  [
+                    6,
+                    9
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_020",
+                "case_021",
+                "case_022",
+                "case_024",
+                "case_026",
+                "case_028"
+              ],
+              "latency_sec": {
+                "mean": 0.11847436953369955,
+                "median": 0.12151523699503741
+              },
+              "prompt_tokens": {
+                "mean": 315.3333333333333,
+                "median": 316.0
+              },
+              "completion_tokens": {
+                "mean": 10.7,
+                "median": 11.0
+              }
+            },
+            "E2": {
+              "correct": 19,
+              "evaluated": 30,
+              "accuracy": 0.6333333333333333,
+              "prediction_counts": {
+                "CONTINUE": 8,
+                "NEW": 22
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    6,
+                    9
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_001",
+                "case_002",
+                "case_006",
+                "case_012",
+                "case_015",
+                "case_017",
+                "case_023",
+                "case_024",
+                "case_027",
+                "case_028",
+                "case_029"
+              ],
+              "latency_sec": {
+                "mean": 0.11580171326640994,
+                "median": 0.11397041150485165
+              },
+              "prompt_tokens": {
+                "mean": 315.3333333333333,
+                "median": 316.0
+              },
+              "completion_tokens": {
+                "mean": 10.266666666666667,
+                "median": 10.0
+              }
+            },
+            "E3": {
+              "correct": 24,
+              "evaluated": 30,
+              "accuracy": 0.8,
+              "prediction_counts": {
+                "CONTINUE": 21,
+                "NEW": 9
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    15,
+                    0
+                  ],
+                  [
+                    6,
+                    9
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_020",
+                "case_021",
+                "case_022",
+                "case_024",
+                "case_026",
+                "case_028"
+              ],
+              "latency_sec": {
+                "mean": 0.12026087293367406,
+                "median": 0.12272266649961239
+              },
+              "prompt_tokens": {
+                "mean": 315.3333333333333,
+                "median": 316.0
+              },
+              "completion_tokens": {
+                "mean": 10.7,
+                "median": 11.0
+              }
+            },
+            "E4": {
+              "correct": 19,
+              "evaluated": 30,
+              "accuracy": 0.6333333333333333,
+              "prediction_counts": {
+                "CONTINUE": 8,
+                "NEW": 22
+              },
+              "confusion_matrix": {
+                "labels": [
+                  "CONTINUE",
+                  "NEW"
+                ],
+                "matrix": [
+                  [
+                    6,
+                    9
+                  ],
+                  [
+                    2,
+                    13
+                  ]
+                ]
+              },
+              "errors": [],
+              "incorrect_cases": [
+                "case_001",
+                "case_002",
+                "case_006",
+                "case_012",
+                "case_015",
+                "case_017",
+                "case_023",
+                "case_024",
+                "case_027",
+                "case_028",
+                "case_029"
+              ],
+              "latency_sec": {
+                "mean": 0.11430041913239014,
+                "median": 0.11256000949651934
+              },
+              "prompt_tokens": {
+                "mean": 315.3333333333333,
+                "median": 316.0
+              },
+              "completion_tokens": {
+                "mean": 10.266666666666667,
+                "median": 10.0
+              }
+            }
+          },
+          "pairwise_agreement": {
+            "E1↔E2": {
+              "agreement_count": 17,
+              "total": 30,
+              "agreement_rate": 0.5666666666666667,
+              "changed_count": 13,
+              "changed_cases": [
+                "case_001",
+                "case_002",
+                "case_006",
+                "case_012",
+                "case_015",
+                "case_017",
+                "case_020",
+                "case_021",
+                "case_022",
+                "case_023",
+                "case_026",
+                "case_027",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E1↔E3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "E1↔E4": {
+              "agreement_count": 17,
+              "total": 30,
+              "agreement_rate": 0.5666666666666667,
+              "changed_count": 13,
+              "changed_cases": [
+                "case_001",
+                "case_002",
+                "case_006",
+                "case_012",
+                "case_015",
+                "case_017",
+                "case_020",
+                "case_021",
+                "case_022",
+                "case_023",
+                "case_026",
+                "case_027",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E2↔E3": {
+              "agreement_count": 17,
+              "total": 30,
+              "agreement_rate": 0.5666666666666667,
+              "changed_count": 13,
+              "changed_cases": [
+                "case_001",
+                "case_002",
+                "case_006",
+                "case_012",
+                "case_015",
+                "case_017",
+                "case_020",
+                "case_021",
+                "case_022",
+                "case_023",
+                "case_026",
+                "case_027",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E2↔E4": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "E3↔E4": {
+              "agreement_count": 17,
+              "total": 30,
+              "agreement_rate": 0.5666666666666667,
+              "changed_count": 13,
+              "changed_cases": [
+                "case_001",
+                "case_002",
+                "case_006",
+                "case_012",
+                "case_015",
+                "case_017",
+                "case_020",
+                "case_021",
+                "case_022",
+                "case_023",
+                "case_026",
+                "case_027",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            }
+          },
+          "prompt_order_effect": {
+            "E1↔E2": {
+              "agreement_count": 17,
+              "total": 30,
+              "agreement_rate": 0.5666666666666667,
+              "changed_count": 13,
+              "changed_cases": [
+                "case_001",
+                "case_002",
+                "case_006",
+                "case_012",
+                "case_015",
+                "case_017",
+                "case_020",
+                "case_021",
+                "case_022",
+                "case_023",
+                "case_026",
+                "case_027",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            },
+            "E3↔E4": {
+              "agreement_count": 17,
+              "total": 30,
+              "agreement_rate": 0.5666666666666667,
+              "changed_count": 13,
+              "changed_cases": [
+                "case_001",
+                "case_002",
+                "case_006",
+                "case_012",
+                "case_015",
+                "case_017",
+                "case_020",
+                "case_021",
+                "case_022",
+                "case_023",
+                "case_026",
+                "case_027",
+                "case_029"
+              ],
+              "uncompared_error_cases": []
+            }
+          },
+          "enum_order_effect": {
+            "E1↔E3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "E2↔E4": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            }
+          },
+          "interaction": {
+            "accuracy_difference_in_differences": 0.0,
+            "case_level_prompt_effect_symmetric_difference": [],
+            "case_level_enum_effect_symmetric_difference": []
+          },
+          "order_robustness_evaluated_cases": 30,
+          "order_sensitive_case_count": 13,
+          "order_sensitive_cases": [
+            "case_001",
+            "case_002",
+            "case_006",
+            "case_012",
+            "case_015",
+            "case_017",
+            "case_020",
+            "case_021",
+            "case_022",
+            "case_023",
+            "case_026",
+            "case_027",
+            "case_029"
+          ]
+        }
+      },
+      "repeatability_by_condition": {
+        "E1": {
+          "all_repeat_comparable_count": 30,
+          "all_repeat_agreement_count": 30,
+          "all_repeat_agreement_rate": 1.0,
+          "unstable_case_count": 0,
+          "unstable_cases": [],
+          "uncompared_error_cases": [],
+          "pairwise": {
+            "R1↔R2": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "R1↔R3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "R2↔R3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            }
+          }
+        },
+        "E2": {
+          "all_repeat_comparable_count": 30,
+          "all_repeat_agreement_count": 30,
+          "all_repeat_agreement_rate": 1.0,
+          "unstable_case_count": 0,
+          "unstable_cases": [],
+          "uncompared_error_cases": [],
+          "pairwise": {
+            "R1↔R2": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "R1↔R3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "R2↔R3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            }
+          }
+        },
+        "E3": {
+          "all_repeat_comparable_count": 30,
+          "all_repeat_agreement_count": 30,
+          "all_repeat_agreement_rate": 1.0,
+          "unstable_case_count": 0,
+          "unstable_cases": [],
+          "uncompared_error_cases": [],
+          "pairwise": {
+            "R1↔R2": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "R1↔R3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "R2↔R3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            }
+          }
+        },
+        "E4": {
+          "all_repeat_comparable_count": 30,
+          "all_repeat_agreement_count": 30,
+          "all_repeat_agreement_rate": 1.0,
+          "unstable_case_count": 0,
+          "unstable_cases": [],
+          "uncompared_error_cases": [],
+          "pairwise": {
+            "R1↔R2": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "R1↔R3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            },
+            "R2↔R3": {
+              "agreement_count": 30,
+              "total": 30,
+              "agreement_rate": 1.0,
+              "changed_count": 0,
+              "changed_cases": [],
+              "uncompared_error_cases": []
+            }
+          }
+        }
+      },
+      "important_cases": {
+        "case_017": {
+          "R1": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": null
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": null
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": null
+            }
+          },
+          "R2": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": null
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": null
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": null
+            }
+          },
+          "R3": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": null
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": null
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": null
+            }
+          }
+        },
+        "case_020": {
+          "R1": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": null
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": null
+            }
+          },
+          "R2": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": null
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": null
+            }
+          },
+          "R3": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": null
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": null
+            }
+          }
+        },
+        "case_021": {
+          "R1": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": null
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": null
+            }
+          },
+          "R2": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": null
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": null
+            }
+          },
+          "R3": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": null
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": true,
+              "error": null,
+              "reason": null
+            }
+          }
+        },
+        "case_023": {
+          "R1": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": null
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": null
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": null
+            }
+          },
+          "R2": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": null
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": null
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": null
+            }
+          },
+          "R3": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": null
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": null
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": null
+            }
+          }
+        },
+        "case_024": {
+          "R1": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E2": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E4": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": null
+            }
+          },
+          "R2": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E2": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E4": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": null
+            }
+          },
+          "R3": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E2": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E4": {
+              "predicted_route": "CONTINUE",
+              "correct": false,
+              "error": null,
+              "reason": null
+            }
+          }
+        },
+        "case_029": {
+          "R1": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": null
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": null
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": null
+            }
+          },
+          "R2": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": null
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": null
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": null
+            }
+          },
+          "R3": {
+            "E1": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": null
+            },
+            "E2": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": null
+            },
+            "E3": {
+              "predicted_route": "CONTINUE",
+              "correct": true,
+              "error": null,
+              "reason": null
+            },
+            "E4": {
+              "predicted_route": "NEW",
+              "correct": false,
+              "error": null,
+              "reason": null
+            }
+          }
+        }
+      }
+    }
+  },
+  "group_comparisons": {
+    "no_thinking_reason↔thinking_reason": {
+      "by_repeat": {
+        "R1": {
+          "comparable_count": 120,
+          "changed_count": 6,
+          "changed": [
+            "E1:case_023",
+            "E2:case_023",
+            "E2:case_029",
+            "E3:case_023",
+            "E4:case_023",
+            "E4:case_029"
+          ],
+          "corrected_count": 2,
+          "corrected": [
+            "E1:case_023",
+            "E3:case_023"
+          ],
+          "broken_count": 4,
+          "broken": [
+            "E2:case_023",
+            "E2:case_029",
+            "E4:case_023",
+            "E4:case_029"
+          ]
+        },
+        "R2": {
+          "comparable_count": 120,
+          "changed_count": 6,
+          "changed": [
+            "E1:case_023",
+            "E2:case_023",
+            "E2:case_029",
+            "E3:case_023",
+            "E4:case_023",
+            "E4:case_029"
+          ],
+          "corrected_count": 2,
+          "corrected": [
+            "E1:case_023",
+            "E3:case_023"
+          ],
+          "broken_count": 4,
+          "broken": [
+            "E2:case_023",
+            "E2:case_029",
+            "E4:case_023",
+            "E4:case_029"
+          ]
+        },
+        "R3": {
+          "comparable_count": 120,
+          "changed_count": 6,
+          "changed": [
+            "E1:case_023",
+            "E2:case_023",
+            "E2:case_029",
+            "E3:case_023",
+            "E4:case_023",
+            "E4:case_029"
+          ],
+          "corrected_count": 2,
+          "corrected": [
+            "E1:case_023",
+            "E3:case_023"
+          ],
+          "broken_count": 4,
+          "broken": [
+            "E2:case_023",
+            "E2:case_029",
+            "E4:case_023",
+            "E4:case_029"
+          ]
+        }
+      },
+      "aggregate": {
+        "comparable_count": 360,
+        "changed_count": 18,
+        "changed": [
+          "R1:E1:case_023",
+          "R1:E2:case_023",
+          "R1:E2:case_029",
+          "R1:E3:case_023",
+          "R1:E4:case_023",
+          "R1:E4:case_029",
+          "R2:E1:case_023",
+          "R2:E2:case_023",
+          "R2:E2:case_029",
+          "R2:E3:case_023",
+          "R2:E4:case_023",
+          "R2:E4:case_029",
+          "R3:E1:case_023",
+          "R3:E2:case_023",
+          "R3:E2:case_029",
+          "R3:E3:case_023",
+          "R3:E4:case_023",
+          "R3:E4:case_029"
+        ],
+        "corrected_count": 6,
+        "corrected": [
+          "R1:E1:case_023",
+          "R1:E3:case_023",
+          "R2:E1:case_023",
+          "R2:E3:case_023",
+          "R3:E1:case_023",
+          "R3:E3:case_023"
+        ],
+        "broken_count": 12,
+        "broken": [
+          "R1:E2:case_023",
+          "R1:E2:case_029",
+          "R1:E4:case_023",
+          "R1:E4:case_029",
+          "R2:E2:case_023",
+          "R2:E2:case_029",
+          "R2:E4:case_023",
+          "R2:E4:case_029",
+          "R3:E2:case_023",
+          "R3:E2:case_029",
+          "R3:E4:case_023",
+          "R3:E4:case_029"
+        ]
+      }
+    },
+    "no_thinking_reason↔thinking_route_only": {
+      "by_repeat": {
+        "R1": {
+          "comparable_count": 120,
+          "changed_count": 30,
+          "changed": [
+            "E1:case_022",
+            "E1:case_023",
+            "E1:case_024",
+            "E1:case_026",
+            "E1:case_028",
+            "E2:case_002",
+            "E2:case_006",
+            "E2:case_012",
+            "E2:case_014",
+            "E2:case_015",
+            "E2:case_017",
+            "E2:case_023",
+            "E2:case_027",
+            "E2:case_028",
+            "E2:case_029",
+            "E3:case_022",
+            "E3:case_023",
+            "E3:case_024",
+            "E3:case_026",
+            "E3:case_028",
+            "E4:case_002",
+            "E4:case_006",
+            "E4:case_012",
+            "E4:case_014",
+            "E4:case_015",
+            "E4:case_017",
+            "E4:case_023",
+            "E4:case_027",
+            "E4:case_028",
+            "E4:case_029"
+          ],
+          "corrected_count": 4,
+          "corrected": [
+            "E1:case_023",
+            "E2:case_014",
+            "E3:case_023",
+            "E4:case_014"
+          ],
+          "broken_count": 26,
+          "broken": [
+            "E1:case_022",
+            "E1:case_024",
+            "E1:case_026",
+            "E1:case_028",
+            "E2:case_002",
+            "E2:case_006",
+            "E2:case_012",
+            "E2:case_015",
+            "E2:case_017",
+            "E2:case_023",
+            "E2:case_027",
+            "E2:case_028",
+            "E2:case_029",
+            "E3:case_022",
+            "E3:case_024",
+            "E3:case_026",
+            "E3:case_028",
+            "E4:case_002",
+            "E4:case_006",
+            "E4:case_012",
+            "E4:case_015",
+            "E4:case_017",
+            "E4:case_023",
+            "E4:case_027",
+            "E4:case_028",
+            "E4:case_029"
+          ]
+        },
+        "R2": {
+          "comparable_count": 120,
+          "changed_count": 30,
+          "changed": [
+            "E1:case_022",
+            "E1:case_023",
+            "E1:case_024",
+            "E1:case_026",
+            "E1:case_028",
+            "E2:case_002",
+            "E2:case_006",
+            "E2:case_012",
+            "E2:case_014",
+            "E2:case_015",
+            "E2:case_017",
+            "E2:case_023",
+            "E2:case_027",
+            "E2:case_028",
+            "E2:case_029",
+            "E3:case_022",
+            "E3:case_023",
+            "E3:case_024",
+            "E3:case_026",
+            "E3:case_028",
+            "E4:case_002",
+            "E4:case_006",
+            "E4:case_012",
+            "E4:case_014",
+            "E4:case_015",
+            "E4:case_017",
+            "E4:case_023",
+            "E4:case_027",
+            "E4:case_028",
+            "E4:case_029"
+          ],
+          "corrected_count": 4,
+          "corrected": [
+            "E1:case_023",
+            "E2:case_014",
+            "E3:case_023",
+            "E4:case_014"
+          ],
+          "broken_count": 26,
+          "broken": [
+            "E1:case_022",
+            "E1:case_024",
+            "E1:case_026",
+            "E1:case_028",
+            "E2:case_002",
+            "E2:case_006",
+            "E2:case_012",
+            "E2:case_015",
+            "E2:case_017",
+            "E2:case_023",
+            "E2:case_027",
+            "E2:case_028",
+            "E2:case_029",
+            "E3:case_022",
+            "E3:case_024",
+            "E3:case_026",
+            "E3:case_028",
+            "E4:case_002",
+            "E4:case_006",
+            "E4:case_012",
+            "E4:case_015",
+            "E4:case_017",
+            "E4:case_023",
+            "E4:case_027",
+            "E4:case_028",
+            "E4:case_029"
+          ]
+        },
+        "R3": {
+          "comparable_count": 120,
+          "changed_count": 30,
+          "changed": [
+            "E1:case_022",
+            "E1:case_023",
+            "E1:case_024",
+            "E1:case_026",
+            "E1:case_028",
+            "E2:case_002",
+            "E2:case_006",
+            "E2:case_012",
+            "E2:case_014",
+            "E2:case_015",
+            "E2:case_017",
+            "E2:case_023",
+            "E2:case_027",
+            "E2:case_028",
+            "E2:case_029",
+            "E3:case_022",
+            "E3:case_023",
+            "E3:case_024",
+            "E3:case_026",
+            "E3:case_028",
+            "E4:case_002",
+            "E4:case_006",
+            "E4:case_012",
+            "E4:case_014",
+            "E4:case_015",
+            "E4:case_017",
+            "E4:case_023",
+            "E4:case_027",
+            "E4:case_028",
+            "E4:case_029"
+          ],
+          "corrected_count": 4,
+          "corrected": [
+            "E1:case_023",
+            "E2:case_014",
+            "E3:case_023",
+            "E4:case_014"
+          ],
+          "broken_count": 26,
+          "broken": [
+            "E1:case_022",
+            "E1:case_024",
+            "E1:case_026",
+            "E1:case_028",
+            "E2:case_002",
+            "E2:case_006",
+            "E2:case_012",
+            "E2:case_015",
+            "E2:case_017",
+            "E2:case_023",
+            "E2:case_027",
+            "E2:case_028",
+            "E2:case_029",
+            "E3:case_022",
+            "E3:case_024",
+            "E3:case_026",
+            "E3:case_028",
+            "E4:case_002",
+            "E4:case_006",
+            "E4:case_012",
+            "E4:case_015",
+            "E4:case_017",
+            "E4:case_023",
+            "E4:case_027",
+            "E4:case_028",
+            "E4:case_029"
+          ]
+        }
+      },
+      "aggregate": {
+        "comparable_count": 360,
+        "changed_count": 90,
+        "changed": [
+          "R1:E1:case_022",
+          "R1:E1:case_023",
+          "R1:E1:case_024",
+          "R1:E1:case_026",
+          "R1:E1:case_028",
+          "R1:E2:case_002",
+          "R1:E2:case_006",
+          "R1:E2:case_012",
+          "R1:E2:case_014",
+          "R1:E2:case_015",
+          "R1:E2:case_017",
+          "R1:E2:case_023",
+          "R1:E2:case_027",
+          "R1:E2:case_028",
+          "R1:E2:case_029",
+          "R1:E3:case_022",
+          "R1:E3:case_023",
+          "R1:E3:case_024",
+          "R1:E3:case_026",
+          "R1:E3:case_028",
+          "R1:E4:case_002",
+          "R1:E4:case_006",
+          "R1:E4:case_012",
+          "R1:E4:case_014",
+          "R1:E4:case_015",
+          "R1:E4:case_017",
+          "R1:E4:case_023",
+          "R1:E4:case_027",
+          "R1:E4:case_028",
+          "R1:E4:case_029",
+          "R2:E1:case_022",
+          "R2:E1:case_023",
+          "R2:E1:case_024",
+          "R2:E1:case_026",
+          "R2:E1:case_028",
+          "R2:E2:case_002",
+          "R2:E2:case_006",
+          "R2:E2:case_012",
+          "R2:E2:case_014",
+          "R2:E2:case_015",
+          "R2:E2:case_017",
+          "R2:E2:case_023",
+          "R2:E2:case_027",
+          "R2:E2:case_028",
+          "R2:E2:case_029",
+          "R2:E3:case_022",
+          "R2:E3:case_023",
+          "R2:E3:case_024",
+          "R2:E3:case_026",
+          "R2:E3:case_028",
+          "R2:E4:case_002",
+          "R2:E4:case_006",
+          "R2:E4:case_012",
+          "R2:E4:case_014",
+          "R2:E4:case_015",
+          "R2:E4:case_017",
+          "R2:E4:case_023",
+          "R2:E4:case_027",
+          "R2:E4:case_028",
+          "R2:E4:case_029",
+          "R3:E1:case_022",
+          "R3:E1:case_023",
+          "R3:E1:case_024",
+          "R3:E1:case_026",
+          "R3:E1:case_028",
+          "R3:E2:case_002",
+          "R3:E2:case_006",
+          "R3:E2:case_012",
+          "R3:E2:case_014",
+          "R3:E2:case_015",
+          "R3:E2:case_017",
+          "R3:E2:case_023",
+          "R3:E2:case_027",
+          "R3:E2:case_028",
+          "R3:E2:case_029",
+          "R3:E3:case_022",
+          "R3:E3:case_023",
+          "R3:E3:case_024",
+          "R3:E3:case_026",
+          "R3:E3:case_028",
+          "R3:E4:case_002",
+          "R3:E4:case_006",
+          "R3:E4:case_012",
+          "R3:E4:case_014",
+          "R3:E4:case_015",
+          "R3:E4:case_017",
+          "R3:E4:case_023",
+          "R3:E4:case_027",
+          "R3:E4:case_028",
+          "R3:E4:case_029"
+        ],
+        "corrected_count": 12,
+        "corrected": [
+          "R1:E1:case_023",
+          "R1:E2:case_014",
+          "R1:E3:case_023",
+          "R1:E4:case_014",
+          "R2:E1:case_023",
+          "R2:E2:case_014",
+          "R2:E3:case_023",
+          "R2:E4:case_014",
+          "R3:E1:case_023",
+          "R3:E2:case_014",
+          "R3:E3:case_023",
+          "R3:E4:case_014"
+        ],
+        "broken_count": 78,
+        "broken": [
+          "R1:E1:case_022",
+          "R1:E1:case_024",
+          "R1:E1:case_026",
+          "R1:E1:case_028",
+          "R1:E2:case_002",
+          "R1:E2:case_006",
+          "R1:E2:case_012",
+          "R1:E2:case_015",
+          "R1:E2:case_017",
+          "R1:E2:case_023",
+          "R1:E2:case_027",
+          "R1:E2:case_028",
+          "R1:E2:case_029",
+          "R1:E3:case_022",
+          "R1:E3:case_024",
+          "R1:E3:case_026",
+          "R1:E3:case_028",
+          "R1:E4:case_002",
+          "R1:E4:case_006",
+          "R1:E4:case_012",
+          "R1:E4:case_015",
+          "R1:E4:case_017",
+          "R1:E4:case_023",
+          "R1:E4:case_027",
+          "R1:E4:case_028",
+          "R1:E4:case_029",
+          "R2:E1:case_022",
+          "R2:E1:case_024",
+          "R2:E1:case_026",
+          "R2:E1:case_028",
+          "R2:E2:case_002",
+          "R2:E2:case_006",
+          "R2:E2:case_012",
+          "R2:E2:case_015",
+          "R2:E2:case_017",
+          "R2:E2:case_023",
+          "R2:E2:case_027",
+          "R2:E2:case_028",
+          "R2:E2:case_029",
+          "R2:E3:case_022",
+          "R2:E3:case_024",
+          "R2:E3:case_026",
+          "R2:E3:case_028",
+          "R2:E4:case_002",
+          "R2:E4:case_006",
+          "R2:E4:case_012",
+          "R2:E4:case_015",
+          "R2:E4:case_017",
+          "R2:E4:case_023",
+          "R2:E4:case_027",
+          "R2:E4:case_028",
+          "R2:E4:case_029",
+          "R3:E1:case_022",
+          "R3:E1:case_024",
+          "R3:E1:case_026",
+          "R3:E1:case_028",
+          "R3:E2:case_002",
+          "R3:E2:case_006",
+          "R3:E2:case_012",
+          "R3:E2:case_015",
+          "R3:E2:case_017",
+          "R3:E2:case_023",
+          "R3:E2:case_027",
+          "R3:E2:case_028",
+          "R3:E2:case_029",
+          "R3:E3:case_022",
+          "R3:E3:case_024",
+          "R3:E3:case_026",
+          "R3:E3:case_028",
+          "R3:E4:case_002",
+          "R3:E4:case_006",
+          "R3:E4:case_012",
+          "R3:E4:case_015",
+          "R3:E4:case_017",
+          "R3:E4:case_023",
+          "R3:E4:case_027",
+          "R3:E4:case_028",
+          "R3:E4:case_029"
+        ]
+      }
+    },
+    "thinking_reason↔thinking_route_only": {
+      "by_repeat": {
+        "R1": {
+          "comparable_count": 120,
+          "changed_count": 24,
+          "changed": [
+            "E1:case_022",
+            "E1:case_024",
+            "E1:case_026",
+            "E1:case_028",
+            "E2:case_002",
+            "E2:case_006",
+            "E2:case_012",
+            "E2:case_014",
+            "E2:case_015",
+            "E2:case_017",
+            "E2:case_027",
+            "E2:case_028",
+            "E3:case_022",
+            "E3:case_024",
+            "E3:case_026",
+            "E3:case_028",
+            "E4:case_002",
+            "E4:case_006",
+            "E4:case_012",
+            "E4:case_014",
+            "E4:case_015",
+            "E4:case_017",
+            "E4:case_027",
+            "E4:case_028"
+          ],
+          "corrected_count": 2,
+          "corrected": [
+            "E2:case_014",
+            "E4:case_014"
+          ],
+          "broken_count": 22,
+          "broken": [
+            "E1:case_022",
+            "E1:case_024",
+            "E1:case_026",
+            "E1:case_028",
+            "E2:case_002",
+            "E2:case_006",
+            "E2:case_012",
+            "E2:case_015",
+            "E2:case_017",
+            "E2:case_027",
+            "E2:case_028",
+            "E3:case_022",
+            "E3:case_024",
+            "E3:case_026",
+            "E3:case_028",
+            "E4:case_002",
+            "E4:case_006",
+            "E4:case_012",
+            "E4:case_015",
+            "E4:case_017",
+            "E4:case_027",
+            "E4:case_028"
+          ]
+        },
+        "R2": {
+          "comparable_count": 120,
+          "changed_count": 24,
+          "changed": [
+            "E1:case_022",
+            "E1:case_024",
+            "E1:case_026",
+            "E1:case_028",
+            "E2:case_002",
+            "E2:case_006",
+            "E2:case_012",
+            "E2:case_014",
+            "E2:case_015",
+            "E2:case_017",
+            "E2:case_027",
+            "E2:case_028",
+            "E3:case_022",
+            "E3:case_024",
+            "E3:case_026",
+            "E3:case_028",
+            "E4:case_002",
+            "E4:case_006",
+            "E4:case_012",
+            "E4:case_014",
+            "E4:case_015",
+            "E4:case_017",
+            "E4:case_027",
+            "E4:case_028"
+          ],
+          "corrected_count": 2,
+          "corrected": [
+            "E2:case_014",
+            "E4:case_014"
+          ],
+          "broken_count": 22,
+          "broken": [
+            "E1:case_022",
+            "E1:case_024",
+            "E1:case_026",
+            "E1:case_028",
+            "E2:case_002",
+            "E2:case_006",
+            "E2:case_012",
+            "E2:case_015",
+            "E2:case_017",
+            "E2:case_027",
+            "E2:case_028",
+            "E3:case_022",
+            "E3:case_024",
+            "E3:case_026",
+            "E3:case_028",
+            "E4:case_002",
+            "E4:case_006",
+            "E4:case_012",
+            "E4:case_015",
+            "E4:case_017",
+            "E4:case_027",
+            "E4:case_028"
+          ]
+        },
+        "R3": {
+          "comparable_count": 120,
+          "changed_count": 24,
+          "changed": [
+            "E1:case_022",
+            "E1:case_024",
+            "E1:case_026",
+            "E1:case_028",
+            "E2:case_002",
+            "E2:case_006",
+            "E2:case_012",
+            "E2:case_014",
+            "E2:case_015",
+            "E2:case_017",
+            "E2:case_027",
+            "E2:case_028",
+            "E3:case_022",
+            "E3:case_024",
+            "E3:case_026",
+            "E3:case_028",
+            "E4:case_002",
+            "E4:case_006",
+            "E4:case_012",
+            "E4:case_014",
+            "E4:case_015",
+            "E4:case_017",
+            "E4:case_027",
+            "E4:case_028"
+          ],
+          "corrected_count": 2,
+          "corrected": [
+            "E2:case_014",
+            "E4:case_014"
+          ],
+          "broken_count": 22,
+          "broken": [
+            "E1:case_022",
+            "E1:case_024",
+            "E1:case_026",
+            "E1:case_028",
+            "E2:case_002",
+            "E2:case_006",
+            "E2:case_012",
+            "E2:case_015",
+            "E2:case_017",
+            "E2:case_027",
+            "E2:case_028",
+            "E3:case_022",
+            "E3:case_024",
+            "E3:case_026",
+            "E3:case_028",
+            "E4:case_002",
+            "E4:case_006",
+            "E4:case_012",
+            "E4:case_015",
+            "E4:case_017",
+            "E4:case_027",
+            "E4:case_028"
+          ]
+        }
+      },
+      "aggregate": {
+        "comparable_count": 360,
+        "changed_count": 72,
+        "changed": [
+          "R1:E1:case_022",
+          "R1:E1:case_024",
+          "R1:E1:case_026",
+          "R1:E1:case_028",
+          "R1:E2:case_002",
+          "R1:E2:case_006",
+          "R1:E2:case_012",
+          "R1:E2:case_014",
+          "R1:E2:case_015",
+          "R1:E2:case_017",
+          "R1:E2:case_027",
+          "R1:E2:case_028",
+          "R1:E3:case_022",
+          "R1:E3:case_024",
+          "R1:E3:case_026",
+          "R1:E3:case_028",
+          "R1:E4:case_002",
+          "R1:E4:case_006",
+          "R1:E4:case_012",
+          "R1:E4:case_014",
+          "R1:E4:case_015",
+          "R1:E4:case_017",
+          "R1:E4:case_027",
+          "R1:E4:case_028",
+          "R2:E1:case_022",
+          "R2:E1:case_024",
+          "R2:E1:case_026",
+          "R2:E1:case_028",
+          "R2:E2:case_002",
+          "R2:E2:case_006",
+          "R2:E2:case_012",
+          "R2:E2:case_014",
+          "R2:E2:case_015",
+          "R2:E2:case_017",
+          "R2:E2:case_027",
+          "R2:E2:case_028",
+          "R2:E3:case_022",
+          "R2:E3:case_024",
+          "R2:E3:case_026",
+          "R2:E3:case_028",
+          "R2:E4:case_002",
+          "R2:E4:case_006",
+          "R2:E4:case_012",
+          "R2:E4:case_014",
+          "R2:E4:case_015",
+          "R2:E4:case_017",
+          "R2:E4:case_027",
+          "R2:E4:case_028",
+          "R3:E1:case_022",
+          "R3:E1:case_024",
+          "R3:E1:case_026",
+          "R3:E1:case_028",
+          "R3:E2:case_002",
+          "R3:E2:case_006",
+          "R3:E2:case_012",
+          "R3:E2:case_014",
+          "R3:E2:case_015",
+          "R3:E2:case_017",
+          "R3:E2:case_027",
+          "R3:E2:case_028",
+          "R3:E3:case_022",
+          "R3:E3:case_024",
+          "R3:E3:case_026",
+          "R3:E3:case_028",
+          "R3:E4:case_002",
+          "R3:E4:case_006",
+          "R3:E4:case_012",
+          "R3:E4:case_014",
+          "R3:E4:case_015",
+          "R3:E4:case_017",
+          "R3:E4:case_027",
+          "R3:E4:case_028"
+        ],
+        "corrected_count": 6,
+        "corrected": [
+          "R1:E2:case_014",
+          "R1:E4:case_014",
+          "R2:E2:case_014",
+          "R2:E4:case_014",
+          "R3:E2:case_014",
+          "R3:E4:case_014"
+        ],
+        "broken_count": 66,
+        "broken": [
+          "R1:E1:case_022",
+          "R1:E1:case_024",
+          "R1:E1:case_026",
+          "R1:E1:case_028",
+          "R1:E2:case_002",
+          "R1:E2:case_006",
+          "R1:E2:case_012",
+          "R1:E2:case_015",
+          "R1:E2:case_017",
+          "R1:E2:case_027",
+          "R1:E2:case_028",
+          "R1:E3:case_022",
+          "R1:E3:case_024",
+          "R1:E3:case_026",
+          "R1:E3:case_028",
+          "R1:E4:case_002",
+          "R1:E4:case_006",
+          "R1:E4:case_012",
+          "R1:E4:case_015",
+          "R1:E4:case_017",
+          "R1:E4:case_027",
+          "R1:E4:case_028",
+          "R2:E1:case_022",
+          "R2:E1:case_024",
+          "R2:E1:case_026",
+          "R2:E1:case_028",
+          "R2:E2:case_002",
+          "R2:E2:case_006",
+          "R2:E2:case_012",
+          "R2:E2:case_015",
+          "R2:E2:case_017",
+          "R2:E2:case_027",
+          "R2:E2:case_028",
+          "R2:E3:case_022",
+          "R2:E3:case_024",
+          "R2:E3:case_026",
+          "R2:E3:case_028",
+          "R2:E4:case_002",
+          "R2:E4:case_006",
+          "R2:E4:case_012",
+          "R2:E4:case_015",
+          "R2:E4:case_017",
+          "R2:E4:case_027",
+          "R2:E4:case_028",
+          "R3:E1:case_022",
+          "R3:E1:case_024",
+          "R3:E1:case_026",
+          "R3:E1:case_028",
+          "R3:E2:case_002",
+          "R3:E2:case_006",
+          "R3:E2:case_012",
+          "R3:E2:case_015",
+          "R3:E2:case_017",
+          "R3:E2:case_027",
+          "R3:E2:case_028",
+          "R3:E3:case_022",
+          "R3:E3:case_024",
+          "R3:E3:case_026",
+          "R3:E3:case_028",
+          "R3:E4:case_002",
+          "R3:E4:case_006",
+          "R3:E4:case_012",
+          "R3:E4:case_015",
+          "R3:E4:case_017",
+          "R3:E4:case_027",
+          "R3:E4:case_028"
+        ]
+      }
+    }
+  }
+}
