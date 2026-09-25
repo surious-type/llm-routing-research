@@ -6,7 +6,7 @@
 
 ## Структура
 
-~~~
+```
 llm-routing-research/
 ├── data/
 │   ├── diagnostic/        # исходный 30-case benchmark
@@ -25,7 +25,7 @@ llm-routing-research/
 ├── reports/
 ├── docs/
 └── archive/               # старый код, старые тесты и промежуточные данные
-~~~
+```
 
 ## Эксперименты
 
@@ -34,54 +34,54 @@ llm-routing-research/
 E1-E4 — четыре условия одного исходного эксперимента с буквенными ответами A/B.
 
 | Условие | Семантика A | Семантика B | Позиция A |
-|---|---|---|---|
-| E1 | CONTINUE | NEW | первая |
-| E2 | NEW | CONTINUE | первая |
-| E3 | CONTINUE | NEW | вторая |
-| E4 | NEW | CONTINUE | вторая |
+| ------- | ----------- | ----------- | --------- |
+| E1      | CONTINUE    | NEW         | первая    |
+| E2      | NEW         | CONTINUE    | первая    |
+| E3      | CONTINUE    | NEW         | вторая    |
+| E4      | NEW         | CONTINUE    | вторая    |
 
 Запуск:
 
-~~~
+```
 python -m experiments.prompt_conditions.run \
   --dataset data/diagnostic/routing_v2.jsonl \
   --model Qwen/Qwen3-4B-AWQ
-~~~
+```
 
 ### 2. Independent candidate scoring
 
 Каждый маршрут оценивается отдельным LLM-запросом; score равен logP(1)-logP(0).
 
-~~~
+```
 python -m experiments.independent_scoring.run \
   --dataset data/diagnostic/routing_v2.jsonl \
   --routes data/routes/continue_first.json \
   --model Qwen/Qwen3-4B-AWQ
-~~~
+```
 
 ### 3. Reranker
 
 Cross-encoder получает query и оба candidate texts, после чего выбирается максимальный score.
 
-~~~
+```
 python -m experiments.reranker.run \
   --dataset data/diagnostic/routing_v2.jsonl \
   --routes data/routes/continue_first.json \
   --endpoint http://localhost:8011/rerank
-~~~
+```
 
 ### 4. Structured LLM routing
 
 Модель непосредственно возвращает route через JSON Schema. Доступны route-only и reason-route.
 
-~~~
+```
 python -m experiments.structured_routing.run \
   --dataset data/diagnostic/routing_v2.jsonl \
   --routes data/routes/continue_first.json \
   --model Qwen/Qwen3-4B-AWQ \
   --mode reason-route \
   --output results/structured_routing/qwen3-4b.json
-~~~
+```
 
 Обозначения E1-E4 здесь намеренно не используются: они закреплены за исходным A/B prompt experiment.
 
@@ -89,20 +89,20 @@ python -m experiments.structured_routing.run \
 
 Фиксированный pipeline reason + route, но меняется модель. Один запуск обслуживает одну уже поднятую модель и автоматически проверяет два порядка descriptions: P1 и P2.
 
-~~~
+```
 python -m experiments.model_comparison.run \
   --model Qwen/Qwen3-8B-AWQ \
   --output results/model_comparison/m8.json
-~~~
+```
 
 После смены модели:
 
-~~~
+```
 python -m experiments.model_comparison.analyze \
   --run M4=results/model_comparison/m4.json \
   --run M8=results/model_comparison/m8.json \
   --run M14=results/model_comparison/m14.json
-~~~
+```
 
 ## Датасеты
 
@@ -118,9 +118,9 @@ data/v3/development.jsonl и data/v3/validation.jsonl — более крупн�
 
 ## Тесты
 
-~~~
+```
 python -m unittest discover -s tests -v
-~~~
+```
 
 Unit tests не вызывают LLM. Они проверяют E1-E4, нормализацию logprobs, восстановление reranker scores по index и порядок enum в structured schema.
 
