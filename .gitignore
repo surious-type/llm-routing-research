@@ -1,4 +1,9 @@
 .ipynb_checkpoints/
-AGENTS.md
-README.md
 __pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.DS_Store
+AGENTS.md
+results/**/latest.csv
+results/**/latest.json
